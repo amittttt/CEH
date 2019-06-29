@@ -1,0 +1,38 @@
+https://informationisbeautiful.net/
+stuxnet
+https://zerodium.com/
+https://twitter.com/panguteam?lang=en
+https://macvendors.com/
+shahu Anonmyous hacker
+
+Hacking Steps : Reconnaissance -> Scanning -> Gaining Access -> Maintaining Access -> Clearing tracks 
+
+Network Basics: 
+
+MAC Address : unique value associated with a network adapter MM:MM:MM:SS:SS:SS (M- Manufacturer ID 
+
+Need to explore: binary -> heax -> decimal
+
+IP Address -> 32bit binary length X.X.X.X 
+
+ARP (Address Resolution Protocol) :
+
+DHCP (Dynamic Host Configuration Protocol) : DPRA protocol (Discove offer request ACK)
+
+DNS (Domain Name Server) : DNS query works like a phone book (Mapping between domain name and server IP)
+
+
+UseFUL links :
+
+Packerstormsecurity.com
+exploit-db.com
+corelan.be
+hackforums.net
+garage4hackers.com
+defcon,Nullcon &OWASP chapers city-wise
+
+
+
+
+
+
