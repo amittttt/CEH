@@ -3,6 +3,11 @@ stuxnet
 https://zerodium.com/
 https://twitter.com/panguteam?lang=en
 https://macvendors.com/
+https://linuxjourney.com/ -> Read everyday
+https://ipchicken.com/ -> see the public IP
+http://hideme.be/  --> Proxy website
+
+
 shahu Anonmyous hacker
 
 Hacking Steps : Reconnaissance -> Scanning -> Gaining Access -> Maintaining Access -> Clearing tracks 
@@ -30,8 +35,23 @@ corelan.be
 hackforums.net
 garage4hackers.com
 defcon,Nullcon &OWASP chapers city-wise
+OSI Model
 
 
+// After break :::
+
+
+everything is a file - Read this
+
+command :
+
+ctr+shift+
+crtl+ -
+ctrl + shift + t
+ctrl + shift + w
+pwd : current where we are 
+man -> (man ls, man cd)
+chmod g+w amit.txt --> change the permission (chmod 420 amit.txt)
 
 
 
