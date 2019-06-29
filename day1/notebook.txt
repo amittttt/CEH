@@ -6,9 +6,11 @@ https://macvendors.com/
 https://linuxjourney.com/ -> Read everyday
 https://ipchicken.com/ -> see the public IP
 http://hideme.be/  --> Proxy website
+https://www.vpnbook.com/ -> VPN Books 
 
 
 shahu Anonmyous hacker
+DPR (SilkRoad)
 
 Hacking Steps : Reconnaissance -> Scanning -> Gaining Access -> Maintaining Access -> Clearing tracks 
 
@@ -52,6 +54,16 @@ ctrl + shift + w
 pwd : current where we are 
 man -> (man ls, man cd)
 chmod g+w amit.txt --> change the permission (chmod 420 amit.txt)
+
+
+tar -xvf -> xtract file in verbose mode
+
+
+Radit Account need to subscribe ::
+/r/netsec
+/r/netsecstudents
+/r/deepweb
+
 
 
 
