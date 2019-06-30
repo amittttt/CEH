@@ -1,2 +1,36 @@
 // Day 2 start ::
 
+
+# FootPrinting Practicals :
+
+1. DNS FootPrinting And Emumeration  :
+ nslookup tool -->
+
+DNS Record : 
+A 	=> ipv4 address of domain
+AAAA 	=> IPv6 Address of domain 
+MX 	=> Mail Exchanger 
+NS 	=> Name server 
+ 
+google.com -> DNS Query done by system -> 
+
+
+NSLOOKUP Tool Command :
+Hit Command in terminal =>
+nslookup 
+set type=A (All query related to A record -> IPv4 address related query)
+google.com
+
+Go with AAAA : this will give you IPV6 Address
+set type=AAAA
+
+set type=MX (Mail Exchanger list we will get)
+
+set type=NS (Name Server Record ) => AXFR Query to send data from the master to slave 
+
+
+#### DIG TOOL :
+This tool is for making this zone transfer request :: 
+syntex : dig axfr @name-server domain.name
+
+###### all we can do with one tool :  dnsenum domainname
