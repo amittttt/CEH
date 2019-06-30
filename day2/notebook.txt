@@ -91,6 +91,11 @@ site:dell.com inut -www.dell.com (google it)
 
 ## Hacker Search Engine :
 http://shodan.io/
+query : Respbian Country:"IN" City:"Bangalore" Port:22
+	hostname:"us-gov-west" port:3389
+
+
+## shodan Explore ::
 
 
 
