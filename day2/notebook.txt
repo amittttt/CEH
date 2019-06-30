@@ -87,6 +87,11 @@ filetype : can specify a filetype along with other keywordsto  find files realte
 ## Subdomain finding tricks:
 site:dell.com inut -www.dell.com (google it)
 
+## GHDB (Google Hacking Database) => https://www.exploit-db.com/google-hacking-database
+
+## Hacker Search Engine :
+http://shodan.io/
+
 
 
 
