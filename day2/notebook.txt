@@ -84,6 +84,11 @@ intitle : works with specified keyword to find that term in page title part of s
 filetype : can specify a filetype along with other keywordsto  find files realted to 		some specific extension types like pdf, doc,xls
 
 
+## Subdomain finding tricks:
+site:dell.com inut -www.dell.com (google it)
+
+
+
 
 
 

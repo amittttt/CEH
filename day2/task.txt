@@ -1,0 +1,16 @@
+1. use site keyword to find subdomain of offensive security website : 
+	site:offensive-security.com -www.offensive-security.com (Google Search)
+	https://webcam.offensive-security.com/
+	https://screenconnect.offensive-security.com:8040/
+	https://cracker.offensive-security.com/hashes.php
+	offensive-security.com/documentation/backtrack-intro.pdf
+
+2. use inurl to find pak websites with wp-admin
+	inurl:gov.pk inurl:/wp-admin/
+
+3. use intitle to find url pdf site files which have page title as Nessus Scan Report
+	intitle:Nessus Scan Report filetype:pdf
+
+4. use filetype & inurl to find all ms-word files from nasa website
+	inurl:nasa.gov filetype:docx
+		
