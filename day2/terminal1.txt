@@ -1,0 +1,239 @@
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find \027[A: NXDOMAIN
+> google.com
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+google.com	mail exchanger = 50 alt4.aspmx.l.google.com.
+google.com	mail exchanger = 40 alt3.aspmx.l.google.com.
+google.com	mail exchanger = 20 alt1.aspmx.l.google.com.
+google.com	mail exchanger = 30 alt2.aspmx.l.google.com.
+google.com	mail exchanger = 10 aspmx.l.google.com.
+
+Authoritative answers can be found from:
+> clear
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find clear: NXDOMAIN
+> clear
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find clear: NXDOMAIN
+> clear
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find clear: NXDOMAIN
+> ^Z
+[2]+  Stopped                 nslookup
+root@kali:~/Desktop/AMITCEH# clear
+
+root@kali:~/Desktop/AMITCEH# nslookup
+> set type=MX
+> google.com
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+google.com	mail exchanger = 50 alt4.aspmx.l.google.com.
+google.com	mail exchanger = 40 alt3.aspmx.l.google.com.
+google.com	mail exchanger = 20 alt1.aspmx.l.google.com.
+google.com	mail exchanger = 30 alt2.aspmx.l.google.com.
+google.com	mail exchanger = 10 aspmx.l.google.com.
+
+Authoritative answers can be found from:
+> dell.com
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+dell.com	mail exchanger = 10 mxb-00154901.gslb.pphosted.com.
+dell.com	mail exchanger = 10 mxa-00154901.gslb.pphosted.com.
+
+Authoritative answers can be found from:
+> sbi.co.in
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+sbi.co.in	mail exchanger = 10 mx1.sbi.co.in.
+sbi.co.in	mail exchanger = 10 mx2.sbi.co.in.
+sbi.co.in	mail exchanger = 10 mx3.sbi.co.in.
+sbi.co.in	mail exchanger = 10 mx4.sbi.co.in.
+sbi.co.in	mail exchanger = 0 sbi-co-in.mail.protection.outlook.com.
+
+Authoritative answers can be found from:
+> ^A^Croot@kali:~/Desktop/AMITCEH# nslookup
+> set type=MX  
+> google.com
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+google.com	mail exchanger = 50 alt4.aspmx.l.google.com.
+google.com	mail exchanger = 40 alt3.aspmx.l.google.com.
+google.com	mail exchanger = 20 alt1.aspmx.l.google.com.
+google.com	mail exchanger = 30 alt2.aspmx.l.google.com.
+google.com	mail exchanger = 10 aspmx.l.google.com.
+
+Authoritative answers can be found from:
+> hackerschool.in
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+hackerschool.in	mail exchanger = 30 aspmx3.googlemail.com.
+hackerschool.in	mail exchanger = 10 aspmx.l.google.com.
+hackerschool.in	mail exchanger = 30 aspmx2.googlemail.com.
+hackerschool.in	mail exchanger = 20 alt1.aspmx.l.google.com.
+hackerschool.in	mail exchanger = 20 alt2.aspmx.l.google.com.
+
+Authoritative answers can be found from:
+> set type=NS
+> vodafone.com
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+vodafone.com	nameserver = ns1.vodafone.com.
+vodafone.com	nameserver = ns5.vodafone.com.
+vodafone.com	nameserver = ns3.vodafone.com.
+
+Authoritative answers can be found from:
+> google.com
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+google.com	nameserver = ns1.google.com.
+google.com	nameserver = ns3.google.com.
+google.com	nameserver = ns4.google.com.
+google.com	nameserver = ns2.google.com.
+
+Authoritative answers can be found from:
+> dell.com
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+dell.com	nameserver = ns1.us.dell.com.
+dell.com	nameserver = ns5.us.dell.com.
+dell.com	nameserver = ns4.us.dell.com.
+dell.com	nameserver = ns6.us.dell.com.
+dell.com	nameserver = ns3.us.dell.com.
+dell.com	nameserver = ns2.us.dell.com.
+
+Authoritative answers can be found from:
+> dig axfr @ns1.us.dell.com. dell.com
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find dig: NXDOMAIN
+> amitmishra.me                    
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+amitmishra.me	nameserver = kate.ns.cloudflare.com.
+amitmishra.me	nameserver = piotr.ns.cloudflare.com.
+
+Authoritative answers can be found from:
+> hackerschool.in
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+hackerschool.in	nameserver = ns2.justhost.com.
+hackerschool.in	nameserver = ns1.justhost.com.
+
+Authoritative answers can be found from:
+> ^Croot@kali:~/Desktop/AMITCEH# ^C
+root@kali:~/Desktop/AMITCEH# vtu.ac.in
+bash: vtu.ac.in: command not found
+root@kali:~/Desktop/AMITCEH# nslookup
+> type=NS
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find type=NS: NXDOMAIN
+> ^[[A
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find \027[A: NXDOMAIN
+> set type=NS   
+> vtu.ac.in
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+vtu.ac.in	nameserver = ns2.vtu.ac.in.
+vtu.ac.in	nameserver = ns1.vtu.ac.in.
+
+Authoritative answers can be found from:
+root@kali:~/Desktop/AMITCEH# nslookup
+> set type=NS
+> kiituniversity.in
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find kiituniversity.in: NXDOMAIN
+> https://kiit.ac.in/
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find https://kiit.ac.in/: NXDOMAIN
+> kiit.ac.in      
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+kiit.ac.in	nameserver = ken.ns.cloudflare.com.
+kiit.ac.in	nameserver = zara.ns.cloudflare.com.
+
+Authoritative answers can be found from:
+> megacorpone.ci 
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find megacorpone.ci: NXDOMAIN
+> megacorpone.com
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+megacorpone.com	nameserver = ns1.megacorpone.com.
+megacorpone.com	nameserver = ns2.megacorpone.com.
+megacorpone.com	nameserver = ns3.megacorpone.com.
+
+Authoritative answers can be found from:
+> https://kiittnp.in
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+** server can't find https://kiittnp.in: NXDOMAIN
+> kiittnp.in 
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+kiittnp.in	nameserver = ruth.ns.cloudflare.com.
+kiittnp.in	nameserver = seth.ns.cloudflare.com.
+
+Authoritative answers can be found from:
+> zonetransfer.me
+Server:		2001:4860:4860::8888
+Address:	2001:4860:4860::8888#53
+
+Non-authoritative answer:
+zonetransfer.me	nameserver = nsztm2.digi.ninja.
+zonetransfer.me	nameserver = nsztm1.digi.ninja.
+
+Authoritative answers can be found from:
+> ^A
+

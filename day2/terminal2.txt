@@ -1,0 +1,531 @@
+root@kali:~/Desktop/AMITCEH# dig axfr @ns1.us.dell.com. dell.com
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns1.us.dell.com. dell.com
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# dig axfr @ns2.us.dell.com. dell.com
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns2.us.dell.com. dell.com
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# dig axfr @ns3.us.dell.com. dell.com
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns3.us.dell.com. dell.com
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# dig axfr @ns4.us.dell.com. dell.com
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns4.us.dell.com. dell.com
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# dig axfr @ns5.us.dell.com. dell.com
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns5.us.dell.com. dell.com
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# dig axfr @ns6.us.dell.com. dell.com
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns6.us.dell.com. dell.com
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# dig axfr @ns1.justhost.com. hackerschool.in
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns1.justhost.com. hackerschool.in
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# dig axfr @ns2.justhost.com. hackerschool.in
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns2.justhost.com. hackerschool.in
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# vtu.ac.in
+bash: vtu.ac.in: command not found
+root@kali:~/Desktop/AMITCEH# dig axfr @ns2.vtu.ac.in. vtu.ac.in
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns2.vtu.ac.in. vtu.ac.in
+; (1 server found)
+;; global options: +cmd
+vtu.ac.in.		7200	IN	SOA	ns1.vtu.ac.in. root.vtu.ac.in. 2010032414 14400 7200 86400 7200
+vtu.ac.in.		7200	IN	NS	ns1.vtu.ac.in.
+vtu.ac.in.		7200	IN	NS	ns2.vtu.ac.in.
+vtu.ac.in.		7200	IN	MX	0 vishwamitra.vtu.ac.in.
+vtu.ac.in.		60	IN	A	210.212.207.171
+default._domainkey.vtu.ac.in. 7200 IN	TXT	"v=DKIM1; k=rsa; " "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCxAaGrPKhOKtpTNj5zE5MeZcqIARnEqj10QhkAL1gyhGl3nBax2TLygCn3miFt7LLcvFz8wgGMHfdtk8riPWphZB82BfxcVrogxsuaAuJ3BqZOzdhj2dINY8nc4x6GIxRDmiP/eFL2MnFYwSzV935y3UyDsHVRnUep983FJmJBqQIDAQAB"
+default._domainkey.vtu.ac.in. 7200 IN	TXT	"v=DKIM1; k=rsa; " "p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZUg6H8dohlwkk76A/lJ6wToxfSNwx/9vb9m8haTgrnRMtEg/Tb9ZnCVLMFbpKqsW/uVbA6GcvneGvyJBKyh+tP4leeRQMuG4Gj34WKDm2iuPWKVcDQO08eG9KRI9ma9EuiKw0wGP+xK8jSddajM3Bwl4VpKVgUJ2ZrykqYM9sCQIDAQAB"
+accounts.vtu.ac.in.	7200	IN	A	210.212.207.181
+www.accounts.vtu.ac.in.	7200	IN	A	210.212.207.181
+affiliation.vtu.ac.in.	7200	IN	A	206.189.134.135
+www.affiliation.vtu.ac.in. 7200	IN	A	206.189.134.135
+alumni.vtu.ac.in.	7200	IN	A	210.212.207.235
+www.alumni.vtu.ac.in.	7200	IN	A	210.212.207.235
+bigdata.vtu.ac.in.	7200	IN	A	210.212.207.178
+www.bigdata.vtu.ac.in.	7200	IN	A	210.212.207.178
+www.labexam.blr.vtu.ac.in. 7200	IN	A	210.212.207.228
+prexam.blr.vtu.ac.in.	7200	IN	A	210.212.207.253
+www.prexam.blr.vtu.ac.in. 7200	IN	A	210.212.207.253
+prexam.blr1.vtu.ac.in.	7200	IN	A	210.212.207.141
+www.prexam.blr1.vtu.ac.in. 7200	IN	A	210.212.207.141
+bosws.vtu.ac.in.	7200	IN	A	210.212.207.149
+www.bosws.vtu.ac.in.	7200	IN	A	210.212.207.149
+cbbelgaum.vtu.ac.in.	7200	IN	A	210.212.207.229
+www.cbbelgaum.vtu.ac.in. 7200	IN	A	210.212.207.229
+coeaerospace.vtu.ac.in.	7200	IN	A	210.212.207.144
+www.coeaerospace.vtu.ac.in. 7200 IN	A	210.212.207.144
+convocation.vtu.ac.in.	7200	IN	A	210.212.207.149
+www.convocation.vtu.ac.in. 7200	IN	A	210.212.207.149
+csdcs.vtu.ac.in.	7200	IN	A	210.212.207.242
+www.csdcs.vtu.ac.in.	7200	IN	A	210.212.207.242
+dvstoken.vtu.ac.in.	7200	IN	A	210.212.207.145
+www.dvstoken.vtu.ac.in.	7200	IN	A	210.212.207.145
+elearning.vtu.ac.in.	7200	IN	A	210.212.207.201
+www.elearning.vtu.ac.in. 7200	IN	A	210.212.207.201
+etd.vtu.ac.in.		7200	IN	A	210.212.207.155
+www.etd.vtu.ac.in.	7200	IN	A	210.212.207.155
+forum.vtu.ac.in.	7200	IN	A	210.212.207.154
+foss.vtu.ac.in.		7200	IN	A	139.59.77.224
+www.foss.vtu.ac.in.	7200	IN	A	139.59.77.224
+helpdesk.vtu.ac.in.	7200	IN	A	210.212.207.156
+www.helpdesk.vtu.ac.in.	7200	IN	A	210.212.207.156
+iamarks.vtu.ac.in.	7200	IN	A	210.212.207.145
+www.iamarks.vtu.ac.in.	7200	IN	A	210.212.207.145
+ijesm.vtu.ac.in.	7200	IN	A	103.50.160.116
+www.ijesm.vtu.ac.in.	7200	IN	A	103.50.160.116
+imap.vtu.ac.in.		7200	IN	A	210.212.207.154
+imaps.vtu.ac.in.	7200	IN	A	210.212.207.154
+vtu.ac.in.vtu.ac.in.	14400	IN	TXT	"v=spf1 a mx ip4:210.212.207.154 ~all"
+mail.vtu.ac.in.vtu.ac.in. 7200	IN	MX	10 mail.vtu.ac.in.
+mail.vtu.ac.in.vtu.ac.in. 7200	IN	TXT	"google-site-verification=6d7bXdr2LtG0XetWqmrdgkrxMPNAHIM_QlquLNqjHhw"
+researchmail.vtu.ac.in.vtu.ac.in. 7200 IN MX	10 mail2.vtu.ac.in.
+vishwamitra.vtu.ac.in.vtu.ac.in. 14400 IN TXT	"v=spf1 a mx ip4:210.212.207.154 ~all"
+www.cbbelgaum.org.in.vtu.ac.in.	7200 IN	A	210.212.207.229
+ir.vtu.ac.in.		7200	IN	A	210.212.207.158
+www.ir.vtu.ac.in.	7200	IN	A	210.212.207.158
+iste19.vtu.ac.in.	7200	IN	A	210.212.207.145
+www.iste19.vtu.ac.in.	7200	IN	A	210.212.207.145
+labexam.vtu.ac.in.	7200	IN	A	210.212.207.199
+www.labexam.vtu.ac.in.	7200	IN	A	210.212.207.199
+lb1.vtu.ac.in.		7200	IN	A	210.212.207.171
+www.lb1.vtu.ac.in.	7200	IN	A	210.212.207.171
+library.vtu.ac.in.	7200	IN	A	210.212.207.191
+www.library.vtu.ac.in.	7200	IN	A	210.212.207.191
+mail.vtu.ac.in.		7200	IN	MX	10 mail.vtu.ac.in.
+mail.vtu.ac.in.		7200	IN	A	210.212.207.154
+mailstats.vtu.ac.in.	7200	IN	A	210.212.207.154
+mbathesis.vtu.ac.in.	7200	IN	A	210.212.207.246
+www.mbathesis.vtu.ac.in. 7200	IN	A	210.212.207.246
+mcathesis.vtu.ac.in.	7200	IN	A	210.212.207.243
+www.mcathesis.vtu.ac.in. 7200	IN	A	210.212.207.243
+mtechthesis.vtu.ac.in.	7200	IN	A	210.212.207.202
+admin.mtechthesis.vtu.ac.in. 7200 IN	A	210.212.207.202
+www.admin.mtechthesis.vtu.ac.in. 7200 IN A	210.212.207.202
+www.mtechthesis.vtu.ac.in. 7200	IN	A	210.212.207.202
+newsletter.vtu.ac.in.	7200	IN	A	210.212.207.168
+www.newsletter.vtu.ac.in. 7200	IN	A	210.212.207.168
+node1.vtu.ac.in.	7200	IN	A	210.212.207.165
+www.node1.vtu.ac.in.	7200	IN	A	210.212.207.165
+nptel.vtu.ac.in.	7200	IN	A	210.212.207.161
+ns1.vtu.ac.in.		7200	IN	A	210.212.207.151
+ns2.vtu.ac.in.		7200	IN	A	210.212.207.152
+ubdtce.org.vtu.ac.in.	7200	IN	A	210.212.207.177
+www.ubdtce.org.vtu.ac.in. 7200	IN	A	210.212.207.177
+pg.pg.vtu.ac.in.	7200	IN	MX	10 vishwamitra.vtu.ac.in.
+researchmail.pg.vtu.ac.in. 7200	IN	MX	10 mail2.vtu.ac.in.
+pgbelagavi.vtu.ac.in.	7200	IN	A	210.212.207.142
+www.pgbelagavi.vtu.ac.in. 7200	IN	A	210.212.207.142
+phdthesis.vtu.ac.in.	7200	IN	A	210.212.207.244
+admin.phdthesis.vtu.ac.in. 7200	IN	A	210.212.207.243
+www.admin.phdthesis.vtu.ac.in. 7200 IN	A	210.212.207.243
+www.phdthesis.vtu.ac.in. 7200	IN	A	210.212.207.244
+photocopy.vtu.ac.in.	7200	IN	TXT	"v=spf1 a mx ip4:210.212.207.129 ~all"
+photocopy.vtu.ac.in.	7200	IN	MX	10 mail.photocopy.vtu.ac.in.
+photocopy.vtu.ac.in.	7200	IN	A	210.212.207.199
+*.photocopy.vtu.ac.in.	7200	IN	CNAME	photocopy.vtu.ac.in.
+_dmarc.photocopy.vtu.ac.in. 7200 IN	TXT	"v=DMARC1; p=none"
+dkim._domainkey.photocopy.vtu.ac.in. 7200 IN TXT "v=DKIM1; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDKwKTEeKYjL9jJnZGS48k5MYtXqMFNlAM+BNIpL/cuGhGQGXuYaCYR+awTfMvUZYbdcMkwiGgGDpCVKAjVlNMX69/Fk4Cwgfwa1G1UdreeuHop89E4zJxKehxZQsvaWIPWPhdeJqEPkk6Z5DJBC1bE7Dz63czFQrlG2VQ7ysUKJwIDAQAB"
+www.photocopy.vtu.ac.in. 7200	IN	A	210.212.207.199
+pop3.vtu.ac.in.		7200	IN	A	210.212.207.154
+pop3s.vtu.ac.in.	7200	IN	A	210.212.207.154
+prexam.vtu.ac.in.	7200	IN	A	210.212.207.252
+www.prexam.vtu.ac.in.	7200	IN	A	210.212.207.252
+qpds.vtu.ac.in.		7200	IN	A	210.212.207.247
+www.qpds.vtu.ac.in.	7200	IN	A	210.212.207.247
+report.vtu.ac.in.	7200	IN	A	210.212.207.145
+www.report.vtu.ac.in.	7200	IN	A	210.212.207.145
+research.vtu.ac.in.	7200	IN	A	210.212.207.207
+www.research.vtu.ac.in.	7200	IN	A	210.212.207.207
+researcher.vtu.ac.in.	7200	IN	A	210.212.207.245
+www.researcher.vtu.ac.in. 7200	IN	A	210.212.207.245
+researchmail.vtu.ac.in.	7200	IN	MX	10 mail2.vtu.ac.in.
+results.vtu.ac.in.	7200	IN	A	210.212.207.149
+www.results.vtu.ac.in.	7200	IN	A	210.212.207.149
+resume.vtu.ac.in.	7200	IN	A	210.212.207.235
+www.resume.vtu.ac.in.	7200	IN	A	210.212.207.235
+rrcinfo.vtu.ac.in.	7200	IN	A	210.212.207.145
+www.rrcinfo.vtu.ac.in.	7200	IN	A	210.212.207.145
+smtp.vtu.ac.in.		7200	IN	A	210.212.207.154
+testmail.vtu.ac.in.	7200	IN	A	210.212.207.185
+www.testmail.vtu.ac.in.	7200	IN	A	210.212.207.185
+videos.vtu.ac.in.	7200	IN	A	210.212.207.207
+www.videos.vtu.ac.in.	7200	IN	A	210.212.207.207
+vishwamitra.vtu.ac.in.	7200	IN	A	210.212.207.154
+webmail.vtu.ac.in.	7200	IN	A	210.212.207.154
+www.vtu.ac.in.		60	IN	A	210.212.207.171
+vtu.ac.in.		7200	IN	SOA	ns1.vtu.ac.in. root.vtu.ac.in. 2010032414 14400 7200 86400 7200
+;; Query time: 33 msec
+;; SERVER: 210.212.207.152#53(210.212.207.152)
+;; WHEN: Sun Jun 30 15:17:09 IST 2019
+;; XFR size: 126 records (messages 1, bytes 3734)
+
+root@kali:~/Desktop/AMITCEH# dig axfr @ken.ns.cloudflare.com. kiit.ac.in
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ken.ns.cloudflare.com. kiit.ac.in
+; (2 servers found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# dig axfr @ns1.megacorpone.com. megacorpone.com
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns1.megacorpone.com. megacorpone.com
+; (1 server found)
+;; global options: +cmd
+; Transfer failed.
+root@kali:~/Desktop/AMITCEH# dig axfr @ns2.megacorpone.com. megacorpone.com
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @ns2.megacorpone.com. megacorpone.com
+; (1 server found)
+;; global options: +cmd
+megacorpone.com.	259200	IN	SOA	ns1.megacorpone.com. admin.megacorpone.com. 201803154 28800 7200 2419200 86400
+megacorpone.com.	259200	IN	TXT	"Try Harder"
+megacorpone.com.	259200	IN	MX	10 fb.mail.gandi.net.
+megacorpone.com.	259200	IN	MX	20 spool.mail.gandi.net.
+megacorpone.com.	259200	IN	MX	50 mail.megacorpone.com.
+megacorpone.com.	259200	IN	MX	60 mail2.megacorpone.com.
+megacorpone.com.	259200	IN	NS	ns1.megacorpone.com.
+megacorpone.com.	259200	IN	NS	ns2.megacorpone.com.
+megacorpone.com.	259200	IN	NS	ns3.megacorpone.com.
+admin.megacorpone.com.	259200	IN	A	38.100.193.83
+beta.megacorpone.com.	259200	IN	A	38.100.193.88
+fs1.megacorpone.com.	259200	IN	A	38.100.193.82
+intranet.megacorpone.com. 259200 IN	A	38.100.193.87
+mail.megacorpone.com.	259200	IN	A	38.100.193.84
+mail2.megacorpone.com.	259200	IN	A	38.100.193.73
+ns1.megacorpone.com.	259200	IN	A	38.100.193.70
+ns2.megacorpone.com.	259200	IN	A	38.100.193.80
+ns3.megacorpone.com.	259200	IN	A	38.100.193.90
+router.megacorpone.com.	259200	IN	A	38.100.193.71
+siem.megacorpone.com.	259200	IN	A	38.100.193.89
+snmp.megacorpone.com.	259200	IN	A	38.100.193.85
+support.megacorpone.com. 259200	IN	A	173.246.47.170
+syslog.megacorpone.com.	259200	IN	A	38.100.193.66
+test.megacorpone.com.	259200	IN	A	38.100.193.67
+vpn.megacorpone.com.	259200	IN	A	38.100.193.77
+www.megacorpone.com.	259200	IN	A	38.100.193.76
+www2.megacorpone.com.	259200	IN	A	38.100.193.79
+megacorpone.com.	259200	IN	SOA	ns1.megacorpone.com. admin.megacorpone.com. 201803154 28800 7200 2419200 86400
+;; Query time: 252 msec
+;; SERVER: 38.100.193.80#53(38.100.193.80)
+;; WHEN: Sun Jun 30 15:20:42 IST 2019
+;; XFR size: 28 records (messages 1, bytes 642)
+
+root@kali:~/Desktop/AMITCEH# dig axfr @nsztm2.digi.ninja. zonetransfer.me
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @nsztm2.digi.ninja. zonetransfer.me
+; (1 server found)
+;; global options: +cmd
+zonetransfer.me.	7200	IN	SOA	nsztm1.digi.ninja. robin.digi.ninja. 2019031901 172800 900 1209600 3600
+zonetransfer.me.	300	IN	HINFO	"Casio fx-700G" "Windows XP"
+zonetransfer.me.	301	IN	TXT	"google-site-verification=tyP28J7JAUHA9fw2sHXMgcCC0I6XBmmoVi04VlMewxA"
+zonetransfer.me.	7200	IN	MX	0 ASPMX.L.GOOGLE.COM.
+zonetransfer.me.	7200	IN	MX	10 ALT1.ASPMX.L.GOOGLE.COM.
+zonetransfer.me.	7200	IN	MX	10 ALT2.ASPMX.L.GOOGLE.COM.
+zonetransfer.me.	7200	IN	MX	20 ASPMX2.GOOGLEMAIL.COM.
+zonetransfer.me.	7200	IN	MX	20 ASPMX3.GOOGLEMAIL.COM.
+zonetransfer.me.	7200	IN	MX	20 ASPMX4.GOOGLEMAIL.COM.
+zonetransfer.me.	7200	IN	MX	20 ASPMX5.GOOGLEMAIL.COM.
+zonetransfer.me.	7200	IN	A	5.196.105.14
+zonetransfer.me.	7200	IN	NS	nsztm1.digi.ninja.
+zonetransfer.me.	7200	IN	NS	nsztm2.digi.ninja.
+_sip._tcp.zonetransfer.me. 14000 IN	SRV	0 0 5060 www.zonetransfer.me.
+14.105.196.5.IN-ADDR.ARPA.zonetransfer.me. 7200	IN PTR www.zonetransfer.me.
+asfdbauthdns.zonetransfer.me. 7900 IN	AFSDB	1 asfdbbox.zonetransfer.me.
+asfdbbox.zonetransfer.me. 7200	IN	A	127.0.0.1
+asfdbvolume.zonetransfer.me. 7800 IN	AFSDB	1 asfdbbox.zonetransfer.me.
+canberra-office.zonetransfer.me. 7200 IN A	202.14.81.230
+cmdexec.zonetransfer.me. 300	IN	TXT	"; ls"
+contact.zonetransfer.me. 2592000 IN	TXT	"Remember to call or email Pippa on +44 123 4567890 or pippa@zonetransfer.me when making DNS changes"
+dc-office.zonetransfer.me. 7200	IN	A	143.228.181.132
+deadbeef.zonetransfer.me. 7201	IN	AAAA	dead:beaf::
+dr.zonetransfer.me.	300	IN	LOC	53 20 56.558 N 1 38 33.526 W 0.00m 1m 10000m 10m
+DZC.zonetransfer.me.	7200	IN	TXT	"AbCdEfG"
+email.zonetransfer.me.	2222	IN	NAPTR	1 1 "P" "E2U+email" "" email.zonetransfer.me.zonetransfer.me.
+email.zonetransfer.me.	7200	IN	A	74.125.206.26
+home.zonetransfer.me.	7200	IN	A	127.0.0.1
+Info.zonetransfer.me.	7200	IN	TXT	"ZoneTransfer.me service provided by Robin Wood - robin@digi.ninja. See http://digi.ninja/projects/zonetransferme.php for more information."
+internal.zonetransfer.me. 300	IN	NS	intns1.zonetransfer.me.
+internal.zonetransfer.me. 300	IN	NS	intns2.zonetransfer.me.
+intns1.zonetransfer.me.	300	IN	A	81.4.108.41
+intns2.zonetransfer.me.	300	IN	A	52.91.28.78
+office.zonetransfer.me.	7200	IN	A	4.23.39.254
+ipv6actnow.org.zonetransfer.me.	7200 IN	AAAA	2001:67c:2e8:11::c100:1332
+owa.zonetransfer.me.	7200	IN	A	207.46.197.32
+robinwood.zonetransfer.me. 302	IN	TXT	"Robin Wood"
+rp.zonetransfer.me.	321	IN	RP	robin.zonetransfer.me. robinwood.zonetransfer.me.
+sip.zonetransfer.me.	3333	IN	NAPTR	2 3 "P" "E2U+sip" "!^.*$!sip:customer-service@zonetransfer.me!" .
+sqli.zonetransfer.me.	300	IN	TXT	"' or 1=1 --"
+sshock.zonetransfer.me.	7200	IN	TXT	"() { :]}; echo ShellShocked"
+staging.zonetransfer.me. 7200	IN	CNAME	www.sydneyoperahouse.com.
+alltcpportsopen.firewall.test.zonetransfer.me. 301 IN A	127.0.0.1
+testing.zonetransfer.me. 301	IN	CNAME	www.zonetransfer.me.
+vpn.zonetransfer.me.	4000	IN	A	174.36.59.154
+www.zonetransfer.me.	7200	IN	A	5.196.105.14
+xss.zonetransfer.me.	300	IN	TXT	"'><script>alert('Boo')</script>"
+zonetransfer.me.	7200	IN	SOA	nsztm1.digi.ninja. robin.digi.ninja. 2019031901 172800 900 1209600 3600
+;; Query time: 225 msec
+;; SERVER: 34.225.33.2#53(34.225.33.2)
+;; WHEN: Sun Jun 30 15:23:59 IST 2019
+;; XFR size: 48 records (messages 1, bytes 1903)
+
+root@kali:~/Desktop/AMITCEH# dig axfr @nsztm1.digi.ninja. zonetransfer.me
+
+; <<>> DiG 9.11.4-2-Debian <<>> axfr @nsztm1.digi.ninja. zonetransfer.me
+; (1 server found)
+;; global options: +cmd
+zonetransfer.me.	7200	IN	SOA	nsztm1.digi.ninja. robin.digi.ninja. 2017042001 172800 900 1209600 3600
+zonetransfer.me.	300	IN	HINFO	"Casio fx-700G" "Windows XP"
+zonetransfer.me.	301	IN	TXT	"google-site-verification=tyP28J7JAUHA9fw2sHXMgcCC0I6XBmmoVi04VlMewxA"
+zonetransfer.me.	7200	IN	MX	0 ASPMX.L.GOOGLE.COM.
+zonetransfer.me.	7200	IN	MX	10 ALT1.ASPMX.L.GOOGLE.COM.
+zonetransfer.me.	7200	IN	MX	10 ALT2.ASPMX.L.GOOGLE.COM.
+zonetransfer.me.	7200	IN	MX	20 ASPMX2.GOOGLEMAIL.COM.
+zonetransfer.me.	7200	IN	MX	20 ASPMX3.GOOGLEMAIL.COM.
+zonetransfer.me.	7200	IN	MX	20 ASPMX4.GOOGLEMAIL.COM.
+zonetransfer.me.	7200	IN	MX	20 ASPMX5.GOOGLEMAIL.COM.
+zonetransfer.me.	7200	IN	A	5.196.105.14
+zonetransfer.me.	7200	IN	NS	nsztm1.digi.ninja.
+zonetransfer.me.	7200	IN	NS	nsztm2.digi.ninja.
+_sip._tcp.zonetransfer.me. 14000 IN	SRV	0 0 5060 www.zonetransfer.me.
+14.105.196.5.IN-ADDR.ARPA.zonetransfer.me. 7200	IN PTR www.zonetransfer.me.
+asfdbauthdns.zonetransfer.me. 7900 IN	AFSDB	1 asfdbbox.zonetransfer.me.
+asfdbbox.zonetransfer.me. 7200	IN	A	127.0.0.1
+asfdbvolume.zonetransfer.me. 7800 IN	AFSDB	1 asfdbbox.zonetransfer.me.
+canberra-office.zonetransfer.me. 7200 IN A	202.14.81.230
+cmdexec.zonetransfer.me. 300	IN	TXT	"; ls"
+contact.zonetransfer.me. 2592000 IN	TXT	"Remember to call or email Pippa on +44 123 4567890 or pippa@zonetransfer.me when making DNS changes"
+dc-office.zonetransfer.me. 7200	IN	A	143.228.181.132
+deadbeef.zonetransfer.me. 7201	IN	AAAA	dead:beaf::
+dr.zonetransfer.me.	300	IN	LOC	53 20 56.558 N 1 38 33.526 W 0.00m 1m 10000m 10m
+DZC.zonetransfer.me.	7200	IN	TXT	"AbCdEfG"
+email.zonetransfer.me.	2222	IN	NAPTR	1 1 "P" "E2U+email" "" email.zonetransfer.me.zonetransfer.me.
+email.zonetransfer.me.	7200	IN	A	74.125.206.26
+home.zonetransfer.me.	7200	IN	A	127.0.0.1
+Info.zonetransfer.me.	7200	IN	TXT	"ZoneTransfer.me service provided by Robin Wood - robin@digi.ninja. See http://digi.ninja/projects/zonetransferme.php for more information."
+internal.zonetransfer.me. 300	IN	NS	intns1.zonetransfer.me.
+internal.zonetransfer.me. 300	IN	NS	intns2.zonetransfer.me.
+intns1.zonetransfer.me.	300	IN	A	81.4.108.41
+intns2.zonetransfer.me.	300	IN	A	167.88.42.94
+office.zonetransfer.me.	7200	IN	A	4.23.39.254
+ipv6actnow.org.zonetransfer.me.	7200 IN	AAAA	2001:67c:2e8:11::c100:1332
+owa.zonetransfer.me.	7200	IN	A	207.46.197.32
+robinwood.zonetransfer.me. 302	IN	TXT	"Robin Wood"
+rp.zonetransfer.me.	321	IN	RP	robin.zonetransfer.me. robinwood.zonetransfer.me.
+sip.zonetransfer.me.	3333	IN	NAPTR	2 3 "P" "E2U+sip" "!^.*$!sip:customer-service@zonetransfer.me!" .
+sqli.zonetransfer.me.	300	IN	TXT	"' or 1=1 --"
+sshock.zonetransfer.me.	7200	IN	TXT	"() { :]}; echo ShellShocked"
+staging.zonetransfer.me. 7200	IN	CNAME	www.sydneyoperahouse.com.
+alltcpportsopen.firewall.test.zonetransfer.me. 301 IN A	127.0.0.1
+testing.zonetransfer.me. 301	IN	CNAME	www.zonetransfer.me.
+vpn.zonetransfer.me.	4000	IN	A	174.36.59.154
+www.zonetransfer.me.	7200	IN	A	5.196.105.14
+xss.zonetransfer.me.	300	IN	TXT	"'><script>alert('Boo')</script>"
+zonetransfer.me.	7200	IN	SOA	nsztm1.digi.ninja. robin.digi.ninja. 2017042001 172800 900 1209600 3600
+;; Query time: 145 msec
+;; SERVER: 81.4.108.41#53(81.4.108.41)
+;; WHEN: Sun Jun 30 15:24:08 IST 2019
+;; XFR size: 48 records (messages 1, bytes 1875)
+
+root@kali:~/Desktop/AMITCEH# dnsenum amitmishra.me
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+dnsenum VERSION:1.2.4
+
+-----   amitmishra.me   -----
+
+
+Host's addresses:
+__________________
+
+amitmishra.me.                           299      IN    A        104.24.113.108
+amitmishra.me.                           299      IN    A        104.24.112.108
+
+
+Name Servers:
+______________
+
+piotr.ns.cloudflare.com.                 21599    IN    A        173.245.59.222
+kate.ns.cloudflare.com.                  21599    IN    A        173.245.58.124
+
+
+Mail (MX) Servers:
+___________________
+
+mailstore1.secureserver.net.             59       IN    A        68.178.213.244
+mailstore1.secureserver.net.             59       IN    A        68.178.213.243
+mailstore1.secureserver.net.             59       IN    A        72.167.238.32
+smtp.secureserver.net.                   59       IN    A        72.167.238.29
+smtp.secureserver.net.                   59       IN    A        68.178.213.37
+smtp.secureserver.net.                   59       IN    A        68.178.213.203
+
+
+Trying Zone Transfers and getting Bind Versions:
+_________________________________________________
+
+
+Trying Zone Transfer for amitmishra.me on piotr.ns.cloudflare.com ... 
+AXFR record query failed: FORMERR
+
+Trying Zone Transfer for amitmishra.me on kate.ns.cloudflare.com ... 
+AXFR record query failed: FORMERR
+
+brute force file not specified, bay.
+root@kali:~/Desktop/AMITCEH# dnsenum dell.com
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+dnsenum VERSION:1.2.4
+
+-----   dell.com   -----
+
+
+Host's addresses:
+__________________
+
+dell.com.                                83       IN    A        143.166.147.101
+dell.com.                                83       IN    A        143.166.135.105
+
+
+Name Servers:
+______________
+
+ns2.us.dell.com.                         599      IN    A        143.166.82.252
+ns5.us.dell.com.                         599      IN    A        143.166.83.13
+ns3.us.dell.com.                         599      IN    A        143.166.224.3
+ns6.us.dell.com.                         599      IN    A        143.166.224.235
+ns4.us.dell.com.                         599      IN    A        143.166.224.11
+ns1.us.dell.com.                         599      IN    A        143.166.82.251
+
+
+Mail (MX) Servers:
+___________________
+
+mxb-00154901.gslb.pphosted.com.          29       IN    A        67.231.157.37
+mxa-00154901.gslb.pphosted.com.          29       IN    A        67.231.157.37
+
+
+Trying Zone Transfers and getting Bind Versions:
+_________________________________________________
+
+
+Trying Zone Transfer for dell.com on ns2.us.dell.com ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for dell.com on ns5.us.dell.com ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for dell.com on ns3.us.dell.com ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for dell.com on ns6.us.dell.com ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for dell.com on ns4.us.dell.com ... 
+AXFR record query failed: REFUSED
+
+Trying Zone Transfer for dell.com on ns1.us.dell.com ... 
+AXFR record query failed: REFUSED
+
+brute force file not specified, bay.
+root@kali:~/Desktop/AMITCEH# dnsenum kiitecell.org
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+dnsenum VERSION:1.2.4
+
+-----   kiitecell.org   -----
+
+
+Host's addresses:
+__________________
+
+
+
+Name Servers:
+______________
+
+ kiitecell.org NS record query failed: NXDOMAIN
+root@kali:~/Desktop/AMITCEH# dnsenum kiitecell.org.in
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+dnsenum VERSION:1.2.4
+
+-----   kiitecell.org.in   -----
+
+
+Host's addresses:
+__________________
+
+
+
+Name Servers:
+______________
+
+ kiitecell.org.in NS record query failed: NXDOMAIN
+root@kali:~/Desktop/AMITCEH# dnsenum ecell.org.in
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+Smartmatch is experimental at /usr/bin/dnsenum line 698.
+dnsenum VERSION:1.2.4
+
+-----   ecell.org.in   -----
+
+
+Host's addresses:
+__________________
+
+ecell.org.in.                            299      IN    A        104.28.20.155
+ecell.org.in.                            299      IN    A        104.28.21.155
+
+
+Name Servers:
+______________
+
+lloyd.ns.cloudflare.com.                 21599    IN    A        173.245.59.197
+becky.ns.cloudflare.com.                 21599    IN    A        173.245.58.73
+
+
+Mail (MX) Servers:
+___________________
+
+aspmx.l.google.com.                      292      IN    A        74.125.200.27
+alt1.aspmx.l.google.com.                 292      IN    A        173.194.203.27
+alt2.aspmx.l.google.com.                 204      IN    A        108.177.8.27
+alt3.aspmx.l.google.com.                 292      IN    A        209.85.200.27
+alt4.aspmx.l.google.com.                 292      IN    A        64.233.176.27
+
+
+Trying Zone Transfers and getting Bind Versions:
+_________________________________________________
+
+
+Trying Zone Transfer for ecell.org.in on lloyd.ns.cloudflare.com ... 
+AXFR record query failed: FORMERR
+
+Trying Zone Transfer for ecell.org.in on becky.ns.cloudflare.com ... 
+AXFR record query failed: FORMERR
+
+brute force file not specified, bay.
+root@kali:~/Desktop/AMITCEH# 
+
