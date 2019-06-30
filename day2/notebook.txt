@@ -34,3 +34,63 @@ This tool is for making this zone transfer request ::
 syntex : dig axfr @name-server domain.name
 
 ###### all we can do with one tool :  dnsenum domainname
+
+
+## Brute Force Attack 
+
+atk6-dnsdict6 command need to hit in terminal 
+
+root@kali:~/Desktop/AMITCEH# atk6-dnsdict6 -D -x > /root/Desktop/AMITCEH/xtreme.txt
+root@kali:~/Desktop/AMITCEH# cat /root/Desktop/AMITCEH/xtreme.txt 
+cat: /root/Desktop/AMITCEH/xtreme.txt: No such file or directory
+root@kali:~/Desktop/AMITCEH# cat /root/Desktop/AMITCEH/xtreme.txt | wc -l
+cat: /root/Desktop/AMITCEH/xtreme.txt: No such file or directory
+0
+root@kali:~/Desktop/AMITCEH# cat /root/Desktop/AMITCEH/day2/xtreme.txt | wc -l
+5887
+
+atk6-dnsdict6 -d46 -x -t 20 dell.com 
+-d46 => here we do for ipv4 and ipv6
+-x =:> use xtreme file 
+-t => we are using to server give result in the thread 
+
+
+// After Break ::
+
+google it : wayback machine => https://archive.org/web/
+https://who.is/
+
+Robot.txt File 
+https://www.google.com/robots.txt
+
+https://www.offensive-security.com/
+https://www.offensive-security.com/robots.txt
+they are using wp-admin means wordpress 
+
+google it : google hacking for penetration testing and read PDF
+
+
+## Notes 
+
+Google hacking 
+search Keywords 
+
+site: They can be used to refine your search results to get relevant pages for your 	    searches done for subdomain discovery.
+
+inurl: works with specified keywords to find that term in url part of search output
+
+intitle : works with specified keyword to find that term in page title part of search 		output
+
+filetype : can specify a filetype along with other keywordsto  find files realted to 		some specific extension types like pdf, doc,xls
+
+
+
+
+
+
+
+
+
+
+
+
