@@ -1,3 +1,60 @@
-// Day 3 start ::
+// Day 3 start :: (Scanning)
+
+
+https://grabify.link/ : used for tracking ip and others information 
+
+social Engineering Attack :
+	Tool : theharvester (enter this in the Kali terminal)
+	Command : theharvester -d gmail.com -l 500 -b google -h 
+	Explain : -d is domain which @ email you want
+		  -l rate limit how many query search you want
+		  -b  is for data source 
+		  -h is for shodan search result 
+
+https://osintframework.com/ : find what you want to do :(|)
+
+#################### SCANNING ##########################
+
+Scanning is the process of gathering additional details about target using highly complex and aggressive reconnaissance techniques.
+
+The main goal : 
+1. Host Discovery
+2. Scanning for open ports
+3. Service and version controls/detection
+4. OS Detection
+
+Type of Scanning :
+1. Network Scanning
+2. Port Scanning
+3. Vulnerabillity Scanning
+
+
+######################### Network Scanning #######################
+
+1. fping
+2. netdiscover
+3. arping
+4. Angry IP Scanner
+
+
+### Host Discovery Tool :
+
+FPING : uses icmp ot internet control Message Protocol to send icmp echo requests to host in specified subnet range, If there are sustems that can respond to our ICMP requests. Their IP address will be shown in result.
+Example : 
+# fping -c 1 -I eth0 -g 192.168.0.1 192.168.0.255 
+OR
+# fping -c 1 -I eth0 -g 192.168.0.0/24
+
+# windows system fireball is on then it's create problem ::: ICMP protocol is not working at that case
+
+#### Net Discover Tool :
+uses ARP or Address resolution protocol to identify active hosts in a specified subnet range.
+
+NBSP : It can only work in lan 
+
+Example: #netdiscover -i eth0 -r 192.168.0.0/24
+
+
+
 
 
