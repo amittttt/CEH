@@ -1,6 +1,6 @@
 // Day 3 start :: (Scanning)
 
-
+https://nmap.org/book/performance-timing-templates.html
 https://grabify.link/ : used for tracking ip and others information 
 
 social Engineering Attack :
@@ -25,7 +25,7 @@ The main goal :
 
 Type of Scanning :
 1. Network Scanning
-2. Port Scanning
+2. Port Scanningfile:///usr/share/kali-defaults/web/homepage.html
 3. Vulnerabillity Scanning
 
 
@@ -133,8 +133,19 @@ Linux Command XMAS: nmap -vv -sF 192.168.0.174
 
 ######## Null, XMAS and fin scan never works for window syste
 
-5. UDP Scans : 
-6. Specific Ports
+5. UDP Scans : UDP is stateless and dosn't involve 3 ways handshake.it is often unreliable as firewalls and routers may drop icmp packets and may lead to false positive showing all UDP ports open
+
+windows Command XMAS: nmap -vv -sU 192.168.0.176
+Linux Command XMAS: nmap -vv -sU 192.168.0.174
+
+### Faster way to do :
+namp -vv -sU -T5 192.168.0.176
+why T5 please refer this : https://nmap.org/book/performance-timing-templates.html
+
+
+6. Specific Ports: 
+   nmap -p80,8080,8085 192.16.0.174 then nmap will perform scan only these port.
+
 7. Service Version Detection
 8. Aggressive Scan
 9. IDLE Scan 
