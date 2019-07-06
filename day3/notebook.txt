@@ -66,7 +66,83 @@ rtt min/avg/max/std-dev = 0.383/0.383/0.383/0.000 ms
 
 -> -c 1 is send only 1 packet in the system
 
-##
+### Angry IP Scanner : (https://angryip.org/download/#linux)
+
+##################### Lunch Break ###############################
+
+## Port Scanning : The port scanning techniques are designed to identify the open ports on a targeted server or host. This is often used by admininstrators to verify security policies of their networks and by attackers to identify running services on a host with the intent of compromising it.
+
+Tool Used :
+
+NMAP (https://nmap.org/book/man.html) : security Scanner tool {TCP Protocol}
+-> port - open;closed;filtered;Unfiltered;
+-> Nmap bydefaul used SYN Stealth Scan 
+
+Scanning Techniques :
+1. ICMP Echo Scan/Ping Sweep : not port scan, it is host discovery technique incorported in nmap for identifying alive hosts in a given network.
+Syntax:  nmap -sn 192.168.0.0/24
+
+2. TCP Connect Scan/Full Open Scan : it detects when a port is open by completing the three way handshake. It establishes a full connection and tears it down by sending a RST packets.
+Total Port : 65535
+1000 most comman ports
+ 
+	Source ----> Destination
+	SYN+PORT80 ----->
+		   <------ Syn/ACK
+	ACK  ------------->
+	RST  ------------->
+
+	Now connection stabilized between host and server 
+
+Examples: windows server ip 192.168.0.176
+	  linux server ip 192.168.0.174
+Command : nmap -vv -sT 192.168.0.176 it scan only 1000 ports 
+
+
+-vv Verbose mode
+-st using TCP 
+
+3. TCP Syn Scan/Half open Scan: This Scan runs default afainst a target machine if scan type is not provided. It works the same way as connect scan but here 3 way handshake will not be completed.
+ 
+	Source ----> DeSstination
+	SYN+PORT80 ----->
+		   <------ Syn/ACK
+	RST  ------------->
+
+windows Command : nmap -vv -sS 192.168.0.176
+Linux Command : nmap -vv -sS 192.168.0.174
+
+
+4. Null, XMAS and Fin Scans: These 3 are similar to each other. The advantage is many a times they get past firewall and IDS. All three of these don't work against windows OS. These are special type of scans because they use inverse flag in packers while performing scan. They will never work against a windows host.
+
+	Source ----> DeSstination
+	0000000+PORT80 ----->
+		   <------ ACK
+
+# Null Scan : Will have no flag set on scan packet
+windows Command NUll: nmap -vv -sN 192.168.0.176
+Linux Command Null: nmap -vv -sN 192.168.0.174
+
+# XMAS Scan : will have finish, push & urgent flag set (FUP) on scan packet
+windows Command Fin: nmap -vv -sX 192.168.0.176
+Linux Command Fin: nmap -vv -sX 192.168.0.174
+
+# Fin Scan : will have Fin flag set in scan packet
+windows Command XMAS: nmap -vv -sF 192.168.0.176
+Linux Command XMAS: nmap -vv -sF 192.168.0.174
+
+######## Null, XMAS and fin scan never works for window syste
+
+5. UDP Scans : 
+6. Specific Ports
+7. Service Version Detection
+8. Aggressive Scan
+9. IDLE Scan 
+
+##### 
+
+
+
 
 
 
