@@ -1,0 +1,250 @@
+oot@kali:~# nmap -vv -sT 192.168.0.176
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:08 IST
+Initiating ARP Ping Scan at 17:08
+Scanning 192.168.0.176 [1 port]
+Completed ARP Ping Scan at 17:08, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:08
+Completed Parallel DNS resolution of 1 host. at 17:08, 0.01s elapsed
+Initiating Connect Scan at 17:08
+Scanning 192.168.0.176 [1000 ports]
+Discovered open port 445/tcp on 192.168.0.176
+Discovered open port 139/tcp on 192.168.0.176
+Discovered open port 135/tcp on 192.168.0.176
+Discovered open port 2869/tcp on 192.168.0.176
+Completed Connect Scan at 17:08, 1.18s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.176
+Host is up, received arp-response (0.0027s latency).
+Scanned at 2019-07-06 17:08:25 IST for 1s
+Not shown: 996 closed ports
+Reason: 996 conn-refused
+PORT     STATE SERVICE      REASON
+135/tcp  open  msrpc        syn-ack
+139/tcp  open  netbios-ssn  syn-ack
+445/tcp  open  microsoft-ds syn-ack
+2869/tcp open  icslap       syn-ack
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.38 seconds
+           Raw packets sent: 1 (28B) | Rcvd: 1 (28B)
+root@kali:~# clear
+root@kali:~# nmap -vv -sT 192.168.0.174
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:08 IST
+Initiating ARP Ping Scan at 17:08
+Scanning 192.168.0.174 [1 port]
+Completed ARP Ping Scan at 17:08, 0.30s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:08
+Completed Parallel DNS resolution of 1 host. at 17:08, 0.01s elapsed
+Initiating Connect Scan at 17:08
+Scanning 192.168.0.174 [1000 ports]
+Discovered open port 111/tcp on 192.168.0.174
+Discovered open port 21/tcp on 192.168.0.174
+Discovered open port 53/tcp on 192.168.0.174
+Discovered open port 23/tcp on 192.168.0.174
+Discovered open port 3306/tcp on 192.168.0.174
+Discovered open port 22/tcp on 192.168.0.174
+Discovered open port 139/tcp on 192.168.0.174
+Discovered open port 445/tcp on 192.168.0.174
+Discovered open port 25/tcp on 192.168.0.174
+Discovered open port 5900/tcp on 192.168.0.174
+Discovered open port 8180/tcp on 192.168.0.174
+Discovered open port 1099/tcp on 192.168.0.174
+Discovered open port 514/tcp on 192.168.0.174
+Discovered open port 8009/tcp on 192.168.0.174
+Discovered open port 2121/tcp on 192.168.0.174
+Discovered open port 513/tcp on 192.168.0.174
+Discovered open port 1524/tcp on 192.168.0.174
+Discovered open port 6000/tcp on 192.168.0.174
+Discovered open port 2049/tcp on 192.168.0.174
+Discovered open port 512/tcp on 192.168.0.174
+Discovered open port 6667/tcp on 192.168.0.174
+Discovered open port 5432/tcp on 192.168.0.174
+Completed Connect Scan at 17:08, 0.15s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.174
+Host is up, received arp-response (0.013s latency).
+Scanned at 2019-07-06 17:08:31 IST for 1s
+Not shown: 978 closed ports
+Reason: 978 conn-refused
+PORT     STATE SERVICE      REASON
+21/tcp   open  ftp          syn-ack
+22/tcp   open  ssh          syn-ack
+23/tcp   open  telnet       syn-ack
+25/tcp   open  smtp         syn-ack
+53/tcp   open  domain       syn-ack
+111/tcp  open  rpcbind      syn-ack
+139/tcp  open  netbios-ssn  syn-ack
+445/tcp  open  microsoft-ds syn-ack
+512/tcp  open  exec         syn-ack
+513/tcp  open  login        syn-ack
+514/tcp  open  shell        syn-ack
+1099/tcp open  rmiregistry  syn-ack
+1524/tcp open  ingreslock   syn-ack
+2049/tcp open  nfs          syn-ack
+2121/tcp open  ccproxy-ftp  syn-ack
+3306/tcp open  mysql        syn-ack
+5432/tcp open  postgresql   syn-ack
+5900/tcp open  vnc          syn-ack
+6000/tcp open  X11          syn-ack
+6667/tcp open  irc          syn-ack
+8009/tcp open  ajp13        syn-ack
+8180/tcp open  unknown      syn-ack
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.59 seconds
+           Raw packets sent: 2 (56B) | Rcvd: 1 (28B)
+root@kali:~# nmap -vv -sT dell.com
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:10 IST
+Warning: Hostname dell.com resolves to 2 IPs. Using 143.166.147.101.
+Initiating Ping Scan at 17:10
+Scanning dell.com (143.166.147.101) [4 ports]
+Completed Ping Scan at 17:10, 0.33s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:10
+Completed Parallel DNS resolution of 1 host. at 17:10, 0.31s elapsed
+Initiating Connect Scan at 17:10
+Scanning dell.com (143.166.147.101) [1000 ports]
+Discovered open port 443/tcp on 143.166.147.101
+Discovered open port 80/tcp on 143.166.147.101
+Connect Scan Timing: About 21.70% done; ETC: 17:13 (0:01:52 remaining)
+Connect Scan Timing: About 23.50% done; ETC: 17:15 (0:03:19 remaining)
+Increasing send delay for 143.166.147.101 from 0 to 5 due to 11 out of 17 dropped probes since last increase.
+Connect Scan Timing: About 41.05% done; ETC: 17:14 (0:02:11 remaining)
+Connect Scan Timing: About 43.35% done; ETC: 17:15 (0:02:38 remaining)
+Increasing send delay for 143.166.147.101 from 5 to 10 due to 11 out of 11 dropped probes since last increase.
+Connect Scan Timing: About 45.80% done; ETC: 17:16 (0:02:59 remaining)
+Connect Scan Timing: About 48.40% done; ETC: 17:17 (0:03:16 remaining)
+Increasing send delay for 143.166.147.101 from 10 to 20 due to 11 out of 11 dropped probes since last increase.
+Connect Scan Timing: About 53.40% done; ETC: 17:18 (0:03:36 remaining)
+Increasing send delay for 143.166.147.101 from 20 to 40 due to 11 out of 11 dropped probes since last increase.
+Stats: 0:05:07 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 58.10% done; ETC: 17:19 (0:03:41 remaining)
+
+[1]+  Stopped                 nmap -vv -sT dell.com
+root@kali:~# nmap -vv -sS 192.168.0.174
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:16 IST
+Initiating ARP Ping Scan at 17:16
+Scanning 192.168.0.174 [1 port]
+Completed ARP Ping Scan at 17:16, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:16
+Completed Parallel DNS resolution of 1 host. at 17:16, 0.01s elapsed
+Initiating SYN Stealth Scan at 17:16
+Scanning 192.168.0.174 [1000 ports]
+Discovered open port 22/tcp on 192.168.0.174
+Discovered open port 25/tcp on 192.168.0.174
+Discovered open port 445/tcp on 192.168.0.174
+Discovered open port 23/tcp on 192.168.0.174
+Discovered open port 21/tcp on 192.168.0.174
+Discovered open port 53/tcp on 192.168.0.174
+Discovered open port 111/tcp on 192.168.0.174
+Discovered open port 3306/tcp on 192.168.0.174
+Discovered open port 5900/tcp on 192.168.0.174
+Discovered open port 139/tcp on 192.168.0.174
+Discovered open port 5432/tcp on 192.168.0.174
+Discovered open port 8009/tcp on 192.168.0.174
+Discovered open port 513/tcp on 192.168.0.174
+Discovered open port 514/tcp on 192.168.0.174
+Discovered open port 2121/tcp on 192.168.0.174
+Discovered open port 1099/tcp on 192.168.0.174
+Discovered open port 1524/tcp on 192.168.0.174
+Discovered open port 2049/tcp on 192.168.0.174
+Discovered open port 8180/tcp on 192.168.0.174
+Discovered open port 6000/tcp on 192.168.0.174
+Discovered open port 512/tcp on 192.168.0.174
+Discovered open port 6667/tcp on 192.168.0.174
+Completed SYN Stealth Scan at 17:16, 0.20s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.174
+Host is up, received arp-response (0.0056s latency).
+Scanned at 2019-07-06 17:16:14 IST for 1s
+Not shown: 978 closed ports
+Reason: 978 resets
+PORT     STATE SERVICE      REASON
+21/tcp   open  ftp          syn-ack ttl 64
+22/tcp   open  ssh          syn-ack ttl 64
+23/tcp   open  telnet       syn-ack ttl 64
+25/tcp   open  smtp         syn-ack ttl 64
+53/tcp   open  domain       syn-ack ttl 64
+111/tcp  open  rpcbind      syn-ack ttl 64
+139/tcp  open  netbios-ssn  syn-ack ttl 64
+445/tcp  open  microsoft-ds syn-ack ttl 64
+512/tcp  open  exec         syn-ack ttl 64
+513/tcp  open  login        syn-ack ttl 64
+514/tcp  open  shell        syn-ack ttl 64
+1099/tcp open  rmiregistry  syn-ack ttl 64
+1524/tcp open  ingreslock   syn-ack ttl 64
+2049/tcp open  nfs          syn-ack ttl 64
+2121/tcp open  ccproxy-ftp  syn-ack ttl 64
+3306/tcp open  mysql        syn-ack ttl 64
+5432/tcp open  postgresql   syn-ack ttl 64
+5900/tcp open  vnc          syn-ack ttl 64
+6000/tcp open  X11          syn-ack ttl 64
+6667/tcp open  irc          syn-ack ttl 64
+8009/tcp open  ajp13        syn-ack ttl 64
+8180/tcp open  unknown      syn-ack ttl 64
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.46 seconds
+           Raw packets sent: 1001 (44.028KB) | Rcvd: 1001 (40.116KB)
+root@kali:~# nmap -vv -sN 192.168.0.176
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:31 IST
+Initiating ARP Ping Scan at 17:31
+Scanning 192.168.0.176 [1 port]
+Completed ARP Ping Scan at 17:31, 0.09s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:31
+Completed Parallel DNS resolution of 1 host. at 17:31, 0.01s elapsed
+Initiating NULL Scan at 17:31
+Scanning 192.168.0.176 [1000 ports]
+Completed NULL Scan at 17:31, 1.42s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.176
+Host is up, received arp-response (0.0053s latency).
+All 1000 scanned ports on 192.168.0.176 are closed because of 1000 resets
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.69 seconds
+           Raw packets sent: 1141 (45.628KB) | Rcvd: 1001 (40.028KB)
+root@kali:~# nmap -vv -sS 192.168.0.200
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:37 IST
+Initiating ARP Ping Scan at 17:37
+Scanning 192.168.0.200 [1 port]
+Completed ARP Ping Scan at 17:37, 0.44s elapsed (1 total hosts)
+Nmap scan report for 192.168.0.200 [host down, received no-response]
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.52 seconds
+           Raw packets sent: 2 (56B) | Rcvd: 0 (0B)
+root@kali:~# nmapnn -vv -sU 192.168.0.176
+bash: nmapnn: command not found
+root@kali:~# nmap -vv -sU 192.168.0.176
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:50 IST
+Initiating ARP Ping Scan at 17:50
+Scanning 192.168.0.176 [1 port]
+Completed ARP Ping Scan at 17:50, 0.11s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:50
+Completed Parallel DNS resolution of 1 host. at 17:50, 0.01s elapsed
+Initiating UDP Scan at 17:50
+Scanning 192.168.0.176 [1000 ports]
+Discovered open port 123/udp on 192.168.0.176
+Discovered open port 137/udp on 192.168.0.176
+Completed UDP Scan at 17:50, 1.39s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.176
+Host is up, received arp-response (0.0038s latency).
+Scanned at 2019-07-06 17:50:15 IST for 2s
+Not shown: 992 closed ports
+Reason: 992 port-unreaches
+PORT     STATE         SERVICE      REASON
+123/udp  open          ntp          udp-response ttl 128
+137/udp  open          netbios-ns   udp-response ttl 128
+138/udp  open|filtered netbios-dgm  no-response
+445/udp  open|filtered microsoft-ds no-response
+500/udp  open|filtered isakmp       no-response
+1025/udp open|filtered blackjack    no-response
+1900/udp open|filtered upnp         no-response
+4500/udp open|filtered nat-t-ike    no-response
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.66 seconds
+           Raw packets sent: 1007 (29.315KB) | Rcvd: 995 (56.514KB)
+root@kali:~# 
+

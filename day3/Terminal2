@@ -1,0 +1,297 @@
+root@kali:~# nmap -VV -sT 192.168.0.176
+Nmap version 7.70 ( https://nmap.org )
+Platform: i686-pc-linux-gnu
+Compiled with: liblua-5.3.3 openssl-1.1.0h libssh2-1.8.0 libz-1.2.11 libpcre-8.39 nmap-libpcap-1.7.3 nmap-libdnet-1.12 ipv6
+Compiled without:
+Available nsock engines: epoll poll select
+root@kali:~# nmap -VV -sT 192.168.0.176
+Nmap version 7.70 ( https://nmap.org )
+Platform: i686-pc-linux-gnu
+Compiled with: liblua-5.3.3 openssl-1.1.0h libssh2-1.8.0 libz-1.2.11 libpcre-8.39 nmap-libpcap-1.7.3 nmap-libdnet-1.12 ipv6
+Compiled without:
+Available nsock engines: epoll poll select
+root@kali:~# nmap -vv -sT 192.168.0.176
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:06 IST
+Initiating ARP Ping Scan at 17:06
+Scanning 192.168.0.176 [1 port]
+Completed ARP Ping Scan at 17:06, 0.08s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:06
+Completed Parallel DNS resolution of 1 host. at 17:06, 0.01s elapsed
+Initiating Connect Scan at 17:06
+Scanning 192.168.0.176 [1000 ports]
+Discovered open port 445/tcp on 192.168.0.176
+Discovered open port 135/tcp on 192.168.0.176
+Discovered open port 139/tcp on 192.168.0.176
+Discovered open port 2869/tcp on 192.168.0.176
+Completed Connect Scan at 17:06, 1.24s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.176
+Host is up, received arp-response (0.0032s latency).
+Scanned at 2019-07-06 17:06:00 IST for 2s
+Not shown: 996 closed ports
+Reason: 996 conn-refused
+PORT     STATE SERVICE      REASON
+135/tcp  open  msrpc        syn-ack
+139/tcp  open  netbios-ssn  syn-ack
+445/tcp  open  microsoft-ds syn-ack
+2869/tcp open  icslap       syn-ack
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.43 seconds
+           Raw packets sent: 1 (28B) | Rcvd: 1 (28B)
+root@kali:~# nmap -vv -sS 192.168.0.176
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:15 IST
+Initiating ARP Ping Scan at 17:15
+Scanning 192.168.0.176 [1 port]
+Completed ARP Ping Scan at 17:15, 0.13s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:15
+Completed Parallel DNS resolution of 1 host. at 17:15, 0.01s elapsed
+Initiating SYN Stealth Scan at 17:15
+Scanning 192.168.0.176 [1000 ports]
+Discovered open port 445/tcp on 192.168.0.176
+Discovered open port 139/tcp on 192.168.0.176
+Discovered open port 135/tcp on 192.168.0.176
+Discovered open port 2869/tcp on 192.168.0.176
+Completed SYN Stealth Scan at 17:15, 1.20s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.176
+Host is up, received arp-response (0.0028s latency).
+Scanned at 2019-07-06 17:15:19 IST for 1s
+Not shown: 996 closed ports
+Reason: 996 resets
+PORT     STATE SERVICE      REASON
+135/tcp  open  msrpc        syn-ack ttl 128
+139/tcp  open  netbios-ssn  syn-ack ttl 128
+445/tcp  open  microsoft-ds syn-ack ttl 128
+2869/tcp open  icslap       syn-ack ttl 128
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.49 seconds
+           Raw packets sent: 1074 (47.240KB) | Rcvd: 1001 (40.044KB)
+root@kali:~# cvd: 1 (28B)
+bash: syntax error near unexpected token `('
+root@kali:~# root@kali:~# nmap -vv -sS 192.168.cvd: 1 (28B)
+bash: syntax error near unexpected token `('
+root@kali:~# nmap -vv -sN 192.168.0.174
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:31 IST
+Initiating ARP Ping Scan at 17:31
+Scanning 192.168.0.174 [1 port]
+Completed ARP Ping Scan at 17:31, 0.09s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:31
+Completed Parallel DNS resolution of 1 host. at 17:31, 0.01s elapsed
+Initiating NULL Scan at 17:31
+Scanning 192.168.0.174 [1000 ports]
+Completed NULL Scan at 17:31, 1.44s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.174
+Host is up, received arp-response (0.0065s latency).
+Scanned at 2019-07-06 17:31:32 IST for 1s
+Not shown: 978 closed ports
+Reason: 978 resets
+PORT     STATE         SERVICE      REASON
+21/tcp   open|filtered ftp          no-response
+22/tcp   open|filtered ssh          no-response
+23/tcp   open|filtered telnet       no-response
+25/tcp   open|filtered smtp         no-response
+53/tcp   open|filtered domain       no-response
+111/tcp  open|filtered rpcbind      no-response
+139/tcp  open|filtered netbios-ssn  no-response
+445/tcp  open|filtered microsoft-ds no-response
+512/tcp  open|filtered exec         no-response
+513/tcp  open|filtered login        no-response
+514/tcp  open|filtered shell        no-response
+1099/tcp open|filtered rmiregistry  no-response
+1524/tcp open|filtered ingreslock   no-response
+2049/tcp open|filtered nfs          no-response
+2121/tcp open|filtered ccproxy-ftp  no-response
+3306/tcp open|filtered mysql        no-response
+5432/tcp open|filtered postgresql   no-response
+5900/tcp open|filtered vnc          no-response
+6000/tcp open|filtered X11          no-response
+6667/tcp open|filtered irc          no-response
+8009/tcp open|filtered ajp13        no-response
+8180/tcp open|filtered unknown      no-response
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.67 seconds
+           Raw packets sent: 1023 (40.908KB) | Rcvd: 979 (39.148KB)
+root@kali:~# nmap -vv -sX 192.168.0.174
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:32 IST
+Initiating ARP Ping Scan at 17:32
+Scanning 192.168.0.174 [1 port]
+Completed ARP Ping Scan at 17:32, 0.14s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:32
+Completed Parallel DNS resolution of 1 host. at 17:32, 0.01s elapsed
+Initiating XMAS Scan at 17:32
+Scanning 192.168.0.174 [1000 ports]
+Completed XMAS Scan at 17:32, 1.42s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.174
+Host is up, received arp-response (0.0034s latency).
+Scanned at 2019-07-06 17:32:26 IST for 2s
+Not shown: 978 closed ports
+Reason: 978 resets
+PORT     STATE         SERVICE      REASON
+21/tcp   open|filtered ftp          no-response
+22/tcp   open|filtered ssh          no-response
+23/tcp   open|filtered telnet       no-response
+25/tcp   open|filtered smtp         no-response
+53/tcp   open|filtered domain       no-response
+111/tcp  open|filtered rpcbind      no-response
+139/tcp  open|filtered netbios-ssn  no-response
+445/tcp  open|filtered microsoft-ds no-response
+512/tcp  open|filtered exec         no-response
+513/tcp  open|filtered login        no-response
+514/tcp  open|filtered shell        no-response
+1099/tcp open|filtered rmiregistry  no-response
+1524/tcp open|filtered ingreslock   no-response
+2049/tcp open|filtered nfs          no-response
+2121/tcp open|filtered ccproxy-ftp  no-response
+3306/tcp open|filtered mysql        no-response
+5432/tcp open|filtered postgresql   no-response
+5900/tcp open|filtered vnc          no-response
+6000/tcp open|filtered X11          no-response
+6667/tcp open|filtered irc          no-response
+8009/tcp open|filtered ajp13        no-response
+8180/tcp open|filtered unknown      no-response
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.75 seconds
+           Raw packets sent: 1023 (40.908KB) | Rcvd: 979 (39.148KB)
+root@kali:~# nmap -vv -sF 192.1680.174.0.174
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:32 IST
+Failed to resolve "192.1680.174.0.174".
+Read data files from: /usr/bin/../share/nmap
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 0.12 seconds
+           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)
+root@kali:~# 
+root@kali:~# Linux Command XMAS: nmap -vv -sF 192.168.0.174
+bash: Linux: command not found
+root@kali:~# nmap -vv -sF 192.168.0.174
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:33 IST
+Initiating ARP Ping Scan at 17:33
+Scanning 192.168.0.174 [1 port]
+Completed ARP Ping Scan at 17:33, 0.11s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:33
+Completed Parallel DNS resolution of 1 host. at 17:33, 0.01s elapsed
+Initiating FIN Scan at 17:33
+Scanning 192.168.0.174 [1000 ports]
+Completed FIN Scan at 17:33, 2.79s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.174
+Host is up, received arp-response (0.0024s latency).
+Scanned at 2019-07-06 17:33:12 IST for 3s
+Not shown: 978 closed ports
+Reason: 978 resets
+PORT     STATE         SERVICE      REASON
+21/tcp   open|filtered ftp          no-response
+22/tcp   open|filtered ssh          no-response
+23/tcp   open|filtered telnet       no-response
+25/tcp   open|filtered smtp         no-response
+53/tcp   open|filtered domain       no-response
+111/tcp  open|filtered rpcbind      no-response
+139/tcp  open|filtered netbios-ssn  no-response
+445/tcp  open|filtered microsoft-ds no-response
+512/tcp  open|filtered exec         no-response
+513/tcp  open|filtered login        no-response
+514/tcp  open|filtered shell        no-response
+1099/tcp open|filtered rmiregistry  no-response
+1524/tcp open|filtered ingreslock   no-response
+2049/tcp open|filtered nfs          no-response
+2121/tcp open|filtered ccproxy-ftp  no-response
+3306/tcp open|filtered mysql        no-response
+5432/tcp open|filtered postgresql   no-response
+5900/tcp open|filtered vnc          no-response
+6000/tcp open|filtered X11          no-response
+6667/tcp open|filtered irc          no-response
+8009/tcp open|filtered ajp13        no-response
+8180/tcp open|filtered unknown      no-response
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 3.05 seconds
+           Raw packets sent: 1094 (43.748KB) | Rcvd: 979 (39.148KB)
+root@kali:~# nmap -vv -sF 192.168.0.200
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:36 IST
+Initiating ARP Ping Scan at 17:36
+Scanning 192.168.0.200 [1 port]
+Completed ARP Ping Scan at 17:36, 0.45s elapsed (1 total hosts)
+Nmap scan report for 192.168.0.200 [host down, received no-response]
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.53 seconds
+           Raw packets sent: 2 (56B) | Rcvd: 0 (0B)
+root@kali:~# nmap -vv -sU 192.168.0.174
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:50 IST
+Initiating ARP Ping Scan at 17:50
+Scanning 192.168.0.174 [1 port]
+Completed ARP Ping Scan at 17:50, 0.12s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:50
+Completed Parallel DNS resolution of 1 host. at 17:50, 0.01s elapsed
+Initiating UDP Scan at 17:50
+Scanning 192.168.0.174 [1000 ports]
+Increasing send delay for 192.168.0.174 from 0 to 50 due to max_successful_tryno increase to 4
+Increasing send delay for 192.168.0.174 from 50 to 100 due to max_successful_tryno increase to 5
+Stats: 0:00:08 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 2.09% done; ETC: 17:57 (0:06:16 remaining)
+Stats: 0:00:09 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 2.29% done; ETC: 17:57 (0:06:25 remaining)
+Stats: 0:00:10 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 2.44% done; ETC: 17:57 (0:06:39 remaining)
+Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 2.50% done; ETC: 17:58 (0:07:09 remaining)
+Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 2.64% done; ETC: 17:57 (0:06:45 remaining)
+Stats: 0:00:12 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 2.83% done; ETC: 17:57 (0:06:52 remaining)
+Increasing send delay for 192.168.0.174 from 100 to 200 due to 11 out of 12 dropped probes since last increase.
+Stats: 0:00:24 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 5.16% done; ETC: 17:58 (0:07:21 remaining)
+Increasing send delay for 192.168.0.174 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
+Stats: 0:00:30 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 5.97% done; ETC: 17:59 (0:07:52 remaining)
+Increasing send delay for 192.168.0.174 from 400 to 800 due to 11 out of 11 dropped probes since last increase.
+UDP Scan Timing: About 8.97% done; ETC: 18:02 (0:10:09 remaining)
+UDP Scan Timing: About 11.36% done; ETC: 18:04 (0:11:42 remaining)
+Stats: 0:03:53 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 24.94% done; ETC: 18:06 (0:11:41 remaining)
+UDP Scan Timing: About 29.20% done; ETC: 18:06 (0:10:52 remaining)
+UDP Scan Timing: About 36.06% done; ETC: 18:06 (0:10:05 remaining)
+UDP Scan Timing: About 38.81% done; ETC: 18:08 (0:10:56 remaining)
+
+[1]+  Stopped                 nmap -vv -sU 192.168.0.174
+root@kali:~# nmap -p80,8080,8085 192.168.0.174
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 18:00 IST
+Nmap scan report for 192.168.0.174
+Host is up (0.062s latency).
+
+PORT     STATE  SERVICE
+80/tcp   closed http
+8080/tcp closed http-proxy
+8085/tcp closed unknown
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
+root@kali:~# nmap -p80,8080,8085 192.168.0.176
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 18:00 IST
+Nmap scan report for 192.168.0.176
+Host is up (0.0059s latency).
+
+PORT     STATE  SERVICE
+80/tcp   closed http
+8080/tcp closed http-proxy
+8085/tcp closed unknown
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.29 seconds
+root@kali:~# git status
+fatal: not a git repository (or any of the parent directories): .git
+root@kali:~# ns(+), 4 deletions(-)
+bash: syntax error near unexpected token `+'
+root@kali:~# root@kali:~/Desktop/CEH# 
+bash: root@kali:~/Desktop/CEH#: No such file or directory
+root@kali:~# ns(+), 4 deletions(-)
+bash: syntax error near unexpected token `+'
+root@kali:~# root@kali:~/Desktop/CEH# 
+bash: root@kali:~/Desktop/CEH#: No such file or directory
+root@kali:

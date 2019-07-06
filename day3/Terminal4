@@ -1,0 +1,127 @@
+root@kali:~# namp -vv -sU -t% 192.168.0.176
+bash: namp: command not found
+root@kali:~# namp -vv -sU -T5 192.168.0.176
+bash: namp: command not found
+root@kali:~# nmap -vv -sU -T5 192.168.0.176
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:55 IST
+Initiating ARP Ping Scan at 17:55
+Scanning 192.168.0.176 [1 port]
+Completed ARP Ping Scan at 17:55, 0.09s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:55
+Completed Parallel DNS resolution of 1 host. at 17:55, 0.01s elapsed
+Initiating UDP Scan at 17:55
+Scanning 192.168.0.176 [1000 ports]
+Discovered open port 123/udp on 192.168.0.176
+Discovered open port 137/udp on 192.168.0.176
+Completed UDP Scan at 17:55, 1.29s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.176
+Host is up, received arp-response (0.0058s latency).
+Scanned at 2019-07-06 17:55:27 IST for 1s
+Not shown: 992 closed ports
+Reason: 992 port-unreaches
+PORT     STATE         SERVICE      REASON
+123/udp  open          ntp          udp-response ttl 128
+137/udp  open          netbios-ns   udp-response ttl 128
+138/udp  open|filtered netbios-dgm  no-response
+445/udp  open|filtered microsoft-ds no-response
+500/udp  open|filtered isakmp       no-response
+1025/udp open|filtered blackjack    no-response
+1900/udp open|filtered upnp         no-response
+4500/udp open|filtered nat-t-ike    no-response
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.52 seconds
+           Raw packets sent: 1007 (29.315KB) | Rcvd: 996 (56.621KB)
+root@kali:~# 76
+bash: 76: command not found
+root@kali:~# 76
+bash: 76: command not found
+root@kali:~# 76
+bash: 76: command not found
+root@kali:~# nmap -vv -sU -T5 192.168.0.174
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-06 17:56 IST
+Initiating ARP Ping Scan at 17:56
+Scanning 192.168.0.174 [1 port]
+Completed ARP Ping Scan at 17:56, 0.09s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:56
+Completed Parallel DNS resolution of 1 host. at 17:56, 0.01s elapsed
+Initiating UDP Scan at 17:56
+Scanning 192.168.0.174 [1000 ports]
+Warning: 192.168.0.174 giving up on port because retransmission cap hit (2).
+Stats: 0:00:07 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 3.97% done; ETC: 18:00 (0:03:14 remaining)
+Stats: 0:00:08 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 4.33% done; ETC: 18:00 (0:03:19 remaining)
+Stats: 0:00:08 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 4.40% done; ETC: 18:00 (0:03:16 remaining)
+Stats: 0:00:08 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 4.47% done; ETC: 18:00 (0:03:12 remaining)
+Stats: 0:00:08 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 4.53% done; ETC: 18:00 (0:03:10 remaining)
+Stats: 0:00:10 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 5.53% done; ETC: 18:00 (0:03:08 remaining)
+Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 5.90% done; ETC: 17:59 (0:02:55 remaining)
+Stats: 0:00:13 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 14.23% done; ETC: 17:58 (0:01:18 remaining)
+Increasing send delay for 192.168.0.174 from 0 to 50 due to 11 out of 15 dropped probes since last increase.
+Stats: 0:00:15 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 19.57% done; ETC: 17:58 (0:01:02 remaining)
+Stats: 0:00:19 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 22.77% done; ETC: 17:58 (0:01:08 remaining)
+Discovered open port 2049/udp on 192.168.0.174
+Increasing send delay for 192.168.0.174 from 50 to 100 due to 11 out of 17 dropped probes since last increase.
+Discovered open port 137/udp on 192.168.0.174
+UDP Scan Timing: About 53.70% done; ETC: 17:59 (0:01:17 remaining)
+Stats: 0:01:31 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 54.77% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:31 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 54.83% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:31 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 54.87% done; ETC: 17:59 (0:01:16 remaining)
+Stats: 0:01:31 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 54.93% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:31 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 54.97% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:31 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 55.03% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:32 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 55.03% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:32 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 55.10% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:32 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 55.33% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:32 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 55.37% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:32 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 55.40% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:33 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 55.43% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:33 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 55.47% done; ETC: 17:59 (0:01:15 remaining)
+Stats: 0:01:33 elapsed; 0 hosts completed (1 up), 1 undergoing UDP Scan
+UDP Scan Timing: About 55.50% done; ETC: 17:59 (0:01:15 remaining)
+Discovered open port 111/udp on 192.168.0.174
+UDP Scan Timing: About 68.27% done; ETC: 17:59 (0:00:59 remaining)
+UDP Scan Timing: About 79.23% done; ETC: 18:00 (0:00:41 remaining)
+Discovered open port 53/udp on 192.168.0.174
+Completed UDP Scan at 18:00, 216.45s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.174
+Host is up, received arp-response (0.017s latency).
+Scanned at 2019-07-06 17:56:48 IST for 217s
+Not shown: 794 open|filtered ports, 202 closed ports
+Reason: 794 no-responses and 202 port-unreaches
+PORT     STATE SERVICE    REASON
+53/udp   open  domain     udp-response ttl 64
+111/udp  open  rpcbind    udp-response ttl 64
+137/udp  open  netbios-ns udp-response ttl 64
+2049/udp open  nfs        udp-response ttl 64
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 216.68 seconds
+           Raw packets sent: 2696 (77.859KB) | Rcvd: 223 (12.718KB)
+root@kali:~# ^C
+root@kali:~# 
+

@@ -138,13 +138,16 @@ Linux Command XMAS: nmap -vv -sF 192.168.0.174
 windows Command XMAS: nmap -vv -sU 192.168.0.176
 Linux Command XMAS: nmap -vv -sU 192.168.0.174
 
-### Faster way to do :
+### Faster way to do :git 
 namp -vv -sU -T5 192.168.0.176
 why T5 please refer this : https://nmap.org/book/performance-timing-templates.html
 
 
 6. Specific Ports: 
    nmap -p80,8080,8085 192.16.0.174 then nmap will perform scan only these port.
+TCP AND UDP BOTH:
+nmap -pT:21,25,30,U:53,2049,3049 192.168.0.174,176 -sU -sT
+
 
 7. Service Version Detection
 8. Aggressive Scan
