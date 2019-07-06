@@ -52,7 +52,23 @@ uses ARP or Address resolution protocol to identify active hosts in a specified 
 
 NBSP : It can only work in lan 
 
-Example: #netdiscover -i eth0 -r 192.168.0.0/24
+Example: #netdiscover -i eth0 -r 192.168.0.0/24 problem with tool is reduce font size to see proper.
+
+
+## Finding the MAC Address :
+root@kali:~/Desktop/CEH/day3# arping -c 1 192.168.0.156
+ARPING 192.168.0.156
+60 bytes from e0:d5:5e:7c:a0:68 (192.168.0.156): index=0 time=382.656 usec
+
+--- 192.168.0.156 statistics ---
+1 packets transmitted, 1 packets received,   0% unanswered (0 extra)
+rtt min/avg/max/std-dev = 0.383/0.383/0.383/0.000 ms
+
+-> -c 1 is send only 1 packet in the system
+
+##
+
+
 
 
 

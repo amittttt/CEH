@@ -1,0 +1,904 @@
+[3J[H[2J Currently scanning: Starting.   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 0 Captured ARP Req/Rep packets, from 0 hosts.   Total size: 0                                                                       
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ Currently scanning: Starting.   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 1 Captured ARP Req/Rep packets, from 1 hosts.   Total size: 60                                                                      
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      1      60  Unknown vendor                                                                    
+ Currently scanning: 192.168.0.0/24   |   Screen View: Unique Hosts                                                                  
+                                                                                                                                     
+ 2 Captured ARP Req/Rep packets, from 2 hosts.   Total size: 120                                                                     
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      1      60  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      1      60  D-Link International                                                              
+ Currently scanning: 192.168.0.0/24   |   Screen View: Unique Hosts                                                                  
+                                                                                                                                     
+ 51 Captured ARP Req/Rep packets, from 50 hosts.   Total size: 3060                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      2     120  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      1      60  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ Currently scanning: 192.168.0.0/24   |   Screen View: Unique Hosts                                                                  
+                                                                                                                                     
+ 53 Captured ARP Req/Rep packets, from 50 hosts.   Total size: 3180                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      3     180  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      2     120  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 55 Captured ARP Req/Rep packets, from 50 hosts.   Total size: 3300                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      4     240  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      3     180  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 57 Captured ARP Req/Rep packets, from 50 hosts.   Total size: 3420                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      5     300  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      4     240  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 57 Captured ARP Req/Rep packets, from 50 hosts.   Total size: 3420                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      5     300  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      4     240  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 58 Captured ARP Req/Rep packets, from 50 hosts.   Total size: 3480                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      5     300  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      5     300  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 59 Captured ARP Req/Rep packets, from 50 hosts.   Total size: 3540                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      5     300  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      6     360  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 61 Captured ARP Req/Rep packets, from 50 hosts.   Total size: 3660                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      6     360  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      7     420  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 64 Captured ARP Req/Rep packets, from 50 hosts.   Total size: 3840                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66      8     480  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      8     480  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 99 Captured ARP Req/Rep packets, from 51 hosts.   Total size: 5940                                                                  
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66     10     600  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b      9     540  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.67    00:e0:4c:61:2f:79     32    1920  REALTEK SEMICONDUCTOR CORP.                                                       
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 1020 Captured ARP Req/Rep packets, from 54 hosts.   Total size: 61200                                                               
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66     11     660  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b     10     600  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.1.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.2.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.3.67    00:e0:4c:61:2f:79    189   11340  REALTEK SEMICONDUCTOR CORP.                                                       
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 1939 Captured ARP Req/Rep packets, from 58 hosts.   Total size: 116340                                                              
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66     11     660  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b     10     600  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.1.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.2.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.3.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.4.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.5.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.6.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.7.67    00:e0:4c:61:2f:79     92    5520  REALTEK SEMICONDUCTOR CORP.                                                       
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 2864 Captured ARP Req/Rep packets, from 61 hosts.   Total size: 171840                                                              
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66     11     660  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b     11     660  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.1.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.2.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.3.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.4.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.5.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.6.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.7.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.8.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.9.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 3797 Captured ARP Req/Rep packets, from 65 hosts.   Total size: 227820                                                              
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66     11     660  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b     12     720  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.1.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.2.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.3.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.4.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.5.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.6.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.7.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.8.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.9.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                       
+                                                                                                                                     
+ 4960 Captured ARP Req/Rep packets, from 70 hosts.   Total size: 297600                                                              
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.0.1     b0:be:76:67:a3:66     11     660  Unknown vendor                                                                    
+ 192.168.1.5     9c:d6:43:d7:57:0b     13     780  D-Link International                                                              
+ 192.168.0.106   1c:1b:0d:c8:2b:06      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.107   b8:97:5a:60:8d:37      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.118   e0:d5:5e:7c:a0:64      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.124   e0:d5:5e:78:54:bc      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.125   e0:d5:5e:dd:5e:07      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.126   e0:d5:5e:7c:ae:c9      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.127   e0:d5:5e:dd:65:23      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.130   e0:d5:5e:7c:a0:e8      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.133   e0:d5:5e:7c:a0:65      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.134   00:e0:4c:61:2d:80      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.135   e0:d5:5e:dd:65:41      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.136   00:e0:4c:61:2f:79      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.138   6c:2b:59:72:1c:4f      1      60  Unknown vendor                                                                    
+ 192.168.0.139   e0:d5:5e:7c:a0:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.141   e0:d5:5e:dd:65:c3      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.140   00:0c:29:16:67:9f      1      60  VMware, Inc.                                                                      
+ 192.168.0.142   e0:d5:5e:78:54:fa      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.143   00:e0:4c:57:6f:6f      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.144   e0:d5:5e:dd:5d:ec      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.145   00:e0:4c:57:63:d2      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.146   00:e0:4c:57:44:b1      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.148   00:e0:4c:44:2c:63      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.150   00:e0:4c:53:28:0b      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.151   e0:d5:5e:78:54:b0      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.152   e0:d5:5e:dd:65:89      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.154   e0:d5:5e:78:55:09      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.114   50:b7:c3:e2:07:0d      1      60  Samsung Electronics Co.,Ltd                                                       
+ 192.168.0.156   e0:d5:5e:7c:a0:68      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.157   e0:d5:5e:78:54:d1      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.158   1c:1b:0d:c8:23:b5      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.164   1c:1b:0d:87:4b:0b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.165   e0:d5:5e:7c:a1:10      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.169   b8:97:5a:60:90:26      1      60  BIOSTAR Microtech Int'l Corp.                                                     
+ 192.168.0.178   e0:d5:5e:78:2e:4b      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.181   e0:d5:5e:78:54:6c      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.185   e0:d5:5e:78:54:f4      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.190   e0:d5:5e:dd:65:60      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.191   e0:d5:5e:7c:a0:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.108   e4:f8:9c:3a:50:9d      1      60  Intel Corporate                                                                   
+ 192.168.0.109   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.192   e0:d5:5e:db:3e:37      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.115   d8:32:e3:3d:4a:ac      1      60  Unknown vendor                                                                    
+ 192.168.0.110   48:5f:99:5e:0d:2f      1      60  Unknown vendor                                                                    
+ 192.168.0.194   e0:d5:5e:dd:5f:b6      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.195   00:e0:4c:53:15:77      1      60  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.0.117   fc:f8:ae:e7:fb:da      2     120  Intel Corporate                                                                   
+ 192.168.0.122   fc:f8:ae:e7:fb:da      1      60  Intel Corporate                                                                   
+ 192.168.0.198   e0:d5:5e:dd:65:6a      1      60  GIGA-BYTE TECHNOLOGY CO.,LTD.                                                     
+ 192.168.0.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.1.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.2.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.3.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.4.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.5.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.6.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.7.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.8.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
+ 192.168.9.67    00:e0:4c:61:2f:79    254   15240  REALTEK SEMICONDUCTOR CORP.                                                       
