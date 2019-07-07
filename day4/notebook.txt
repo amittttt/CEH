@@ -1,3 +1,5 @@
-// Day 4 start :: (Scanning)
+// Day 4 start :: 
+
+=> open Zenmap as root
 
 

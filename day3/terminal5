@@ -1,0 +1,278 @@
+root@kali:~/Desktop/Amit/CEH# cd ~
+root@kali:~# nmap -vv -T5 192.168.0.187
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 14:51 IST
+Initiating ARP Ping Scan at 14:51
+Scanning 192.168.0.187 [1 port]
+Completed ARP Ping Scan at 14:51, 0.13s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:51
+Completed Parallel DNS resolution of 1 host. at 14:51, 0.01s elapsed
+Initiating SYN Stealth Scan at 14:51
+Scanning 192.168.0.187 [1000 ports]
+Discovered open port 445/tcp on 192.168.0.187
+Discovered open port 135/tcp on 192.168.0.187
+Discovered open port 139/tcp on 192.168.0.187
+Discovered open port 5357/tcp on 192.168.0.187
+Discovered open port 2869/tcp on 192.168.0.187
+Discovered open port 49155/tcp on 192.168.0.187
+Discovered open port 49152/tcp on 192.168.0.187
+Discovered open port 49156/tcp on 192.168.0.187
+Discovered open port 49154/tcp on 192.168.0.187
+Discovered open port 49157/tcp on 192.168.0.187
+Discovered open port 49153/tcp on 192.168.0.187
+Completed SYN Stealth Scan at 14:51, 2.52s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.187
+Host is up, received arp-response (0.0028s latency).
+Scanned at 2019-07-07 14:51:51 IST for 3s
+Not shown: 989 closed ports
+Reason: 989 resets
+PORT      STATE SERVICE      REASON
+135/tcp   open  msrpc        syn-ack ttl 128
+139/tcp   open  netbios-ssn  syn-ack ttl 128
+445/tcp   open  microsoft-ds syn-ack ttl 128
+2869/tcp  open  icslap       syn-ack ttl 128
+5357/tcp  open  wsdapi       syn-ack ttl 128
+49152/tcp open  unknown      syn-ack ttl 128
+49153/tcp open  unknown      syn-ack ttl 128
+49154/tcp open  unknown      syn-ack ttl 128
+49155/tcp open  unknown      syn-ack ttl 128
+49156/tcp open  unknown      syn-ack ttl 128
+49157/tcp open  unknown      syn-ack ttl 128
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 2.96 seconds
+           Raw packets sent: 1161 (51.068KB) | Rcvd: 1001 (40.072KB)
+root@kali:~# nmap -vv -T5 192.168.0.187-sV -O
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 14:55 IST
+Failed to resolve "192.168.0.187-sV".
+Read data files from: /usr/bin/../share/nmap
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 0.40 seconds
+           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)
+root@kali:~# nmap -vv -T5 192.168.0.187-sV -O
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 14:55 IST
+Failed to resolve "192.168.0.187-sV".
+Read data files from: /usr/bin/../share/nmap
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 0.24 seconds
+           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)
+root@kali:~# nmap -vv -T5 192.168.0.187 -sV -O
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 14:55 IST
+NSE: Loaded 43 scripts for scanning.
+Initiating ARP Ping Scan at 14:55
+Scanning 192.168.0.187 [1 port]
+Completed ARP Ping Scan at 14:55, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:55
+Completed Parallel DNS resolution of 1 host. at 14:55, 0.01s elapsed
+Initiating SYN Stealth Scan at 14:55
+Scanning 192.168.0.187 [1000 ports]
+Discovered open port 139/tcp on 192.168.0.187
+Discovered open port 135/tcp on 192.168.0.187
+Discovered open port 445/tcp on 192.168.0.187
+Discovered open port 49152/tcp on 192.168.0.187
+Discovered open port 49155/tcp on 192.168.0.187
+Discovered open port 2869/tcp on 192.168.0.187
+Discovered open port 49153/tcp on 192.168.0.187
+Discovered open port 5357/tcp on 192.168.0.187
+Discovered open port 49157/tcp on 192.168.0.187
+Discovered open port 49156/tcp on 192.168.0.187
+Discovered open port 49154/tcp on 192.168.0.187
+Completed SYN Stealth Scan at 14:55, 1.31s elapsed (1000 total ports)
+Initiating Service scan at 14:55
+Scanning 11 services on 192.168.0.187
+Service scan Timing: About 54.55% done; ETC: 14:57 (0:00:44 remaining)
+Completed Service scan at 14:56, 58.68s elapsed (11 services on 1 host)
+Initiating OS detection (try #1) against 192.168.0.187
+NSE: Script scanning 192.168.0.187.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 14:56
+Completed NSE at 14:56, 0.04s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 14:56
+Completed NSE at 14:56, 0.00s elapsed
+Nmap scan report for 192.168.0.187
+Host is up, received arp-response (0.0021s latency).
+Scanned at 2019-07-07 14:55:41 IST for 62s
+Not shown: 989 closed ports
+Reason: 989 resets
+PORT      STATE SERVICE      REASON          VERSION
+135/tcp   open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 128 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds syn-ack ttl 128 Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+2869/tcp  open  http         syn-ack ttl 128 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+5357/tcp  open  http         syn-ack ttl 128 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+49152/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49153/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49154/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49155/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49156/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49157/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+Device type: general purpose
+Running: Microsoft Windows 7|2008|8.1
+OS CPE: cpe:/o:microsoft:windows_7::- cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_8.1
+OS details: Microsoft Windows 7 SP0 - SP1, Windows Server 2008 SP1, Windows Server 2008 R2, Windows 8, or Windows 8.1 Update 1
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=7/7%OT=135%CT=1%CU=33713%PV=Y%DS=1%DC=D%G=N%M=6030D4%T
+OS:M=5D21BAD3%P=i686-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10D%TI=I%CI=I%II=I%S
+OS:S=S%TS=7)OPS(O1=M5B4NW8ST11%O2=M5B4NW8ST11%O3=M5B4NW8NNT11%O4=M5B4NW8ST1
+OS:1%O5=M5B4NW8ST11%O6=M5B4ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000
+OS:%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000%O=M5B4NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%
+OS:S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=
+OS:Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R
+OS:%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=
+OS:80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0
+OS:%Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R
+OS:=Y%DFI=N%T=80%CD=Z)
+
+Uptime guess: 0.011 days (since Sun Jul  7 14:40:37 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: VIC-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 62.31 seconds
+           Raw packets sent: 1092 (48.746KB) | Rcvd: 1019 (41.482KB)
+root@kali:~# nmap -vv -A 192.168.0.187 -T5
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 15:04 IST
+NSE: Loaded 148 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+Initiating ARP Ping Scan at 15:04
+Scanning 192.168.0.187 [1 port]
+Completed ARP Ping Scan at 15:04, 0.04s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:04
+Completed Parallel DNS resolution of 1 host. at 15:04, 0.01s elapsed
+Initiating SYN Stealth Scan at 15:04
+Scanning 192.168.0.187 [1000 ports]
+Discovered open port 135/tcp on 192.168.0.187
+Discovered open port 445/tcp on 192.168.0.187
+Discovered open port 139/tcp on 192.168.0.187
+Discovered open port 49156/tcp on 192.168.0.187
+Discovered open port 49155/tcp on 192.168.0.187
+Discovered open port 2869/tcp on 192.168.0.187
+Discovered open port 49153/tcp on 192.168.0.187
+Discovered open port 5357/tcp on 192.168.0.187
+Discovered open port 49154/tcp on 192.168.0.187
+Discovered open port 49152/tcp on 192.168.0.187
+Discovered open port 49157/tcp on 192.168.0.187
+Completed SYN Stealth Scan at 15:04, 2.34s elapsed (1000 total ports)
+Initiating Service scan at 15:04
+Scanning 11 services on 192.168.0.187
+Service scan Timing: About 54.55% done; ETC: 15:05 (0:00:45 remaining)
+Completed Service scan at 15:05, 60.02s elapsed (11 services on 1 host)
+Initiating OS detection (try #1) against 192.168.0.187
+NSE: Script scanning 192.168.0.187.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:05
+Completed NSE at 15:05, 8.37s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Nmap scan report for 192.168.0.187
+Host is up, received arp-response (0.0018s latency).
+Scanned at 2019-07-07 15:04:08 IST for 72s
+Not shown: 989 closed ports
+Reason: 989 resets
+PORT      STATE SERVICE      REASON          VERSION
+135/tcp   open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+139/tcp   open  netbios-ssn  syn-ack ttl 128 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds syn-ack ttl 128 Windows 7 Ultimate 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+2869/tcp  open  http         syn-ack ttl 128 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+5357/tcp  open  http         syn-ack ttl 128 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+49152/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49153/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49154/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49155/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49156/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49157/tcp open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+Device type: general purpose
+Running: Microsoft Windows 7|2008|8.1
+OS CPE: cpe:/o:microsoft:windows_7::- cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_server_2008::sp1 cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_8.1
+OS details: Microsoft Windows 7 SP0 - SP1, Windows Server 2008 SP1, Windows Server 2008 R2, Windows 8, or Windows 8.1 Update 1
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=7/7%OT=135%CT=1%CU=34513%PV=Y%DS=1%DC=D%G=N%M=6030D4%T
+OS:M=5D21BCD9%P=i686-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10A%TI=I%CI=I%II=I%S
+OS:S=S%TS=7)OPS(O1=M5B4NW8ST11%O2=M5B4NW8ST11%O3=M5B4NW8NNT11%O4=M5B4NW8ST1
+OS:1%O5=M5B4NW8ST11%O6=M5B4ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000
+OS:%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000%O=M5B4NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%
+OS:S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=
+OS:Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R
+OS:%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=
+OS:80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0
+OS:%Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R
+OS:=Y%DFI=N%T=80%CD=Z)
+
+Uptime guess: 0.017 days (since Sun Jul  7 14:40:36 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: Host: VIC-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: -1h49m58s, deviation: 3h10m29s, median: 0s
+| nbstat: NetBIOS name: VIC-PC, NetBIOS user: <unknown>, NetBIOS MAC: aa:bb:cc:ff:ee:dd (unknown)
+| Names:
+|   VIC-PC<00>           Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   VIC-PC<20>           Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   aa bb cc ff ee dd 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 24648/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 60263/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 62200/udp): CLEAN (Timeout)
+|   Check 4 (port 62360/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 7 Ultimate 7601 Service Pack 1 (Windows 7 Ultimate 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1
+|   Computer name: Vic-PC
+|   NetBIOS computer name: VIC-PC\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-07-07T15:05:16+05:30
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-07-07 15:05:15
+|_  start_date: 2019-07-07 14:40:49
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.84 ms 192.168.0.187
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:05
+Completed NSE at 15:05, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 72.47 seconds
+           Raw packets sent: 1170 (52.178KB) | Rcvd: 1025 (41.834KB)
+root@kali:~# 
+

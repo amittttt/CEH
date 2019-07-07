@@ -1,0 +1,481 @@
+root@kali:~# nmap -vv -T5 192.168.0.109
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 14:52 IST
+Initiating ARP Ping Scan at 14:52
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 14:52, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:52
+Completed Parallel DNS resolution of 1 host. at 14:52, 0.01s elapsed
+Initiating SYN Stealth Scan at 14:52
+Scanning 192.168.0.109 [1000 ports]
+Discovered open port 139/tcp on 192.168.0.109
+Discovered open port 80/tcp on 192.168.0.109
+Discovered open port 445/tcp on 192.168.0.109
+Discovered open port 23/tcp on 192.168.0.109
+Discovered open port 5900/tcp on 192.168.0.109
+Discovered open port 53/tcp on 192.168.0.109
+Discovered open port 21/tcp on 192.168.0.109
+Discovered open port 25/tcp on 192.168.0.109
+Discovered open port 22/tcp on 192.168.0.109
+Discovered open port 3306/tcp on 192.168.0.109
+Discovered open port 111/tcp on 192.168.0.109
+Discovered open port 514/tcp on 192.168.0.109
+Discovered open port 513/tcp on 192.168.0.109
+Discovered open port 1099/tcp on 192.168.0.109
+Discovered open port 6667/tcp on 192.168.0.109
+Discovered open port 8009/tcp on 192.168.0.109
+Discovered open port 2049/tcp on 192.168.0.109
+Discovered open port 2121/tcp on 192.168.0.109
+Discovered open port 1524/tcp on 192.168.0.109
+Discovered open port 6000/tcp on 192.168.0.109
+Discovered open port 512/tcp on 192.168.0.109
+Discovered open port 8180/tcp on 192.168.0.109
+Discovered open port 5432/tcp on 192.168.0.109
+Completed SYN Stealth Scan at 14:52, 0.19s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.0063s latency).
+Scanned at 2019-07-07 14:52:07 IST for 1s
+Not shown: 977 closed ports
+Reason: 977 resets
+PORT     STATE SERVICE      REASON
+21/tcp   open  ftp          syn-ack ttl 64
+22/tcp   open  ssh          syn-ack ttl 64
+23/tcp   open  telnet       syn-ack ttl 64
+25/tcp   open  smtp         syn-ack ttl 64
+53/tcp   open  domain       syn-ack ttl 64
+80/tcp   open  http         syn-ack ttl 64
+111/tcp  open  rpcbind      syn-ack ttl 64
+139/tcp  open  netbios-ssn  syn-ack ttl 64
+445/tcp  open  microsoft-ds syn-ack ttl 64
+512/tcp  open  exec         syn-ack ttl 64
+513/tcp  open  login        syn-ack ttl 64
+514/tcp  open  shell        syn-ack ttl 64
+1099/tcp open  rmiregistry  syn-ack ttl 64
+1524/tcp open  ingreslock   syn-ack ttl 64
+2049/tcp open  nfs          syn-ack ttl 64
+2121/tcp open  ccproxy-ftp  syn-ack ttl 64
+3306/tcp open  mysql        syn-ack ttl 64
+5432/tcp open  postgresql   syn-ack ttl 64
+5900/tcp open  vnc          syn-ack ttl 64
+6000/tcp open  X11          syn-ack ttl 64
+6667/tcp open  irc          syn-ack ttl 64
+8009/tcp open  ajp13        syn-ack ttl 64
+8180/tcp open  unknown      syn-ack ttl 64
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.43 seconds
+           Raw packets sent: 1001 (44.028KB) | Rcvd: 1001 (40.120KB)
+root@kali:~# nmap -vv -T5 192.168.0.109 -sV -O
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 14:56 IST
+NSE: Loaded 43 scripts for scanning.
+Initiating ARP Ping Scan at 14:56
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 14:56, 0.07s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:56
+Completed Parallel DNS resolution of 1 host. at 14:56, 0.01s elapsed
+Initiating SYN Stealth Scan at 14:56
+Scanning 192.168.0.109 [1000 ports]
+Discovered open port 53/tcp on 192.168.0.109
+Discovered open port 111/tcp on 192.168.0.109
+Discovered open port 21/tcp on 192.168.0.109
+Discovered open port 5900/tcp on 192.168.0.109
+Discovered open port 23/tcp on 192.168.0.109
+Discovered open port 22/tcp on 192.168.0.109
+Discovered open port 25/tcp on 192.168.0.109
+Discovered open port 139/tcp on 192.168.0.109
+Discovered open port 445/tcp on 192.168.0.109
+Discovered open port 3306/tcp on 192.168.0.109
+Discovered open port 80/tcp on 192.168.0.109
+Discovered open port 512/tcp on 192.168.0.109
+Discovered open port 513/tcp on 192.168.0.109
+Discovered open port 1524/tcp on 192.168.0.109
+Discovered open port 1099/tcp on 192.168.0.109
+Discovered open port 8009/tcp on 192.168.0.109
+Discovered open port 6000/tcp on 192.168.0.109
+Discovered open port 514/tcp on 192.168.0.109
+Discovered open port 2049/tcp on 192.168.0.109
+Discovered open port 2121/tcp on 192.168.0.109
+Discovered open port 5432/tcp on 192.168.0.109
+Discovered open port 6667/tcp on 192.168.0.109
+Discovered open port 8180/tcp on 192.168.0.109
+Completed SYN Stealth Scan at 14:56, 0.19s elapsed (1000 total ports)
+Initiating Service scan at 14:56
+Scanning 23 services on 192.168.0.109
+Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 86.96% done; ETC: 14:56 (0:00:02 remaining)
+Completed Service scan at 14:56, 11.06s elapsed (23 services on 1 host)
+Initiating OS detection (try #1) against 192.168.0.109
+NSE: Script scanning 192.168.0.109.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 14:56
+Completed NSE at 14:56, 0.14s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 14:56
+Completed NSE at 14:56, 0.02s elapsed
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.0025s latency).
+Scanned at 2019-07-07 14:56:11 IST for 13s
+Not shown: 977 closed ports
+Reason: 977 resets
+PORT     STATE SERVICE     REASON         VERSION
+21/tcp   open  ftp         syn-ack ttl 64 vsftpd 2.3.4
+22/tcp   open  ssh         syn-ack ttl 64 OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet      syn-ack ttl 64 Linux telnetd
+25/tcp   open  smtp        syn-ack ttl 64 Postfix smtpd
+53/tcp   open  domain      syn-ack ttl 64 ISC BIND 9.4.2
+80/tcp   open  http        syn-ack ttl 64 Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+111/tcp  open  rpcbind     syn-ack ttl 64 2 (RPC #100000)
+139/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+512/tcp  open  exec        syn-ack ttl 64 netkit-rsh rexecd
+513/tcp  open  login?      syn-ack ttl 64
+514/tcp  open  tcpwrapped  syn-ack ttl 64
+1099/tcp open  rmiregistry syn-ack ttl 64 GNU Classpath grmiregistry
+1524/tcp open  bindshell   syn-ack ttl 64 Metasploitable root shell
+2049/tcp open  nfs         syn-ack ttl 64 2-4 (RPC #100003)
+2121/tcp open  ftp         syn-ack ttl 64 ProFTPD 1.3.1
+3306/tcp open  mysql       syn-ack ttl 64 MySQL 5.0.51a-3ubuntu5
+5432/tcp open  postgresql  syn-ack ttl 64 PostgreSQL DB 8.3.0 - 8.3.7
+5900/tcp open  vnc         syn-ack ttl 64 VNC (protocol 3.3)
+6000/tcp open  X11         syn-ack ttl 64 (access denied)
+6667/tcp open  irc         syn-ack ttl 64 UnrealIRCd
+8009/tcp open  ajp13       syn-ack ttl 64 Apache Jserv (Protocol v1.3)
+8180/tcp open  http        syn-ack ttl 64 Apache Tomcat/Coyote JSP engine 1.1
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=7/7%OT=21%CT=1%CU=30526%PV=Y%DS=1%DC=D%G=N%M=6030D4%TM
+OS:=5D21BAC0%P=i686-pc-linux-gnu)SEQ(SP=C8%GCD=1%ISR=CD%TI=Z%CI=Z%II=I%TS=7
+OS:)OPS(O1=M5B4ST11NW5%O2=M5B4ST11NW5%O3=M5B4NNT11NW5%O4=M5B4ST11NW5%O5=M5B
+OS:4ST11NW5%O6=M5B4ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0
+OS:)ECN(R=Y%DF=Y%T=40%W=16D0%O=M5B4NNSNW5%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=16A0%S=O%A=S+%F=AS%O=M5B4ST11NW5
+OS:%RD=0%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=
+OS:0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T
+OS:7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN
+OS:=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.007 days (since Sun Jul  7 14:45:45 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=200 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Hosts:  metasploitable.localdomain, localhost, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 13.26 seconds
+           Raw packets sent: 1020 (45.626KB) | Rcvd: 1016 (41.430KB)
+root@kali:~# namp -vv -A 192.168.1.0.187 -T5
+bash: namp: command not found
+root@kali:~# namp -vv -A 192.168.0.187 -T5
+bash: namp: command not found
+root@kali:~# namp -vv -A 192.168.0.187 -T5
+bash: namp: command not found
+root@kali:~# nmap -vv -A 192.168.0.187 -T5
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 15:03 IST
+NSE: Loaded 148 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:03
+Completed NSE at 15:03, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:03
+Completed NSE at 15:03, 0.00s elapsed
+Initiating ARP Ping Scan at 15:03
+Scanning 192.168.0.187 [1 port]
+Completed ARP Ping Scan at 15:03, 0.08s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:03
+Completed Parallel DNS resolution of 1 host. at 15:03, 0.01s elapsed
+Initiating SYN Stealth Scan at 15:03
+Scanning 192.168.0.187 [1000 ports]
+Discovered open port 445/tcp on 192.168.0.187
+Discovered open port 135/tcp on 192.168.0.187
+Discovered open port 49156/tcp on 192.168.0.187
+Discovered open port 49152/tcp on 192.168.0.187
+Discovered open port 139/tcp on 192.168.0.187
+Discovered open port 2869/tcp on 192.168.0.187
+Discovered open port 5357/tcp on 192.168.0.187
+Discovered open port 49153/tcp on 192.168.0.187
+Discovered open port 49154/tcp on 192.168.0.187
+Discovered open port 49155/tcp on 192.168.0.187
+Discovered open port 49157/tcp on 192.168.0.187
+Completed SYN Stealth Scan at 15:03, 1.35s elapsed (1000 total ports)
+Initiating Service scan at 15:03
+Scanning 11 services on 192.168.0.187
+
+[1]+  Stopped                 nmap -vv -A 192.168.0.187 -T5
+root@kali:~# nmap -vv -A 192.168.0.109 -T5
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 15:04 IST
+NSE: Loaded 148 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+Initiating ARP Ping Scan at 15:04
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 15:04, 0.25s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:04
+Completed Parallel DNS resolution of 1 host. at 15:04, 0.01s elapsed
+Initiating SYN Stealth Scan at 15:04
+Scanning 192.168.0.109 [1000 ports]
+Discovered open port 53/tcp on 192.168.0.109
+Discovered open port 22/tcp on 192.168.0.109
+Discovered open port 23/tcp on 192.168.0.109
+Discovered open port 3306/tcp on 192.168.0.109
+Discovered open port 21/tcp on 192.168.0.109
+Discovered open port 80/tcp on 192.168.0.109
+Discovered open port 111/tcp on 192.168.0.109
+Discovered open port 5900/tcp on 192.168.0.109
+Discovered open port 139/tcp on 192.168.0.109
+Discovered open port 25/tcp on 192.168.0.109
+Discovered open port 445/tcp on 192.168.0.109
+Discovered open port 2049/tcp on 192.168.0.109
+Discovered open port 5432/tcp on 192.168.0.109
+Discovered open port 6667/tcp on 192.168.0.109
+Discovered open port 513/tcp on 192.168.0.109
+Discovered open port 514/tcp on 192.168.0.109
+Discovered open port 8180/tcp on 192.168.0.109
+Discovered open port 8009/tcp on 192.168.0.109
+Discovered open port 6000/tcp on 192.168.0.109
+Discovered open port 2121/tcp on 192.168.0.109
+Discovered open port 512/tcp on 192.168.0.109
+Discovered open port 1099/tcp on 192.168.0.109
+Discovered open port 1524/tcp on 192.168.0.109
+Completed SYN Stealth Scan at 15:04, 0.17s elapsed (1000 total ports)
+Initiating Service scan at 15:04
+Scanning 23 services on 192.168.0.109
+Completed Service scan at 15:04, 11.06s elapsed (23 services on 1 host)
+Initiating OS detection (try #1) against 192.168.0.109
+NSE: Script scanning 192.168.0.109.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:04
+NSE: [ftp-bounce 192.168.0.109:21] PORT response: 500 Illegal PORT command.
+Completed NSE at 15:04, 8.45s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.01s elapsed
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.0032s latency).
+Scanned at 2019-07-07 15:04:18 IST for 22s
+Not shown: 977 closed ports
+Reason: 977 resets
+PORT     STATE SERVICE     REASON         VERSION
+21/tcp   open  ftp         syn-ack ttl 64 vsftpd 2.3.4
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 192.168.0.185
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh         syn-ack ttl 64 OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 60:0f:cf:e1:c0:5f:6a:74:d6:90:24:fa:c4:d5:6c:cd (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBALz4hsc8a2Srq4nlW960qV8xwBG0JC+jI7fWxm5METIJH4tKr/xUTwsTYEYnaZLzcOiy21D3ZvOwYb6AA3765zdgCd2Tgand7F0YD5UtXG7b7fbz99chReivL0SIWEG/E96Ai+pqYMP2WD5KaOJwSIXSUajnU5oWmY5x85sBw+XDAAAAFQDFkMpmdFQTF+oRqaoSNVU7Z+hjSwAAAIBCQxNKzi1TyP+QJIFa3M0oLqCVWI0We/ARtXrzpBOJ/dt0hTJXCeYisKqcdwdtyIn8OUCOyrIjqNuA2QW217oQ6wXpbFh+5AQm8Hl3b6C6o8lX3Ptw+Y4dp0lzfWHwZ/jzHwtuaDQaok7u1f971lEazeJLqfiWrAzoklqSWyDQJAAAAIA1lAD3xWYkeIeHv/R3P9i+XaoI7imFkMuYXCDTq843YU6Td+0mWpllCqAWUV/CQamGgQLtYy5S0ueoks01MoKdOMMhKVwqdr08nvCBdNKjIEd3gH6oBk/YRnjzxlEAYBsvCmM4a0jmhz0oNiRWlc/F+bkUeFKrBx/D2fdfZmhrGg==
+|   2048 56:56:24:0f:21:1d:de:a7:2b:ae:61:b1:24:3d:e8:f3 (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAstqnuFMBOZvO3WTEjP4TUdjgWkIVNdTq6kboEDjteOfc65TlI7sRvQBwqAhQjeeyyIk8T55gMDkOD0akSlSXvLDcmcdYfxeIF0ZSuT+nkRhij7XSSA/Oc5QSk3sJ/SInfb78e3anbRHpmkJcVgETJ5WhKObUNf1AKZW++4Xlc63M4KI5cjvMMIPEVOyR3AKmI78Fo3HJjYucg87JjLeC66I7+dlEYX6zT8i1XYwa/L1vZ3qSJISGVu8kRPikMv/cNSvki4j+qDYyZ2E5497W87+Ed46/8P42LNGoOV8OcX/ro6pAcbEPUdUEfkJrqi2YXbhvwIJ0gFMb6wfe5cnQew==
+23/tcp   open  telnet      syn-ack ttl 64 Linux telnetd
+25/tcp   open  smtp        syn-ack ttl 64 Postfix smtpd
+|_smtp-commands: metasploitable.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| ssl-cert: Subject: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX/emailAddress=root@ubuntu804-base.localdomain/localityName=Everywhere/organizationalUnitName=Office for Complication of Otherwise Simple Affairs
+| Issuer: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX/emailAddress=root@ubuntu804-base.localdomain/localityName=Everywhere/organizationalUnitName=Office for Complication of Otherwise Simple Affairs
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2010-03-17T14:07:45
+| Not valid after:  2010-04-16T14:07:45
+| MD5:   dcd9 ad90 6c8f 2f73 74af 383b 2540 8828
+| SHA-1: ed09 3088 7066 03bf d5dc 2373 99b4 98da 2d4d 31c6
+| -----BEGIN CERTIFICATE-----
+| MIIDWzCCAsQCCQD6+TpMf7a5zDANBgkqhkiG9w0BAQUFADCB8TELMAkGA1UEBhMC
+| WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET
+| MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m
+| ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly
+| czEjMCEGA1UEAxMadWJ1bnR1ODA0LWJhc2UubG9jYWxkb21haW4xLjAsBgkqhkiG
+| 9w0BCQEWH3Jvb3RAdWJ1bnR1ODA0LWJhc2UubG9jYWxkb21haW4wHhcNMTAwMzE3
+| MTQwNzQ1WhcNMTAwNDE2MTQwNzQ1WjCB8TELMAkGA1UEBhMCWFgxKjAoBgNVBAgT
+| IVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzETMBEGA1UEBxMKRXZl
+| cnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09mZmljZSBmb3IgQ29t
+| cGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWlyczEjMCEGA1UEAxMa
+| dWJ1bnR1ODA0LWJhc2UubG9jYWxkb21haW4xLjAsBgkqhkiG9w0BCQEWH3Jvb3RA
+| dWJ1bnR1ODA0LWJhc2UubG9jYWxkb21haW4wgZ8wDQYJKoZIhvcNAQEBBQADgY0A
+| MIGJAoGBANa0EzYzmpVxexvefIN12nGxPKl//q1kG3fpT66+ytT4y++uu0N5JHP/
+| POWeO238yLGs+kxNXptMmVQL16hKULqp3h0f9ORrAqP0a0XNTK+NiWIzj2W7NmGf
+| xCxzwU4uoKgUTphwRmG70bkx34yZ7nVreTxAoK6XAJCd3JkNM6S1AgMBAAEwDQYJ
+| KoZIhvcNAQEFBQADgYEAkqS0uBRVYyVRSgvDKiLPOvgXagzPZqqnZS9Ibc3jPlyf
+| d2zURFQfHoRPjtSN3awtiAkhqNpWLKkFPEloNRl1DNpTI4iIGS10JsEiZe4RaINq
+| U0qcJ8ugtOmNKQyyPBhcZ8xTph4w0Komex6uQLkpAWwuvKIZlHwVbo0wOPbKLnU=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2019-07-07T09:34:33+00:00; 0s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|_    SSL2_RC4_128_EXPORT40_WITH_MD5
+53/tcp   open  domain      syn-ack ttl 64 ISC BIND 9.4.2
+| dns-nsid: 
+|_  bind.version: 9.4.2
+80/tcp   open  http        syn-ack ttl 64 Apache httpd 2.2.8 ((Ubuntu) DAV/2)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.8 (Ubuntu) DAV/2
+|_http-title: Metasploitable2 - Linux
+111/tcp  open  rpcbind     syn-ack ttl 64 2 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100003  2,3,4       2049/tcp  nfs
+|   100003  2,3,4       2049/udp  nfs
+|   100005  1,2,3      44617/tcp  mountd
+|   100005  1,2,3      53650/udp  mountd
+|   100021  1,3,4      38019/udp  nlockmgr
+|   100021  1,3,4      52649/tcp  nlockmgr
+|   100024  1          37054/tcp  status
+|_  100024  1          45722/udp  status
+139/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn syn-ack ttl 64 Samba smbd 3.0.20-Debian (workgroup: WORKGROUP)
+512/tcp  open  exec        syn-ack ttl 64 netkit-rsh rexecd
+513/tcp  open  login       syn-ack ttl 64 OpenBSD or Solaris rlogind
+514/tcp  open  shell       syn-ack ttl 64 Netkit rshd
+1099/tcp open  java-rmi    syn-ack ttl 64 Java RMI Registry
+1524/tcp open  bindshell   syn-ack ttl 64 Metasploitable root shell
+2049/tcp open  nfs         syn-ack ttl 64 2-4 (RPC #100003)
+2121/tcp open  ftp         syn-ack ttl 64 ProFTPD 1.3.1
+3306/tcp open  mysql       syn-ack ttl 64 MySQL 5.0.51a-3ubuntu5
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.0.51a-3ubuntu5
+|   Thread ID: 112
+|   Capabilities flags: 43564
+|   Some Capabilities: Speaks41ProtocolNew, Support41Auth, LongColumnFlag, SwitchToSSLAfterHandshake, ConnectWithDatabase, SupportsTransactions, SupportsCompression
+|   Status: Autocommit
+|_  Salt: Uk8vj1Q'jd5{0x.z=aRT
+5432/tcp open  postgresql  syn-ack ttl 64 PostgreSQL DB 8.3.0 - 8.3.7
+| ssl-cert: Subject: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX/emailAddress=root@ubuntu804-base.localdomain/localityName=Everywhere/organizationalUnitName=Office for Complication of Otherwise Simple Affairs
+| Issuer: commonName=ubuntu804-base.localdomain/organizationName=OCOSA/stateOrProvinceName=There is no such thing outside US/countryName=XX/emailAddress=root@ubuntu804-base.localdomain/localityName=Everywhere/organizationalUnitName=Office for Complication of Otherwise Simple Affairs
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2010-03-17T14:07:45
+| Not valid after:  2010-04-16T14:07:45
+| MD5:   dcd9 ad90 6c8f 2f73 74af 383b 2540 8828
+| SHA-1: ed09 3088 7066 03bf d5dc 2373 99b4 98da 2d4d 31c6
+| -----BEGIN CERTIFICATE-----
+| MIIDWzCCAsQCCQD6+TpMf7a5zDANBgkqhkiG9w0BAQUFADCB8TELMAkGA1UEBhMC
+| WFgxKjAoBgNVBAgTIVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzET
+| MBEGA1UEBxMKRXZlcnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09m
+| ZmljZSBmb3IgQ29tcGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWly
+| czEjMCEGA1UEAxMadWJ1bnR1ODA0LWJhc2UubG9jYWxkb21haW4xLjAsBgkqhkiG
+| 9w0BCQEWH3Jvb3RAdWJ1bnR1ODA0LWJhc2UubG9jYWxkb21haW4wHhcNMTAwMzE3
+| MTQwNzQ1WhcNMTAwNDE2MTQwNzQ1WjCB8TELMAkGA1UEBhMCWFgxKjAoBgNVBAgT
+| IVRoZXJlIGlzIG5vIHN1Y2ggdGhpbmcgb3V0c2lkZSBVUzETMBEGA1UEBxMKRXZl
+| cnl3aGVyZTEOMAwGA1UEChMFT0NPU0ExPDA6BgNVBAsTM09mZmljZSBmb3IgQ29t
+| cGxpY2F0aW9uIG9mIE90aGVyd2lzZSBTaW1wbGUgQWZmYWlyczEjMCEGA1UEAxMa
+| dWJ1bnR1ODA0LWJhc2UubG9jYWxkb21haW4xLjAsBgkqhkiG9w0BCQEWH3Jvb3RA
+| dWJ1bnR1ODA0LWJhc2UubG9jYWxkb21haW4wgZ8wDQYJKoZIhvcNAQEBBQADgY0A
+| MIGJAoGBANa0EzYzmpVxexvefIN12nGxPKl//q1kG3fpT66+ytT4y++uu0N5JHP/
+| POWeO238yLGs+kxNXptMmVQL16hKULqp3h0f9ORrAqP0a0XNTK+NiWIzj2W7NmGf
+| xCxzwU4uoKgUTphwRmG70bkx34yZ7nVreTxAoK6XAJCd3JkNM6S1AgMBAAEwDQYJ
+| KoZIhvcNAQEFBQADgYEAkqS0uBRVYyVRSgvDKiLPOvgXagzPZqqnZS9Ibc3jPlyf
+| d2zURFQfHoRPjtSN3awtiAkhqNpWLKkFPEloNRl1DNpTI4iIGS10JsEiZe4RaINq
+| U0qcJ8ugtOmNKQyyPBhcZ8xTph4w0Komex6uQLkpAWwuvKIZlHwVbo0wOPbKLnU=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2019-07-07T09:34:32+00:00; -1s from scanner time.
+5900/tcp open  vnc         syn-ack ttl 64 VNC (protocol 3.3)
+| vnc-info: 
+|   Protocol version: 3.3
+|   Security types: 
+|_    VNC Authentication (2)
+6000/tcp open  X11         syn-ack ttl 64 (access denied)
+6667/tcp open  irc         syn-ack ttl 64 UnrealIRCd
+8009/tcp open  ajp13       syn-ack ttl 64 Apache Jserv (Protocol v1.3)
+|_ajp-methods: Failed to get a valid response for the OPTION request
+8180/tcp open  http        syn-ack ttl 64 Apache Tomcat/Coyote JSP engine 1.1
+|_http-favicon: Apache Tomcat
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Apache Tomcat/5.5
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=7/7%OT=21%CT=1%CU=42750%PV=Y%DS=1%DC=D%G=N%M=6030D4%TM
+OS:=5D21BCB0%P=i686-pc-linux-gnu)SEQ(SP=CE%GCD=1%ISR=D2%TI=Z%CI=Z%II=I%TS=7
+OS:)OPS(O1=M5B4ST11NW5%O2=M5B4ST11NW5%O3=M5B4NNT11NW5%O4=M5B4ST11NW5%O5=M5B
+OS:4ST11NW5%O6=M5B4ST11)WIN(W1=16A0%W2=16A0%W3=16A0%W4=16A0%W5=16A0%W6=16A0
+OS:)ECN(R=Y%DF=Y%T=40%W=16D0%O=M5B4NNSNW5%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=16A0%S=O%A=S+%F=AS%O=M5B4ST11NW5
+OS:%RD=0%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=
+OS:0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T
+OS:7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN
+OS:=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.013 days (since Sun Jul  7 14:45:45 2019)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=206 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Hosts:  metasploitable.localdomain, localhost, irc.Metasploitable.LAN; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 1h19m59s, deviation: 2h18m34s, median: 0s
+| nbstat: NetBIOS name: METASPLOITABLE, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   METASPLOITABLE<00>   Flags: <unique><active>
+|   METASPLOITABLE<03>   Flags: <unique><active>
+|   METASPLOITABLE<20>   Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 51611/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 30817/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 60948/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 16245/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.20-Debian)
+|   NetBIOS computer name: 
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-07-07T05:34:31-04:00
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   3.23 ms 192.168.0.109
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:04
+Completed NSE at 15:04, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 21.80 seconds
+           Raw packets sent: 1021 (
