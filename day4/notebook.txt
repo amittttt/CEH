@@ -1,4 +1,4 @@
-// Day 4 start :: (Scanning)
+// Day 4 start ::
 
 For this we will find all script:
 
@@ -30,5 +30,26 @@ install FTP in linux:
 sudo apt-get install FTP
 
 
+Read about enumeration of hacking 
+
 ################## Important link : https://bitvijays.github.io/LFC-VulnerableMachines.html#rabbit-holes ########
+
+
+
+################################# Tool : NETCAT (hackers swiss army knife) #####################################
+1. A port read/write utility
+2. can be used for : chats, executing programs remotely
+3. transfering files
+
+
+## Netcat Server : nc -nlvvp 6513(anyport) {-n do not resolve the hostname only take ip address}
+## netcat client : nc ip port(nc 192.168.0.113 6513)
+
+we can access another desktop access with the help of netcat :
+
+
+
+
+
+
 
