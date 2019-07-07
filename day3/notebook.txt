@@ -175,10 +175,17 @@ Command : nmap -vv -T5 192.168.0.187 -sV -O
 
 9. IDLE Scan: it is a very effective and stealthy technique. the idea behind idle scan is to introduce a zombie to scan another host. this technique is stealthy because the victm would receive packet from zombie host, thus not able to figure put ewhere scan originated.
 
+Command 
+hping3 -S -r 192.168.01.87 it's help to check zombie is good 
+nmap -sI 192.168.0.187 192.168.0.109 -vv -T5 -this go for ideal scan
 
 
-##### 
 
+-oA output in different format you will get result.
+
+nmap -vv -sS 192.168.0.109 -oA linux-amit genrate result in the file with three format 
+
+##### Day 3 Finished ###################
 
 
 
