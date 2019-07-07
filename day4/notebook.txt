@@ -29,3 +29,6 @@ root@kali:~# nmap --script /usr/share/nmap/scripts/smb-security-mode.nse --vv -T
 install FTP in linux:
 sudo apt-get install FTP
 
+
+################## Important link : https://bitvijays.github.io/LFC-VulnerableMachines.html#rabbit-holes ########
+
