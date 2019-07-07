@@ -149,9 +149,33 @@ TCP AND UDP BOTH:
 nmap -pT:21,25,30,U:53,2049,3049 192.168.0.174,176 -sU -sT
 
 
-7. Service Version Detection
-8. Aggressive Scan
-9. IDLE Scan 
+7. Service Version Detection & OS Fingerprint:
+    windows7 -> 192.168.0.187
+    Linux -> 192.168.0.109
+    -sV : service Version scan 
+    -O : OS finger printing
+     
+Command : nmap -vv -T5 192.168.0.187 -sV -O
+	  nmap -vv -T5 192.168.0.187 -sV -O
+  
+
+8. Aggressive Scan: it is combination of :
+	-> Syn Stealth Scn 
+	-> Service Scan 
+	-> Os Scan 
+	-> NSE default Scripts
+	-> TCP traceroute
+	
+	Command :nmap -vv -A 192.168.0.187 -T5
+	-A for aggressive scan 
+
+	Smb-os-Discovery(in output window)
+	these are the scripts
+
+
+9. IDLE Scan: it is a very effective and stealthy technique. the idea behind idle scan is to introduce a zombie to scan another host. this technique is stealthy because the victm would receive packet from zombie host, thus not able to figure put ewhere scan originated.
+
+
 
 ##### 
 
