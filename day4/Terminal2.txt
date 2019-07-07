@@ -1,0 +1,1055 @@
+root@kali:~# nmap --script /usr/share/nmap/scripts/smb-vuln-ms08-067.nse -vv -T5 192.168.0.113
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:54 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:54
+Completed NSE at 16:54, 0.00s elapsed
+Initiating ARP Ping Scan at 16:54
+Scanning 192.168.0.113 [1 port]
+Completed ARP Ping Scan at 16:54, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:54
+Completed Parallel DNS resolution of 1 host. at 16:54, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:54
+Scanning 192.168.0.113 [1000 ports]
+Discovered open port 135/tcp on 192.168.0.113
+Discovered open port 445/tcp on 192.168.0.113
+Discovered open port 139/tcp on 192.168.0.113
+Discovered open port 2869/tcp on 192.168.0.113
+Completed SYN Stealth Scan at 16:54, 1.23s elapsed (1000 total ports)
+NSE: Script scanning 192.168.0.113.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:54
+Completed NSE at 16:54, 0.06s elapsed
+Nmap scan report for 192.168.0.113
+Host is up, received arp-response (0.0059s latency).
+Scanned at 2019-07-07 16:54:44 IST for 1s
+Not shown: 996 closed ports
+Reason: 996 resets
+PORT     STATE SERVICE      REASON
+135/tcp  open  msrpc        syn-ack ttl 128
+139/tcp  open  netbios-ssn  syn-ack ttl 128
+445/tcp  open  microsoft-ds syn-ack ttl 128
+2869/tcp open  icslap       syn-ack ttl 128
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Host script results:
+| smb-vuln-ms08-067: 
+|   VULNERABLE:
+|   Microsoft Windows system vulnerable to remote code execution (MS08-067)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2008-4250
+|           The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2,
+|           Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary
+|           code via a crafted RPC request that triggers the overflow during path canonicalization.
+|           
+|     Disclosure date: 2008-10-23
+|     References:
+|       https://technet.microsoft.com/en-us/library/security/ms08-067.aspx
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:54
+Completed NSE at 16:54, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.70 seconds
+           Raw packets sent: 1087 (47.812KB) | Rcvd: 1001 (40.044KB)
+root@kali:~# nmap --script /usr/share/nmap/scripts/smb-vuln-ms17-010.nse -vv -T5 192.168.0.187
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:55 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:55
+Completed NSE at 16:55, 0.00s elapsed
+Initiating ARP Ping Scan at 16:55
+Scanning 192.168.0.187 [1 port]
+Completed ARP Ping Scan at 16:55, 0.15s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:55
+Completed Parallel DNS resolution of 1 host. at 16:55, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:55
+Scanning 192.168.0.187 [1000 ports]
+Discovered open port 139/tcp on 192.168.0.187
+Discovered open port 135/tcp on 192.168.0.187
+Discovered open port 445/tcp on 192.168.0.187
+Discovered open port 49155/tcp on 192.168.0.187
+Discovered open port 49153/tcp on 192.168.0.187
+Discovered open port 49152/tcp on 192.168.0.187
+Discovered open port 49154/tcp on 192.168.0.187
+Discovered open port 49157/tcp on 192.168.0.187
+Discovered open port 49156/tcp on 192.168.0.187
+Discovered open port 5357/tcp on 192.168.0.187
+Completed SYN Stealth Scan at 16:55, 1.27s elapsed (1000 total ports)
+NSE: Script scanning 192.168.0.187.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:55
+Completed NSE at 16:55, 0.03s elapsed
+Nmap scan report for 192.168.0.187
+Host is up, received arp-response (0.0070s latency).
+Scanned at 2019-07-07 16:55:11 IST for 2s
+Not shown: 990 closed ports
+Reason: 990 resets
+PORT      STATE SERVICE      REASON
+135/tcp   open  msrpc        syn-ack ttl 128
+139/tcp   open  netbios-ssn  syn-ack ttl 128
+445/tcp   open  microsoft-ds syn-ack ttl 128
+5357/tcp  open  wsdapi       syn-ack ttl 128
+49152/tcp open  unknown      syn-ack ttl 128
+49153/tcp open  unknown      syn-ack ttl 128
+49154/tcp open  unknown      syn-ack ttl 128
+49155/tcp open  unknown      syn-ack ttl 128
+49156/tcp open  unknown      syn-ack ttl 128
+49157/tcp open  unknown      syn-ack ttl 128
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Host script results:
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:55
+Completed NSE at 16:55, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.80 seconds
+           Raw packets sent: 1088 (47.856KB) | Rcvd: 1001 (40.068KB)
+root@kali:~# locate *.nse 
+/root/nmap-vulners/vulners.nse
+/usr/share/exploitdb/exploits/hardware/webapps/31527.nse
+/usr/share/exploitdb/exploits/multiple/remote/33310.nse
+/usr/share/golismero/wordlist/fingerprint/httprecon/httprecon.nse
+/usr/share/nmap/scripts/acarsd-info.nse
+/usr/share/nmap/scripts/address-info.nse
+/usr/share/nmap/scripts/afp-brute.nse
+/usr/share/nmap/scripts/afp-ls.nse
+/usr/share/nmap/scripts/afp-path-vuln.nse
+/usr/share/nmap/scripts/afp-serverinfo.nse
+/usr/share/nmap/scripts/afp-showmount.nse
+/usr/share/nmap/scripts/ajp-auth.nse
+/usr/share/nmap/scripts/ajp-brute.nse
+/usr/share/nmap/scripts/ajp-headers.nse
+/usr/share/nmap/scripts/ajp-methods.nse
+/usr/share/nmap/scripts/ajp-request.nse
+/usr/share/nmap/scripts/allseeingeye-info.nse
+/usr/share/nmap/scripts/amqp-info.nse
+/usr/share/nmap/scripts/asn-query.nse
+/usr/share/nmap/scripts/auth-owners.nse
+/usr/share/nmap/scripts/auth-spoof.nse
+/usr/share/nmap/scripts/backorifice-brute.nse
+/usr/share/nmap/scripts/backorifice-info.nse
+/usr/share/nmap/scripts/bacnet-info.nse
+/usr/share/nmap/scripts/banner.nse
+/usr/share/nmap/scripts/bitcoin-getaddr.nse
+/usr/share/nmap/scripts/bitcoin-info.nse
+/usr/share/nmap/scripts/bitcoinrpc-info.nse
+/usr/share/nmap/scripts/bittorrent-discovery.nse
+/usr/share/nmap/scripts/bjnp-discover.nse
+/usr/share/nmap/scripts/broadcast-ataoe-discover.nse
+/usr/share/nmap/scripts/broadcast-avahi-dos.nse
+/usr/share/nmap/scripts/broadcast-bjnp-discover.nse
+/usr/share/nmap/scripts/broadcast-db2-discover.nse
+/usr/share/nmap/scripts/broadcast-dhcp-discover.nse
+/usr/share/nmap/scripts/broadcast-dhcp6-discover.nse
+/usr/share/nmap/scripts/broadcast-dns-service-discovery.nse
+/usr/share/nmap/scripts/broadcast-dropbox-listener.nse
+/usr/share/nmap/scripts/broadcast-eigrp-discovery.nse
+/usr/share/nmap/scripts/broadcast-igmp-discovery.nse
+/usr/share/nmap/scripts/broadcast-listener.nse
+/usr/share/nmap/scripts/broadcast-ms-sql-discover.nse
+/usr/share/nmap/scripts/broadcast-netbios-master-browser.nse
+/usr/share/nmap/scripts/broadcast-networker-discover.nse
+/usr/share/nmap/scripts/broadcast-novell-locate.nse
+/usr/share/nmap/scripts/broadcast-ospf2-discover.nse
+/usr/share/nmap/scripts/broadcast-pc-anywhere.nse
+/usr/share/nmap/scripts/broadcast-pc-duo.nse
+/usr/share/nmap/scripts/broadcast-pim-discovery.nse
+/usr/share/nmap/scripts/broadcast-ping.nse
+/usr/share/nmap/scripts/broadcast-pppoe-discover.nse
+/usr/share/nmap/scripts/broadcast-rip-discover.nse
+/usr/share/nmap/scripts/broadcast-ripng-discover.nse
+/usr/share/nmap/scripts/broadcast-sonicwall-discover.nse
+/usr/share/nmap/scripts/broadcast-sybase-asa-discover.nse
+/usr/share/nmap/scripts/broadcast-tellstick-discover.nse
+/usr/share/nmap/scripts/broadcast-upnp-info.nse
+/usr/share/nmap/scripts/broadcast-versant-locate.nse
+/usr/share/nmap/scripts/broadcast-wake-on-lan.nse
+/usr/share/nmap/scripts/broadcast-wpad-discover.nse
+/usr/share/nmap/scripts/broadcast-wsdd-discover.nse
+/usr/share/nmap/scripts/broadcast-xdmcp-discover.nse
+/usr/share/nmap/scripts/cassandra-brute.nse
+/usr/share/nmap/scripts/cassandra-info.nse
+/usr/share/nmap/scripts/cccam-version.nse
+/usr/share/nmap/scripts/cics-enum.nse
+/usr/share/nmap/scripts/cics-info.nse
+/usr/share/nmap/scripts/cics-user-brute.nse
+/usr/share/nmap/scripts/cics-user-enum.nse
+/usr/share/nmap/scripts/citrix-brute-xml.nse
+/usr/share/nmap/scripts/citrix-enum-apps-xml.nse
+/usr/share/nmap/scripts/citrix-enum-apps.nse
+/usr/share/nmap/scripts/citrix-enum-servers-xml.nse
+/usr/share/nmap/scripts/citrix-enum-servers.nse
+/usr/share/nmap/scripts/clamav-exec.nse
+/usr/share/nmap/scripts/clock-skew.nse
+/usr/share/nmap/scripts/coap-resources.nse
+/usr/share/nmap/scripts/couchdb-databases.nse
+/usr/share/nmap/scripts/couchdb-stats.nse
+/usr/share/nmap/scripts/creds-summary.nse
+/usr/share/nmap/scripts/cups-info.nse
+/usr/share/nmap/scripts/cups-queue-info.nse
+/usr/share/nmap/scripts/cvs-brute-repository.nse
+/usr/share/nmap/scripts/cvs-brute.nse
+/usr/share/nmap/scripts/daap-get-library.nse
+/usr/share/nmap/scripts/daytime.nse
+/usr/share/nmap/scripts/db2-das-info.nse
+/usr/share/nmap/scripts/deluge-rpc-brute.nse
+/usr/share/nmap/scripts/dhcp-discover.nse
+/usr/share/nmap/scripts/dict-info.nse
+/usr/share/nmap/scripts/distcc-cve2004-2687.nse
+/usr/share/nmap/scripts/dns-blacklist.nse
+/usr/share/nmap/scripts/dns-brute.nse
+/usr/share/nmap/scripts/dns-cache-snoop.nse
+/usr/share/nmap/scripts/dns-check-zone.nse
+/usr/share/nmap/scripts/dns-client-subnet-scan.nse
+/usr/share/nmap/scripts/dns-fuzz.nse
+/usr/share/nmap/scripts/dns-ip6-arpa-scan.nse
+/usr/share/nmap/scripts/dns-nsec-enum.nse
+/usr/share/nmap/scripts/dns-nsec3-enum.nse
+/usr/share/nmap/scripts/dns-nsid.nse
+/usr/share/nmap/scripts/dns-random-srcport.nse
+/usr/share/nmap/scripts/dns-random-txid.nse
+/usr/share/nmap/scripts/dns-recursion.nse
+/usr/share/nmap/scripts/dns-service-discovery.nse
+/usr/share/nmap/scripts/dns-srv-enum.nse
+/usr/share/nmap/scripts/dns-update.nse
+/usr/share/nmap/scripts/dns-zeustracker.nse
+/usr/share/nmap/scripts/dns-zone-transfer.nse
+/usr/share/nmap/scripts/docker-version.nse
+/usr/share/nmap/scripts/domcon-brute.nse
+/usr/share/nmap/scripts/domcon-cmd.nse
+/usr/share/nmap/scripts/domino-enum-users.nse
+/usr/share/nmap/scripts/dpap-brute.nse
+/usr/share/nmap/scripts/drda-brute.nse
+/usr/share/nmap/scripts/drda-info.nse
+/usr/share/nmap/scripts/duplicates.nse
+/usr/share/nmap/scripts/eap-info.nse
+/usr/share/nmap/scripts/enip-info.nse
+/usr/share/nmap/scripts/epmd-info.nse
+/usr/share/nmap/scripts/eppc-enum-processes.nse
+/usr/share/nmap/scripts/fcrdns.nse
+/usr/share/nmap/scripts/finger.nse
+/usr/share/nmap/scripts/fingerprint-strings.nse
+/usr/share/nmap/scripts/firewalk.nse
+/usr/share/nmap/scripts/firewall-bypass.nse
+/usr/share/nmap/scripts/flume-master-info.nse
+/usr/share/nmap/scripts/fox-info.nse
+/usr/share/nmap/scripts/freelancer-info.nse
+/usr/share/nmap/scripts/ftp-anon.nse
+/usr/share/nmap/scripts/ftp-bounce.nse
+/usr/share/nmap/scripts/ftp-brute.nse
+/usr/share/nmap/scripts/ftp-libopie.nse
+/usr/share/nmap/scripts/ftp-proftpd-backdoor.nse
+/usr/share/nmap/scripts/ftp-syst.nse
+/usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
+/usr/share/nmap/scripts/ftp-vuln-cve2010-4221.nse
+/usr/share/nmap/scripts/ganglia-info.nse
+/usr/share/nmap/scripts/giop-info.nse
+/usr/share/nmap/scripts/gkrellm-info.nse
+/usr/share/nmap/scripts/gopher-ls.nse
+/usr/share/nmap/scripts/gpsd-info.nse
+/usr/share/nmap/scripts/hadoop-datanode-info.nse
+/usr/share/nmap/scripts/hadoop-jobtracker-info.nse
+/usr/share/nmap/scripts/hadoop-namenode-info.nse
+/usr/share/nmap/scripts/hadoop-secondary-namenode-info.nse
+/usr/share/nmap/scripts/hadoop-tasktracker-info.nse
+/usr/share/nmap/scripts/hbase-master-info.nse
+/usr/share/nmap/scripts/hbase-region-info.nse
+/usr/share/nmap/scripts/hddtemp-info.nse
+/usr/share/nmap/scripts/hnap-info.nse
+/usr/share/nmap/scripts/hostmap-bfk.nse
+/usr/share/nmap/scripts/hostmap-crtsh.nse
+/usr/share/nmap/scripts/hostmap-ip2hosts.nse
+/usr/share/nmap/scripts/hostmap-robtex.nse
+/usr/share/nmap/scripts/http-adobe-coldfusion-apsa1301.nse
+/usr/share/nmap/scripts/http-affiliate-id.nse
+/usr/share/nmap/scripts/http-apache-negotiation.nse
+/usr/share/nmap/scripts/http-apache-server-status.nse
+/usr/share/nmap/scripts/http-aspnet-debug.nse
+/usr/share/nmap/scripts/http-auth-finder.nse
+/usr/share/nmap/scripts/http-auth.nse
+/usr/share/nmap/scripts/http-avaya-ipoffice-users.nse
+/usr/share/nmap/scripts/http-awstatstotals-exec.nse
+/usr/share/nmap/scripts/http-axis2-dir-traversal.nse
+/usr/share/nmap/scripts/http-backup-finder.nse
+/usr/share/nmap/scripts/http-barracuda-dir-traversal.nse
+/usr/share/nmap/scripts/http-bigip-cookie.nse
+/usr/share/nmap/scripts/http-brute.nse
+/usr/share/nmap/scripts/http-cakephp-version.nse
+/usr/share/nmap/scripts/http-chrono.nse
+/usr/share/nmap/scripts/http-cisco-anyconnect.nse
+/usr/share/nmap/scripts/http-coldfusion-subzero.nse
+/usr/share/nmap/scripts/http-comments-displayer.nse
+/usr/share/nmap/scripts/http-config-backup.nse
+/usr/share/nmap/scripts/http-cookie-flags.nse
+/usr/share/nmap/scripts/http-cors.nse
+/usr/share/nmap/scripts/http-cross-domain-policy.nse
+/usr/share/nmap/scripts/http-csrf.nse
+/usr/share/nmap/scripts/http-date.nse
+/usr/share/nmap/scripts/http-default-accounts.nse
+/usr/share/nmap/scripts/http-devframework.nse
+/usr/share/nmap/scripts/http-dlink-backdoor.nse
+/usr/share/nmap/scripts/http-dombased-xss.nse
+/usr/share/nmap/scripts/http-domino-enum-passwords.nse
+/usr/share/nmap/scripts/http-drupal-enum-users.nse
+/usr/share/nmap/scripts/http-drupal-enum.nse
+/usr/share/nmap/scripts/http-enum.nse
+/usr/share/nmap/scripts/http-errors.nse
+/usr/share/nmap/scripts/http-exif-spider.nse
+/usr/share/nmap/scripts/http-favicon.nse
+/usr/share/nmap/scripts/http-feed.nse
+/usr/share/nmap/scripts/http-fetch.nse
+/usr/share/nmap/scripts/http-fileupload-exploiter.nse
+/usr/share/nmap/scripts/http-form-brute.nse
+/usr/share/nmap/scripts/http-form-fuzzer.nse
+/usr/share/nmap/scripts/http-frontpage-login.nse
+/usr/share/nmap/scripts/http-generator.nse
+/usr/share/nmap/scripts/http-git.nse
+/usr/share/nmap/scripts/http-gitweb-projects-enum.nse
+/usr/share/nmap/scripts/http-google-malware.nse
+/usr/share/nmap/scripts/http-grep.nse
+/usr/share/nmap/scripts/http-headers.nse
+/usr/share/nmap/scripts/http-huawei-hg5xx-vuln.nse
+/usr/share/nmap/scripts/http-icloud-findmyiphone.nse
+/usr/share/nmap/scripts/http-icloud-sendmsg.nse
+/usr/share/nmap/scripts/http-iis-short-name-brute.nse
+/usr/share/nmap/scripts/http-iis-webdav-vuln.nse
+/usr/share/nmap/scripts/http-internal-ip-disclosure.nse
+/usr/share/nmap/scripts/http-joomla-brute.nse
+/usr/share/nmap/scripts/http-jsonp-detection.nse
+/usr/share/nmap/scripts/http-litespeed-sourcecode-download.nse
+/usr/share/nmap/scripts/http-ls.nse
+/usr/share/nmap/scripts/http-majordomo2-dir-traversal.nse
+/usr/share/nmap/scripts/http-malware-host.nse
+/usr/share/nmap/scripts/http-mcmp.nse
+/usr/share/nmap/scripts/http-method-tamper.nse
+/usr/share/nmap/scripts/http-methods.nse
+/usr/share/nmap/scripts/http-mobileversion-checker.nse
+/usr/share/nmap/scripts/http-ntlm-info.nse
+/usr/share/nmap/scripts/http-open-proxy.nse
+/usr/share/nmap/scripts/http-open-redirect.nse
+/usr/share/nmap/scripts/http-passwd.nse
+/usr/share/nmap/scripts/http-php-version.nse
+/usr/share/nmap/scripts/http-phpmyadmin-dir-traversal.nse
+/usr/share/nmap/scripts/http-phpself-xss.nse
+/usr/share/nmap/scripts/http-proxy-brute.nse
+/usr/share/nmap/scripts/http-put.nse
+/usr/share/nmap/scripts/http-qnap-nas-info.nse
+/usr/share/nmap/scripts/http-referer-checker.nse
+/usr/share/nmap/scripts/http-rfi-spider.nse
+/usr/share/nmap/scripts/http-robots.txt.nse
+/usr/share/nmap/scripts/http-robtex-reverse-ip.nse
+/usr/share/nmap/scripts/http-robtex-shared-ns.nse
+/usr/share/nmap/scripts/http-security-headers.nse
+/usr/share/nmap/scripts/http-server-header.nse
+/usr/share/nmap/scripts/http-shellshock.nse
+/usr/share/nmap/scripts/http-sitemap-generator.nse
+/usr/share/nmap/scripts/http-slowloris-check.nse
+/usr/share/nmap/scripts/http-slowloris.nse
+/usr/share/nmap/scripts/http-sql-injection.nse
+/usr/share/nmap/scripts/http-stored-xss.nse
+/usr/share/nmap/scripts/http-svn-enum.nse
+/usr/share/nmap/scripts/http-svn-info.nse
+/usr/share/nmap/scripts/http-title.nse
+/usr/share/nmap/scripts/http-tplink-dir-traversal.nse
+/usr/share/nmap/scripts/http-trace.nse
+/usr/share/nmap/scripts/http-traceroute.nse
+/usr/share/nmap/scripts/http-trane-info.nse
+/usr/share/nmap/scripts/http-unsafe-output-escaping.nse
+/usr/share/nmap/scripts/http-useragent-tester.nse
+/usr/share/nmap/scripts/http-userdir-enum.nse
+/usr/share/nmap/scripts/http-vhosts.nse
+/usr/share/nmap/scripts/http-virustotal.nse
+/usr/share/nmap/scripts/http-vlcstreamer-ls.nse
+/usr/share/nmap/scripts/http-vmware-path-vuln.nse
+/usr/share/nmap/scripts/http-vuln-cve2006-3392.nse
+/usr/share/nmap/scripts/http-vuln-cve2009-3960.nse
+/usr/share/nmap/scripts/http-vuln-cve2010-0738.nse
+/usr/share/nmap/scripts/http-vuln-cve2010-2861.nse
+/usr/share/nmap/scripts/http-vuln-cve2011-3192.nse
+/usr/share/nmap/scripts/http-vuln-cve2011-3368.nse
+/usr/share/nmap/scripts/http-vuln-cve2012-1823.nse
+/usr/share/nmap/scripts/http-vuln-cve2013-0156.nse
+/usr/share/nmap/scripts/http-vuln-cve2013-6786.nse
+/usr/share/nmap/scripts/http-vuln-cve2013-7091.nse
+/usr/share/nmap/scripts/http-vuln-cve2014-2126.nse
+/usr/share/nmap/scripts/http-vuln-cve2014-2127.nse
+/usr/share/nmap/scripts/http-vuln-cve2014-2128.nse
+/usr/share/nmap/scripts/http-vuln-cve2014-2129.nse
+/usr/share/nmap/scripts/http-vuln-cve2014-3704.nse
+/usr/share/nmap/scripts/http-vuln-cve2014-8877.nse
+/usr/share/nmap/scripts/http-vuln-cve2015-1427.nse
+/usr/share/nmap/scripts/http-vuln-cve2015-1635.nse
+/usr/share/nmap/scripts/http-vuln-cve2017-1001000.nse
+/usr/share/nmap/scripts/http-vuln-cve2017-5638.nse
+/usr/share/nmap/scripts/http-vuln-cve2017-5689.nse
+/usr/share/nmap/scripts/http-vuln-cve2017-8917.nse
+/usr/share/nmap/scripts/http-vuln-misfortune-cookie.nse
+/usr/share/nmap/scripts/http-vuln-wnr1000-creds.nse
+/usr/share/nmap/scripts/http-waf-detect.nse
+/usr/share/nmap/scripts/http-waf-fingerprint.nse
+/usr/share/nmap/scripts/http-webdav-scan.nse
+/usr/share/nmap/scripts/http-wordpress-brute.nse
+/usr/share/nmap/scripts/http-wordpress-enum.nse
+/usr/share/nmap/scripts/http-wordpress-users.nse
+/usr/share/nmap/scripts/http-xssed.nse
+/usr/share/nmap/scripts/iax2-brute.nse
+/usr/share/nmap/scripts/iax2-version.nse
+/usr/share/nmap/scripts/icap-info.nse
+/usr/share/nmap/scripts/iec-identify.nse
+/usr/share/nmap/scripts/ike-version.nse
+/usr/share/nmap/scripts/imap-brute.nse
+/usr/share/nmap/scripts/imap-capabilities.nse
+/usr/share/nmap/scripts/imap-ntlm-info.nse
+/usr/share/nmap/scripts/impress-remote-discover.nse
+/usr/share/nmap/scripts/informix-brute.nse
+/usr/share/nmap/scripts/informix-query.nse
+/usr/share/nmap/scripts/informix-tables.nse
+/usr/share/nmap/scripts/ip-forwarding.nse
+/usr/share/nmap/scripts/ip-geolocation-geoplugin.nse
+/usr/share/nmap/scripts/ip-geolocation-ipinfodb.nse
+/usr/share/nmap/scripts/ip-geolocation-map-bing.nse
+/usr/share/nmap/scripts/ip-geolocation-map-google.nse
+/usr/share/nmap/scripts/ip-geolocation-map-kml.nse
+/usr/share/nmap/scripts/ip-geolocation-maxmind.nse
+/usr/share/nmap/scripts/ip-https-discover.nse
+/usr/share/nmap/scripts/ipidseq.nse
+/usr/share/nmap/scripts/ipmi-brute.nse
+/usr/share/nmap/scripts/ipmi-cipher-zero.nse
+/usr/share/nmap/scripts/ipmi-version.nse
+/usr/share/nmap/scripts/ipv6-multicast-mld-list.nse
+/usr/share/nmap/scripts/ipv6-node-info.nse
+/usr/share/nmap/scripts/ipv6-ra-flood.nse
+/usr/share/nmap/scripts/irc-botnet-channels.nse
+/usr/share/nmap/scripts/irc-brute.nse
+/usr/share/nmap/scripts/irc-info.nse
+/usr/share/nmap/scripts/irc-sasl-brute.nse
+/usr/share/nmap/scripts/irc-unrealircd-backdoor.nse
+/usr/share/nmap/scripts/iscsi-brute.nse
+/usr/share/nmap/scripts/iscsi-info.nse
+/usr/share/nmap/scripts/isns-info.nse
+/usr/share/nmap/scripts/jdwp-exec.nse
+/usr/share/nmap/scripts/jdwp-info.nse
+/usr/share/nmap/scripts/jdwp-inject.nse
+/usr/share/nmap/scripts/jdwp-version.nse
+/usr/share/nmap/scripts/knx-gateway-discover.nse
+/usr/share/nmap/scripts/knx-gateway-info.nse
+/usr/share/nmap/scripts/krb5-enum-users.nse
+/usr/share/nmap/scripts/ldap-brute.nse
+/usr/share/nmap/scripts/ldap-novell-getpass.nse
+/usr/share/nmap/scripts/ldap-rootdse.nse
+/usr/share/nmap/scripts/ldap-search.nse
+/usr/share/nmap/scripts/lexmark-config.nse
+/usr/share/nmap/scripts/llmnr-resolve.nse
+/usr/share/nmap/scripts/lltd-discovery.nse
+/usr/share/nmap/scripts/maxdb-info.nse
+/usr/share/nmap/scripts/mcafee-epo-agent.nse
+/usr/share/nmap/scripts/membase-brute.nse
+/usr/share/nmap/scripts/membase-http-info.nse
+/usr/share/nmap/scripts/memcached-info.nse
+/usr/share/nmap/scripts/metasploit-info.nse
+/usr/share/nmap/scripts/metasploit-msgrpc-brute.nse
+/usr/share/nmap/scripts/metasploit-xmlrpc-brute.nse
+/usr/share/nmap/scripts/mikrotik-routeros-brute.nse
+/usr/share/nmap/scripts/mmouse-brute.nse
+/usr/share/nmap/scripts/mmouse-exec.nse
+/usr/share/nmap/scripts/modbus-discover.nse
+/usr/share/nmap/scripts/mongodb-brute.nse
+/usr/share/nmap/scripts/mongodb-databases.nse
+/usr/share/nmap/scripts/mongodb-info.nse
+/usr/share/nmap/scripts/mqtt-subscribe.nse
+/usr/share/nmap/scripts/mrinfo.nse
+/usr/share/nmap/scripts/ms-sql-brute.nse
+/usr/share/nmap/scripts/ms-sql-config.nse
+/usr/share/nmap/scripts/ms-sql-dac.nse
+/usr/share/nmap/scripts/ms-sql-dump-hashes.nse
+/usr/share/nmap/scripts/ms-sql-empty-password.nse
+/usr/share/nmap/scripts/ms-sql-hasdbaccess.nse
+/usr/share/nmap/scripts/ms-sql-info.nse
+/usr/share/nmap/scripts/ms-sql-ntlm-info.nse
+/usr/share/nmap/scripts/ms-sql-query.nse
+/usr/share/nmap/scripts/ms-sql-tables.nse
+/usr/share/nmap/scripts/ms-sql-xp-cmdshell.nse
+/usr/share/nmap/scripts/msrpc-enum.nse
+/usr/share/nmap/scripts/mtrace.nse
+/usr/share/nmap/scripts/murmur-version.nse
+/usr/share/nmap/scripts/mysql-audit.nse
+/usr/share/nmap/scripts/mysql-brute.nse
+/usr/share/nmap/scripts/mysql-databases.nse
+/usr/share/nmap/scripts/mysql-dump-hashes.nse
+/usr/share/nmap/scripts/mysql-empty-password.nse
+/usr/share/nmap/scripts/mysql-enum.nse
+/usr/share/nmap/scripts/mysql-info.nse
+/usr/share/nmap/scripts/mysql-query.nse
+/usr/share/nmap/scripts/mysql-users.nse
+/usr/share/nmap/scripts/mysql-variables.nse
+/usr/share/nmap/scripts/mysql-vuln-cve2012-2122.nse
+/usr/share/nmap/scripts/nat-pmp-info.nse
+/usr/share/nmap/scripts/nat-pmp-mapport.nse
+/usr/share/nmap/scripts/nbd-info.nse
+/usr/share/nmap/scripts/nbstat.nse
+/usr/share/nmap/scripts/ncp-enum-users.nse
+/usr/share/nmap/scripts/ncp-serverinfo.nse
+/usr/share/nmap/scripts/ndmp-fs-info.nse
+/usr/share/nmap/scripts/ndmp-version.nse
+/usr/share/nmap/scripts/nessus-brute.nse
+/usr/share/nmap/scripts/nessus-xmlrpc-brute.nse
+/usr/share/nmap/scripts/netbus-auth-bypass.nse
+/usr/share/nmap/scripts/netbus-brute.nse
+/usr/share/nmap/scripts/netbus-info.nse
+/usr/share/nmap/scripts/netbus-version.nse
+/usr/share/nmap/scripts/nexpose-brute.nse
+/usr/share/nmap/scripts/nfs-ls.nse
+/usr/share/nmap/scripts/nfs-showmount.nse
+/usr/share/nmap/scripts/nfs-statfs.nse
+/usr/share/nmap/scripts/nje-node-brute.nse
+/usr/share/nmap/scripts/nje-pass-brute.nse
+/usr/share/nmap/scripts/nntp-ntlm-info.nse
+/usr/share/nmap/scripts/nping-brute.nse
+/usr/share/nmap/scripts/nrpe-enum.nse
+/usr/share/nmap/scripts/ntp-info.nse
+/usr/share/nmap/scripts/ntp-monlist.nse
+/usr/share/nmap/scripts/omp2-brute.nse
+/usr/share/nmap/scripts/omp2-enum-targets.nse
+/usr/share/nmap/scripts/omron-info.nse
+/usr/share/nmap/scripts/openlookup-info.nse
+/usr/share/nmap/scripts/openvas-otp-brute.nse
+/usr/share/nmap/scripts/openwebnet-discovery.nse
+/usr/share/nmap/scripts/oracle-brute-stealth.nse
+/usr/share/nmap/scripts/oracle-brute.nse
+/usr/share/nmap/scripts/oracle-enum-users.nse
+/usr/share/nmap/scripts/oracle-sid-brute.nse
+/usr/share/nmap/scripts/oracle-tns-version.nse
+/usr/share/nmap/scripts/ovs-agent-version.nse
+/usr/share/nmap/scripts/p2p-conficker.nse
+/usr/share/nmap/scripts/path-mtu.nse
+/usr/share/nmap/scripts/pcanywhere-brute.nse
+/usr/share/nmap/scripts/pcworx-info.nse
+/usr/share/nmap/scripts/pgsql-brute.nse
+/usr/share/nmap/scripts/pjl-ready-message.nse
+/usr/share/nmap/scripts/pop3-brute.nse
+/usr/share/nmap/scripts/pop3-capabilities.nse
+/usr/share/nmap/scripts/pop3-ntlm-info.nse
+/usr/share/nmap/scripts/pptp-version.nse
+/usr/share/nmap/scripts/puppet-naivesigning.nse
+/usr/share/nmap/scripts/qconn-exec.nse
+/usr/share/nmap/scripts/qscan.nse
+/usr/share/nmap/scripts/quake1-info.nse
+/usr/share/nmap/scripts/quake3-info.nse
+/usr/share/nmap/scripts/quake3-master-getservers.nse
+/usr/share/nmap/scripts/rdp-enum-encryption.nse
+/usr/share/nmap/scripts/rdp-vuln-ms12-020.nse
+/usr/share/nmap/scripts/realvnc-auth-bypass.nse
+/usr/share/nmap/scripts/redis-brute.nse
+/usr/share/nmap/scripts/redis-info.nse
+/usr/share/nmap/scripts/resolveall.nse
+/usr/share/nmap/scripts/reverse-index.nse
+/usr/share/nmap/scripts/rexec-brute.nse
+/usr/share/nmap/scripts/rfc868-time.nse
+/usr/share/nmap/scripts/riak-http-info.nse
+/usr/share/nmap/scripts/rlogin-brute.nse
+/usr/share/nmap/scripts/rmi-dumpregistry.nse
+/usr/share/nmap/scripts/rmi-vuln-classloader.nse
+/usr/share/nmap/scripts/rpc-grind.nse
+/usr/share/nmap/scripts/rpcap-brute.nse
+/usr/share/nmap/scripts/rpcap-info.nse
+/usr/share/nmap/scripts/rpcinfo.nse
+/usr/share/nmap/scripts/rsa-vuln-roca.nse
+/usr/share/nmap/scripts/rsync-brute.nse
+/usr/share/nmap/scripts/rsync-list-modules.nse
+/usr/share/nmap/scripts/rtsp-methods.nse
+/usr/share/nmap/scripts/rtsp-url-brute.nse
+/usr/share/nmap/scripts/rusers.nse
+/usr/share/nmap/scripts/s7-info.nse
+/usr/share/nmap/scripts/samba-vuln-cve-2012-1182.nse
+/usr/share/nmap/scripts/servicetags.nse
+/usr/share/nmap/scripts/shodan-api.nse
+/usr/share/nmap/scripts/sip-brute.nse
+/usr/share/nmap/scripts/sip-call-spoof.nse
+/usr/share/nmap/scripts/sip-enum-users.nse
+/usr/share/nmap/scripts/sip-methods.nse
+/usr/share/nmap/scripts/skypev2-version.nse
+/usr/share/nmap/scripts/smb-brute.nse
+/usr/share/nmap/scripts/smb-double-pulsar-backdoor.nse
+/usr/share/nmap/scripts/smb-enum-domains.nse
+/usr/share/nmap/scripts/smb-enum-groups.nse
+/usr/share/nmap/scripts/smb-enum-processes.nse
+/usr/share/nmap/scripts/smb-enum-services.nse
+/usr/share/nmap/scripts/smb-enum-sessions.nse
+/usr/share/nmap/scripts/smb-enum-shares.nse
+/usr/share/nmap/scripts/smb-enum-users.nse
+/usr/share/nmap/scripts/smb-flood.nse
+/usr/share/nmap/scripts/smb-ls.nse
+/usr/share/nmap/scripts/smb-mbenum.nse
+/usr/share/nmap/scripts/smb-os-discovery.nse
+/usr/share/nmap/scripts/smb-print-text.nse
+/usr/share/nmap/scripts/smb-protocols.nse
+/usr/share/nmap/scripts/smb-psexec.nse
+/usr/share/nmap/scripts/smb-security-mode.nse
+/usr/share/nmap/scripts/smb-server-stats.nse
+/usr/share/nmap/scripts/smb-system-info.nse
+/usr/share/nmap/scripts/smb-vuln-conficker.nse
+/usr/share/nmap/scripts/smb-vuln-cve-2017-7494.nse
+/usr/share/nmap/scripts/smb-vuln-cve2009-3103.nse
+/usr/share/nmap/scripts/smb-vuln-ms06-025.nse
+/usr/share/nmap/scripts/smb-vuln-ms07-029.nse
+/usr/share/nmap/scripts/smb-vuln-ms08-067.nse
+/usr/share/nmap/scripts/smb-vuln-ms10-054.nse
+/usr/share/nmap/scripts/smb-vuln-ms10-061.nse
+/usr/share/nmap/scripts/smb-vuln-ms17-010.nse
+/usr/share/nmap/scripts/smb-vuln-regsvc-dos.nse
+/usr/share/nmap/scripts/smb2-capabilities.nse
+/usr/share/nmap/scripts/smb2-security-mode.nse
+/usr/share/nmap/scripts/smb2-time.nse
+/usr/share/nmap/scripts/smb2-vuln-uptime.nse
+/usr/share/nmap/scripts/smtp-brute.nse
+/usr/share/nmap/scripts/smtp-commands.nse
+/usr/share/nmap/scripts/smtp-enum-users.nse
+/usr/share/nmap/scripts/smtp-ntlm-info.nse
+/usr/share/nmap/scripts/smtp-open-relay.nse
+/usr/share/nmap/scripts/smtp-strangeport.nse
+/usr/share/nmap/scripts/smtp-vuln-cve2010-4344.nse
+/usr/share/nmap/scripts/smtp-vuln-cve2011-1720.nse
+/usr/share/nmap/scripts/smtp-vuln-cve2011-1764.nse
+/usr/share/nmap/scripts/sniffer-detect.nse
+/usr/share/nmap/scripts/snmp-brute.nse
+/usr/share/nmap/scripts/snmp-hh3c-logins.nse
+/usr/share/nmap/scripts/snmp-info.nse
+/usr/share/nmap/scripts/snmp-interfaces.nse
+/usr/share/nmap/scripts/snmp-ios-config.nse
+/usr/share/nmap/scripts/snmp-netstat.nse
+/usr/share/nmap/scripts/snmp-processes.nse
+/usr/share/nmap/scripts/snmp-sysdescr.nse
+/usr/share/nmap/scripts/snmp-win32-services.nse
+/usr/share/nmap/scripts/snmp-win32-shares.nse
+/usr/share/nmap/scripts/snmp-win32-software.nse
+/usr/share/nmap/scripts/snmp-win32-users.nse
+/usr/share/nmap/scripts/socks-auth-info.nse
+/usr/share/nmap/scripts/socks-brute.nse
+/usr/share/nmap/scripts/socks-open-proxy.nse
+/usr/share/nmap/scripts/ssh-auth-methods.nse
+/usr/share/nmap/scripts/ssh-brute.nse
+/usr/share/nmap/scripts/ssh-hostkey.nse
+/usr/share/nmap/scripts/ssh-publickey-acceptance.nse
+/usr/share/nmap/scripts/ssh-run.nse
+/usr/share/nmap/scripts/ssh2-enum-algos.nse
+/usr/share/nmap/scripts/sshv1.nse
+/usr/share/nmap/scripts/ssl-ccs-injection.nse
+/usr/share/nmap/scripts/ssl-cert-intaddr.nse
+/usr/share/nmap/scripts/ssl-cert.nse
+/usr/share/nmap/scripts/ssl-date.nse
+/usr/share/nmap/scripts/ssl-dh-params.nse
+/usr/share/nmap/scripts/ssl-enum-ciphers.nse
+/usr/share/nmap/scripts/ssl-heartbleed.nse
+/usr/share/nmap/scripts/ssl-known-key.nse
+/usr/share/nmap/scripts/ssl-poodle.nse
+/usr/share/nmap/scripts/sslv2-drown.nse
+/usr/share/nmap/scripts/sslv2.nse
+/usr/share/nmap/scripts/sstp-discover.nse
+/usr/share/nmap/scripts/stun-info.nse
+/usr/share/nmap/scripts/stun-version.nse
+/usr/share/nmap/scripts/stuxnet-detect.nse
+/usr/share/nmap/scripts/supermicro-ipmi-conf.nse
+/usr/share/nmap/scripts/svn-brute.nse
+/usr/share/nmap/scripts/targets-asn.nse
+/usr/share/nmap/scripts/targets-ipv6-map4to6.nse
+/usr/share/nmap/scripts/targets-ipv6-multicast-echo.nse
+/usr/share/nmap/scripts/targets-ipv6-multicast-invalid-dst.nse
+/usr/share/nmap/scripts/targets-ipv6-multicast-mld.nse
+/usr/share/nmap/scripts/targets-ipv6-multicast-slaac.nse
+/usr/share/nmap/scripts/targets-ipv6-wordlist.nse
+/usr/share/nmap/scripts/targets-sniffer.nse
+/usr/share/nmap/scripts/targets-traceroute.nse
+/usr/share/nmap/scripts/targets-xml.nse
+/usr/share/nmap/scripts/teamspeak2-version.nse
+/usr/share/nmap/scripts/telnet-brute.nse
+/usr/share/nmap/scripts/telnet-encryption.nse
+/usr/share/nmap/scripts/telnet-ntlm-info.nse
+/usr/share/nmap/scripts/tftp-enum.nse
+/usr/share/nmap/scripts/tls-alpn.nse
+/usr/share/nmap/scripts/tls-nextprotoneg.nse
+/usr/share/nmap/scripts/tls-ticketbleed.nse
+/usr/share/nmap/scripts/tn3270-screen.nse
+/usr/share/nmap/scripts/tor-consensus-checker.nse
+/usr/share/nmap/scripts/traceroute-geolocation.nse
+/usr/share/nmap/scripts/tso-brute.nse
+/usr/share/nmap/scripts/tso-enum.nse
+/usr/share/nmap/scripts/unittest.nse
+/usr/share/nmap/scripts/unusual-port.nse
+/usr/share/nmap/scripts/upnp-info.nse
+/usr/share/nmap/scripts/url-snarf.nse
+/usr/share/nmap/scripts/ventrilo-info.nse
+/usr/share/nmap/scripts/versant-info.nse
+/usr/share/nmap/scripts/vmauthd-brute.nse
+/usr/share/nmap/scripts/vmware-version.nse
+/usr/share/nmap/scripts/vnc-brute.nse
+/usr/share/nmap/scripts/vnc-info.nse
+/usr/share/nmap/scripts/vnc-title.nse
+/usr/share/nmap/scripts/voldemort-info.nse
+/usr/share/nmap/scripts/vtam-enum.nse
+/usr/share/nmap/scripts/vuze-dht-info.nse
+/usr/share/nmap/scripts/wdb-version.nse
+/usr/share/nmap/scripts/weblogic-t3-info.nse
+/usr/share/nmap/scripts/whois-domain.nse
+/usr/share/nmap/scripts/whois-ip.nse
+/usr/share/nmap/scripts/wsdd-discover.nse
+/usr/share/nmap/scripts/x11-access.nse
+/usr/share/nmap/scripts/xdmcp-discover.nse
+/usr/share/nmap/scripts/xmlrpc-methods.nse
+/usr/share/nmap/scripts/xmpp-brute.nse
+/usr/share/nmap/scripts/xmpp-info.nse
+root@kali:~# locate *.nse | grep ftp
+/usr/share/nmap/scripts/ftp-anon.nse
+/usr/share/nmap/scripts/ftp-bounce.nse
+/usr/share/nmap/scripts/ftp-brute.nse
+/usr/share/nmap/scripts/ftp-libopie.nse
+/usr/share/nmap/scripts/ftp-proftpd-backdoor.nse
+/usr/share/nmap/scripts/ftp-syst.nse
+/usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
+/usr/share/nmap/scripts/ftp-vuln-cve2010-4221.nse
+/usr/share/nmap/scripts/tftp-enum.nse
+root@kali:~# nmap --script-help /usr/share/nmap/scripts/ftp-anon.nse
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:57 IST
+
+ftp-anon
+Categories: default auth safe
+https://nmap.org/nsedoc/scripts/ftp-anon.html
+  Checks if an FTP server allows anonymous logins.
+
+  If anonymous is allowed, gets a directory listing of the root directory
+  and highlights writeable files.
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-anon.nse dell.com
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:58 IST
+
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-anon.nse dell.com -p21 -vv -T5 192.168.0.109
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:59 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:59
+Completed NSE at 16:59, 0.00s elapsed
+Warning: Hostname dell.com resolves to 2 IPs. Using 143.166.147.101.
+Initiating Ping Scan at 16:59
+Scanning dell.com (143.166.147.101) [4 ports]
+Completed Ping Scan at 16:59, 1.54s elapsed (1 total hosts)
+Nmap scan report for dell.com (143.166.147.101) [host down, received no-response]
+Other addresses for dell.com (not scanned): 143.166.135.105
+Initiating ARP Ping Scan at 16:59
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 16:59, 0.09s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:59
+Completed Parallel DNS resolution of 1 host. at 16:59, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:59
+Scanning 192.168.0.109 [1 port]
+Discovered open port 21/tcp on 192.168.0.109
+Completed SYN Stealth Scan at 16:59, 0.06s elapsed (1 total ports)
+NSE: Script scanning 192.168.0.109.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:59
+Completed NSE at 16:59, 0.02s elapsed
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.043s latency).
+Scanned at 2019-07-07 16:59:52 IST for 0s
+
+PORT   STATE SERVICE REASON
+21/tcp open  ftp     syn-ack ttl 64
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:59
+Completed NSE at 16:59, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 2 IP addresses (1 host up) scanned in 2.39 seconds
+           Raw packets sent: 10 (376B) | Rcvd: 2 (72B)
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-anon.nse dell.com -p21 -vv -T5 143.166.147.101
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 17:00 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:00
+Completed NSE at 17:00, 0.00s elapsed
+Warning: Hostname dell.com resolves to 2 IPs. Using 143.166.147.101.
+Initiating Ping Scan at 17:00
+Scanning dell.com (143.166.147.101) [4 ports]
+Completed Ping Scan at 17:00, 0.30s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:00
+Completed Parallel DNS resolution of 1 host. at 17:00, 0.03s elapsed
+Initiating Ping Scan at 17:00
+Scanning 143.166.147.101 [4 ports]
+Completed Ping Scan at 17:00, 0.30s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 17:00
+Scanning dell.com (143.166.147.101) [1 port]
+Completed SYN Stealth Scan at 17:00, 0.64s elapsed (1 total ports)
+NSE: Script scanning 143.166.147.101.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:00
+Completed NSE at 17:00, 0.00s elapsed
+Nmap scan report for dell.com (143.166.147.101)
+Host is up, received syn-ack ttl 240 (0.26s latency).
+Other addresses for dell.com (not scanned): 143.166.135.105
+rDNS record for 143.166.147.101: dell-root-vip-ps3.us.dell.com
+Scanned at 2019-07-07 17:00:01 IST for 2s
+
+PORT   STATE    SERVICE REASON
+21/tcp filtered ftp     no-response
+
+Initiating SYN Stealth Scan at 17:00
+Scanning dell-root-vip-ps3.us.dell.com (143.166.147.101) [1 port]
+Completed SYN Stealth Scan at 17:00, 0.66s elapsed (1 total ports)
+NSE: Script scanning 143.166.147.101.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:00
+Completed NSE at 17:00, 0.00s elapsed
+Nmap scan report for dell-root-vip-ps3.us.dell.com (143.166.147.101)
+Host is up, received syn-ack ttl 240 (0.26s latency).
+Scanned at 2019-07-07 17:00:02 IST for 1s
+
+PORT   STATE    SERVICE REASON
+21/tcp filtered ftp     no-response
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:00
+Completed NSE at 17:00, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 2 IP addresses (2 hosts up) scanned in 2.35 seconds
+           Raw packets sent: 12 (480B) | Rcvd: 2 (88B)
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-anon.nse dell.com -p21 -vv -T5 192.168.0.113
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 17:00 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:00
+Completed NSE at 17:00, 0.00s elapsed
+Warning: Hostname dell.com resolves to 2 IPs. Using 143.166.147.101.
+Initiating Ping Scan at 17:00
+Scanning dell.com (143.166.147.101) [4 ports]
+Completed Ping Scan at 17:00, 0.30s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:00
+Completed Parallel DNS resolution of 1 host. at 17:00, 0.06s elapsed
+Initiating ARP Ping Scan at 17:00
+Scanning 192.168.0.113 [1 port]
+Completed ARP Ping Scan at 17:00, 0.05s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:00
+Completed Parallel DNS resolution of 1 host. at 17:00, 0.01s elapsed
+Initiating SYN Stealth Scan at 17:00
+Scanning dell.com (143.166.147.101) [1 port]
+Completed SYN Stealth Scan at 17:01, 0.64s elapsed (1 total ports)
+NSE: Script scanning 143.166.147.101.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:01
+Completed NSE at 17:01, 0.00s elapsed
+Nmap scan report for dell.com (143.166.147.101)
+Host is up, received syn-ack ttl 240 (0.26s latency).
+Other addresses for dell.com (not scanned): 143.166.135.105
+Scanned at 2019-07-07 17:00:59 IST for 1s
+
+PORT   STATE    SERVICE REASON
+21/tcp filtered ftp     no-response
+
+Initiating SYN Stealth Scan at 17:01
+Scanning 192.168.0.113 [1 port]
+Completed SYN Stealth Scan at 17:01, 0.06s elapsed (1 total ports)
+NSE: Script scanning 192.168.0.113.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:01
+Completed NSE at 17:01, 0.00s elapsed
+Nmap scan report for 192.168.0.113
+Host is up, received arp-response (0.0027s latency).
+Scanned at 2019-07-07 17:00:59 IST for 1s
+
+PORT   STATE  SERVICE REASON
+21/tcp closed ftp     reset ttl 128
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:01
+Completed NSE at 17:01, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 2 IP addresses (2 hosts up) scanned in 1.57 seconds
+           Raw packets sent: 8 (312B) | Rcvd: 3 (112B)
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-anon.nse -p21 -vv -T5 192.168.0.109
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 17:02 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:02
+Completed NSE at 17:02, 0.00s elapsed
+Initiating ARP Ping Scan at 17:02
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 17:02, 0.13s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:02
+Completed Parallel DNS resolution of 1 host. at 17:02, 0.01s elapsed
+Initiating SYN Stealth Scan at 17:02
+Scanning 192.168.0.109 [1 port]
+Discovered open port 21/tcp on 192.168.0.109
+Completed SYN Stealth Scan at 17:02, 0.05s elapsed (1 total ports)
+NSE: Script scanning 192.168.0.109.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:02
+Completed NSE at 17:02, 0.02s elapsed
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.084s latency).
+Scanned at 2019-07-07 17:02:07 IST for 1s
+
+PORT   STATE SERVICE REASON
+21/tcp open  ftp     syn-ack ttl 64
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:02
+Completed NSE at 17:02, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.56 seconds
+           Raw packets sent: 2 (72B) | Rcvd: 2 (72B)
+root@kali:~# ftp 192.168.0.109 21
+Connected to 192.168.0.109.
+220 (vsFTPd 2.3.4)
+Name (192.168.0.109:root): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ?
+Commands may be abbreviated.  Commands are:
+
+!		dir		mdelete		qc		site
+$		disconnect	mdir		sendport	size
+account		exit		mget		put		status
+append		form		mkdir		pwd		struct
+ascii		get		mls		quit		system
+bell		glob		mode		quote		sunique
+binary		hash		modtime		recv		tenex
+bye		help		mput		reget		tick
+case		idle		newer		rstatus		trace
+cd		image		nmap		rhelp		type
+cdup		ipany		nlist		rename		user
+chmod		ipv4		ntrans		reset		umask
+close		ipv6		open		restart		verbose
+cr		lcd		prompt		rmdir		?
+delete		ls		passive		runique
+debug		macdef		proxy		send
+ftp> cd delete
+550 Failed to change directory.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> ?
+Commands may be abbreviated.  Commands are:
+
+!		dir		mdelete		qc		site
+$		disconnect	mdir		sendport	size
+account		exit		mget		put		status
+append		form		mkdir		pwd		struct
+ascii		get		mls		quit		system
+bell		glob		mode		quote		sunique
+binary		hash		modtime		recv		tenex
+bye		help		mput		reget		tick
+case		idle		newer		rstatus		trace
+cd		image		nmap		rhelp		type
+cdup		ipany		nlist		rename		user
+chmod		ipv4		ntrans		reset		umask
+close		ipv6		open		restart		verbose
+cr		lcd		prompt		rmdir		?
+delete		ls		passive		runique
+debug		macdef		proxy		send
+ftp> cd dir
+550 Failed to change directory.
+ftp> dir 
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> dir hello
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> ?
+Commands may be abbreviated.  Commands are:
+
+!		dir		mdelete		qc		site
+$		disconnect	mdir		sendport	size
+account		exit		mget		put		status
+append		form		mkdir		pwd		struct
+ascii		get		mls		quit		system
+bell		glob		mode		quote		sunique
+binary		hash		modtime		recv		tenex
+bye		help		mput		reget		tick
+case		idle		newer		rstatus		trace
+cd		image		nmap		rhelp		type
+cdup		ipany		nlist		rename		user
+chmod		ipv4		ntrans		reset		umask
+close		ipv6		open		restart		verbose
+cr		lcd		prompt		rmdir		?
+delete		ls		passive		runique
+debug		macdef		proxy		send
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> cd account
+550 Failed to change directory.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> lcd
+Local directory now /root
+ftp> ;s
+?Invalid command
+ftp> lcd
+Local directory now /root
+ftp> cd root
+550 Failed to change directory.
+ftp> lcd
+Local directory now /root
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> lcd root
+local: root: No such file or directory
+ftp> lcd
+Local directory now /root
+ftp> mkdir hello
+550 Create directory operation failed.
+ftp> dir hello
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> 143.166.147.101
+?Invalid command
+ftp> ^Z
+[1]+  Stopped                 ftp 192.168.0.109 21
+root@kali:~# 
+

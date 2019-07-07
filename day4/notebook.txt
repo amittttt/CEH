@@ -1,5 +1,31 @@
-// Day 4 start :: 
+// Day 4 start :: (Scanning)
 
-=> open Zenmap as root
+For this we will find all script:
 
+root@kali:~/Desktop/Amit/CEH# updatedb
+root@kali:~/Desktop/Amit/CEH# locate *.nse
+### Count the script 
+root@kali:~/Desktop/Amit/CEH# locate *.nse | wc -l
+
+File which name is FTP:
+root@kali:~/Desktop/Amit/CEH# locate *.nse | grep ftp
+
+## this command helps us to know what the work of this script:
+root@kali:~# nmap --script-help /usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
+
+## SMB Scripts :
+locate *.nse | grep smb
+root@kali:~# nmap --script-help /usr/share/nmap/scripts/smb-os-discovery.nse
+
+
+# run only single script:
+This script help us to know about OS version :::
+nmap --script /usr/share/nmap/scripts/smb-os-discovery.nse --vv -T5 192.168.0.187
+
+Run security script :
+root@kali:~# nmap --script /usr/share/nmap/scripts/smb-security-mode.nse --vv -T5 192.168.0.113
+
+
+install FTP in linux:
+sudo apt-get install FTP
 

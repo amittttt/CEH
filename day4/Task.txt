@@ -1,0 +1,488 @@
+112.216.117.86
+193.239.252.17
+check for these server ftp login as anonymous
+
+
+
+
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-anon.nse -p21 -vv -T5 192.168.0.109
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 17:11 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:11
+Completed NSE at 17:11, 0.00s elapsed
+Initiating ARP Ping Scan at 17:11
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 17:11, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:11
+Completed Parallel DNS resolution of 1 host. at 17:11, 0.01s elapsed
+Initiating SYN Stealth Scan at 17:11
+Scanning 192.168.0.109 [1 port]
+Discovered open port 21/tcp on 192.168.0.109
+Completed SYN Stealth Scan at 17:11, 0.06s elapsed (1 total ports)
+NSE: Script scanning 192.168.0.109.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:11
+Completed NSE at 17:11, 0.02s elapsed
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.013s latency).
+Scanned at 2019-07-07 17:11:58 IST for 1s
+
+PORT   STATE SERVICE REASON
+21/tcp open  ftp     syn-ack ttl 64
+|_ftp-anon: Anonymous FTP login allowed (FTP code 230)
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 17:11
+Completed NSE at 17:11, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.48 seconds
+           Raw packets sent: 2 (72B) | Rcvd: 2 (72B)
+root@kali:~# nmap -vv -A -T5 112.216.117.86
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 17:13 IST
+NSE: Loaded 148 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 17:13
+Completed NSE at 17:13, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 17:13
+Completed NSE at 17:13, 0.00s elapsed
+Initiating Ping Scan at 17:13
+Scanning 112.216.117.86 [4 ports]
+Completed Ping Scan at 17:13, 0.29s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:13
+Completed Parallel DNS resolution of 1 host. at 17:13, 0.03s elapsed
+Initiating SYN Stealth Scan at 17:13
+Scanning 112.216.117.86 [1000 ports]
+Discovered open port 21/tcp on 112.216.117.86
+Discovered open port 22/tcp on 112.216.117.86
+Discovered open port 443/tcp on 112.216.117.86
+Discovered open port 3306/tcp on 112.216.117.86
+Completed SYN Stealth Scan at 17:13, 10.58s elapsed (1000 total ports)
+Initiating Service scan at 17:13
+Scanning 4 services on 112.216.117.86
+Completed Service scan at 17:14, 13.58s elapsed (4 services on 1 host)
+Initiating OS detection (try #1) against 112.216.117.86
+Retrying OS detection (try #2) against 112.216.117.86
+Initiating Traceroute at 17:14
+Completed Traceroute at 17:14, 3.28s elapsed
+Initiating Parallel DNS resolution of 14 hosts. at 17:14
+Completed Parallel DNS resolution of 14 hosts. at 17:14, 0.43s elapsed
+NSE: Script scanning 112.216.117.86.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 17:14
+NSE: [ftp-bounce 112.216.117.86:21] PORT response: 500 Illegal PORT command.
+NSE Timing: About 99.82% done; ETC: 17:14 (0:00:00 remaining)
+Completed NSE at 17:14, 31.54s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 17:14
+Completed NSE at 17:14, 0.00s elapsed
+Nmap scan report for 112.216.117.86
+Host is up, received syn-ack ttl 45 (0.25s latency).
+Scanned at 2019-07-07 17:13:37 IST for 65s
+Not shown: 995 filtered ports
+Reason: 995 no-responses
+PORT     STATE  SERVICE  REASON         VERSION
+20/tcp   closed ftp-data reset ttl 46
+21/tcp   open   ftp      syn-ack ttl 46 vsftpd 2.3.4
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: TIMEOUT
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to 49.206.15.166
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 8
+|      vsFTPd 2.3.4 - secure, fast, stable
+|_End of status
+22/tcp   open   ssh      syn-ack ttl 46 OpenSSH 5.6 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 82:66:5f:f3:70:e9:0b:19:b6:1d:e5:ea:3b:09:61:84 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAPxht/Cbx7EImfnCKvAvhpGfwanHWoa+cevVJXgL7WWYUQGddpnUjlF8nt+AUlB5qyMM97mjUlijyAMs9iX35i8aptZ/utuRdLPrqDX+UKi4863bZwnWN7ULz7QsbA/6Kthpeh5fSojzhQm/DUqZ6xYALioetsTFnN60dtvzWPhJAAAAFQC60uB371qSrc43PL/UL1+ZW1U5VwAAAIAg01WHKqQbgyRJykgm0ZPlRMyYcvToz36fOFIxdLXWhz57gzWyK2hae4NS+yHLRlenI9v47rMIdgSP8jloPtqpi+a/CYu26W3PDI0ZoM1qjrzbCj01RoELKsRp8N0nr3x6dJBNCbPU3i1nz10BRyz5cY1u5WISO7PUcIp//EZPxAAAAIEAmaFkF2jxnmdVFzOZ3oQLcmJgLIuDIFAMJcpX1VZG5zASlfmHQEMfRhXDbCrAR3WvgW0Z4Fju0s84ptXoOwV12WSMObu0LhUBsCvfjrHHHJKI+8ag8nk44HuwnPlevK3atBF1luL4mG+G1GX0CbDqv59DjxJQiagASLFDMktQ6bc=
+|   2048 45:a0:d7:09:7e:01:aa:af:91:3e:7b:89:be:38:13:64 (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEZILTmN02jefkORIYyWQRqCCDekfCzhxLQHPuFenCkAH/V7P8bSIxahlKvLA/UUXq7EW23MBhd0EOxNgK/3s0/mUDrjhr1pkoE04eRk4ZCcAjLm057dl7Rj7yxo7m9jEGCMoufsCezCGTe2HZczZapgOJ3q1OOvuQTm69LSCVMyUH9sVrdsb1D2v45UM3WQxugvjBZfXIZYcY5h+YgejkUesuw2zAC1gaQyYDmfaIHyOsU1E8F0oyIThMHWqmW/VZZsd6texSWpXwnfI1VjWZ4cwtKCtNhl3NGMHp46Hyu7qCyWEceFauBOtQVJo/XX6cRyh4+ihyY1Eep867yD4j
+443/tcp  open   ssl/http syn-ack ttl 46 Apache httpd 2.2.21 ((Fedora))
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.21 (Fedora)
+|_http-title: Test Page for the Apache HTTP Server on Fedora
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/organizationalUnitName=SomeOrganizationalUnit/emailAddress=root@localhost.localdomain/localityName=SomeCity
+| Issuer: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--/organizationalUnitName=SomeOrganizationalUnit/emailAddress=root@localhost.localdomain/localityName=SomeCity
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2011-12-01T16:54:21
+| Not valid after:  2012-11-30T16:54:21
+| MD5:   028d 5f58 0e99 35a4 0456 3f02 e878 b825
+| SHA-1: 7bc3 393b 64d9 1ca5 3759 a1f7 730e ac10 45bc eb6d
+| -----BEGIN CERTIFICATE-----
+| MIIDCTCCAnKgAwIBAgICfSUwDQYJKoZIhvcNAQEFBQAwgbsxCzAJBgNVBAYTAi0t
+| MRIwEAYDVQQIDAlTb21lU3RhdGUxETAPBgNVBAcMCFNvbWVDaXR5MRkwFwYDVQQK
+| DBBTb21lT3JnYW5pemF0aW9uMR8wHQYDVQQLDBZTb21lT3JnYW5pemF0aW9uYWxV
+| bml0MR4wHAYDVQQDDBVsb2NhbGhvc3QubG9jYWxkb21haW4xKTAnBgkqhkiG9w0B
+| CQEWGnJvb3RAbG9jYWxob3N0LmxvY2FsZG9tYWluMB4XDTExMTIwMTE2NTQyMVoX
+| DTEyMTEzMDE2NTQyMVowgbsxCzAJBgNVBAYTAi0tMRIwEAYDVQQIDAlTb21lU3Rh
+| dGUxETAPBgNVBAcMCFNvbWVDaXR5MRkwFwYDVQQKDBBTb21lT3JnYW5pemF0aW9u
+| MR8wHQYDVQQLDBZTb21lT3JnYW5pemF0aW9uYWxVbml0MR4wHAYDVQQDDBVsb2Nh
+| bGhvc3QubG9jYWxkb21haW4xKTAnBgkqhkiG9w0BCQEWGnJvb3RAbG9jYWxob3N0
+| LmxvY2FsZG9tYWluMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDM0D0B4yVU
+| kC40081HGm8xBKidr07AbRSoW/qu/Z61xWR+zJPrW5pVeyuDUwnrQqssuzYK5l/n
+| lZTxszI0OsP4qqNeXEMlFmbge6sFgn0UGiIX1Xz/zA9mWMcjfovnOrXBo5XmnsFz
+| 2Ufs/+OvgnTSC8FcRm3zaX564ASKCP6T3QIDAQABoxowGDAJBgNVHRMEAjAAMAsG
+| A1UdDwQEAwIF4DANBgkqhkiG9w0BAQUFAAOBgQArL7cgoObhHSUz6XlcFqnRi8DV
+| 107s0qsN8QbEOZlIcndhJbtZ6rkVQbp10ie9fJlNaSAHHFJXvxYjtc61CdYKx5wk
+| nGsCO1DTC/3eCdYA0a4xBciluC4lYMM5yRiU+XUmxdNAYqLA+8nzS02zDuS5ur6g
+| 1miMxDcYoFZGcpxMFA==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2019-07-07T11:44:11+00:00; -1s from scanner time.
+3306/tcp open   mysql    syn-ack ttl 45 MySQL 5.5.14
+| mysql-info: 
+|_  MySQL Error: Host '49.206.15.166' is blocked because of many connection errors; unblock with 'mysqladmin flush-hosts'
+OS fingerprint not ideal because: Timing level 5 (Insane) used
+Aggressive OS guesses: Linux 2.6.32 or 3.10 (95%), Synology DiskStation Manager 5.1 (94%), Linux 2.6.32 (94%), Linux 2.6.39 (94%), Linux 3.4 (94%), Linux 3.1 - 3.2 (93%), WatchGuard Fireware 11.8 (93%), Linux 2.6.32 - 2.6.39 (93%), Linux 3.10 (92%), Linux 2.6.32 - 3.0 (92%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.70%E=4%D=7/7%OT=21%CT=20%CU=39282%PV=N%DS=18%DC=T%G=N%TM=5D21DB2B%P=i686-pc-linux-gnu)
+SEQ(SP=FB%GCD=1%ISR=10F%TI=Z%II=I%TS=A)
+OPS(O1=M5A0ST11NW4%O2=M5A0ST11NW4%O3=M5A0NNT11NW4%O4=M5A0ST11NW4%O5=M5A0ST11NW4%O6=M5A0ST11)
+WIN(W1=3890%W2=3890%W3=3890%W4=3890%W5=3890%W6=3890)
+ECN(R=Y%DF=Y%T=3F%W=3908%O=M5A0NNSNW4%CC=Y%Q=)
+T1(R=Y%DF=Y%T=3F%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+T5(R=Y%DF=Y%T=3F%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=N)
+T7(R=N)
+U1(R=Y%DF=N%T=3E%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=3E%CD=S)
+
+Uptime guess: 32.477 days (since Wed Jun  5 05:47:15 2019)
+Network Distance: 18 hops
+TCP Sequence Prediction: Difficulty=253 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Unix
+
+Host script results:
+|_clock-skew: mean: -1s, deviation: 0s, median: -1s
+
+TRACEROUTE (using port 20/tcp)
+HOP RTT       ADDRESS
+1   0.40 ms   192.168.0.1
+2   ...
+3   2.10 ms   14.141.145.89.static-Bangalore.vsnl.net.in (14.141.145.89)
+4   9.85 ms   172.17.169.202
+5   12.12 ms  ix-ae-4-2.tcore1.cxr-chennai.as6453.net (180.87.36.9)
+6   110.43 ms if-ae-13-2.tcore1.svw-singapore.as6453.net (180.87.36.83)
+7   110.89 ms if-ae-36-2.tcore1.tv2-tokyo.as6453.net (120.29.217.12)
+8   107.31 ms if-ae-2-2.tcore2.tv2-tokyo.as6453.net (180.87.180.2)
+9   ...
+10  249.10 ms 1.213.150.133
+11  245.93 ms 1.208.147.13
+12  259.03 ms 1.208.148.134
+13  ...
+14  265.45 ms 1.213.152.114
+15  252.27 ms 1.210.78.178
+16  257.65 ms 1.214.79.230
+17  ...
+18  243.98 ms 112.216.117.86
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 17:14
+Completed NSE at 17:14, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 17:14
+Completed NSE at 17:14, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 66.02 seconds
+           Raw packets sent: 2092 (93.932KB) | Rcvd: 65 (5.430KB)
+root@kali:~# ftp 112.216.117.86
+Connected to 112.216.117.86.
+220 (vsFTPd 2.3.4)
+Name (112.216.117.86:root): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr-xr-x    2 0        0            4096 Mar 03  2011 pub
+226 Directory send OK.
+ftp> cd drwxr-xr-x
+550 Failed to change directory.
+ftp> cd pub
+250 Directory successfully changed.
+ftp> cd pub
+550 Failed to change directory.
+ftp> ?
+Commands may be abbreviated.  Commands are:
+
+!		dir		mdelete		qc		site
+$		disconnect	mdir		sendport	size
+account		exit		mget		put		status
+append		form		mkdir		pwd		struct
+ascii		get		mls		quit		system
+bell		glob		mode		quote		sunique
+binary		hash		modtime		recv		tenex
+bye		help		mput		reget		tick
+case		idle		newer		rstatus		trace
+cd		image		nmap		rhelp		type
+cdup		ipany		nlist		rename		user
+chmod		ipv4		ntrans		reset		umask
+close		ipv6		open		restart		verbose
+cr		lcd		prompt		rmdir		?
+delete		ls		passive		runique
+debug		macdef		proxy		send
+ftp> whoami
+?Invalid command
+ftp> user
+(username) anonymous
+530 Can't change from guest user.
+Login failed.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> dir
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> dir /
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr-xr-x    2 0        0            4096 Mar 03  2011 pub
+226 Directory send OK.
+ftp> cd pub
+550 Failed to change directory.
+ftp> cd ..
+250 Directory successfully changed.
+ftp> cd pub
+250 Directory successfully changed.
+ftp> cd p
+550 Failed to change directory.
+ftp> cd pub
+550 Failed to change directory.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> nmap -vv -sS 193.239.252.17
+ftp> exit
+221 Goodbye.
+root@kali:~# nmap -vv -sS 193.239.252.17
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 17:22 IST
+Initiating Ping Scan at 17:22
+Scanning 193.239.252.17 [4 ports]
+Completed Ping Scan at 17:22, 0.22s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:22
+Completed Parallel DNS resolution of 1 host. at 17:22, 0.08s elapsed
+Initiating SYN Stealth Scan at 17:22
+Scanning ip17.silvernet.ro (193.239.252.17) [1000 ports]
+Discovered open port 80/tcp on 193.239.252.17
+Discovered open port 21/tcp on 193.239.252.17
+Discovered open port 443/tcp on 193.239.252.17
+Completed SYN Stealth Scan at 17:22, 7.96s elapsed (1000 total ports)
+Nmap scan report for ip17.silvernet.ro (193.239.252.17)
+Host is up, received echo-reply ttl 45 (0.18s latency).
+Scanned at 2019-07-07 17:22:03 IST for 9s
+Not shown: 958 filtered ports
+Reason: 958 no-responses
+PORT      STATE  SERVICE     REASON
+20/tcp    closed ftp-data    reset ttl 46
+21/tcp    open   ftp         syn-ack ttl 47
+80/tcp    open   http        syn-ack ttl 46
+443/tcp   open   https       syn-ack ttl 46
+50000/tcp closed ibm-db2     reset ttl 46
+50001/tcp closed unknown     reset ttl 46
+50002/tcp closed iiimsf      reset ttl 46
+50003/tcp closed unknown     reset ttl 46
+50006/tcp closed unknown     reset ttl 46
+50300/tcp closed unknown     reset ttl 45
+50389/tcp closed unknown     reset ttl 45
+50500/tcp closed unknown     reset ttl 47
+50636/tcp closed unknown     reset ttl 46
+50800/tcp closed unknown     reset ttl 45
+51103/tcp closed unknown     reset ttl 46
+51493/tcp closed unknown     reset ttl 46
+52673/tcp closed unknown     reset ttl 47
+52822/tcp closed unknown     reset ttl 45
+52848/tcp closed unknown     reset ttl 46
+52869/tcp closed unknown     reset ttl 46
+54045/tcp closed unknown     reset ttl 45
+54328/tcp closed unknown     reset ttl 46
+55055/tcp closed unknown     reset ttl 46
+55056/tcp closed unknown     reset ttl 47
+55555/tcp closed unknown     reset ttl 47
+55600/tcp closed unknown     reset ttl 45
+56737/tcp closed unknown     reset ttl 46
+56738/tcp closed unknown     reset ttl 47
+57294/tcp closed unknown     reset ttl 45
+57797/tcp closed unknown     reset ttl 46
+58080/tcp closed unknown     reset ttl 47
+60020/tcp closed unknown     reset ttl 47
+60443/tcp closed unknown     reset ttl 46
+61532/tcp closed unknown     reset ttl 47
+61900/tcp closed unknown     reset ttl 47
+62078/tcp closed iphone-sync reset ttl 46
+63331/tcp closed unknown     reset ttl 45
+64623/tcp closed unknown     reset ttl 47
+64680/tcp closed unknown     reset ttl 45
+65000/tcp closed unknown     reset ttl 46
+65129/tcp closed unknown     reset ttl 47
+65389/tcp closed unknown     reset ttl 46
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 8.37 seconds
+           Raw packets sent: 1963 (86.348KB) | Rcvd: 44 (1.764KB)
+root@kali:~# nmap -vv -sS -sV 193.239.252.17
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 17:22 IST
+NSE: Loaded 43 scripts for scanning.
+Initiating Ping Scan at 17:22
+Scanning 193.239.252.17 [4 ports]
+Completed Ping Scan at 17:22, 0.22s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:22
+Completed Parallel DNS resolution of 1 host. at 17:22, 0.04s elapsed
+Initiating SYN Stealth Scan at 17:22
+Scanning ip17.silvernet.ro (193.239.252.17) [1000 ports]
+Discovered open port 80/tcp on 193.239.252.17
+Discovered open port 21/tcp on 193.239.252.17
+Discovered open port 443/tcp on 193.239.252.17
+Completed SYN Stealth Scan at 17:23, 13.53s elapsed (1000 total ports)
+Initiating Service scan at 17:23
+Scanning 3 services on ip17.silvernet.ro (193.239.252.17)
+Completed Service scan at 17:23, 13.14s elapsed (3 services on 1 host)
+NSE: Script scanning 193.239.252.17.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 17:23
+Completed NSE at 17:23, 1.63s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 17:23
+Completed NSE at 17:23, 0.00s elapsed
+Nmap scan report for ip17.silvernet.ro (193.239.252.17)
+Host is up, received echo-reply ttl 45 (0.18s latency).
+Scanned at 2019-07-07 17:22:56 IST for 28s
+Not shown: 958 filtered ports
+Reason: 958 no-responses
+PORT      STATE  SERVICE     REASON         VERSION
+20/tcp    closed ftp-data    reset ttl 46
+21/tcp    open   ftp         syn-ack ttl 46 vsftpd 2.3.4
+80/tcp    open   http        syn-ack ttl 46 Apache httpd 2.2.22
+443/tcp   open   ssl/http    syn-ack ttl 45 Apache httpd 2.2.22 ((Fedora))
+50000/tcp closed ibm-db2     reset ttl 45
+50001/tcp closed unknown     reset ttl 46
+50002/tcp closed iiimsf      reset ttl 46
+50003/tcp closed unknown     reset ttl 46
+50006/tcp closed unknown     reset ttl 46
+50300/tcp closed unknown     reset ttl 46
+50389/tcp closed unknown     reset ttl 47
+50500/tcp closed unknown     reset ttl 45
+50636/tcp closed unknown     reset ttl 45
+50800/tcp closed unknown     reset ttl 47
+51103/tcp closed unknown     reset ttl 46
+51493/tcp closed unknown     reset ttl 46
+52673/tcp closed unknown     reset ttl 45
+52822/tcp closed unknown     reset ttl 46
+52848/tcp closed unknown     reset ttl 46
+52869/tcp closed unknown     reset ttl 45
+54045/tcp closed unknown     reset ttl 46
+54328/tcp closed unknown     reset ttl 46
+55055/tcp closed unknown     reset ttl 46
+55056/tcp closed unknown     reset ttl 45
+55555/tcp closed unknown     reset ttl 46
+55600/tcp closed unknown     reset ttl 47
+56737/tcp closed unknown     reset ttl 45
+56738/tcp closed unknown     reset ttl 46
+57294/tcp closed unknown     reset ttl 47
+57797/tcp closed unknown     reset ttl 45
+58080/tcp closed unknown     reset ttl 45
+60020/tcp closed unknown     reset ttl 46
+60443/tcp closed unknown     reset ttl 47
+61532/tcp closed unknown     reset ttl 45
+61900/tcp closed unknown     reset ttl 46
+62078/tcp closed iphone-sync reset ttl 47
+63331/tcp closed unknown     reset ttl 46
+64623/tcp closed unknown     reset ttl 46
+64680/tcp closed unknown     reset ttl 47
+65000/tcp closed unknown     reset ttl 46
+65129/tcp closed unknown     reset ttl 46
+65389/tcp closed unknown     reset ttl 47
+Service Info: Host: www.koolnet.ro; OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 28.98 seconds
+           Raw packets sent: 2923 (128.588KB) | Rcvd: 46 (1.840KB)
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-anon.nse -p21 193.239.252.17
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 17:24 IST
+Stats: 0:00:31 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 0.00% done
+Nmap scan report for ip17.silvernet.ro (193.239.252.17)
+Host is up (0.17s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: TIMEOUT
+
+Nmap done: 1 IP address (1 host up) scanned in 31.56 seconds
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-anon.nse -p21 193.239.252.17
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 17:25 IST
+Nmap scan report for ip17.silvernet.ro (193.239.252.17)
+Host is up (0.17s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_drwxr-xr-x    2 0        0            4096 Nov 15  2011 pub
+
+Nmap done: 1 IP address (1 host up) scanned in 1.93 seconds
+root@kali:~# ftp 193.239.252.17
+Connected to 193.239.252.17.
+220 (vsFTPd 2.3.4)
+Name (193.239.252.17:root): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+drwxr-xr-x    2 0        0            4096 Nov 15  2011 pub
+226 Directory send OK.
+ftp> cd pub
+250 Directory successfully changed.
+ftp> exit
+221 Goodbye.
+root@kali:~# ftp 112.216.117.86
+Connected to 112.216.117.86.
+220 (vsFTPd 2.3.4)
+Name (112.216.117.86:root): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+cd 150 Here comes the directory listing.
+drwxr-xr-x    2 0        0            4096 Mar 03  2011 pub
+226 Directory send OK.
+ftp> cd pub
+250 Directory successfully changed.
+ftp> 
+

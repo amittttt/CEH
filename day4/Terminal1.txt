@@ -1,0 +1,511 @@
+root@kali:~/Desktop/Amit/CEH# cd ~
+root@kali:~# nmap --script-help /usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:31 IST
+
+ftp-vsftpd-backdoor
+Categories: exploit intrusive malware vuln
+https://nmap.org/nsedoc/scripts/ftp-vsftpd-backdoor.html
+  Tests for the presence of the vsFTPd 2.3.4 backdoor reported on 2011-07-04
+  (CVE-2011-2523). This script attempts to exploit the backdoor using the
+  innocuous <code>id</code> command by default, but that can be changed with
+  the <code>exploit.cmd</code> or <code>ftp-vsftpd-backdoor.cmd</code> script
+  arguments.
+
+  References:
+
+  * http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+  * https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+  * http://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE-2011-2523
+root@kali:~# nmap --script-help /usr/share/nmap/scripts/smb-os-discovery.nse
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:33 IST
+
+smb-os-discovery
+Categories: default discovery safe
+https://nmap.org/nsedoc/scripts/smb-os-discovery.html
+  Attempts to determine the operating system, computer name, domain, workgroup, and current
+  time over the SMB protocol (ports 445 or 139).
+  This is done by starting a session with the anonymous
+  account (or with a proper user account, if one is given; it likely doesn't make
+  a difference); in response to a session starting, the server will send back all this
+  information.
+
+  The following fields may be included in the output, depending on the
+  circumstances (e.g. the workgroup name is mutually exclusive with domain and forest
+  names) and the information available:
+  * OS
+  * Computer name
+  * Domain name
+  * Forest name
+  * FQDN
+  * NetBIOS computer name
+  * NetBIOS domain name
+  * Workgroup
+  * System time
+
+  Some systems, like Samba, will blank out their name (and only send their domain).
+  Other systems (like embedded printers) will simply leave out the information. Other
+  systems will blank out various pieces (some will send back 0 for the current
+  time, for example).
+
+  If this script is used in conjunction with version detection it can augment the
+  standard nmap version detection information with data that this script has discovered.
+
+  Retrieving the name and operating system of a server is a vital step in targeting
+  an attack against it, and this script makes that retrieval easy. Additionally, if
+  a penetration tester is choosing between multiple targets, the time can help identify
+  servers that are being poorly maintained (for more information/random thoughts on
+  using the time, see http://www.skullsecurity.org/blog/?p=76.
+
+  Although the standard <code>smb*</code> script arguments can be used,
+  they likely won't change the outcome in any meaningful way. However, <code>smbnoguest</code>
+  will speed up the script on targets that do not allow guest access.
+root@kali:~# nmap --script-help /usr/share/nmap/scripts/smb-os-discovery.nse --vv -T5 192.168.0.187
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:34 IST
+NSE: Loaded 1 scripts for scanning.
+
+smb-os-discovery
+Categories: default discovery safe
+https://nmap.org/nsedoc/scripts/smb-os-discovery.html
+  Attempts to determine the operating system, computer name, domain, workgroup, and current
+  time over the SMB protocol (ports 445 or 139).
+  This is done by starting a session with the anonymous
+  account (or with a proper user account, if one is given; it likely doesn't make
+  a difference); in response to a session starting, the server will send back all this
+  information.
+
+  The following fields may be included in the output, depending on the
+  circumstances (e.g. the workgroup name is mutually exclusive with domain and forest
+  names) and the information available:
+  * OS
+  * Computer name
+  * Domain name
+  * Forest name
+  * FQDN
+  * NetBIOS computer name
+  * NetBIOS domain name
+  * Workgroup
+  * System time
+
+  Some systems, like Samba, will blank out their name (and only send their domain).
+  Other systems (like embedded printers) will simply leave out the information. Other
+  systems will blank out various pieces (some will send back 0 for the current
+  time, for example).
+
+  If this script is used in conjunction with version detection it can augment the
+  standard nmap version detection information with data that this script has discovered.
+
+  Retrieving the name and operating system of a server is a vital step in targeting
+  an attack against it, and this script makes that retrieval easy. Additionally, if
+  a penetration tester is choosing between multiple targets, the time can help identify
+  servers that are being poorly maintained (for more information/random thoughts on
+  using the time, see http://www.skullsecurity.org/blog/?p=76.
+
+  Although the standard <code>smb*</code> script arguments can be used,
+  they likely won't change the outcome in any meaningful way. However, <code>smbnoguest</code>
+  will speed up the script on targets that do not allow guest access.
+root@kali:~# nmap --script /usr/share/nmap/scripts/smb-os-discovery.nse --vv -T5 192.168.0.187
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:35 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:35
+Completed NSE at 16:35, 0.00s elapsed
+Initiating ARP Ping Scan at 16:35
+Scanning 192.168.0.187 [1 port]
+Completed ARP Ping Scan at 16:35, 0.44s elapsed (1 total hosts)
+Nmap scan report for 192.168.0.187 [host down, received no-response]
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:35
+Completed NSE at 16:35, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.68 seconds
+           Raw packets sent: 2 (56B) | Rcvd: 0 (0B)
+root@kali:~# nmap --script /usr/share/nmap/scripts/smb-os-discovery.nse --vv -T5 192.168.0.113
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:35 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:35
+Completed NSE at 16:35, 0.00s elapsed
+Initiating ARP Ping Scan at 16:35
+Scanning 192.168.0.113 [1 port]
+Completed ARP Ping Scan at 16:35, 0.13s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:35
+Completed Parallel DNS resolution of 1 host. at 16:35, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:35
+Scanning 192.168.0.113 [1000 ports]
+Discovered open port 139/tcp on 192.168.0.113
+Discovered open port 445/tcp on 192.168.0.113
+Discovered open port 135/tcp on 192.168.0.113
+Discovered open port 2869/tcp on 192.168.0.113
+Completed SYN Stealth Scan at 16:35, 1.20s elapsed (1000 total ports)
+NSE: Script scanning 192.168.0.113.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:35
+Completed NSE at 16:35, 0.04s elapsed
+Nmap scan report for 192.168.0.113
+Host is up, received arp-response (0.0030s latency).
+Scanned at 2019-07-07 16:35:31 IST for 2s
+Not shown: 996 closed ports
+Reason: 996 resets
+PORT     STATE SERVICE      REASON
+135/tcp  open  msrpc        syn-ack ttl 128
+139/tcp  open  netbios-ssn  syn-ack ttl 128
+445/tcp  open  microsoft-ds syn-ack ttl 128
+2869/tcp open  icslap       syn-ack ttl 128
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: hackersc-c6e8b1
+|   NetBIOS computer name: HACKERSC-C6E8B1\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-07-07T16:35:31+05:30
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:35
+Completed NSE at 16:35, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.69 seconds
+           Raw packets sent: 1091 (47.988KB) | Rcvd: 1001 (40.044KB)
+root@kali:~# nmap --script /usr/share/nmap/scripts/smb-security-mode.nse --vv -T5 192.168.0.113
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:37 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:37
+Completed NSE at 16:37, 0.00s elapsed
+Initiating ARP Ping Scan at 16:37
+Scanning 192.168.0.113 [1 port]
+Completed ARP Ping Scan at 16:37, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:37
+Completed Parallel DNS resolution of 1 host. at 16:37, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:37
+Scanning 192.168.0.113 [1000 ports]
+Discovered open port 139/tcp on 192.168.0.113
+Discovered open port 445/tcp on 192.168.0.113
+Discovered open port 135/tcp on 192.168.0.113
+Discovered open port 2869/tcp on 192.168.0.113
+Completed SYN Stealth Scan at 16:37, 1.20s elapsed (1000 total ports)
+NSE: Script scanning 192.168.0.113.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:37
+Completed NSE at 16:37, 0.01s elapsed
+Nmap scan report for 192.168.0.113
+Host is up, received arp-response (0.0041s latency).
+Scanned at 2019-07-07 16:37:12 IST for 1s
+Not shown: 996 closed ports
+Reason: 996 resets
+PORT     STATE SERVICE      REASON
+135/tcp  open  msrpc        syn-ack ttl 128
+139/tcp  open  netbios-ssn  syn-ack ttl 128
+445/tcp  open  microsoft-ds syn-ack ttl 128
+2869/tcp open  icslap       syn-ack ttl 128
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:37
+Completed NSE at 16:37, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.58 seconds
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse --p21 192.168.0.109
+nmap: unrecognized option '--p21'
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse -p21 192.168.0.109
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:42 IST
+Note: Host seems down. If it is really up, but blocking our ping probes, try -Pn
+Nmap done: 1 IP address (0 hosts up) scanned in 0.65 seconds
+root@kali:~# nmap --script /usr/share/nmap/scripts/ftp-vsftpd-backdoor.nse -p 21 192.168.0.109
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:42 IST
+Nmap scan report for 192.168.0.109
+Host is up (0.082s latency).
+
+PORT   STATE SERVICE
+21/tcp open  ftp
+| ftp-vsftpd-backdoor: 
+|   VULNERABLE:
+|   vsFTPd version 2.3.4 backdoor
+|     State: VULNERABLE (Exploitable)
+|     IDs:  OSVDB:73573  CVE:CVE-2011-2523
+|       vsFTPd version 2.3.4 backdoor, this was reported on 2011-07-04.
+|     Disclosure date: 2011-07-03
+|     Exploit results:
+|       Shell command: id
+|       Results: uid=0(root) gid=0(root)
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
+|       http://osvdb.org/73573
+|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+|_      https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.47 seconds
+root@kali:~# nmap --script /usr/share/nmap/scripts/irc-unrealircd-backdoor.nse -p 6667 192.168.0.109
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:45 IST
+Nmap scan report for 192.168.0.109
+Host is up (0.031s latency).
+
+PORT     STATE SERVICE
+6667/tcp open  irc
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 8.40 seconds
+root@kali:~# nmap --script /usr/share/nmap/scripts/irc-unrealircd-backdoor.nse -p 6667 192.168.0.109 -vv
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:45 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:45
+Completed NSE at 16:45, 0.00s elapsed
+Initiating ARP Ping Scan at 16:45
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 16:45, 0.13s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:45
+Completed Parallel DNS resolution of 1 host. at 16:45, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:45
+Scanning 192.168.0.109 [1 port]
+Discovered open port 6667/tcp on 192.168.0.109
+Completed SYN Stealth Scan at 16:45, 0.04s elapsed (1 total ports)
+NSE: Script scanning 192.168.0.109.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:45
+Completed NSE at 16:45, 8.01s elapsed
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.075s latency).
+Scanned at 2019-07-07 16:45:37 IST for 8s
+
+PORT     STATE SERVICE REASON
+6667/tcp open  irc     syn-ack ttl 64
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:45
+Completed NSE at 16:45, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 8.48 seconds
+           Raw packets sent: 2 (72B) | Rcvd: 2 (72B)
+root@kali:~# nmap --script /usr/share/nmap/scripts/irc-unrealircd-backdoor.nse -p 6667 192.168.0.109 -vv
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:46 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:46
+Completed NSE at 16:46, 0.00s elapsed
+Initiating ARP Ping Scan at 16:46
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 16:46, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:46
+Completed Parallel DNS resolution of 1 host. at 16:46, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:46
+Scanning 192.168.0.109 [1 port]
+Discovered open port 6667/tcp on 192.168.0.109
+Completed SYN Stealth Scan at 16:46, 0.06s elapsed (1 total ports)
+NSE: Script scanning 192.168.0.109.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:46
+Completed NSE at 16:46, 8.00s elapsed
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.017s latency).
+Scanned at 2019-07-07 16:46:13 IST for 8s
+
+PORT     STATE SERVICE REASON
+6667/tcp open  irc     syn-ack ttl 64
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:46
+Completed NSE at 16:46, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 8.43 seconds
+           Raw packets sent: 2 (72B) | Rcvd: 2 (72B)
+root@kali:~# nmap --script /usr/share/nmap/scripts/irc-unrealircd-backdoor.nse -p 6667 192.168.0.109 -vv
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:46 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:46
+Completed NSE at 16:46, 0.00s elapsed
+Initiating ARP Ping Scan at 16:46
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 16:46, 0.10s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:46
+Completed Parallel DNS resolution of 1 host. at 16:46, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:46
+Scanning 192.168.0.109 [1 port]
+Completed SYN Stealth Scan at 16:46, 0.68s elapsed (1 total ports)
+NSE: Script scanning 192.168.0.109.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:46
+Completed NSE at 16:46, 0.00s elapsed
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.063s latency).
+Scanned at 2019-07-07 16:46:35 IST for 1s
+
+PORT     STATE    SERVICE REASON
+6667/tcp filtered irc     no-response
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:46
+Completed NSE at 16:46, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.08 seconds
+           Raw packets sent: 3 (116B) | Rcvd: 1 (28B)
+root@kali:~# nmap --script /usr/share/nmap/scripts/irc-unrealircd-backdoor.nse -p 6667 192.168.0.109 -vv
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:46 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:46
+Completed NSE at 16:46, 0.00s elapsed
+Initiating ARP Ping Scan at 16:46
+Scanning 192.168.0.109 [1 port]
+Completed ARP Ping Scan at 16:46, 0.14s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:46
+Completed Parallel DNS resolution of 1 host. at 16:46, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:46
+Scanning 192.168.0.109 [1 port]
+Discovered open port 6667/tcp on 192.168.0.109
+Completed SYN Stealth Scan at 16:46, 0.04s elapsed (1 total ports)
+NSE: Script scanning 192.168.0.109.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:46
+Completed NSE at 16:47, 22.75s elapsed
+Nmap scan report for 192.168.0.109
+Host is up, received arp-response (0.085s latency).
+Scanned at 2019-07-07 16:46:38 IST for 24s
+
+PORT     STATE SERVICE REASON
+6667/tcp open  irc     syn-ack ttl 64
+|_irc-unrealircd-backdoor: Looks like trojaned version of unrealircd. See http://seclists.org/fulldisclosure/2010/Jun/277
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:47
+Completed NSE at 16:47, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 23.23 seconds
+root@kali:~# locate *.nse | grep smb
+/usr/share/nmap/scripts/smb-brute.nse
+/usr/share/nmap/scripts/smb-double-pulsar-backdoor.nse
+/usr/share/nmap/scripts/smb-enum-domains.nse
+/usr/share/nmap/scripts/smb-enum-groups.nse
+/usr/share/nmap/scripts/smb-enum-processes.nse
+/usr/share/nmap/scripts/smb-enum-services.nse
+/usr/share/nmap/scripts/smb-enum-sessions.nse
+/usr/share/nmap/scripts/smb-enum-shares.nse
+/usr/share/nmap/scripts/smb-enum-users.nse
+/usr/share/nmap/scripts/smb-flood.nse
+/usr/share/nmap/scripts/smb-ls.nse
+/usr/share/nmap/scripts/smb-mbenum.nse
+/usr/share/nmap/scripts/smb-os-discovery.nse
+/usr/share/nmap/scripts/smb-print-text.nse
+/usr/share/nmap/scripts/smb-protocols.nse
+/usr/share/nmap/scripts/smb-psexec.nse
+/usr/share/nmap/scripts/smb-security-mode.nse
+/usr/share/nmap/scripts/smb-server-stats.nse
+/usr/share/nmap/scripts/smb-system-info.nse
+/usr/share/nmap/scripts/smb-vuln-conficker.nse
+/usr/share/nmap/scripts/smb-vuln-cve-2017-7494.nse
+/usr/share/nmap/scripts/smb-vuln-cve2009-3103.nse
+/usr/share/nmap/scripts/smb-vuln-ms06-025.nse
+/usr/share/nmap/scripts/smb-vuln-ms07-029.nse
+/usr/share/nmap/scripts/smb-vuln-ms08-067.nse
+/usr/share/nmap/scripts/smb-vuln-ms10-054.nse
+/usr/share/nmap/scripts/smb-vuln-ms10-061.nse
+/usr/share/nmap/scripts/smb-vuln-ms17-010.nse
+/usr/share/nmap/scripts/smb-vuln-regsvc-dos.nse
+/usr/share/nmap/scripts/smb2-capabilities.nse
+/usr/share/nmap/scripts/smb2-security-mode.nse
+/usr/share/nmap/scripts/smb2-time.nse
+/usr/share/nmap/scripts/smb2-vuln-uptime.nse
+root@kali:~# nmap --script /usr/share/nmap/scripts/smb-vuln-ms08-067.nse -vv -T5  
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:52 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+WARNING: No targets were specified, so 0 hosts scanned.
+Nmap done: 0 IP addresses (0 hosts up) scanned in 0.24 seconds
+           Raw packets sent: 0 (0B) | Rcvd: 0 (0B)
+root@kali:~# nmap --script /usr/share/nmap/scripts/smb-vuln-ms08-067.nse -vv -T5 192.168.0.113
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-07 16:52 IST
+NSE: Loaded 1 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+Initiating ARP Ping Scan at 16:52
+Scanning 192.168.0.113 [1 port]
+Completed ARP Ping Scan at 16:52, 0.15s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 16:52
+Completed Parallel DNS resolution of 1 host. at 16:52, 0.01s elapsed
+Initiating SYN Stealth Scan at 16:52
+Scanning 192.168.0.113 [1000 ports]
+Discovered open port 445/tcp on 192.168.0.113
+Discovered open port 139/tcp on 192.168.0.113
+Discovered open port 135/tcp on 192.168.0.113
+Discovered open port 2869/tcp on 192.168.0.113
+Completed SYN Stealth Scan at 16:52, 1.21s elapsed (1000 total ports)
+NSE: Script scanning 192.168.0.113.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.05s elapsed
+Nmap scan report for 192.168.0.113
+Host is up, received arp-response (0.0035s latency).
+Scanned at 2019-07-07 16:52:52 IST for 2s
+Not shown: 996 closed ports
+Reason: 996 resets
+PORT     STATE SERVICE      REASON
+135/tcp  open  msrpc        syn-ack ttl 128
+139/tcp  open  netbios-ssn  syn-ack ttl 128
+445/tcp  open  microsoft-ds syn-ack ttl 128
+2869/tcp open  icslap       syn-ack ttl 128
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Host script results:
+| smb-vuln-ms08-067: 
+|   VULNERABLE:
+|   Microsoft Windows system vulnerable to remote code execution (MS08-067)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2008-4250
+|           The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2,
+|           Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary
+|           code via a crafted RPC request that triggers the overflow during path canonicalization.
+|           
+|     Disclosure date: 2008-10-23
+|     References:
+|       https://technet.microsoft.com/en-us/library/security/ms08-067.aspx
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4250
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 1) scan.
+Initiating NSE at 16:52
+Completed NSE at 16:52, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.77 seconds
+           Raw packets sent: 1087 (47.812KB) | Rcvd: 1001 (40.044KB)
+root@kali:~# 
+
