@@ -17,18 +17,48 @@
 
 ########################### 
 
-1. Metasplout Framework: Metasploit framework is an open source pen testing project that helps you to find out systems and application vulnerablities and exploit these framework.
+1. Metasploit Framework: Metasploit framework is an open source pen testing project that helps you to find out systems and application vulnerablities and exploit these framework.
 
 
-## Exploits module always required a playload associate with them while running auxilliary's are opposite of them 
+###### Exploits module always required a playload associate with them while running auxilliary's are opposite of them 
 
 # payloads : payload consist of code that runs remotely
 # Encoders : Encoders ensure that payload makes it to their destination
 # Nops : Nops keep the payload sizes consistent
 
 
-########
+##### After gathering information about target system :
 
+1. Select the right exploit and then set the target
+2. Verify the exploit options to determine wheather the target system is vulnerable ti that exploit
+3. Select a payload
+4. Execute the Script
+
+
+###### Command used in metasploit:
+
+1. show
+2. search 
+3. info
+4. use
+5. set
+6. unset
+7. kill
+8. sessions
+9. jobs
+
+
+##### Some useful options :
+
+1. RHOST --> Remote Host (Vitim) IP Address
+2. RPOST --> Remote Port (Victim) Port Number 
+3. LHOST --> Local Host (Attacker) IP Address
+4. LPORT --> Local (Attacker) port to connect back on	
+5. SRVHOST --> Local Host(Attacker) IP address
+6. SRVPORT --> Locak(Attacker) port to connect back on 
+7. URIPATH /
+
+IP --> All IP Address discussed can be public or private IP
 
 
 
