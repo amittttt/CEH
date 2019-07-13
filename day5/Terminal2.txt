@@ -1,0 +1,83 @@
+root@kali:/usr/share/metasploit-framework/modules/exploits/windows/smb# cd ~
+root@kali:~# service postgresql start
+root@kali:~# service postgresql status
+● postgresql.service - PostgreSQL RDBMS
+   Loaded: loaded (/lib/systemd/system/postgresql.service; dis
+   Active: active (exited) since Sat 2019-07-13 15:53:54 IST; 
+  Process: 2391 ExecStart=/bin/true (code=exited, status=0/SUC
+ Main PID: 2391 (code=exited, status=0/SUCCESS)
+
+Jul 13 15:53:54 kali systemd[1]: Starting PostgreSQL RDBMS...
+Jul 13 15:53:54 kali systemd[1]: Started PostgreSQL RDBMS.
+
+root@kali:~# msfdb reinit
+[i] Database already started
+[+] Dropping databases 'msf'
+dropdb: database removal failed: ERROR:  database "msf" is being accessed by other users
+DETAIL:  There are 2 other sessions using the database.
+[+] Dropping databases 'msf_test'
+[+] Dropping database user 'msf'
+dropuser: removal of role "msf" failed: ERROR:  role "msf" cannot be dropped because some objects depend on it
+DETAIL:  owner of database msf
+132 objects in database msf
+[+] Deleting configuration file /usr/share/metasploit-framework/config/database.yml
+[+] Stopping database
+[+] Starting database
+[+] Resetting password of database user 'msf'
+[+] Creating databases 'msf_test'
+[+] Creating configuration file '/usr/share/metasploit-framework/config/database.yml'
+[+] Creating initial database schema
+root@kali:~# msf console
+bash: msf: command not found
+root@kali:~# msfconsole
+                                                  
+
+     .~+P``````-o+:.                                      -o+:.
+.+oooyysyyssyyssyddh++os-`````                        ```````````````          `
++++++++++++++++++++++++sydhyoyso/:.````...`...-///::+ohhyosyyosyy/+om++:ooo///o
+++++///////~~~~///////++++++++++++++++ooyysoyysosso+++++++++++++++++++///oossosy
+--.`                 .-.-...-////+++++++++++++++////////~~//////++++++++++++///
+                                `...............`              `...-/////...`
+
+
+                                  .::::::::::-.                     .::::::-
+                                .hmMMMMMMMMMMNddds\...//M\\.../hddddmMMMMMMNo
+                                 :Nm-/NMMMMMMMMMMMMM$$NMMMMm&&MMMMMMMMMMMMMMy
+                                 .sm/`-yMMMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMMMh`
+                                  -Nd`  :MMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMMh`
+                                   -Nh` .yMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMm/
+    `oo/``-hd:  ``                 .sNd  :MMMMMMMMMM$$MMMMMN&&MMMMMMMMMMm/
+      .yNmMMh//+syysso-``````       -mh` :MMMMMMMMMM$$MMMMMN&&MMMMMMMMMMd
+    .shMMMMN//dmNMMMMMMMMMMMMs`     `:```-o++++oooo+:/ooooo+:+o+++oooo++/
+    `///omh//dMMMMMMMMMMMMMMMN/:::::/+ooso--/ydh//+s+/ossssso:--syN///os:
+          /MMMMMMMMMMMMMMMMMMd.     `/++-.-yy/...osydh/-+oo:-`o//...oyodh+
+          -hMMmssddd+:dMMmNMMh.     `.-=mmk.//^^^\\.^^`:++:^^o://^^^\\`::
+          .sMMmo.    -dMd--:mN/`           ||--X--||          ||--X--||
+........../yddy/:...+hmo-...hdd:............\\=v=//............\\=v=//.........
+================================================================================
+=====================+--------------------------------+=========================
+=====================| Session one died of dysentery. |=========================
+=====================+--------------------------------+=========================
+================================================================================
+
+                     Press ENTER to size up the situation
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Date: April 25, 1848 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Weather: It's always cool in the lab %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Health: Overweight %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% Caffeine: 12975 mg %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacked: All the things %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        Press SPACE BAR to continue
+
+
+
+       =[ metasploit v4.17.3-dev                          ]
++ -- --=[ 1797 exploits - 1019 auxiliary - 310 post       ]
++ -- --=[ 538 payloads - 41 encoders - 10 nops            ]
++ -- --=[ Free Metasploit Pro trial: http://r-7.co/trymsp ]
+
+msf > 
+
