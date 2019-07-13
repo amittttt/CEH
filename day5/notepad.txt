@@ -1,0 +1,34 @@
+###################### DAY5 ########################
+
+1. Install NESSUS in local machine :
+	Mailinator is the website where you can create temp mail address for you without any password (https://www.mailinator.com/)
+
+2. After Downloading the relevant package : 
+	dpkg -i put-the-file-.deb-path-here
+
+3. service nessusd start -> this cmd will help to start in our system
+
+4. Nessus by default port is : 8834
+
+5. Nessus is the OS Scanning Tool 
+
+6. In nessus free version we can scan only 16 IP at the same time 
+
+
+########################### 
+
+1. Metasplout Framework: Metasploit framework is an open source pen testing project that helps you to find out systems and application vulnerablities and exploit these framework.
+
+
+## Exploits module always required a playload associate with them while running auxilliary's are opposite of them 
+
+# payloads : payload consist of code that runs remotely
+# Encoders : Encoders ensure that payload makes it to their destination
+# Nops : Nops keep the payload sizes consistent
+
+
+########
+
+
+
+
