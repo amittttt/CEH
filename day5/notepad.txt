@@ -82,7 +82,19 @@ Exploit Code in MetaSploit : /usr/share/metasploit-framework/modules/exploits/wi
 1. windows/adduser (Payload) : 
 2. windows/shell/reverse_tcp
 3. windows/vncinject/reverse_tcp
-4. windows/meterpreter/reverse_tcp
+4. windows/meterpreter/reverse_tcp  -------> it's called meterpreter (Advance level ) 
+	sysinfo :
+	getuid
+	getpid
+	ps
+	screenshot
+	search -f *.txt
+	download
+	upload
+	rm
+	background
+	sessions
+	hashdump
 
 
 
