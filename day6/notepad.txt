@@ -1,0 +1,54 @@
+###################### DAY6 ########################
+
+
+### Today we are going to exploit on MS17-010 Security update :
+1. checking which port is open : root@root:~# nmap -vv -T5 192.168.0.108
+2. running metasploit framework : 
+root@root:~# service postgresql start
+root@root:~# service postgresql status
+● postgresql.service - PostgreSQL RDBMS
+   Loaded: loaded (/lib/systemd/system/postgresql.service; disabled; vendo
+   Active: active (exited) since Sun 2019-07-14 09:19:14 IST; 5h 24min ago
+  Process: 12447 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+ Main PID: 12447 (code=exited, status=0/SUCCESS)
+
+Jul 14 09:19:11 root systemd[1]: Starting PostgreSQL RDBMS...
+Jul 14 09:19:14 root systemd[1]: Started PostgreSQL RDBMS.
+
+root@root:~# msfconsole -q
+
+3. msf5 > search ms17-010
+4. msf5 > search doublepulsar
+
+## in metasploit reload_all will helps to reload all exploit which present in the metasploit framework
+
+5. Remote Exploitation on windows 7 with eternalblue doublepulsar :::::
+   
+
+
+######Need to Install Wine :::
+
+1/ root@root:~# mkdir -p /root/.wine/drive_c/
+. -> hidden dict
+
+2/ root@root:~# dpkg --add-architecture i386 && apt-get update && apt-get install wine32
+
+
+### getsystem : helps us to know what access we have
+
+
+#### exploit-db.com for getting exploit
+
+
+######### For Attack please refer Terminal1.txt (all commands are there)####
+
+
+########### public IP command : curl ifconfig.io
+
+
+
+
+
+
+
+
