@@ -1,0 +1,78 @@
+1.	scan single ip address
+	nmap 192.168.1.1
+	scan hostname
+	nmap google.com
+	increase verbosity level
+	nmap -v 192.168.1.1
+	
+2.	scan multiple ip addresses
+	nmap 192.168.1.1 192.168.1.2 192.168.1.3
+	nmap 192.168.1.1,2,3
+	scan a subnet
+	nmap 192.168.1.0/24
+	nmap 192.168.1.*
+	Scan a Range of IP Addresses (192.168.1.1 - 192.168.1.200)
+	nmap 192.168.1.1-200
+	Scan Network for Active Computers
+	nmap -sn 192.168.1.0/24
+
+3.	Exclude IP/Hosts/Networks From Nmap Scan
+	nmap 192.168.1.0/24 --exclude 192.168.1.1
+	nmap 192.168.1.0/24 --exclude 192.168.1.1 192.168.1.5
+	nmap 192.168.1.0/24 --exclude 192.168.1.1,2,3
+
+4.	Scan For Specific Ports
+	nmap -p 80 192.168.1.1
+	nmap -p 80,443 192.168.1.1
+	nmap -p 80-1000 192.168.1.1
+	nmap -p- 192.168.1.1
+	nmap --top-ports 5 192.168.1.1
+	nmap --top-ports 10 192.168.1.1
+
+5.	Determine Supported IP Protocols
+	nmap -sO 192.168.1.1
+
+6.	Scan for All TCP Ports :
+	nmap -sT 192.168.1.1
+	Scan for Particular TCP Ports :
+	nmap -p T:80 192.168.1.1
+	Scan for All UDP Ports :
+	nmap -sU 192.168.1.1
+	Scan for Particular UDP Ports :
+	nmap -p U:53 192.168.1.1
+	Combine scanning of different ports :
+	nmap -p U:53,79,113 T:21-25,80,443,8080 192.168.1.1 -sT -sU
+
+7.	Enable Fast Mode :
+	nmap -F 192.168.1.1
+
+8.	Show Only Open Ports (or possibly open) :
+	nmap --open 192.168.1.1
+
+9.	Turn on OS Detection :
+	nmap -O 192.168.1.1
+
+10.	Turn on Version Detection :
+	nmap -sV 192.168.1.1
+
+11.	Find out if a host is protected by any Packet Filters or Firewall :
+	nmap -sA 192.168.1.1
+	if this doesn't work,try adding -Pn
+	nmap -Pn -sA 192.168.1.1
+
+12.	Spoof your MAC Address :
+	nmap --spoof-mac 00:11:22:33:44:55 192.168.1.1
+	nmap --spoof-mac 0 192.168.1.1
+
+13.	TCP Null Scan :
+	nmap -sN 192.168.1.1
+	TCP Fin Scan :
+	nmap -sF 192.168.1.1
+	TCP Xmas Scan :
+	nmap -sX 192.168.1.1
+	TCP SYN Scan :
+	nmap -sS 192.168.0.1
+	Don't ping host before scanning :
+ 	nmap -Pn 192.168.1.1
+	Never do reverse DNS Resolution on the active IP addresses it finds :
+	nmap -n 192.168.1.1
