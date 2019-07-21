@@ -1,0 +1,70 @@
+root@kali:~# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.0.170  netmask 255.255.255.0  broadcast 192.168.0.255
+        inet6 2406:7400:73:88b3:84e5:e10a:2d9a:681f  prefixlen 64  scopeid 0x0<global>
+        inet6 2406:7400:73:88b3:e2d5:5eff:fe78:546c  prefixlen 64  scopeid 0x0<global>
+        inet6 fe80::e2d5:5eff:fe78:546c  prefixlen 64  scopeid 0x20<link>
+        ether e0:d5:5e:78:54:6c  txqueuelen 1000  (Ethernet)
+        RX packets 122878  bytes 142177824 (135.5 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 57386  bytes 5752074 (5.4 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 17602  bytes 10524562 (10.0 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 17602  bytes 10524562 (10.0 MiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@kali:~# nmap -vv -p20,21 -T5 192.168.0.145 -sT
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-21 15:47 IST
+Initiating ARP Ping Scan at 15:47
+Scanning 192.168.0.145 [1 port]
+Completed ARP Ping Scan at 15:47, 0.10s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:47
+Completed Parallel DNS resolution of 1 host. at 15:47, 0.01s elapsed
+Initiating Connect Scan at 15:47
+Scanning 192.168.0.145 [2 ports]
+Discovered open port 21/tcp on 192.168.0.145
+Completed Connect Scan at 15:47, 0.00s elapsed (2 total ports)
+Nmap scan report for 192.168.0.145
+Host is up, received arp-response (0.051s latency).
+Scanned at 2019-07-21 15:47:18 IST for 0s
+
+PORT   STATE  SERVICE  REASON
+20/tcp closed ftp-data conn-refused
+21/tcp open   ftp      syn-ack
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.18 seconds
+           Raw packets sent: 1 (28B) | Rcvd: 1 (28B)
+root@kali:~# nmap -vv -p20,21 -T5 192.168.0.145 -sT
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-21 15:48 IST
+Initiating ARP Ping Scan at 15:48
+Scanning 192.168.0.145 [1 port]
+Completed ARP Ping Scan at 15:48, 0.12s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:48
+Completed Parallel DNS resolution of 1 host. at 15:48, 0.01s elapsed
+Initiating Connect Scan at 15:48
+Scanning 192.168.0.145 [2 ports]
+Discovered open port 21/tcp on 192.168.0.145
+Completed Connect Scan at 15:48, 0.01s elapsed (2 total ports)
+Nmap scan report for 192.168.0.145
+Host is up, received arp-response (0.058s latency).
+Scanned at 2019-07-21 15:48:25 IST for 0s
+
+PORT   STATE  SERVICE  REASON
+20/tcp closed ftp-data conn-refused
+21/tcp open   ftp      syn-ack
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.28 seconds
+           Raw packets sent: 1 (28B) | Rcvd: 1 (28B)
+root@kali:~# ^C
+root@kali:~# 
+
