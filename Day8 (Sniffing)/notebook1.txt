@@ -1,0 +1,27 @@
+#######################################################################################
+
+
+1. open ettercap 
+2. 4 options
+3. go in opotion and get addtitonal tick promisc mode
+4. go in sniff and select unified sniffing 
+5. after this rest part occurs in the menu part 
+6. Find how many active ip is there: 
+	in menu bar section is host and scan for host
+	it will find how many host are there
+7. host list we will check who they are
+8. we will get device ip and mac address
+9. select and add in target 1 and add it in the target 2
+10. go in targets and check current targets
+11. we will see both ip in target 1 and target 2
+12. we need both ways so tick in alert both ways
+13. check result and get all the userid and password
+
+
+
+#######################################################################################
+
+
+Easiest Way 
+
+

@@ -1,0 +1,14 @@
+######################################################################
+
+Network monitoring :
+
+
+
+root@kali:~/Desktop/Amit/CEH# darkstat -b 0.0.0.0 -i eth0 -p 667
+root@kali:~/Desktop/Amit/CEH# netstat -antp | grep 667
+tcp        0      0 0.0.0.0:667             0.0.0.0:*               LISTEN      4611/darkstat       
+root@kali:~/Desktop/Amit/CEH# 
+
+
+
+open localhost:667
