@@ -1,0 +1,10 @@
+eternalblue errors fix
+
+1. in a normal terminal tab(not the msfconsole), give this command
+
+mkdir -p /root/.wine/drive_c/
+
+
+2. run the command 
+
+dpkg --add-architecture i386 && apt-get update && apt-get install wine32

