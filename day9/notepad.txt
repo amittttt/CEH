@@ -1,0 +1,25 @@
+############################################### DAY9 ################################################################
+
+1. kevin mitnick hacker --> read about (good socail engineer)
+
+######################## Attack
+
+1. SETOOLKIT : setoolkit (attached a one txt file for practical)
+2. Launch in WLAN newtork
+
+
+
+@@@@@@@@@@ 
+https://github.com/thelinuxchoice/shellphish : this helps us to make page same as google, facebook and insta
+
+root@kali:~# git clone https://github.com/thelinuxchoice/shellphish.git
+fatal: destination path 'shellphish' already exists and is not an empty directory.
+root@kali:~# cd shellphish/
+root@kali:~/shellphish# ls
+LICENSE  ngrok  README.md  shellphish.sh  sites
+root@kali:~/shellphish# chmod +x shellphish.sh 
+root@kali:~/shellphish# ./shellphish.sh
+     _     _             _  _  ______   _      
+
+
+
