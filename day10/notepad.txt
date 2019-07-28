@@ -1,0 +1,21 @@
+
+############################################### DAY 10 {Denial Of Service} ################################################################
+
+Mam Cash 
+ 
+amit sangria explitdb : https://www.exploit-db.com/exploits/43020
+
+http://exploit-db.com/ explore this
+
+https://www.exploit-db.com/exploits/45357  (root@kali:~/Desktop/amit/CEH# top """ here see the how much memory is using)
+
+https://en.wikipedia.org/wiki/Billion_laughs_attack
+
+https://en.wikipedia.org/wiki/Slow_loris
+
+https://github.com/llaera/slowloris.pl
+
+
+
+
+
