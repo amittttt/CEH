@@ -36,10 +36,15 @@ the problem with these attacks why they are uncommon is because administrators p
 2. dictionary attack
 3. syllable attack
 4. rainbow tables for hashed passwords
-5. rubber hose attack
+5. rubber hose attack --------> 100% work
 
 
 
 ############# websites ";
 
 1. https://howsecureismypassword.net/
+2. https://github.com/danielmiessler/SecLists -> github passwrod list hacked
+3. man crunch -> do in git terminal and explore
+4. HYdra is the online password tracking activity
+5. https://www.enigmagroup.org/ -> run some kind of web application attacks
+6. https://overthewire.org/wargames/natas/ ---> teach server side sequrity

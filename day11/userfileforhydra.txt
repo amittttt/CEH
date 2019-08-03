@@ -1,0 +1,7 @@
+admin
+administrator
+batman
+netadmin
+test
+user
+msfadmin

