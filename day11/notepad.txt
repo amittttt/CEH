@@ -23,3 +23,23 @@ Equifax breach, ManageEngine service
 3. Password attacks
 
 the last resort to performing attacks on services which require authentication.
+
+
+password attacks
+---------------------------------------------------------------------------------------
+
+these are fairly common on services which require authentication to access a service like ftp, ssh etc.
+the problem with these attacks why they are uncommon is because administrators put lockout policies or maintain a blacklist for preventing these kind of attacks.
+
+
+1. brute force attack
+2. dictionary attack
+3. syllable attack
+4. rainbow tables for hashed passwords
+5. rubber hose attack
+
+
+
+############# websites ";
+
+1. https://howsecureismypassword.net/
