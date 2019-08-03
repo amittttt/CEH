@@ -1,0 +1,25 @@
+
+############################################### DAY 11 {Session hijacking} ################################################################
+
+hacking webservers
+--------------------------------------------------------------------------------------
+
+1. default installation
+2. misconfiguration
+3. password attacks
+
+1. default installation
+
+Happens in case when administrator leaves services in deafult installation state leaving vulnerable vectors for attackers. Example
+
+XAMPP 1.7.2 default installation (default password for webdav service)
+
+2. misconfiguration
+
+Happens in case when administrator leaves the installed service in unattended state or leaving them in old version state, which can leave known velnerabilities for attacker to exploit. Example
+
+Equifax breach, ManageEngine service
+
+3. Password attacks
+
+the last resort to performing attacks on services which require authentication.
