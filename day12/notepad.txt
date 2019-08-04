@@ -11,7 +11,11 @@ Web Application Attacks
 6. CSRF
 7. Brute Force on web App (HYDRA)
 
+$$$$$$$$$$$$$$$$$$$$$$$
 
+lfi rfi cheat sheet --> google it
+https://highon.coffee/blog/lfi-cheat-sheet/
+https://evi1us3r.wordpress.com/lfi-cheat-sheet/
 
 ############WEBSITE
 
